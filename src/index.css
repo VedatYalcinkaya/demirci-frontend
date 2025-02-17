@@ -1,6 +1,13 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
+
+@font-face {
+  font-family: 'Square721 BT';
+  src: url('./assets/fonts/SQR721B.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -28,10 +35,10 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  padding: 0;
+  width: 100%;
   min-height: 100vh;
+  background-color: #000;
 }
 
 h1 {
