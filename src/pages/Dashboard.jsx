@@ -3,6 +3,7 @@ import NavbarDemo from "../components/NavbarDemo";
 import { BackgroundBeamsWithCollision } from "../components/ui/background-beams-with-collision";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from "./HomePage";
+import { HeroParallaxDemo } from "../components/HeroParallaxDemo";
 
 
 const Dashboard = () => {
@@ -39,6 +40,7 @@ const Dashboard = () => {
       <div className="w-full min-h-screen">
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/try" element={<HeroParallaxDemo />} />
         </Routes>
       </div>
     </Router>
