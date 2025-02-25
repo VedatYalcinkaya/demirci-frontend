@@ -3,6 +3,12 @@ import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from "./ui/canvas-reveal-effect";
 import { BackgroundBeamsWithCollision } from "./ui/background-beams-with-collision";
+import webDesignLogo from "../assets/servicesLogos/web-design-logo.png"
+import graphicDesignLogo from "../assets/servicesLogos/graphic-design-logo.png"
+import marketplaceLogo from "../assets/servicesLogos/marketplace-logo.png"
+import eCommerceLogo from "../assets/servicesLogos/e-commerce-logo.png"
+import digitalAdvertisingLogo from "../assets/servicesLogos/digital-advertising-logo.png"
+import aiLogo from "../assets/servicesLogos/ai-logo.png"
 
 export function ServicesSection() {
   return (
@@ -12,37 +18,37 @@ export function ServicesSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ServiceCard 
               title="WEB TASARIM" 
-              icon={<WebIcon />}
+              icon={webDesignLogo}
               description="Özel ve profesyonel web tasarım hizmetlerimizle, işletmenizi dijital dünyada en iyi şekilde temsil eden estetik ve kullanıcı dostu web siteleri tasarlıyoruz. Mobil uyumlu, hızlı yüklenen ve SEO optimizasyonlu sitelerle dijital varlığınızı güçlendiriyoruz."
               bgColor="bg-emerald-900"
             />
             <ServiceCard 
               title="GRAFİK TASARIM" 
-              icon={<GraphicIcon />}
+              icon={graphicDesignLogo}
               description="Markanızın kimliğini güçlendiren yaratıcı ve etkileyici grafik tasarım çözümleri sunuyoruz. Logo tasarımından, sosyal medya içeriklerine kadar geniş bir yelpazede hizmet veriyoruz."
               bgColor="bg-sky-900"
             />
             <ServiceCard 
               title="SANAL PAZARYERİ" 
-              icon={<MarketplaceIcon />}
+              icon={marketplaceLogo}
               description="Hepsiburada, Trendyol, N11 gibi popüler sanal pazaryerlerinde başarılı olmanız için danışmanlık hizmeti veriyoruz. Ürün listeleme, fiyatlandırma ve mağaza yönetimi konularında destek sağlıyoruz."
               bgColor="bg-purple-900"
             />
             <ServiceCard 
               title="E-TİCARET DANIŞMANLIĞI" 
-              icon={<ECommerceIcon />}
+              icon={eCommerceLogo}
               description="E-ticaret sitenizin kurulumundan, yönetimine kadar tüm süreçlerde profesyonel danışmanlık hizmeti sunuyoruz. Satış stratejileri, stok yönetimi ve müşteri deneyimi optimizasyonu konularında uzman desteği sağlıyoruz."
               bgColor="bg-orange-900"
             />
             <ServiceCard 
               title="DİJİTAL REKLAMCILIK" 
-              icon={<AdvertisingIcon />}
+              icon={digitalAdvertisingLogo}
               description="Google Ads, Facebook Ads ve diğer dijital reklam platformlarında etkili kampanyalar oluşturuyoruz. Hedef kitlenize ulaşmanızı sağlayacak optimize edilmiş reklam stratejileri geliştiriyoruz."
               bgColor="bg-red-900"
             />
             <ServiceCard 
               title="VERİ ANALİZİ VE YAPAY ZEKA" 
-              icon={<AIIcon />}
+              icon={aiLogo}
               description="İşletmenizin verilerini analiz ederek, yapay zeka destekli çözümler sunuyoruz. Müşteri davranışları analizi, satış tahminleri ve otomatik karar destek sistemleri ile işletmenizi geleceğe hazırlıyoruz."
               bgColor="bg-indigo-900"
             />
@@ -80,12 +86,23 @@ const ServiceCard = ({ title, icon, description, bgColor }) => {
         )}
       </AnimatePresence>
 
-      <div className="relative z-20 text-center">
-        <div className="text-center group-hover/card:-translate-y-4 group-hover/card:opacity-0 transition duration-200 w-full mx-auto flex items-center justify-center text-white">
-          {icon}
+      <div className="relative z-20 flex flex-col items-center justify-center h-full w-full">
+        {/* Logo */}
+        <div className={`transition-all duration-300 ${hovered ? 'opacity-0 scale-90' : 'opacity-100 scale-100'}`}>
+          {typeof icon === 'string' ? (
+            <img src={icon} alt={title} className="w-16 h-16 object-contain" />
+          ) : (
+            icon
+          )}
         </div>
-        <h2 className="text-2xl font-bold text-white mt-4 mb-2">{title}</h2>
-        <p className="text-white/80 opacity-0 group-hover/card:opacity-100 transition-opacity duration-200 text-sm max-w-[300px] mx-auto">
+        
+        {/* Başlık */}
+        <h2 className={`text-2xl font-bold text-white transition-all duration-300 ${hovered ? '-translate-y-8' : 'translate-y-2'}`}>
+          {title}
+        </h2>
+        
+        {/* Açıklama */}
+        <p className={`text-white/80 text-sm max-w-[300px] mx-auto transition-all duration-300 ${hovered ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           {description}
         </p>
       </div>
