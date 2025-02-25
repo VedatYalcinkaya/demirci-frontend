@@ -9,12 +9,13 @@ import marketplaceLogo from "../assets/servicesLogos/marketplace-logo.png";
 import eCommerceLogo from "../assets/servicesLogos/e-commerce-logo.png";
 import digitalAdvertisingLogo from "../assets/servicesLogos/digital-advertising-logo.png";
 import aiLogo from "../assets/servicesLogos/ai-logo.png";
+import { WavyBackground } from "./ui/wavy-background";
 
 export function ServicesSection() {
   return (
-    <div className="relative z-10 py-20 flex flex-col items-center justify-center w-full">
+    <div className="relative z-10 py-20 mt-[-10vh] flex flex-col items-center justify-center w-full">
       {/* Başlık Kısmı */}
-      <div className="text-center mb-16 mt-16">
+      <div className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
           Her İhtiyaca <ColourfulText text="Profesyonel" /> Çözümler
         </h1>
@@ -23,6 +24,7 @@ export function ServicesSection() {
           yanınızdayız
         </p>
       </div>
+      
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <ServiceCard
