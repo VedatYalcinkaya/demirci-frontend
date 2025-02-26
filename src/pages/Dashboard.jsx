@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from "./HomePage";
 import { Footer } from "../components/Footer";
 import WebTasarim from "./WebTasarim";
-import { LampDemo } from "../components/LampDemo";
 
 const Dashboard = () => {
   let mouseX = useMotionValue(0);
@@ -56,7 +55,7 @@ const Dashboard = () => {
         <div className="relative w-full min-h-screen pt-20">
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/wavy" element={<LampDemo />} />
+            {/* <Route path="/buttons" element={<TailwindcssButtons />} /> */}
             <Route path="/web-tasarim" element={<WebTasarim />} />
           </Routes>
         </div>

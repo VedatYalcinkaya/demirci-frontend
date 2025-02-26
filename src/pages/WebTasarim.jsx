@@ -32,7 +32,7 @@ const WebTasarim = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-emerald-500 text-white px-8 py-3 rounded-lg font-medium hover:bg-emerald-600 transition-colors"
+            className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-emerald-800/30 bg-[linear-gradient(110deg,#042f2e,45%,#065f46,55%,#042f2e)] bg-[length:200%_100%] px-6 font-medium text-emerald-200 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black"
           >
             Teklif Alın
           </motion.button>
@@ -51,3 +51,5 @@ const WebTasarim = () => {
 };
 
 export default WebTasarim; 
+
+
