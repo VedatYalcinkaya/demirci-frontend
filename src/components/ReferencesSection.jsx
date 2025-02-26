@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
 import { HeroParallax } from "./ui/hero-parallax";
-import { ColourfulText } from "./ui/colourful-text";
-
 export function ReferencesSection() {
   return <HeroParallax products={references} />;
 }

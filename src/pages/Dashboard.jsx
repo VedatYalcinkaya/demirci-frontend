@@ -3,24 +3,26 @@ import { useMotionValue, motion, useMotionTemplate } from "framer-motion";
 import NavbarDemo from "../components/NavbarDemo";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from "./HomePage";
-import { HeroHighlightDemo } from "../components/HeroHighlightDemo";
+import { Footer } from "../components/Footer";
+import WebTasarim from "./WebTasarim";
+import { LampDemo } from "../components/LampDemo";
 
 const Dashboard = () => {
   let mouseX = useMotionValue(0);
   let mouseY = useMotionValue(0);
 
-  function handleMouseMove({ currentTarget, clientX, clientY }) {
-    if (!currentTarget) return;
-    let { left, top } = currentTarget.getBoundingClientRect();
-    mouseX.set(clientX - left);
-    mouseY.set(clientY - top);
-  }
+  React.useEffect(() => {
+    const handleMouseMove = (e) => {
+      mouseX.set(e.clientX);
+      mouseY.set(e.clientY);
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, [mouseX, mouseY]);
 
   return (
-    <div 
-      className="relative min-h-screen bg-black group"
-      onMouseMove={handleMouseMove}
-    >
+    <div className="relative min-h-screen bg-black group">
       {/* Background Effects Container */}
       <div className="fixed inset-0 overflow-hidden">
         {/* Dot Pattern Background */}
@@ -34,7 +36,7 @@ const Dashboard = () => {
         
         {/* Mouse Movement Effect */}
         <motion.div
-          className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500"
+          className="pointer-events-none fixed inset-0 opacity-0 group-hover:opacity-100 transition duration-500"
           style={{
             background: useMotionTemplate`
               radial-gradient(
@@ -54,10 +56,12 @@ const Dashboard = () => {
         <div className="relative w-full min-h-screen pt-20">
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/wavy" element={<HeroHighlightDemo />} />
+            <Route path="/wavy" element={<LampDemo />} />
+            <Route path="/web-tasarim" element={<WebTasarim />} />
           </Routes>
         </div>
       </Router>
+      <Footer/>
     </div>
   );
 };
