@@ -16,12 +16,22 @@ export function ServicesSection() {
     <div className="relative z-10 py-20 mt-[-10vh] flex flex-col items-center justify-center w-full">
       {/* Başlık Kısmı */}
       <div className="text-center mb-16">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
-          Her İhtiyaca <ColourfulText text="Profesyonel" /> Çözümler
-        </h1>
-        <p className="text-white/80 text-lg max-w-2xl mx-auto">
-          Web tasarımdan yapay zekaya, dijital dünyanın her alanında
-          yanınızdayız
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-3 md:gap-4">
+          <h1 className="text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white">
+            Her İhtiyaca
+          </h1>
+          <div className="my-2 sm:my-0">
+            <ColourfulText 
+              text="Profesyonel" 
+              className="text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold"
+            />
+          </div>
+          <h1 className="text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white">
+            Çözümler
+          </h1>
+        </div>
+        <p className="text-white/80 text-base sm:text-lg max-w-2xl mx-auto mt-6">
+          Web tasarımdan yapay zekaya, dijital dünyanın her alanında yanınızdayız
         </p>
       </div>
       
