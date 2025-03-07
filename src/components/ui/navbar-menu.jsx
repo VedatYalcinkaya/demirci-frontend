@@ -1,7 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import { cn } from "../../lib/utils";
 import { Link } from "react-router-dom";
 
 const transition = {
@@ -17,83 +16,92 @@ export const MenuItem = ({
   setActive,
   active,
   item,
-  children,
+  children
 }) => {
   return (
-    <div onMouseEnter={() => setActive(item)} className="relative">
+    (<div onMouseEnter={() => setActive(item)} className="relative ">
       <motion.p
-        className="cursor-pointer text-white hover:text-white/60 transition-colors"
-        animate={{
-          color: active === item ? "white" : "#ffffffaa",
-        }}
-      >
+        transition={{ duration: 0.3 }}
+        className="cursor-pointer hover:opacity-[0.9] text-white">
         {item}
       </motion.p>
-      {active === item && (
-        <div className="absolute top-[calc(100%_+_1.2rem)] left-1/2 transform -translate-x-1/2 pt-4">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.85, y: 10 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={transition}
-            layoutId="dropdown"
-            className="bg-black/90 backdrop-blur-md rounded-2xl overflow-hidden border border-white/10 shadow-xl z-50"
-          >
-            <motion.div
-              layout
-              className="p-4 min-w-[200px] max-h-[80vh] overflow-auto"
-            >
-              {children}
-            </motion.div>
-          </motion.div>
-        </div>
+      {active !== null && (
+        <motion.div
+          initial={{ opacity: 0, scale: 0.85, y: 10 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={transition}>
+          {active === item && (
+            <div
+              className="absolute top-[calc(100%_+_1.2rem)] left-1/2 transform -translate-x-1/2 pt-4">
+              <motion.div
+                transition={transition}
+                // layoutId ensures smooth animation
+                layoutId="active"
+                className="bg-black backdrop-blur-sm rounded-2xl overflow-hidden border border-white/[0.2] shadow-xl">
+                <motion.div
+                  // layout ensures smooth animation
+                  layout
+                  className="w-max h-full p-4">
+                  {children}
+                </motion.div>
+              </motion.div>
+            </div>
+          )}
+        </motion.div>
       )}
-    </div>
+    </div>)
   );
 };
 
-export function Menu({ children, setActive }) {
+export const Menu = ({
+  setActive,
+  children
+}) => {
   return (
-    <nav
+    (<nav
+      // resets the state
       onMouseLeave={() => setActive(null)}
-      className="relative rounded-full bg-black/50 backdrop-blur-md border border-white/10 shadow-md px-8 py-4"
-    >
+      className="relative rounded-full border bg-black border-white/[0.2]  shadow-input flex justify-center space-x-4 px-8 py-6 ">
       {children}
-    </nav>
+    </nav>)
   );
-}
+};
 
 export const ProductItem = ({
   title,
   description,
   to,
-  src,
+  src
 }) => {
   return (
-    <Link to={to} className="flex flex-col gap-2 group p-2">
-      <div className="relative overflow-hidden rounded-xl h-28">
-        <img
-          src={src}
-          alt={title}
-          className="object-cover w-full h-full transition-transform group-hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors" />
-      </div>
+    (<Link to={to} className="flex space-x-2">
+      <img
+        src={src}
+        width={140}
+        height={70}
+        alt={title}
+        className="flex-shrink-0 rounded-md shadow-2xl" />
       <div>
-        <h3 className="font-medium text-white text-sm">{title}</h3>
-        <p className="text-xs text-neutral-300 line-clamp-2">{description}</p>
+        <h4 className="text-xl font-bold mb-1 text-white">
+          {title}
+        </h4>
+        <p className="text-sm max-w-[10rem] text-neutral-300">
+          {description}
+        </p>
       </div>
-    </Link>
+    </Link>)
   );
 };
 
-export const HoveredLink = ({ to, children, ...rest }) => {
+export const HoveredLink = ({
+  children,
+  ...rest
+}) => {
   return (
-    <Link
-      to={to}
+    (<Link
       {...rest}
-      className="text-neutral-200 hover:text-white transition-colors"
-    >
+      className="text-neutral-200 hover:text-black ">
       {children}
-    </Link>
+    </Link>)
   );
 };

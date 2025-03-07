@@ -76,7 +76,7 @@ function Navbar({ className }) {
               </div>
             </MenuItem>
             <MenuItem setActive={setActive} active={active} item="Referanslar">
-              <div className="grid grid-cols-2 gap-4 w-[500px]">
+              <div className="text-sm grid grid-cols-2 gap-4 p-4">
                 <ProductItem
                   title="E-Ticaret Projeleri"
                   to="/referanslar/e-ticaret"
