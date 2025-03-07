@@ -22,8 +22,6 @@ export default {
       },
       animation: {
         aurora: "aurora 60s linear infinite",
-      },
-      animation: {
         shimmer: "shimmer 2s linear infinite",
       },
       keyframes: {

@@ -5,6 +5,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from "./HomePage";
 import { Footer } from "../components/Footer";
 import WebTasarim from "./WebTasarim";
+import GrafikTasarim from "./GrafikTasarim";
+import SanalPazaryeri from "./SanalPazaryeri";
+import ETicaret from "./ETicaret";
+import DijitalReklamcilik from "./DijitalReklamcilik";
+import YapayZeka from "./YapayZeka";
 
 const Dashboard = () => {
   let mouseX = useMotionValue(0);
@@ -57,6 +62,11 @@ const Dashboard = () => {
             <Route path="/" element={<HomePage />} />
             {/* <Route path="/buttons" element={<TailwindcssButtons />} /> */}
             <Route path="/web-tasarim" element={<WebTasarim />} />
+            <Route path="/grafik-tasarim" element={<GrafikTasarim />} />
+            <Route path="/sanal-pazaryeri" element={<SanalPazaryeri />} />
+            <Route path="/e-ticaret" element={<ETicaret />} />
+            <Route path="/dijital-reklamcilik" element={<DijitalReklamcilik />} />
+            <Route path="/yapay-zeka" element={<YapayZeka />} />
           </Routes>
         </div>
       </Router>

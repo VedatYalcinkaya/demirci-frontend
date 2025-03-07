@@ -10,6 +10,7 @@ import eCommerceLogo from "../assets/servicesLogos/e-commerce-logo.png";
 import digitalAdvertisingLogo from "../assets/servicesLogos/digital-advertising-logo.png";
 import aiLogo from "../assets/servicesLogos/ai-logo.png";
 import { WavyBackground } from "./ui/wavy-background";
+import { Link } from "react-router-dom";
 
 export function ServicesSection() {
   return (
@@ -42,36 +43,42 @@ export function ServicesSection() {
             icon={webDesignLogo}
             description="Özel ve profesyonel web tasarım hizmetlerimizle, işletmenizi dijital dünyada en iyi şekilde temsil eden estetik ve kullanıcı dostu web siteleri tasarlıyoruz. Mobil uyumlu, hızlı yüklenen ve SEO optimizasyonlu sitelerle dijital varlığınızı güçlendiriyoruz."
             bgColor="bg-emerald-900"
+            path="/web-tasarim"
           />
           <ServiceCard
             title="GRAFİK TASARIM"
             icon={graphicDesignLogo}
             description="Markanızın kimliğini güçlendiren yaratıcı ve etkileyici grafik tasarım çözümleri sunuyoruz. Logo tasarımından, sosyal medya içeriklerine kadar geniş bir yelpazede hizmet veriyoruz."
             bgColor="bg-sky-900"
+            path="/grafik-tasarim"
           />
           <ServiceCard
             title="SANAL PAZARYERİ"
             icon={marketplaceLogo}
             description="Hepsiburada, Trendyol, N11 gibi popüler sanal pazaryerlerinde başarılı olmanız için danışmanlık hizmeti veriyoruz. Ürün listeleme, fiyatlandırma ve mağaza yönetimi konularında destek sağlıyoruz."
             bgColor="bg-purple-900"
+            path="/sanal-pazaryeri"
           />
           <ServiceCard
             title="E-TİCARET DANIŞMANLIĞI"
             icon={eCommerceLogo}
             description="E-ticaret sitenizin kurulumundan, yönetimine kadar tüm süreçlerde profesyonel danışmanlık hizmeti sunuyoruz. Satış stratejileri, stok yönetimi ve müşteri deneyimi optimizasyonu konularında uzman desteği sağlıyoruz."
             bgColor="bg-orange-900"
+            path="/e-ticaret"
           />
           <ServiceCard
             title="DİJİTAL REKLAMCILIK"
             icon={digitalAdvertisingLogo}
             description="Google Ads, Facebook Ads ve diğer dijital reklam platformlarında etkili kampanyalar oluşturuyoruz. Hedef kitlenize ulaşmanızı sağlayacak optimize edilmiş reklam stratejileri geliştiriyoruz."
             bgColor="bg-red-900"
+            path="/dijital-reklamcilik"
           />
           <ServiceCard
             title="VERİ ANALİZİ VE YAPAY ZEKA"
             icon={aiLogo}
             description="İşletmenizin verilerini analiz ederek, yapay zeka destekli çözümler sunuyoruz. Müşteri davranışları analizi, satış tahminleri ve otomatik karar destek sistemleri ile işletmenizi geleceğe hazırlıyoruz."
             bgColor="bg-indigo-900"
+            path="/yapay-zeka"
           />
         </div>
       </div>
@@ -79,66 +86,68 @@ export function ServicesSection() {
   );
 }
 
-const ServiceCard = ({ title, icon, description, bgColor }) => {
+const ServiceCard = ({ title, icon, description, bgColor, path }) => {
   const [hovered, setHovered] = React.useState(false);
 
   return (
-    <div
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      className="border border-white/[0.2] rounded-xl group/card flex items-center justify-center w-full p-4 relative h-[300px]"
-    >
-      <CardBorder />
-      <AnimatePresence>
-        {hovered && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="h-full w-full absolute inset-0 rounded-xl overflow-hidden"
-          >
-            <CanvasRevealEffect
-              animationSpeed={2}
-              containerClassName={bgColor}
-              colors={[[125, 211, 252]]}
-            />
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      <div className="relative z-20 flex flex-col items-center justify-center h-full w-full">
-        {/* Logo */}
-        <div
-          className={`transition-all duration-300 ${
-            hovered ? "opacity-0 scale-90" : "opacity-100 scale-100"
-          }`}
-        >
-          {typeof icon === "string" ? (
-            <img src={icon} alt={title} className="w-16 h-16 object-contain" />
-          ) : (
-            icon
+    <Link to={path} className="block">
+      <div
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        className="border border-white/[0.2] rounded-xl group/card flex items-center justify-center w-full p-4 relative h-[300px] cursor-pointer transition-transform duration-300 hover:scale-[1.02]"
+      >
+        <CardBorder />
+        <AnimatePresence>
+          {hovered && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="h-full w-full absolute inset-0 rounded-xl overflow-hidden"
+            >
+              <CanvasRevealEffect
+                animationSpeed={2}
+                containerClassName={bgColor}
+                colors={[[125, 211, 252]]}
+              />
+            </motion.div>
           )}
+        </AnimatePresence>
+
+        <div className="relative z-20 flex flex-col items-center justify-center h-full w-full">
+          {/* Logo */}
+          <div
+            className={`transition-all duration-300 ${
+              hovered ? "opacity-0 scale-90" : "opacity-100 scale-100"
+            }`}
+          >
+            {typeof icon === "string" ? (
+              <img src={icon} alt={title} className="w-16 h-16 object-contain" />
+            ) : (
+              icon
+            )}
+          </div>
+
+          {/* Başlık */}
+          <h2
+            className={`text-2xl font-bold text-white transition-all duration-300 ${
+              hovered ? "-translate-y-8" : "translate-y-2"
+            }`}
+          >
+            {title}
+          </h2>
+
+          {/* Açıklama */}
+          <p
+            className={`text-white/80 text-sm max-w-[300px] mx-auto transition-all duration-300 ${
+              hovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+            }`}
+          >
+            {description}
+          </p>
         </div>
-
-        {/* Başlık */}
-        <h2
-          className={`text-2xl font-bold text-white transition-all duration-300 ${
-            hovered ? "-translate-y-8" : "translate-y-2"
-          }`}
-        >
-          {title}
-        </h2>
-
-        {/* Açıklama */}
-        <p
-          className={`text-white/80 text-sm max-w-[300px] mx-auto transition-all duration-300 ${
-            hovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-          }`}
-        >
-          {description}
-        </p>
       </div>
-    </div>
+    </Link>
   );
 };
 
