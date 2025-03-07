@@ -25,11 +25,38 @@ const grafikFeatures = [
   {
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+    title: "Kurumsal Kimlik",
+    description: "Kartvizit, broşür, afiş ve tüm matbaa ürünleriyle kurumsal kimliğinizi tasarlıyor ve basıyoruz"
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
       </svg>
     ),
     title: "Yüksek Kalite",
     description: "Her türlü baskı ve dijital ortam için yüksek çözünürlüklü tasarımlar sunuyoruz."
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+      </svg>
+    ),
+    title: "Hedef Kitle Odaklı",
+    description: "Hedef kitlenize uygun, dikkat çekici ve etkileyici tasarımlar oluşturuyoruz."
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+    title: "Sınırsız Revizyon",
+    description: "Tam memnuniyet sağlayana kadar sınırsız revizyon imkanı sunuyoruz."
   }
 ];
 
@@ -82,35 +109,7 @@ const GrafikTasarim = () => {
       {/* Özellikler */}
       <Features features={grafikFeatures} iconColor="sky" />
 
-      {/* Hizmetler */}
-      <div className="container mx-auto px-4 mb-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-black/20 backdrop-blur-sm p-6 rounded-lg border border-white/10">
-            <h3 className="text-xl font-semibold text-white mb-3">Logo Tasarımı</h3>
-            <p className="text-neutral-400">Markanızı en iyi şekilde temsil eden, akılda kalıcı ve profesyonel logo tasarımları.</p>
-          </div>
-          <div className="bg-black/20 backdrop-blur-sm p-6 rounded-lg border border-white/10">
-            <h3 className="text-xl font-semibold text-white mb-3">Kurumsal Kimlik</h3>
-            <p className="text-neutral-400">Kartvizit, antetli kağıt, zarf ve diğer kurumsal kimlik elemanlarının tasarımı.</p>
-          </div>
-          <div className="bg-black/20 backdrop-blur-sm p-6 rounded-lg border border-white/10">
-            <h3 className="text-xl font-semibold text-white mb-3">Sosyal Medya Tasarımları</h3>
-            <p className="text-neutral-400">Sosyal medya platformları için dikkat çekici ve etkileşim alan görsel içerikler.</p>
-          </div>
-          <div className="bg-black/20 backdrop-blur-sm p-6 rounded-lg border border-white/10">
-            <h3 className="text-xl font-semibold text-white mb-3">Ambalaj Tasarımı</h3>
-            <p className="text-neutral-400">Ürünlerinizi öne çıkaran, marka değerinizi yansıtan ambalaj tasarımları.</p>
-          </div>
-          <div className="bg-black/20 backdrop-blur-sm p-6 rounded-lg border border-white/10">
-            <h3 className="text-xl font-semibold text-white mb-3">Broşür ve Katalog</h3>
-            <p className="text-neutral-400">Ürün ve hizmetlerinizi en iyi şekilde tanıtan broşür ve katalog tasarımları.</p>
-          </div>
-          <div className="bg-black/20 backdrop-blur-sm p-6 rounded-lg border border-white/10">
-            <h3 className="text-xl font-semibold text-white mb-3">Banner ve Afiş</h3>
-            <p className="text-neutral-400">Dijital ve basılı mecralarda kullanılmak üzere etkili banner ve afiş tasarımları.</p>
-          </div>
-        </div>
-      </div>
+      
     </div>
   );
 };

@@ -44,7 +44,6 @@ export default {
       },
     },
   },
-  darkMode: 'class',
   plugins: [
     addVariablesForColors,
     function ({

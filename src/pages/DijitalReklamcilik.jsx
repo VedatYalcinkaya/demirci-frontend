@@ -30,6 +30,34 @@ const reklamFeatures = [
     ),
     title: "Bütçe Kontrolü",
     description: "Reklam bütçenizi en verimli şekilde kullanarak maksimum geri dönüş sağlıyoruz."
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+      </svg>
+    ),
+    title: "Çoklu Platform",
+    description: "Google, Facebook, Instagram, LinkedIn ve YouTube gibi çeşitli platformlarda reklam yönetimi yapıyoruz."
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
+      </svg>
+    ),
+    title: "Detaylı Analiz",
+    description: "Kampanya sonuçlarını detaylı raporlar ve analizlerle sunarak stratejilerinizi geliştirmenize yardımcı oluyoruz."
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+      </svg>
+    ),
+    title: "Anahtar Kelime Optimizasyonu",
+    description: "En etkili anahtar kelimeleri belirleyerek reklam kampanyalarınızın verimliliğini artırıyoruz."
   }
 ];
 
@@ -82,35 +110,6 @@ const DijitalReklamcilik = () => {
       {/* Özellikler */}
       <Features features={reklamFeatures} iconColor="red" />
 
-      {/* Hizmetler */}
-      <div className="container mx-auto px-4 mb-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-black/20 backdrop-blur-sm p-6 rounded-lg border border-white/10">
-            <h3 className="text-xl font-semibold text-white mb-3">Google Ads</h3>
-            <p className="text-neutral-400">Arama ağı, görüntülü reklam ağı ve YouTube reklamları ile hedef kitlenize ulaşın.</p>
-          </div>
-          <div className="bg-black/20 backdrop-blur-sm p-6 rounded-lg border border-white/10">
-            <h3 className="text-xl font-semibold text-white mb-3">Facebook & Instagram Ads</h3>
-            <p className="text-neutral-400">Sosyal medya platformlarında etkili ve hedefli reklam kampanyaları.</p>
-          </div>
-          <div className="bg-black/20 backdrop-blur-sm p-6 rounded-lg border border-white/10">
-            <h3 className="text-xl font-semibold text-white mb-3">LinkedIn Reklamları</h3>
-            <p className="text-neutral-400">B2B pazarlama için profesyonel ağda hedefli reklam stratejileri.</p>
-          </div>
-          <div className="bg-black/20 backdrop-blur-sm p-6 rounded-lg border border-white/10">
-            <h3 className="text-xl font-semibold text-white mb-3">Remarketing</h3>
-            <p className="text-neutral-400">Sitenizi ziyaret eden kullanıcılara yeniden ulaşarak dönüşüm oranlarını artırın.</p>
-          </div>
-          <div className="bg-black/20 backdrop-blur-sm p-6 rounded-lg border border-white/10">
-            <h3 className="text-xl font-semibold text-white mb-3">Performans Analizi</h3>
-            <p className="text-neutral-400">Reklam kampanyalarının performansını analiz ederek sürekli optimizasyon.</p>
-          </div>
-          <div className="bg-black/20 backdrop-blur-sm p-6 rounded-lg border border-white/10">
-            <h3 className="text-xl font-semibold text-white mb-3">Reklam Metni Oluşturma</h3>
-            <p className="text-neutral-400">Dönüşüm odaklı, etkileyici reklam metinleri ve görselleri hazırlama.</p>
-          </div>
-        </div>
-      </div>
 
       {/* Platformlar */}
       <div className="container mx-auto px-4 mb-20">

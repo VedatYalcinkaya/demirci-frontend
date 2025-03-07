@@ -30,6 +30,33 @@ const pazaryeriFeatures = [
     ),
     title: "Optimum Fiyatlandırma",
     description: "Kâr marjınızı maksimize edecek fiyatlandırma stratejileri geliştiriyoruz."
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+      </svg>
+    ),
+    title: "Hedefli Reklamlar",
+    description: "Pazaryeri içi reklam kampanyaları ile potansiyel müşterilere ulaşmanızı sağlıyoruz."
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+      </svg>
+    ),
+    title: "Veri Analizi",
+    description: "Satış verilerinizi analiz ederek pazaryeri stratejinizi sürekli iyileştiriyoruz."
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+      </svg>
+    ),
+    title: "Mağaza Optimizasyonu",
+    description: "Pazaryeri mağazanızın görünürlüğünü ve satış performansını artıracak optimizasyonlar yapıyoruz."
   }
 ];
 
@@ -82,35 +109,6 @@ const SanalPazaryeri = () => {
       {/* Özellikler */}
       <Features features={pazaryeriFeatures} iconColor="purple" />
 
-      {/* Hizmetler */}
-      <div className="container mx-auto px-4 mb-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-black/20 backdrop-blur-sm p-6 rounded-lg border border-white/10">
-            <h3 className="text-xl font-semibold text-white mb-3">Mağaza Kurulumu</h3>
-            <p className="text-neutral-400">Popüler pazaryerlerinde profesyonel mağaza kurulumu ve optimizasyonu.</p>
-          </div>
-          <div className="bg-black/20 backdrop-blur-sm p-6 rounded-lg border border-white/10">
-            <h3 className="text-xl font-semibold text-white mb-3">Ürün Listeleme</h3>
-            <p className="text-neutral-400">SEO uyumlu, dikkat çekici ve satış odaklı ürün içerikleri oluşturma.</p>
-          </div>
-          <div className="bg-black/20 backdrop-blur-sm p-6 rounded-lg border border-white/10">
-            <h3 className="text-xl font-semibold text-white mb-3">Fiyatlandırma Stratejisi</h3>
-            <p className="text-neutral-400">Rekabetçi ve kârlı fiyatlandırma stratejileri geliştirme.</p>
-          </div>
-          <div className="bg-black/20 backdrop-blur-sm p-6 rounded-lg border border-white/10">
-            <h3 className="text-xl font-semibold text-white mb-3">Reklam Yönetimi</h3>
-            <p className="text-neutral-400">Pazaryeri içi reklam kampanyalarının oluşturulması ve yönetimi.</p>
-          </div>
-          <div className="bg-black/20 backdrop-blur-sm p-6 rounded-lg border border-white/10">
-            <h3 className="text-xl font-semibold text-white mb-3">Performans Analizi</h3>
-            <p className="text-neutral-400">Satış ve ziyaretçi verilerinin analizi, raporlama ve iyileştirme önerileri.</p>
-          </div>
-          <div className="bg-black/20 backdrop-blur-sm p-6 rounded-lg border border-white/10">
-            <h3 className="text-xl font-semibold text-white mb-3">Müşteri Hizmetleri</h3>
-            <p className="text-neutral-400">Etkili müşteri hizmetleri yönetimi ve müşteri memnuniyeti stratejileri.</p>
-          </div>
-        </div>
-      </div>
 
       {/* Pazaryerleri */}
       <div className="container mx-auto px-4 mb-20">

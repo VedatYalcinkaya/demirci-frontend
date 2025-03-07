@@ -30,6 +30,33 @@ const eCommerceFeatures = [
     ),
     title: "Detaylı Raporlama",
     description: "Satış, ziyaretçi ve stok verilerinizi analiz ederek işletmenizi büyütmenize yardımcı oluyoruz."
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+      </svg>
+    ),
+    title: "Entegre Lojistik",
+    description: "Kargo firmaları ve lojistik süreçlerle tam entegrasyon sağlayarak teslimat süreçlerinizi optimize ediyoruz."
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      </svg>
+    ),
+    title: "SEO Optimizasyonu",
+    description: "E-ticaret sitenizin arama motorlarında üst sıralarda yer almasını sağlayan SEO çalışmaları yapıyoruz."
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+      </svg>
+    ),
+    title: "Dijital Pazarlama",
+    description: "E-ticaret siteniz için özel dijital pazarlama stratejileri geliştirerek satışlarınızı artırıyoruz."
   }
 ];
 
@@ -82,35 +109,6 @@ const ETicaret = () => {
       {/* Özellikler */}
       <Features features={eCommerceFeatures} iconColor="orange" />
 
-      {/* Hizmetler */}
-      <div className="container mx-auto px-4 mb-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-black/20 backdrop-blur-sm p-6 rounded-lg border border-white/10">
-            <h3 className="text-xl font-semibold text-white mb-3">E-Ticaret Site Kurulumu</h3>
-            <p className="text-neutral-400">WooCommerce, Shopify, Magento gibi platformlarda profesyonel e-ticaret sitesi kurulumu.</p>
-          </div>
-          <div className="bg-black/20 backdrop-blur-sm p-6 rounded-lg border border-white/10">
-            <h3 className="text-xl font-semibold text-white mb-3">Ödeme Sistemleri</h3>
-            <p className="text-neutral-400">Güvenli ve çok yönlü ödeme sistemlerinin entegrasyonu ve yönetimi.</p>
-          </div>
-          <div className="bg-black/20 backdrop-blur-sm p-6 rounded-lg border border-white/10">
-            <h3 className="text-xl font-semibold text-white mb-3">Stok Yönetimi</h3>
-            <p className="text-neutral-400">Etkili stok yönetimi sistemleri ve otomatik stok takibi çözümleri.</p>
-          </div>
-          <div className="bg-black/20 backdrop-blur-sm p-6 rounded-lg border border-white/10">
-            <h3 className="text-xl font-semibold text-white mb-3">Kargo ve Lojistik</h3>
-            <p className="text-neutral-400">Kargo firmaları entegrasyonu ve lojistik süreçlerin optimizasyonu.</p>
-          </div>
-          <div className="bg-black/20 backdrop-blur-sm p-6 rounded-lg border border-white/10">
-            <h3 className="text-xl font-semibold text-white mb-3">SEO Optimizasyonu</h3>
-            <p className="text-neutral-400">E-ticaret sitesi için özel SEO stratejileri ve arama motoru optimizasyonu.</p>
-          </div>
-          <div className="bg-black/20 backdrop-blur-sm p-6 rounded-lg border border-white/10">
-            <h3 className="text-xl font-semibold text-white mb-3">Müşteri Deneyimi</h3>
-            <p className="text-neutral-400">Kullanıcı dostu arayüz tasarımı ve müşteri deneyimini iyileştirme çözümleri.</p>
-          </div>
-        </div>
-      </div>
 
       {/* İstatistikler */}
       <div className="container mx-auto px-4 mb-20">
