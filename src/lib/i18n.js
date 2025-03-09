@@ -3,9 +3,9 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
 // Dil dosyalarını içe aktarıyoruz
-import translationTR from '../locales/tr/translation.json';
-import translationEN from '../locales/en/translation.json';
-import translationDE from '../locales/de/translation.json';
+import translationTR from '../locales/tr/tr-translation.json';
+import translationEN from '../locales/en/en-translation.json';
+import translationDE from '../locales/de/de-translation.json';
 
 // Kullanılabilir diller
 export const languages = {

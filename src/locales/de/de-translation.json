@@ -396,5 +396,94 @@
         "description": "Einfluss der Kundenerfahrung auf die Markentreue"
       }
     }
+  },
+  "aboutPage": {
+    "whoWeAre": {
+      "title": "Wer Wir Sind",
+      "subtitle": "Führendes Team in der digitalen Welt",
+      "description": "Seit 2015 arbeiten wir daran, Unternehmen in der digitalen Welt Mehrwert zu bieten. Mit unserem erfahrenen Team und innovativen Ansatz sind wir ein vertrauenswürdiger Lösungspartner auf der digitalen Transformationsreise unserer Kunden.",
+      "values": {
+        "title": "Unsere Werte",
+        "innovation": {
+          "title": "Innovation",
+          "description": "Wir verfolgen die neuesten Technologien und Trends, um unseren Kunden stets die besten Lösungen zu bieten."
+        },
+        "quality": {
+          "title": "Qualität",
+          "description": "Wir halten in allen unseren Projekten die höchsten Qualitätsstandards ein und arbeiten mit einem perfektionistischen Ansatz."
+        },
+        "customerFocus": {
+          "title": "Kundenorientierung",
+          "description": "Wir verstehen die Bedürfnisse unserer Kunden bestmöglich und entwickeln maßgeschneiderte Lösungen für sie."
+        },
+        "transparency": {
+          "title": "Transparenz",
+          "description": "Wir pflegen eine offene und ehrliche Kommunikation in allen unseren Geschäftsprozessen."
+        }
+      }
+    },
+    "visionMission": {
+      "title": "Vision & Mission",
+      "vision": {
+        "title": "Unsere Vision",
+        "description": "Als globales Technologieunternehmen in der digitalen Transformation der bevorzugte Lösungspartner in den digitalen Erfolgsgeschichten von Unternehmen zu werden."
+      },
+      "mission": {
+        "title": "Unsere Mission",
+        "description": "Unternehmen durch innovative Technologien und kreative Lösungen zu nachhaltigem Erfolg in der digitalen Welt zu verhelfen."
+      },
+      "goals": {
+        "title": "Unsere Ziele",
+        "items": [
+          "Die digitale Präsenz unserer Kunden stärken",
+          "Mehrwert durch innovative Technologien schaffen",
+          "Nachhaltiges Wachstum sicherstellen",
+          "Ein wichtiger Akteur im globalen Markt werden"
+        ]
+      }
+    },
+    "timeline": {
+      "title": "Unsere Reise",
+      "foundation": {
+        "year": "2015",
+        "title": "Gründung",
+        "description": "Demirci Software wurde mit dem Ziel gegründet, Unternehmen in der digitalen Welt Mehrwert zu bieten."
+      },
+      "growth": {
+        "year": "2017",
+        "title": "Wachstum",
+        "description": "Unser Team hat sich erweitert und wir haben unser Dienstleistungsportfolio diversifiziert."
+      },
+      "international": {
+        "year": "2019",
+        "title": "Internationale Projekte",
+        "description": "Wir sind in den globalen Markt eingetreten, indem wir unsere ersten internationalen Projekte umgesetzt haben."
+      },
+      "innovation": {
+        "year": "2022",
+        "title": "Technologische Innovationen",
+        "description": "Wir haben unser Dienstleistungsspektrum durch die Entwicklung von KI- und Datenanalyselösungen erweitert."
+      },
+      "today": {
+        "year": "2024",
+        "title": "Heute",
+        "description": "Wir schaffen weiterhin Mehrwert für unsere Kunden mit unserem erfahrenen Team und innovativen Ansatz."
+      }
+    },
+    "principles": {
+      "title": "Unsere Grundprinzipien",
+      "reliability": {
+        "title": "Zuverlässigkeit",
+        "description": "Wir verfolgen einen ehrlichen und transparenten Ansatz gegenüber unseren Kunden und halten unsere Versprechen."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Wir verfolgen technologische Entwicklungen genau und bieten unseren Kunden die innovativsten Lösungen."
+      },
+      "collaboration": {
+        "title": "Zusammenarbeit",
+        "description": "Wir arbeiten eng mit unseren Kunden zusammen, um ihre Bedürfnisse bestmöglich zu erfüllen."
+      }
+    }
   }
 } 

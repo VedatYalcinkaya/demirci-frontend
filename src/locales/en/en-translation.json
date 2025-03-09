@@ -396,5 +396,94 @@
         "description": "Impact of customer experience on brand loyalty"
       }
     }
+  },
+  "aboutPage": {
+    "whoWeAre": {
+      "title": "Who We Are",
+      "subtitle": "Leading Team in the Digital World",
+      "description": "Since 2015, we have been working to add value to businesses in the digital world. With our experienced team and innovative approach, we serve as a trusted solution partner in our customers' digital transformation journey.",
+      "values": {
+        "title": "Our Values",
+        "innovation": {
+          "title": "Innovation",
+          "description": "We follow the latest technologies and trends to always provide the best solutions to our customers."
+        },
+        "quality": {
+          "title": "Quality",
+          "description": "We maintain the highest quality standards in all our projects, working with a perfectionist approach."
+        },
+        "customerFocus": {
+          "title": "Customer Focus",
+          "description": "We understand our customers' needs in the best way and develop customized solutions for them."
+        },
+        "transparency": {
+          "title": "Transparency",
+          "description": "We embrace open and honest communication in all our business processes."
+        }
+      }
+    },
+    "visionMission": {
+      "title": "Vision & Mission",
+      "vision": {
+        "title": "Our Vision",
+        "description": "To become the preferred solution partner in businesses' digital success stories as a global technology company in digital transformation."
+      },
+      "mission": {
+        "title": "Our Mission",
+        "description": "To enable businesses to achieve sustainable success in the digital world through innovative technologies and creative solutions."
+      },
+      "goals": {
+        "title": "Our Goals",
+        "items": [
+          "Strengthen our customers' digital presence",
+          "Create value with innovative technologies",
+          "Ensure sustainable growth",
+          "Become a key player in the global market"
+        ]
+      }
+    },
+    "timeline": {
+      "title": "Our Journey",
+      "foundation": {
+        "year": "2015",
+        "title": "Foundation",
+        "description": "Demirci Software was founded with the aim of adding value to businesses in the digital world."
+      },
+      "growth": {
+        "year": "2017",
+        "title": "Growth",
+        "description": "Our team expanded and we diversified our service portfolio."
+      },
+      "international": {
+        "year": "2019",
+        "title": "International Projects",
+        "description": "We stepped into the global market by implementing our first international projects."
+      },
+      "innovation": {
+        "year": "2022",
+        "title": "Technological Innovations",
+        "description": "We expanded our service range by developing artificial intelligence and data analysis solutions."
+      },
+      "today": {
+        "year": "2024",
+        "title": "Today",
+        "description": "We continue to add value to our customers with our experienced team and innovative approach."
+      }
+    },
+    "principles": {
+      "title": "Our Core Principles",
+      "reliability": {
+        "title": "Reliability",
+        "description": "We adopt an honest and transparent approach to our customers and keep our promises."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "We closely follow technological developments and offer our customers the most innovative solutions."
+      },
+      "collaboration": {
+        "title": "Collaboration",
+        "description": "We work in close collaboration with our customers to meet their needs in the best way possible."
+      }
+    }
   }
 } 

@@ -396,5 +396,94 @@
         "description": "Müşteri deneyiminin marka sadakatine etkisi"
       }
     }
+  },
+  "aboutPage": {
+    "whoWeAre": {
+      "title": "Biz Kimiz",
+      "subtitle": "Dijital Dünyanın Öncü Ekibi",
+      "description": "2015 yılından bu yana, dijital dünyada işletmelere değer katmak için çalışıyoruz. Deneyimli ekibimiz ve yenilikçi yaklaşımımızla, müşterilerimizin dijital dönüşüm yolculuğunda güvenilir bir çözüm ortağı olarak yer alıyoruz.",
+      "values": {
+        "title": "Değerlerimiz",
+        "innovation": {
+          "title": "Yenilikçilik",
+          "description": "En son teknolojileri ve trendleri takip ederek, müşterilerimize her zaman en iyi çözümleri sunuyoruz."
+        },
+        "quality": {
+          "title": "Kalite",
+          "description": "Her projemizde en yüksek kalite standartlarını gözetiyor, mükemmeliyetçi yaklaşımımızla çalışıyoruz."
+        },
+        "customerFocus": {
+          "title": "Müşteri Odaklılık",
+          "description": "Müşterilerimizin ihtiyaçlarını en iyi şekilde anlıyor ve onlara özel çözümler geliştiriyoruz."
+        },
+        "transparency": {
+          "title": "Şeffaflık",
+          "description": "Tüm iş süreçlerimizde açık ve dürüst iletişimi benimsiyoruz."
+        }
+      }
+    },
+    "visionMission": {
+      "title": "Vizyon & Misyon",
+      "vision": {
+        "title": "Vizyonumuz",
+        "description": "Dijital dönüşümde global bir teknoloji şirketi olarak, işletmelerin dijital başarı hikayelerinde tercih edilen çözüm ortağı olmak."
+      },
+      "mission": {
+        "title": "Misyonumuz",
+        "description": "Yenilikçi teknolojiler ve yaratıcı çözümlerle işletmelerin dijital dünyada sürdürülebilir başarı elde etmelerini sağlamak."
+      },
+      "goals": {
+        "title": "Hedeflerimiz",
+        "items": [
+          "Müşterilerimizin dijital varlıklarını güçlendirmek",
+          "Yenilikçi teknolojilerle değer yaratmak",
+          "Sürdürülebilir büyüme sağlamak",
+          "Global pazarda söz sahibi olmak"
+        ]
+      }
+    },
+    "timeline": {
+      "title": "Yolculuğumuz",
+      "foundation": {
+        "year": "2015",
+        "title": "Kuruluş",
+        "description": "Demirci Yazılım, dijital dünyada işletmelere değer katmak amacıyla kuruldu."
+      },
+      "growth": {
+        "year": "2017",
+        "title": "Büyüme",
+        "description": "Ekibimiz genişledi ve hizmet yelpazemizi çeşitlendirdik."
+      },
+      "international": {
+        "year": "2019",
+        "title": "Uluslararası Projeler",
+        "description": "İlk uluslararası projelerimizi hayata geçirerek global pazara adım attık."
+      },
+      "innovation": {
+        "year": "2022",
+        "title": "Teknoloji Yenilikleri",
+        "description": "Yapay zeka ve veri analizi çözümlerimizi geliştirerek hizmet yelpazemizi genişlettik."
+      },
+      "today": {
+        "year": "2024",
+        "title": "Bugün",
+        "description": "Deneyimli ekibimiz ve yenilikçi yaklaşımımızla müşterilerimize değer katmaya devam ediyoruz."
+      }
+    },
+    "principles": {
+      "title": "Temel İlkelerimiz",
+      "reliability": {
+        "title": "Güvenilirlik",
+        "description": "Müşterilerimize karşı her zaman dürüst ve şeffaf bir yaklaşım benimsiyor, verdiğimiz sözleri tutuyoruz."
+      },
+      "innovation": {
+        "title": "Yenilikçilik",
+        "description": "Teknolojik gelişmeleri yakından takip ediyor, müşterilerimize en yenilikçi çözümleri sunuyoruz."
+      },
+      "collaboration": {
+        "title": "İşbirliği",
+        "description": "Müşterilerimizle yakın işbirliği içinde çalışarak, onların ihtiyaçlarını en iyi şekilde karşılıyoruz."
+      }
+    }
   }
 } 
