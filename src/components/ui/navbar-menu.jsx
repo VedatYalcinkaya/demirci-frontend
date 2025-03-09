@@ -16,10 +16,11 @@ export const MenuItem = ({
   setActive,
   active,
   item,
-  children
+  children,
+  className
 }) => {
   return (
-    (<div onMouseEnter={() => setActive(item)} className="relative ">
+    (<div onMouseEnter={() => setActive(item)} className={`relative ${className || ''}`}>
       <motion.p
         transition={{ duration: 0.3 }}
         className="cursor-pointer hover:opacity-[0.9] text-white">
@@ -93,15 +94,14 @@ export const ProductItem = ({
   );
 };
 
-export const HoveredLink = ({
-  children,
-  ...rest
-}) => {
+export const HoveredLink = ({ children, to, ...rest }) => {
   return (
-    (<Link
+    <Link
+      to={to}
       {...rest}
-      className="text-neutral-200 hover:text-black ">
+      className="text-neutral-200 hover:text-white transition-all duration-300 hover:font-medium"
+    >
       {children}
-    </Link>)
+    </Link>
   );
 };

@@ -2,16 +2,13 @@
 import React from "react";
 import { FlipWords } from "./ui/flip-words";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export function HeroSection() {
-  const words = [
-    "Web",
-    "SEO",
-    "Mobil",
-    "Logo",
-    "Marka",
-    "Reklam",
-  ];
+  const { t } = useTranslation();
+  
+  // Çeviri dosyasından kelimeleri al
+  const words = t('hero.flipWords', { returnObjects: true });
 
   return (
     <div className="min-h-[50vh] md:min-h-[50vh] flex flex-col justify-center items-center px-4 py-20">
@@ -23,7 +20,7 @@ export function HeroSection() {
       >
         <div className="flex flex-col items-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight sm:leading-tight md:leading-tight lg:leading-tight mb-2 sm:mb-3 md:mb-4">
-            <span className="text-neutral-400">Fikir Sizden,</span>
+            <span className="text-neutral-400">{t('hero.ideaFromYou')}</span>
           </h1>
           
           <div className="h-[45px] sm:h-[45px] md:h-[55px] lg:h-[70px] flex items-center justify-center mb-2 sm:mb-3 md:mb-4">
@@ -34,12 +31,12 @@ export function HeroSection() {
           </div>
           
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-400">
-            Bizden.
+            {t('hero.fromUs')}
           </h1>
         </div>
         
         <p className="text-neutral-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mt-4 sm:mt-6 md:mt-8 px-4">
-          Dijital dünyada markanızı öne çıkaracak yaratıcı çözümler sunuyoruz.
+          {t('hero.subtitle')}
         </p>
       </motion.div>
     </div>

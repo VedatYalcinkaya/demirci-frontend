@@ -52,23 +52,7 @@ export const Timeline = ({
         </div>
 
         <div className="max-w-7xl mx-auto pt-10 px-4 md:px-8 lg:px-10 relative">
-          <motion.div
-            initial={{ opacity: 0.5, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              delay: 0.3,
-              duration: 0.8,
-              ease: "easeInOut",
-            }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Çalışma Sürecimiz
-            </h2>
-            <p className="text-neutral-300 text-sm md:text-base max-w-2xl mx-auto">
-              Projelerinizi hayata geçirirken izlediğimiz profesyonel süreç
-            </p>
-          </motion.div>
+          {/* Başlık bölümünü kaldırıyoruz */}
         </div>
       </div>
 

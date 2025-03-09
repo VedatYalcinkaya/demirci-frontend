@@ -1,0 +1,400 @@
+{
+  "navbar": {
+    "home": "Startseite",
+    "services": "Dienstleistungen",
+    "about": "Über Uns",
+    "contact": "Kontakt",
+    "blog": "Blog",
+    "references": "Referenzen",
+    "dropdown": {
+      "services": {
+        "webDesign": "Webdesign",
+        "graphicDesign": "Grafikdesign",
+        "marketplace": "Virtueller Marktplatz",
+        "eCommerce": "E-Commerce-Beratung",
+        "digitalAdvertising": "Digitale Werbung",
+        "ai": "Datenanalyse & KI"
+      },
+      "references": {
+        "eCommerce": "E-Commerce-Projekte",
+        "corporate": "Unternehmenswebsites",
+        "mobile": "Mobile Anwendungen",
+        "software": "Individuelle Softwareprojekte",
+        "eCommerceDesc": "Erfolgreich abgeschlossene E-Commerce-Projekte.",
+        "corporateDesc": "Websites für unsere Unternehmenskunden.",
+        "mobileDesc": "Anwendungen für iOS- und Android-Plattformen.",
+        "softwareDesc": "Individuelle Softwarelösungen für unsere Kunden."
+      },
+      "about": {
+        "whoWeAre": "Wer Wir Sind",
+        "visionMission": "Vision & Mission",
+        "team": "Unser Team",
+        "technologies": "Verwendete Technologien"
+      },
+      "contact": {
+        "contactUs": "Kontaktieren Sie Uns",
+        "getQuote": "Angebot Anfordern",
+        "career": "Karriere",
+        "faq": "FAQ"
+      },
+      "blog": {
+        "technology": "Technologie",
+        "design": "Design",
+        "marketing": "Marketing",
+        "ai": "Künstliche Intelligenz"
+      }
+    }
+  },
+  "services": {
+    "title": "Professionelle Lösungen für jeden Bedarf",
+    "subtitle": "Wir sind in jedem Bereich der digitalen Welt für Sie da, vom Webdesign bis zur künstlichen Intelligenz",
+    "webDesign": {
+      "title": "WEBDESIGN",
+      "description": "Mit unseren maßgeschneiderten und professionellen Webdesign-Dienstleistungen gestalten wir ästhetische und benutzerfreundliche Websites, die Ihr Unternehmen in der digitalen Welt am besten repräsentieren."
+    },
+    "graphicDesign": {
+      "title": "GRAFIKDESIGN",
+      "description": "Wir bieten Logo-, Corporate Identity- und digitale Designlösungen an, die Ihre Marke hervorheben."
+    },
+    "marketplace": {
+      "title": "VIRTUELLER MARKTPLATZ",
+      "description": "Erweitern Sie Ihr Geschäft und erschließen Sie neue Märkte mit Multi-Vendor-E-Commerce-Plattformen."
+    },
+    "eCommerce": {
+      "title": "E-COMMERCE",
+      "description": "Steigern Sie Ihren Umsatz mit benutzerfreundlichen, sicheren und leistungsstarken E-Commerce-Websites."
+    },
+    "digitalAdvertising": {
+      "title": "DIGITALE WERBUNG",
+      "description": "Wir entwickeln effektive digitale Werbestrategien, die Ihnen helfen, Ihre Zielgruppe zu erreichen."
+    },
+    "ai": {
+      "title": "KÜNSTLICHE INTELLIGENZ",
+      "description": "Steigern Sie Ihre Effizienz mit KI-Lösungen, die Ihr Unternehmen einen Schritt weiter bringen."
+    },
+    "viewDetails": "Details Anzeigen"
+  },
+  "hero": {
+    "title": "Professionelle Lösungen in der digitalen Welt",
+    "subtitle": "Mit unserem breiten Spektrum an Dienstleistungen vom Webdesign bis zur künstlichen Intelligenz lassen wir Ihr Unternehmen in der digitalen Welt herausstechen.",
+    "cta": "Entdecken Sie unsere Dienstleistungen",
+    "ideaFromYou": "Ihre Idee,",
+    "fromUs": "Unsere Umsetzung.",
+    "flipWords": ["Web", "SEO", "Mobil", "Logo", "Marke", "Werbung"]
+  },
+  "footer": {
+    "description": "Wir bieten kreative Lösungen an, die Ihre Marke in der digitalen Welt hervorheben.",
+    "services": "Unsere Dienstleistungen",
+    "corporate": "Unternehmen",
+    "contact": "Kontakt",
+    "copyright": "© {{year}} Demirci Software. Alle Rechte vorbehalten."
+  },
+  "features": {
+    "responsive": {
+      "title": "Responsives Design",
+      "description": "Wir gestalten mobilfreundliche Websites, die auf allen Geräten perfekt aussehen."
+    },
+    "fast": {
+      "title": "Schnelles Laden",
+      "description": "Wir entwickeln schnell ladende Websites mit optimierter Codierung."
+    },
+    "seo": {
+      "title": "SEO-Freundlich",
+      "description": "Wir erstellen SEO-kompatible Websites, die Ihnen helfen, in Suchmaschinen hoch zu ranken."
+    },
+    "customizable": {
+      "title": "Anpassbares Design",
+      "description": "Wir bieten anpassbare Webdesigns an, die auf Ihre Bedürfnisse und Markenidentität zugeschnitten sind."
+    }
+  },
+  "language": {
+    "select": "Sprache Auswählen"
+  },
+  "webDesignPage": {
+    "title": "Modernes Webdesign",
+    "subtitle": "Lösungen",
+    "description": "Wir gestalten moderne und benutzerfreundliche Websites, die Ihre Marke in der digitalen Welt am besten repräsentieren.",
+    "cta": "Angebot Anfordern",
+    "features": {
+      "responsive": {
+        "title": "Responsives Design",
+        "description": "Wir gestalten mobilfreundliche Websites, die auf allen Geräten perfekt aussehen."
+      },
+      "fast": {
+        "title": "Schnelles Laden",
+        "description": "Wir entwickeln schnell ladende Websites mit optimierter Codierung."
+      },
+      "seo": {
+        "title": "SEO-Freundlich",
+        "description": "Wir erstellen SEO-kompatible Websites, die Ihnen helfen, in Suchmaschinen hoch zu ranken."
+      },
+      "customizable": {
+        "title": "Anpassbares Design",
+        "description": "Wir bieten anpassbare Webdesigns an, die auf Ihre Bedürfnisse und Markenidentität zugeschnitten sind."
+      },
+      "secure": {
+        "title": "Sichere Infrastruktur",
+        "description": "Wir entwickeln sichere Websites, die mit SSL-Zertifikaten und Sicherheitsmaßnahmen geschützt sind."
+      },
+      "support": {
+        "title": "24/7 Support",
+        "description": "Wir bieten 24/7 technischen Support für alle Fragen zu Ihrer Website."
+      }
+    },
+    "timeline": {
+      "title": "Unser Arbeitsprozess",
+      "subtitle": "Der professionelle Prozess, dem wir bei der Umsetzung Ihrer Projekte folgen",
+      "step1": {
+        "title": "Analyse und Planung",
+        "description": "Wir analysieren Ihre Bedürfnisse und bestimmen eine für Ihre Ziele geeignete Strategie.",
+        "analysis": {
+          "title": "Zielanalyse",
+          "description": "Wir bestimmen die Ziele Ihres Projekts und Ihre Zielgruppe."
+        },
+        "content": {
+          "title": "Content-Strategie",
+          "description": "Wir erstellen die Inhaltsstruktur und -strategie Ihrer Website."
+        }
+      },
+      "step2": {
+        "title": "Design",
+        "description": "Wir erstellen einzigartige Designs, die Ihre Marke im Einklang mit modernen Trends widerspiegeln.",
+        "uiux": {
+          "title": "UI/UX Design",
+          "description": "Schnittstellendesigns, die die Benutzererfahrung priorisieren."
+        },
+        "responsive": {
+          "title": "Responsives Design",
+          "description": "Designs, die auf allen Geräten perfekt aussehen."
+        }
+      },
+      "step3": {
+        "title": "Entwicklung",
+        "description": "Wir entwickeln sichere und leistungsstarke Websites mit den neuesten Technologien.",
+        "tech": {
+          "title": "Moderne Technologien",
+          "description": "Wir verwenden moderne Frameworks wie React, Next.js."
+        },
+        "seo": {
+          "title": "SEO-Optimierung",
+          "description": "Für Suchmaschinen optimierte Codierung."
+        }
+      },
+      "step4": {
+        "title": "Testen und Launch",
+        "description": "Wir starten Ihre Website nach umfassenden Tests und bieten Support.",
+        "quality": {
+          "title": "Qualitätskontrolle",
+          "description": "Detaillierte Testprozesse und Fehlerbehebung."
+        },
+        "support": {
+          "title": "Kontinuierlicher Support",
+          "description": "Technischer Support und Wartungsdienste nach dem Launch."
+        }
+      }
+    }
+  },
+  "graphicDesignPage": {
+    "title": "Kreatives Grafikdesign",
+    "subtitle": "Lösungen",
+    "description": "Wir bieten kreative und beeindruckende Grafikdesign-Lösungen an, die Ihre Markenidentität stärken.",
+    "cta": "Angebot Anfordern",
+    "features": {
+      "creative": {
+        "title": "Kreatives Design",
+        "description": "Wir erstellen einzigartige und kreative Designs, die Ihre Marke am besten widerspiegeln."
+      },
+      "brandConsistency": {
+        "title": "Markenkonsistenz",
+        "description": "Wir spiegeln Ihre Markenidentität konsequent in all Ihren Designs wider."
+      },
+      "corporateIdentity": {
+        "title": "Unternehmensidentität",
+        "description": "Wir gestalten und drucken Ihre Corporate Identity mit Visitenkarten, Broschüren, Plakaten und sämtlichen Druckmaterialien."
+      },
+      "highQuality": {
+        "title": "Hohe Qualität",
+        "description": "Wir bieten hochauflösende Designs für alle Arten von Print- und digitalen Medien an."
+      },
+      "targetAudience": {
+        "title": "Zielgruppenorientiert",
+        "description": "Wir erstellen auffällige und beeindruckende Designs, die für Ihre Zielgruppe geeignet sind."
+      },
+      "unlimitedRevision": {
+        "title": "Unbegrenzte Revision",
+        "description": "Wir bieten unbegrenzte Revisionsmöglichkeiten an, bis Sie vollständig zufrieden sind."
+      }
+    }
+  },
+  "marketplacePage": {
+    "title": "Virtueller Marktplatz",
+    "subtitle": "Beratung",
+    "description": "Wir bieten Beratungsdienste an, um Ihnen zum Erfolg auf beliebten virtuellen Marktplätzen wie Amazon, eBay und Etsy zu verhelfen.",
+    "cta": "Angebot Anfordern",
+    "features": {
+      "wideCustomerBase": {
+        "title": "Breite Kundenbasis",
+        "description": "Steigern Sie Ihren Umsatz, indem Sie Ihre Produkte auf Marktplätzen mit Millionen aktiver Nutzer präsentieren."
+      },
+      "competitionAnalysis": {
+        "title": "Wettbewerbsanalyse",
+        "description": "Wir helfen Ihnen, sich auf dem Markt abzuheben, indem wir die Strategien Ihrer Wettbewerber analysieren."
+      },
+      "optimalPricing": {
+        "title": "Optimale Preisgestaltung",
+        "description": "Wir entwickeln Preisstrategien, die Ihre Gewinnmarge maximieren."
+      },
+      "targetedAds": {
+        "title": "Gezielte Werbung",
+        "description": "Wir helfen Ihnen, potenzielle Kunden mit Werbekampagnen innerhalb des Marktplatzes zu erreichen."
+      },
+      "dataAnalysis": {
+        "title": "Datenanalyse",
+        "description": "Wir verbessern Ihre Marktplatzstrategie kontinuierlich, indem wir Ihre Verkaufsdaten analysieren."
+      },
+      "storeOptimization": {
+        "title": "Shop-Optimierung",
+        "description": "Wir nehmen Optimierungen vor, die die Sichtbarkeit und Verkaufsleistung Ihres Marktplatz-Shops erhöhen."
+      }
+    },
+    "marketplaces": {
+      "title": "Marktplätze, mit denen wir arbeiten",
+      "trendyol": "Trendyol",
+      "hepsiburada": "Hepsiburada",
+      "n11": "N11",
+      "amazon": "Amazon",
+      "gittigidiyor": "GittiGidiyor"
+    }
+  },
+  "digitalAdvertisingPage": {
+    "title": "Digitale Werbung",
+    "subtitle": "Dienstleistungen",
+    "description": "Wir erstellen effektive Kampagnen auf Google Ads, Facebook Ads und anderen digitalen Werbeplattformen.",
+    "cta": "Angebot Anfordern",
+    "features": {
+      "targetedAds": {
+        "title": "Gezielte Werbung",
+        "description": "Wir erreichen Ihre potenziellen Kunden mit demografischem, interessenbasiertem und verhaltensbasiertem Targeting."
+      },
+      "performanceTracking": {
+        "title": "Leistungsverfolgung",
+        "description": "Wir bieten Optimierung, indem wir die Leistung Ihrer Werbekampagnen in Echtzeit überwachen."
+      },
+      "budgetControl": {
+        "title": "Budgetkontrolle",
+        "description": "Wir sorgen für maximale Rendite, indem wir Ihr Werbebudget auf die effizienteste Weise einsetzen."
+      },
+      "multiPlatform": {
+        "title": "Multi-Plattform",
+        "description": "Wir verwalten Werbung auf verschiedenen Plattformen wie Google, Facebook, Instagram, LinkedIn und YouTube."
+      },
+      "detailedAnalysis": {
+        "title": "Detaillierte Analyse",
+        "description": "Wir helfen Ihnen, Ihre Strategien zu verbessern, indem wir Kampagnenergebnisse mit detaillierten Berichten und Analysen präsentieren."
+      },
+      "keywordOptimization": {
+        "title": "Keyword-Optimierung",
+        "description": "Wir steigern die Effizienz Ihrer Werbekampagnen, indem wir die effektivsten Keywords identifizieren."
+      }
+    },
+    "platforms": {
+      "title": "Werbeplattformen",
+      "googleAds": "Google Ads",
+      "facebookAds": "Facebook Ads",
+      "instagramAds": "Instagram Ads",
+      "linkedinAds": "LinkedIn Ads",
+      "youtubeAds": "YouTube Ads"
+    }
+  },
+  "aiPage": {
+    "title": "Datenanalyse und",
+    "subtitle": "Künstliche Intelligenz",
+    "description": "Wir bieten KI-gestützte Lösungen an, indem wir die Daten Ihres Unternehmens analysieren.",
+    "cta": "Angebot Anfordern",
+    "features": {
+      "smartSolutions": {
+        "title": "Intelligente Lösungen",
+        "description": "Wir entwickeln KI-gestützte Lösungen, die speziell auf die Bedürfnisse Ihres Unternehmens zugeschnitten sind."
+      },
+      "automatedProcesses": {
+        "title": "Automatisierte Prozesse",
+        "description": "Wir sparen Zeit und Kosten, indem wir Ihre sich wiederholenden Aufgaben automatisieren."
+      },
+      "dataAnalysis": {
+        "title": "Datenanalyse",
+        "description": "Wir liefern wertvolle Erkenntnisse für Ihr Unternehmen, indem wir große Datensätze analysieren."
+      },
+      "chatbotDevelopment": {
+        "title": "Chatbot-Entwicklung",
+        "description": "Wir entwickeln intelligente Chatbots, die mit Ihren Kunden interagieren und ihnen helfen."
+      },
+      "nlp": {
+        "title": "Natürliche Sprachverarbeitung",
+        "description": "Wir entwickeln KI-Systeme, die Texte verstehen, analysieren und darauf reagieren."
+      },
+      "customAiModels": {
+        "title": "Benutzerdefinierte KI-Modelle",
+        "description": "Wir entwickeln benutzerdefinierte KI-Modelle für die spezifischen Bedürfnisse Ihres Unternehmens."
+      }
+    },
+    "technologies": {
+      "title": "Technologien, die wir verwenden",
+      "tensorflow": "TensorFlow",
+      "pytorch": "PyTorch",
+      "python": "Python",
+      "openai": "OpenAI API",
+      "pandas": "Pandas"
+    }
+  },
+  "eCommercePage": {
+    "title": "E-Commerce",
+    "subtitle": "Beratung",
+    "description": "Wir bieten professionelle Beratungsdienste in allen Prozessen vom Aufbau bis zur Verwaltung Ihrer E-Commerce-Website an.",
+    "cta": "Angebot Anfordern",
+    "features": {
+      "securePayment": {
+        "title": "Sichere Zahlung",
+        "description": "Wir bieten Zahlungssystemintegration, die durch die aktuellsten Sicherheitsprotokolle geschützt ist."
+      },
+      "multiplePaymentOptions": {
+        "title": "Mehrere Zahlungsoptionen",
+        "description": "Wir steigern Ihren Umsatz, indem wir verschiedene Zahlungsmethoden wie Kreditkarte, Banküberweisung und Nachnahme anbieten."
+      },
+      "detailedReporting": {
+        "title": "Detaillierte Berichterstattung",
+        "description": "Wir helfen Ihnen, Ihr Unternehmen zu vergrößern, indem wir Ihre Verkaufs-, Besucher- und Bestandsdaten analysieren."
+      },
+      "integratedLogistics": {
+        "title": "Integrierte Logistik",
+        "description": "Wir optimieren Ihre Lieferprozesse, indem wir eine vollständige Integration mit Versandunternehmen und Logistikprozessen bieten."
+      },
+      "seoOptimization": {
+        "title": "SEO-Optimierung",
+        "description": "Wir führen SEO-Arbeiten durch, die sicherstellen, dass Ihre E-Commerce-Website in Suchmaschinen hoch rankt."
+      },
+      "digitalMarketing": {
+        "title": "Digitales Marketing",
+        "description": "Wir steigern Ihren Umsatz, indem wir spezielle digitale Marketingstrategien für Ihre E-Commerce-Website entwickeln."
+      }
+    },
+    "statistics": {
+      "title": "E-Commerce-Erfolgsfaktoren",
+      "mobileShopping": {
+        "value": "68%",
+        "description": "Rate des Einkaufs von mobilen Geräten"
+      },
+      "loadingTime": {
+        "value": "3 Sek",
+        "description": "Maximale Zeit, die Benutzer auf das Laden der Website warten"
+      },
+      "cartAbandonment": {
+        "value": "70%",
+        "description": "Warenkorbabbruchrate"
+      },
+      "customerExperience": {
+        "value": "89%",
+        "description": "Einfluss der Kundenerfahrung auf die Markentreue"
+      }
+    }
+  }
+} 

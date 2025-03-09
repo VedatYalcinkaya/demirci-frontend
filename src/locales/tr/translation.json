@@ -1,0 +1,400 @@
+{
+  "navbar": {
+    "home": "Ana Sayfa",
+    "services": "Hizmetlerimiz",
+    "about": "Hakkımızda",
+    "contact": "İletişim",
+    "blog": "Blog",
+    "references": "Referanslar",
+    "dropdown": {
+      "services": {
+        "webDesign": "Web Tasarım",
+        "graphicDesign": "Grafik Tasarım",
+        "marketplace": "Sanal Pazaryeri",
+        "eCommerce": "E-Ticaret Danışmanlığı",
+        "digitalAdvertising": "Dijital Reklamcılık",
+        "ai": "Veri Analizi ve Yapay Zeka"
+      },
+      "references": {
+        "eCommerce": "E-Ticaret Projeleri",
+        "corporate": "Kurumsal Web Siteleri",
+        "mobile": "Mobil Uygulamalar",
+        "software": "Özel Yazılım Projeleri",
+        "eCommerceDesc": "Başarıyla tamamladığımız e-ticaret projeleri.",
+        "corporateDesc": "Kurumsal müşterilerimiz için geliştirdiğimiz web siteleri.",
+        "mobileDesc": "iOS ve Android platformları için geliştirdiğimiz uygulamalar.",
+        "softwareDesc": "Müşterilerimize özel geliştirdiğimiz yazılım çözümleri."
+      },
+      "about": {
+        "whoWeAre": "Biz Kimiz",
+        "visionMission": "Vizyon & Misyon",
+        "team": "Ekibimiz",
+        "technologies": "Kullandığımız Teknolojiler"
+      },
+      "contact": {
+        "contactUs": "Bize Ulaşın",
+        "getQuote": "Teklif Alın",
+        "career": "Kariyer",
+        "faq": "S.S.S."
+      },
+      "blog": {
+        "technology": "Teknoloji",
+        "design": "Tasarım",
+        "marketing": "Pazarlama",
+        "ai": "Yapay Zeka"
+      }
+    }
+  },
+  "services": {
+    "title": "Her İhtiyaca Profesyonel Çözümler",
+    "subtitle": "Web tasarımdan yapay zekaya, dijital dünyanın her alanında yanınızdayız",
+    "webDesign": {
+      "title": "WEB TASARIM",
+      "description": "Özel ve profesyonel web tasarım hizmetlerimizle, işletmenizi dijital dünyada en iyi şekilde temsil eden estetik ve kullanıcı dostu web siteleri tasarlıyoruz."
+    },
+    "graphicDesign": {
+      "title": "GRAFİK TASARIM",
+      "description": "Markanızı öne çıkaracak logo, kurumsal kimlik ve dijital tasarım çözümleri sunuyoruz."
+    },
+    "marketplace": {
+      "title": "SANAL PAZARYERİ",
+      "description": "Çok satıcılı e-ticaret platformları ile işletmenizi büyütün ve yeni pazarlara açılın."
+    },
+    "eCommerce": {
+      "title": "E-TİCARET",
+      "description": "Kullanıcı dostu, güvenli ve yüksek performanslı e-ticaret siteleri ile satışlarınızı artırın."
+    },
+    "digitalAdvertising": {
+      "title": "DİJİTAL REKLAMCILIK",
+      "description": "Hedef kitlenize ulaşmanızı sağlayacak etkili dijital reklam stratejileri geliştiriyoruz."
+    },
+    "ai": {
+      "title": "YAPAY ZEKA",
+      "description": "İşletmenizi bir adım öne taşıyacak yapay zeka çözümleri ile verimliliğinizi artırın."
+    },
+    "viewDetails": "Detayları Gör"
+  },
+  "hero": {
+    "title": "Dijital Dünyada Profesyonel Çözümler",
+    "subtitle": "Web tasarımdan yapay zekaya kadar geniş hizmet yelpazemizle işletmenizi dijital dünyada öne çıkarıyoruz.",
+    "cta": "Hizmetlerimizi Keşfedin",
+    "ideaFromYou": "Fikir Sizden,",
+    "fromUs": "Bizden.",
+    "flipWords": ["Web", "SEO", "Mobil", "Logo", "Marka", "Reklam"]
+  },
+  "footer": {
+    "description": "Dijital dünyada markanızı öne çıkaracak yaratıcı çözümler sunuyoruz.",
+    "services": "Hizmetlerimiz",
+    "corporate": "Kurumsal",
+    "contact": "İletişim",
+    "copyright": "© {{year}} Demirci Yazılım. Tüm hakları saklıdır."
+  },
+  "features": {
+    "responsive": {
+      "title": "Responsive Tasarım",
+      "description": "Tüm cihazlarda mükemmel görünen, mobil uyumlu web siteleri tasarlıyoruz."
+    },
+    "fast": {
+      "title": "Hızlı Yükleme",
+      "description": "Optimize edilmiş kodlama ile hızlı yüklenen web siteleri geliştiriyoruz."
+    },
+    "seo": {
+      "title": "SEO Dostu",
+      "description": "Arama motorlarında üst sıralarda yer almanızı sağlayan SEO uyumlu siteler oluşturuyoruz."
+    },
+    "customizable": {
+      "title": "Özelleştirilebilir Tasarım",
+      "description": "İhtiyaçlarınıza ve marka kimliğinize uygun özelleştirilebilir web tasarımları sunuyoruz."
+    }
+  },
+  "language": {
+    "select": "Dil Seçin"
+  },
+  "webDesignPage": {
+    "title": "Modern Web Tasarım",
+    "subtitle": "Çözümleri",
+    "description": "Markanızı dijital dünyada en iyi şekilde temsil eden, modern ve kullanıcı dostu web siteleri tasarlıyoruz.",
+    "cta": "Teklif Alın",
+    "features": {
+      "responsive": {
+        "title": "Responsive Tasarım",
+        "description": "Tüm cihazlarda mükemmel görünen, mobil uyumlu web siteleri tasarlıyoruz."
+      },
+      "fast": {
+        "title": "Hızlı Yükleme",
+        "description": "Optimize edilmiş kodlama ile hızlı yüklenen web siteleri geliştiriyoruz."
+      },
+      "seo": {
+        "title": "SEO Dostu",
+        "description": "Arama motorlarında üst sıralarda yer almanızı sağlayan SEO uyumlu siteler oluşturuyoruz."
+      },
+      "customizable": {
+        "title": "Özelleştirilebilir Tasarım",
+        "description": "İhtiyaçlarınıza ve marka kimliğinize uygun özelleştirilebilir web tasarımları sunuyoruz."
+      },
+      "secure": {
+        "title": "Güvenli Altyapı",
+        "description": "SSL sertifikası ve güvenlik önlemleriyle korunan güvenli web siteleri geliştiriyoruz."
+      },
+      "support": {
+        "title": "7/24 Destek",
+        "description": "Web sitenizle ilgili her türlü sorunuzda 7/24 teknik destek hizmeti sunuyoruz."
+      }
+    },
+    "timeline": {
+      "title": "Çalışma Sürecimiz",
+      "subtitle": "Projelerinizi hayata geçirirken izlediğimiz profesyonel süreç",
+      "step1": {
+        "title": "Analiz ve Planlama",
+        "description": "İhtiyaçlarınızı analiz ediyor, hedeflerinize uygun bir strateji belirliyoruz.",
+        "analysis": {
+          "title": "Hedef Analizi",
+          "description": "Projenizin amaçlarını ve hedef kitlenizi belirliyoruz."
+        },
+        "content": {
+          "title": "İçerik Stratejisi",
+          "description": "Web sitenizin içerik yapısını ve stratejisini oluşturuyoruz."
+        }
+      },
+      "step2": {
+        "title": "Tasarım",
+        "description": "Modern trendlere uygun, markanızı yansıtan özgün tasarımlar oluşturuyoruz.",
+        "uiux": {
+          "title": "UI/UX Tasarım",
+          "description": "Kullanıcı deneyimini ön planda tutan arayüz tasarımları."
+        },
+        "responsive": {
+          "title": "Responsive Tasarım",
+          "description": "Tüm cihazlarda mükemmel görünen tasarımlar."
+        }
+      },
+      "step3": {
+        "title": "Geliştirme",
+        "description": "En son teknolojilerle güvenli ve performanslı web siteleri geliştiriyoruz.",
+        "tech": {
+          "title": "Modern Teknolojiler",
+          "description": "React, Next.js gibi modern framework'ler kullanıyoruz."
+        },
+        "seo": {
+          "title": "SEO Optimizasyonu",
+          "description": "Arama motorları için optimize edilmiş kodlama."
+        }
+      },
+      "step4": {
+        "title": "Test ve Yayın",
+        "description": "Kapsamlı testlerden sonra sitenizi yayına alıyor ve destek sağlıyoruz.",
+        "quality": {
+          "title": "Kalite Kontrol",
+          "description": "Detaylı test süreçleri ve hata ayıklama."
+        },
+        "support": {
+          "title": "Sürekli Destek",
+          "description": "Yayın sonrası teknik destek ve bakım hizmetleri."
+        }
+      }
+    }
+  },
+  "graphicDesignPage": {
+    "title": "Yaratıcı Grafik Tasarım",
+    "subtitle": "Çözümleri",
+    "description": "Markanızın kimliğini güçlendiren yaratıcı ve etkileyici grafik tasarım çözümleri sunuyoruz.",
+    "cta": "Teklif Alın",
+    "features": {
+      "creative": {
+        "title": "Yaratıcı Tasarım",
+        "description": "Markanızı en iyi şekilde yansıtan özgün ve yaratıcı tasarımlar oluşturuyoruz."
+      },
+      "brandConsistency": {
+        "title": "Marka Tutarlılığı",
+        "description": "Tüm tasarımlarınızda marka kimliğinizi tutarlı bir şekilde yansıtıyoruz."
+      },
+      "corporateIdentity": {
+        "title": "Kurumsal Kimlik",
+        "description": "Kartvizit, broşür, afiş ve tüm matbaa ürünleriyle kurumsal kimliğinizi tasarlıyor ve basıyoruz."
+      },
+      "highQuality": {
+        "title": "Yüksek Kalite",
+        "description": "Her türlü baskı ve dijital ortam için yüksek çözünürlüklü tasarımlar sunuyoruz."
+      },
+      "targetAudience": {
+        "title": "Hedef Kitle Odaklı",
+        "description": "Hedef kitlenize uygun, dikkat çekici ve etkileyici tasarımlar oluşturuyoruz."
+      },
+      "unlimitedRevision": {
+        "title": "Sınırsız Revizyon",
+        "description": "Tam memnuniyet sağlayana kadar sınırsız revizyon imkanı sunuyoruz."
+      }
+    }
+  },
+  "marketplacePage": {
+    "title": "Sanal Pazaryeri",
+    "subtitle": "Danışmanlığı",
+    "description": "Hepsiburada, Trendyol, N11 gibi popüler sanal pazaryerlerinde başarılı olmanız için danışmanlık hizmeti veriyoruz.",
+    "cta": "Teklif Alın",
+    "features": {
+      "wideCustomerBase": {
+        "title": "Geniş Müşteri Kitlesi",
+        "description": "Milyonlarca aktif kullanıcıya sahip pazaryerlerinde ürünlerinizi sergileyerek satışlarınızı artırın."
+      },
+      "competitionAnalysis": {
+        "title": "Rekabet Analizi",
+        "description": "Rakiplerinizin stratejilerini analiz ederek pazarda öne çıkmanızı sağlıyoruz."
+      },
+      "optimalPricing": {
+        "title": "Optimum Fiyatlandırma",
+        "description": "Kâr marjınızı maksimize edecek fiyatlandırma stratejileri geliştiriyoruz."
+      },
+      "targetedAds": {
+        "title": "Hedefli Reklamlar",
+        "description": "Pazaryeri içi reklam kampanyaları ile potansiyel müşterilere ulaşmanızı sağlıyoruz."
+      },
+      "dataAnalysis": {
+        "title": "Veri Analizi",
+        "description": "Satış verilerinizi analiz ederek pazaryeri stratejinizi sürekli iyileştiriyoruz."
+      },
+      "storeOptimization": {
+        "title": "Mağaza Optimizasyonu",
+        "description": "Pazaryeri mağazanızın görünürlüğünü ve satış performansını artıracak optimizasyonlar yapıyoruz."
+      }
+    },
+    "marketplaces": {
+      "title": "Çalıştığımız Pazaryerleri",
+      "trendyol": "Trendyol",
+      "hepsiburada": "Hepsiburada",
+      "n11": "N11",
+      "amazon": "Amazon",
+      "gittigidiyor": "GittiGidiyor"
+    }
+  },
+  "digitalAdvertisingPage": {
+    "title": "Dijital Reklamcılık",
+    "subtitle": "Hizmetleri",
+    "description": "Google Ads, Facebook Ads ve diğer dijital reklam platformlarında etkili kampanyalar oluşturuyoruz.",
+    "cta": "Teklif Alın",
+    "features": {
+      "targetedAds": {
+        "title": "Hedefli Reklamlar",
+        "description": "Potansiyel müşterilerinize demografik, ilgi alanı ve davranış bazlı hedefleme ile ulaşıyoruz."
+      },
+      "performanceTracking": {
+        "title": "Performans Takibi",
+        "description": "Reklam kampanyalarınızın performansını gerçek zamanlı olarak izleyerek optimizasyon sağlıyoruz."
+      },
+      "budgetControl": {
+        "title": "Bütçe Kontrolü",
+        "description": "Reklam bütçenizi en verimli şekilde kullanarak maksimum geri dönüş sağlıyoruz."
+      },
+      "multiPlatform": {
+        "title": "Çoklu Platform",
+        "description": "Google, Facebook, Instagram, LinkedIn ve YouTube gibi çeşitli platformlarda reklam yönetimi yapıyoruz."
+      },
+      "detailedAnalysis": {
+        "title": "Detaylı Analiz",
+        "description": "Kampanya sonuçlarını detaylı raporlar ve analizlerle sunarak stratejilerinizi geliştirmenize yardımcı oluyoruz."
+      },
+      "keywordOptimization": {
+        "title": "Anahtar Kelime Optimizasyonu",
+        "description": "En etkili anahtar kelimeleri belirleyerek reklam kampanyalarınızın verimliliğini artırıyoruz."
+      }
+    },
+    "platforms": {
+      "title": "Reklam Platformları",
+      "googleAds": "Google Ads",
+      "facebookAds": "Facebook Ads",
+      "instagramAds": "Instagram Ads",
+      "linkedinAds": "LinkedIn Ads",
+      "youtubeAds": "YouTube Ads"
+    }
+  },
+  "aiPage": {
+    "title": "Veri Analizi ve",
+    "subtitle": "Yapay Zeka",
+    "description": "İşletmenizin verilerini analiz ederek, yapay zeka destekli çözümler sunuyoruz.",
+    "cta": "Teklif Alın",
+    "features": {
+      "smartSolutions": {
+        "title": "Akıllı Çözümler",
+        "description": "İşletmenizin ihtiyaçlarına özel yapay zeka destekli çözümler geliştiriyoruz."
+      },
+      "automatedProcesses": {
+        "title": "Otomatik Süreçler",
+        "description": "Tekrarlayan işlerinizi otomatikleştirerek zaman ve maliyet tasarrufu sağlıyoruz."
+      },
+      "dataAnalysis": {
+        "title": "Veri Analizi",
+        "description": "Büyük veri setlerini analiz ederek işletmeniz için değerli içgörüler sunuyoruz."
+      },
+      "chatbotDevelopment": {
+        "title": "Chatbot Geliştirme",
+        "description": "Müşterilerinizle etkileşime geçen ve onlara yardımcı olan akıllı chatbotlar geliştiriyoruz."
+      },
+      "nlp": {
+        "title": "Doğal Dil İşleme",
+        "description": "Metinleri anlayan, analiz eden ve yanıtlayan yapay zeka sistemleri geliştiriyoruz."
+      },
+      "customAiModels": {
+        "title": "Özel AI Modelleri",
+        "description": "İşletmenizin spesifik ihtiyaçlarına yönelik özel yapay zeka modelleri geliştiriyoruz."
+      }
+    },
+    "technologies": {
+      "title": "Kullandığımız Teknolojiler",
+      "tensorflow": "TensorFlow",
+      "pytorch": "PyTorch",
+      "python": "Python",
+      "openai": "OpenAI API",
+      "pandas": "Pandas"
+    }
+  },
+  "eCommercePage": {
+    "title": "E-Ticaret",
+    "subtitle": "Danışmanlığı",
+    "description": "E-ticaret sitenizin kurulumundan, yönetimine kadar tüm süreçlerde profesyonel danışmanlık hizmeti sunuyoruz.",
+    "cta": "Teklif Alın",
+    "features": {
+      "securePayment": {
+        "title": "Güvenli Ödeme",
+        "description": "En güncel güvenlik protokolleriyle korunan ödeme sistemleri entegrasyonu sağlıyoruz."
+      },
+      "multiplePaymentOptions": {
+        "title": "Çoklu Ödeme Seçenekleri",
+        "description": "Kredi kartı, havale, kapıda ödeme gibi farklı ödeme yöntemleri sunarak satışlarınızı artırıyoruz."
+      },
+      "detailedReporting": {
+        "title": "Detaylı Raporlama",
+        "description": "Satış, ziyaretçi ve stok verilerinizi analiz ederek işletmenizi büyütmenize yardımcı oluyoruz."
+      },
+      "integratedLogistics": {
+        "title": "Entegre Lojistik",
+        "description": "Kargo firmaları ve lojistik süreçlerle tam entegrasyon sağlayarak teslimat süreçlerinizi optimize ediyoruz."
+      },
+      "seoOptimization": {
+        "title": "SEO Optimizasyonu",
+        "description": "E-ticaret sitenizin arama motorlarında üst sıralarda yer almasını sağlayan SEO çalışmaları yapıyoruz."
+      },
+      "digitalMarketing": {
+        "title": "Dijital Pazarlama",
+        "description": "E-ticaret siteniz için özel dijital pazarlama stratejileri geliştirerek satışlarınızı artırıyoruz."
+      }
+    },
+    "statistics": {
+      "title": "E-Ticaret Başarı Faktörleri",
+      "mobileShopping": {
+        "value": "%68",
+        "description": "Mobil cihazlardan yapılan alışveriş oranı"
+      },
+      "loadingTime": {
+        "value": "3 sn",
+        "description": "Kullanıcıların site yüklenmesi için beklediği maksimum süre"
+      },
+      "cartAbandonment": {
+        "value": "%70",
+        "description": "Sepeti terk etme oranı"
+      },
+      "customerExperience": {
+        "value": "%89",
+        "description": "Müşteri deneyiminin marka sadakatine etkisi"
+      }
+    }
+  }
+} 

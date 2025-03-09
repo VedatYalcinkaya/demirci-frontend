@@ -11,74 +11,83 @@ import digitalAdvertisingLogo from "../assets/servicesLogos/digital-advertising-
 import aiLogo from "../assets/servicesLogos/ai-logo.png";
 import { WavyBackground } from "./ui/wavy-background";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export function ServicesSection() {
+  const { t } = useTranslation();
+
   return (
     <div className="relative z-10 py-20 mt-[-10vh] flex flex-col items-center justify-center w-full">
       {/* Başlık Kısmı */}
       <div className="text-center mb-16">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-3 md:gap-4">
           <h1 className="text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white">
-            Her İhtiyaca
+            {t('services.title').split(' ')[0]} {t('services.title').split(' ')[1]}
           </h1>
           <div className="my-2 sm:my-0">
             <ColourfulText 
-              text="Profesyonel" 
+              text={t('services.title').split(' ')[2]} 
               className="text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold"
             />
           </div>
           <h1 className="text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white">
-            Çözümler
+            {t('services.title').split(' ')[3]}
           </h1>
         </div>
         <p className="text-white/80 text-base sm:text-lg max-w-2xl mx-auto mt-6">
-          Web tasarımdan yapay zekaya, dijital dünyanın her alanında yanınızdayız
+          {t('services.subtitle')}
         </p>
       </div>
       
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <ServiceCard
-            title="WEB TASARIM"
+            title={t('services.webDesign.title')}
             icon={webDesignLogo}
-            description="Özel ve profesyonel web tasarım hizmetlerimizle, işletmenizi dijital dünyada en iyi şekilde temsil eden estetik ve kullanıcı dostu web siteleri tasarlıyoruz. Mobil uyumlu, hızlı yüklenen ve SEO optimizasyonlu sitelerle dijital varlığınızı güçlendiriyoruz."
+            description={t('services.webDesign.description')}
             bgColor="bg-emerald-900"
             path="/web-tasarim"
+            buttonText={t('services.viewDetails')}
           />
           <ServiceCard
-            title="GRAFİK TASARIM"
+            title={t('services.graphicDesign.title')}
             icon={graphicDesignLogo}
-            description="Markanızın kimliğini güçlendiren yaratıcı ve etkileyici grafik tasarım çözümleri sunuyoruz. Logo tasarımından, sosyal medya içeriklerine kadar geniş bir yelpazede hizmet veriyoruz."
+            description={t('services.graphicDesign.description')}
             bgColor="bg-sky-900"
             path="/grafik-tasarim"
+            buttonText={t('services.viewDetails')}
           />
           <ServiceCard
-            title="SANAL PAZARYERİ"
+            title={t('services.marketplace.title')}
             icon={marketplaceLogo}
-            description="Hepsiburada, Trendyol, N11 gibi popüler sanal pazaryerlerinde başarılı olmanız için danışmanlık hizmeti veriyoruz. Ürün listeleme, fiyatlandırma ve mağaza yönetimi konularında destek sağlıyoruz."
+            description={t('services.marketplace.description')}
             bgColor="bg-purple-900"
             path="/sanal-pazaryeri"
+            buttonText={t('services.viewDetails')}
           />
           <ServiceCard
-            title="E-TİCARET DANIŞMANLIĞI"
+            title={t('services.eCommerce.title')}
             icon={eCommerceLogo}
-            description="E-ticaret sitenizin kurulumundan, yönetimine kadar tüm süreçlerde profesyonel danışmanlık hizmeti sunuyoruz. Satış stratejileri, stok yönetimi ve müşteri deneyimi optimizasyonu konularında uzman desteği sağlıyoruz."
+            description={t('services.eCommerce.description')}
             bgColor="bg-orange-900"
             path="/e-ticaret"
+            buttonText={t('services.viewDetails')}
           />
           <ServiceCard
-            title="DİJİTAL REKLAMCILIK"
+            title={t('services.digitalAdvertising.title')}
             icon={digitalAdvertisingLogo}
-            description="Google Ads, Facebook Ads ve diğer dijital reklam platformlarında etkili kampanyalar oluşturuyoruz. Hedef kitlenize ulaşmanızı sağlayacak optimize edilmiş reklam stratejileri geliştiriyoruz."
+            description={t('services.digitalAdvertising.description')}
             bgColor="bg-red-900"
             path="/dijital-reklamcilik"
+            buttonText={t('services.viewDetails')}
           />
           <ServiceCard
-            title="VERİ ANALİZİ VE YAPAY ZEKA"
+            title={t('services.ai.title')}
             icon={aiLogo}
-            description="İşletmenizin verilerini analiz ederek, yapay zeka destekli çözümler sunuyoruz. Müşteri davranışları analizi, satış tahminleri ve otomatik karar destek sistemleri ile işletmenizi geleceğe hazırlıyoruz."
+            description={t('services.ai.description')}
             bgColor="bg-indigo-900"
             path="/yapay-zeka"
+            buttonText={t('services.viewDetails')}
           />
         </div>
       </div>
@@ -86,7 +95,7 @@ export function ServicesSection() {
   );
 }
 
-const ServiceCard = ({ title, icon, description, bgColor, path }) => {
+const ServiceCard = ({ title, icon, description, bgColor, path, buttonText }) => {
   const [hovered, setHovered] = React.useState(false);
 
   return (
@@ -145,6 +154,25 @@ const ServiceCard = ({ title, icon, description, bgColor, path }) => {
           >
             {description}
           </p>
+
+          {/* Detay Bağlantısı - Buton yerine şık bir bağlantı */}
+          <div
+            className={`mt-4 transition-all duration-300 ${
+              hovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+            }`}
+          >
+            <span className="text-emerald-400 hover:text-emerald-300 text-sm font-medium flex items-center gap-1 cursor-pointer group/link">
+              {buttonText}
+              <svg 
+                className="w-4 h-4 transition-transform group-hover/link:translate-x-1" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </span>
+          </div>
         </div>
       </div>
     </Link>
