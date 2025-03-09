@@ -56,29 +56,5 @@ export const references = [
     link: "#",
     thumbnail: "https://picsum.photos/id/100/800/600",
   },
-  {
-    title: "Stok Takip Sistemi",
-    link: "#",
-    thumbnail: "https://picsum.photos/id/110/800/600",
-  },
-  {
-    title: "Muhasebe Yazılımı",
-    link: "#",
-    thumbnail: "https://picsum.photos/id/120/800/600",
-  },
-  {
-    title: "Analitik Dashboard",
-    link: "#",
-    thumbnail: "https://picsum.photos/id/130/800/600",
-  },
-  {
-    title: "Müşteri Portalı",
-    link: "#",
-    thumbnail: "https://picsum.photos/id/140/800/600",
-  },
-  {
-    title: "Yapay Zeka Uygulaması",
-    link: "#",
-    thumbnail: "https://picsum.photos/id/150/800/600",
-  },
+  
 ]; 

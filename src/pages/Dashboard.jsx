@@ -149,8 +149,8 @@ const Dashboard = () => {
           <Route path="/e-ticaret" element={<ETicaret />} />
           <Route path="/dijital-reklamcilik" element={<DijitalReklamcilik />} />
           <Route path="/yapay-zeka" element={<YapayZeka />} />
-          <Route path="/biz-kimiz" element={<BizKimiz />} />
-          <Route path="/vizyon-misyon" element={<VizyonMisyon />} />
+          <Route path="/hakkimizda/biz-kimiz" element={<BizKimiz />} />
+          <Route path="/hakkimizda/vizyon-misyon" element={<VizyonMisyon />} />
         </Routes>
       </div>
 

@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from "./ui/canvas-reveal-effect";
 import { ColourfulText } from "./ui/colourful-text";
@@ -15,6 +15,116 @@ import { useTranslation } from "react-i18next";
 
 export function ServicesSection() {
   const { t } = useTranslation();
+  const [isMobile, setIsMobile] = useState(false);
+  const mobileContainerRef = useRef(null);
+  const [activeCardIndex, setActiveCardIndex] = useState(0);
+  const cardRefs = useRef([]);
+
+  // Cihaz tipini kontrol et
+  useEffect(() => {
+    const checkIfMobile = () => {
+      // Mobil cihazları tespit etmek için user agent kontrolü
+      const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      setIsMobile(isMobileDevice);
+    };
+
+    // İlk yükleme kontrolü
+    checkIfMobile();
+  }, []);
+
+  // Mobil görünümde scroll olayını izle
+  useEffect(() => {
+    if (!isMobile || !mobileContainerRef.current) return;
+
+    const checkCardVisibility = () => {
+      const viewportCenter = window.innerHeight / 2;
+      
+      let closestCardIndex = 0;
+      let minDistance = Infinity;
+
+      cardRefs.current.forEach((cardRef, index) => {
+        if (!cardRef) return;
+        
+        const cardRect = cardRef.getBoundingClientRect();
+        const cardCenter = cardRect.top + cardRect.height / 2;
+        const distance = Math.abs(viewportCenter - cardCenter);
+        
+        if (distance < minDistance) {
+          minDistance = distance;
+          closestCardIndex = index;
+        }
+      });
+
+      setActiveCardIndex(closestCardIndex);
+    };
+
+    // İlk yükleme kontrolü
+    checkCardVisibility();
+
+    // Scroll olayını dinle
+    window.addEventListener('scroll', checkCardVisibility, { passive: true });
+    
+    // Temizleme fonksiyonu
+    return () => {
+      window.removeEventListener('scroll', checkCardVisibility);
+    };
+  }, [isMobile]);
+
+  // Kart referanslarını temizle ve yeniden oluştur
+  useEffect(() => {
+    cardRefs.current = cardRefs.current.slice(0, 6);
+  }, []);
+
+  const services = [
+    {
+      title: t('services.webDesign.title'),
+      icon: webDesignLogo,
+      description: t('services.webDesign.description'),
+      bgColor: "bg-emerald-900",
+      path: "/web-tasarim",
+      buttonText: t('services.viewDetails')
+    },
+    {
+      title: t('services.graphicDesign.title'),
+      icon: graphicDesignLogo,
+      description: t('services.graphicDesign.description'),
+      bgColor: "bg-sky-900",
+      path: "/grafik-tasarim",
+      buttonText: t('services.viewDetails')
+    },
+    {
+      title: t('services.marketplace.title'),
+      icon: marketplaceLogo,
+      description: t('services.marketplace.description'),
+      bgColor: "bg-purple-900",
+      path: "/sanal-pazaryeri",
+      buttonText: t('services.viewDetails')
+    },
+    {
+      title: t('services.eCommerce.title'),
+      icon: eCommerceLogo,
+      description: t('services.eCommerce.description'),
+      bgColor: "bg-orange-900",
+      path: "/e-ticaret",
+      buttonText: t('services.viewDetails')
+    },
+    {
+      title: t('services.digitalAdvertising.title'),
+      icon: digitalAdvertisingLogo,
+      description: t('services.digitalAdvertising.description'),
+      bgColor: "bg-red-900",
+      path: "/dijital-reklamcilik",
+      buttonText: t('services.viewDetails')
+    },
+    {
+      title: t('services.ai.title'),
+      icon: aiLogo,
+      description: t('services.ai.description'),
+      bgColor: "bg-indigo-900",
+      path: "/yapay-zeka",
+      buttonText: t('services.viewDetails')
+    }
+  ];
 
   return (
     <div className="relative z-10 py-20 mt-[-10vh] flex flex-col items-center justify-center w-full">
@@ -40,60 +150,100 @@ export function ServicesSection() {
       </div>
       
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <ServiceCard
-            title={t('services.webDesign.title')}
-            icon={webDesignLogo}
-            description={t('services.webDesign.description')}
-            bgColor="bg-emerald-900"
-            path="/web-tasarim"
-            buttonText={t('services.viewDetails')}
-          />
-          <ServiceCard
-            title={t('services.graphicDesign.title')}
-            icon={graphicDesignLogo}
-            description={t('services.graphicDesign.description')}
-            bgColor="bg-sky-900"
-            path="/grafik-tasarim"
-            buttonText={t('services.viewDetails')}
-          />
-          <ServiceCard
-            title={t('services.marketplace.title')}
-            icon={marketplaceLogo}
-            description={t('services.marketplace.description')}
-            bgColor="bg-purple-900"
-            path="/sanal-pazaryeri"
-            buttonText={t('services.viewDetails')}
-          />
-          <ServiceCard
-            title={t('services.eCommerce.title')}
-            icon={eCommerceLogo}
-            description={t('services.eCommerce.description')}
-            bgColor="bg-orange-900"
-            path="/e-ticaret"
-            buttonText={t('services.viewDetails')}
-          />
-          <ServiceCard
-            title={t('services.digitalAdvertising.title')}
-            icon={digitalAdvertisingLogo}
-            description={t('services.digitalAdvertising.description')}
-            bgColor="bg-red-900"
-            path="/dijital-reklamcilik"
-            buttonText={t('services.viewDetails')}
-          />
-          <ServiceCard
-            title={t('services.ai.title')}
-            icon={aiLogo}
-            description={t('services.ai.description')}
-            bgColor="bg-indigo-900"
-            path="/yapay-zeka"
-            buttonText={t('services.viewDetails')}
-          />
-        </div>
+        {isMobile ? (
+          // Mobil görünüm
+          <div ref={mobileContainerRef} className="space-y-6">
+            {services.map((service, index) => (
+              <div 
+                key={service.path} 
+                ref={el => cardRefs.current[index] = el}
+              >
+                <MobileServiceCard
+                  {...service}
+                  isActive={activeCardIndex === index}
+                />
+              </div>
+            ))}
+          </div>
+        ) : (
+          // Masaüstü görünüm
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map(service => (
+              <ServiceCard
+                key={service.path}
+                {...service}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
 }
+
+// Mobil cihazlar için özel kart bileşeni
+const MobileServiceCard = ({ title, icon, description, bgColor, path, buttonText, isActive }) => {
+  return (
+    <Link to={path} className="block">
+      <div className={`border border-white/[0.2] rounded-xl p-4 relative transition-all duration-300 ${isActive ? 'scale-[1.02] shadow-lg shadow-black/30' : ''}`}>
+        <CardBorder />
+        
+        {/* Animasyon Efekti - Daha şeffaf ve içeriği engellemeyen */}
+        <AnimatePresence>
+          {isActive && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="h-full w-full absolute inset-0 rounded-xl overflow-hidden"
+            >
+              <div className={`absolute inset-0 ${bgColor} opacity-30 rounded-xl`}></div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+        
+        <div className="relative z-20">
+          <div className="flex items-center gap-4 mb-3">
+            {/* Logo */}
+            <div className="flex-shrink-0">
+              {typeof icon === "string" ? (
+                <img src={icon} alt={title} className="w-12 h-12 object-contain" />
+              ) : (
+                React.cloneElement(icon, { className: "w-12 h-12" })
+              )}
+            </div>
+            
+            {/* Başlık */}
+            <h2 className={`text-xl font-bold text-white transition-all duration-300 ${isActive ? 'text-white' : 'text-white/90'}`}>
+              {title}
+            </h2>
+          </div>
+          
+          {/* Açıklama */}
+          <p className={`text-sm mb-4 transition-all duration-300 ${isActive ? 'text-white' : 'text-white/70'}`}>
+            {description}
+          </p>
+          
+          {/* Detay Bağlantısı */}
+          <div className="flex justify-end">
+            <span className={`text-sm font-medium flex items-center gap-1 cursor-pointer group/link transition-all duration-300 ${isActive ? 'text-emerald-300' : 'text-emerald-400'}`}>
+              {buttonText}
+              <svg 
+                className="w-4 h-4 transition-transform group-hover/link:translate-x-1" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </Link>
+  );
+};
 
 const ServiceCard = ({ title, icon, description, bgColor, path, buttonText }) => {
   const [hovered, setHovered] = React.useState(false);

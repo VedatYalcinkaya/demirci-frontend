@@ -4,7 +4,7 @@ import { FlipWords } from "./ui/flip-words";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
-export function HeroSection() {
+export function HeroSection({ onCtaClick }) {
   const { t } = useTranslation();
   
   // Çeviri dosyasından kelimeleri al
@@ -40,6 +40,7 @@ export function HeroSection() {
         </p>
         
         <motion.button
+          onClick={onCtaClick}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
