@@ -485,5 +485,107 @@
         "description": "We work in close collaboration with our customers to meet their needs in the best way possible."
       }
     }
+  },
+  "common": {
+    "getQuote": "Get a Quote"
+  },
+  "form": {
+    "title": "Professional Service Request",
+    "subtitle": "Share your information for customized solutions, we'll get back to you as soon as possible.",
+    "fullName": "Full Name",
+    "email": "Email",
+    "phone": "Phone",
+    "services": "Services",
+    "message": "Your Message",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "selectService": "Select service",
+    "countryCode": "Country Code",
+    "placeholders": {
+      "fullName": "Your First and Last Name",
+      "email": "example@email.com",
+      "phone": "5XX XXX XX XX",
+      "message": "Briefly explain your project needs..."
+    },
+    "validation": {
+      "fullName": {
+        "required": "Full name is required",
+        "min": "Full name must be at least 2 characters"
+      },
+      "email": {
+        "required": "Email is required",
+        "invalid": "Please enter a valid email address"
+      },
+      "phone": {
+        "required": "Phone number is required",
+        "invalid": "Please enter a valid phone number",
+        "min": "Phone number must be at least 10 characters",
+        "max": "Phone number must be at most 11 characters"
+      },
+      "countryCode": {
+        "required": "Country code is required"
+      },
+      "services": {
+        "required": "You must select at least one service",
+        "min": "You must select at least one service"
+      },
+      "message": {
+        "min": "Message must be at least 10 characters",
+        "max": "Message must be at most 500 characters"
+      }
+    }
+  },
+  "contactPage": {
+    "title": "Contact Us",
+    "subtitle": "We're Happy to Help You",
+    "description": "Get in touch with us for your projects, questions, or collaboration opportunities. We'll get back to you as soon as possible.",
+    "cta": "Send Message",
+    "info": {
+      "title": "Contact Information",
+      "address": {
+        "title": "Address",
+        "value": "Atatürk Mah. Ertuğrul Gazi Cad. No: 21 Floor: 3 Ataşehir, Istanbul"
+      },
+      "phone": {
+        "title": "Phone",
+        "value": "+90 (216) 123 45 67"
+      },
+      "email": {
+        "title": "Email",
+        "value": "info@demirciyazilim.com"
+      },
+      "workHours": {
+        "title": "Working Hours",
+        "value": "Monday - Friday: 09:00 - 18:00"
+      }
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "subtitle": "Share your information for customized solutions, we'll get back to you as soon as possible."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "questions": [
+        {
+          "question": "What are the prices of your services?",
+          "answer": "Our service prices vary depending on the scope, requirements, and duration of the project. Please contact us for a customized quote."
+        },
+        {
+          "question": "How long does it take to complete a project?",
+          "answer": "Project completion time varies depending on the complexity and scope of the project. A simple website can be completed in 2-4 weeks, while a comprehensive e-commerce project may take 2-3 months."
+        },
+        {
+          "question": "What payment methods do you accept?",
+          "answer": "We accept bank transfers, credit cards, and installment payment options. We apply a payment plan of 40% at the start of the project, 30% during development, and 30% upon delivery."
+        },
+        {
+          "question": "Do you provide support after project delivery?",
+          "answer": "Yes, we provide free technical support for all our projects for 1 year. After this period, you can benefit from our monthly maintenance and support packages."
+        }
+      ]
+    },
+    "map": {
+      "title": "Visit Us"
+    }
   }
 } 

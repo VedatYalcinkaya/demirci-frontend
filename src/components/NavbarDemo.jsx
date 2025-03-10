@@ -2,11 +2,11 @@
 import React, { useState } from "react";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
 import { cn } from "../lib/utils";
-import demirciLogo from "../assets/DemirciLogo_3.svg";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { ColoredLogo } from "./ui/ColoredLogo";
 
 export default function NavbarDemo() {
   return (
@@ -43,11 +43,7 @@ function Navbar({ className }) {
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <img
-                src={demirciLogo}
-                alt="Demirci Yazılım Logo"
-                className="h-12 md:h-16 w-auto object-contain"
-              />
+              <ColoredLogo className="h-12 md:h-16 w-auto" />
             </Link>
           </div>
 
@@ -120,7 +116,7 @@ function Navbar({ className }) {
             </MenuItem>
             <MenuItem setActive={setActive} active={active} item={t('navbar.contact')}>
               <div className="flex flex-col space-y-4 text-sm">
-                <HoveredLink to="/iletisim/bize-ulasin">{t('navbar.dropdown.contact.contactUs')}</HoveredLink>
+                <HoveredLink to="/iletisim">{t('navbar.dropdown.contact.contactUs')}</HoveredLink>
                 <HoveredLink to="/iletisim/teklif-al">{t('navbar.dropdown.contact.getQuote')}</HoveredLink>
                 <HoveredLink to="/iletisim/kariyer">{t('navbar.dropdown.contact.career')}</HoveredLink>
                 <HoveredLink to="/iletisim/sikca-sorulan-sorular">{t('navbar.dropdown.contact.faq')}</HoveredLink>
@@ -166,11 +162,7 @@ function Navbar({ className }) {
                 <div className="flex flex-col h-full overflow-y-auto">
                   {/* Logo Alanı */}
                   <div className="p-6 border-b border-white/10">
-                    <img
-                      src={demirciLogo}
-                      alt="Demirci Yazılım Logo"
-                      className="h-12 w-auto"
-                    />
+                    <ColoredLogo className="h-12 w-auto" />
                   </div>
 
                   {/* Menü Öğeleri */}
@@ -204,7 +196,7 @@ function Navbar({ className }) {
                       </MobileMenuSection>
 
                       <MobileMenuSection title={t('navbar.contact')}>
-                        <MobileLink to="/iletisim/bize-ulasin">{t('navbar.dropdown.contact.contactUs')}</MobileLink>
+                        <MobileLink to="/iletisim">{t('navbar.dropdown.contact.contactUs')}</MobileLink>
                         <MobileLink to="/iletisim/teklif-al">{t('navbar.dropdown.contact.getQuote')}</MobileLink>
                         <MobileLink to="/iletisim/kariyer">{t('navbar.dropdown.contact.career')}</MobileLink>
                         <MobileLink to="/iletisim/sikca-sorulan-sorular">{t('navbar.dropdown.contact.faq')}</MobileLink>

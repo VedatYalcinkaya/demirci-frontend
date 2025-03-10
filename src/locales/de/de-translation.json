@@ -485,5 +485,107 @@
         "description": "Wir arbeiten eng mit unseren Kunden zusammen, um ihre Bedürfnisse bestmöglich zu erfüllen."
       }
     }
+  },
+  "common": {
+    "getQuote": "Angebot anfordern"
+  },
+  "form": {
+    "title": "Professionelle Serviceanfrage",
+    "subtitle": "Teilen Sie Ihre Informationen für maßgeschneiderte Lösungen, wir melden uns so schnell wie möglich bei Ihnen.",
+    "fullName": "Vollständiger Name",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "services": "Dienstleistungen",
+    "message": "Ihre Nachricht",
+    "submit": "Absenden",
+    "cancel": "Abbrechen",
+    "selectService": "Dienstleistung auswählen",
+    "countryCode": "Ländercode",
+    "placeholders": {
+      "fullName": "Ihr Vor- und Nachname",
+      "email": "beispiel@email.com",
+      "phone": "5XX XXX XX XX",
+      "message": "Beschreiben Sie kurz Ihre Projektanforderungen..."
+    },
+    "validation": {
+      "fullName": {
+        "required": "Vollständiger Name ist erforderlich",
+        "min": "Vollständiger Name muss mindestens 2 Zeichen lang sein"
+      },
+      "email": {
+        "required": "E-Mail ist erforderlich",
+        "invalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+      },
+      "phone": {
+        "required": "Telefonnummer ist erforderlich",
+        "invalid": "Bitte geben Sie eine gültige Telefonnummer ein",
+        "min": "Telefonnummer muss mindestens 10 Zeichen lang sein",
+        "max": "Telefonnummer darf höchstens 11 Zeichen lang sein"
+      },
+      "countryCode": {
+        "required": "Ländercode ist erforderlich"
+      },
+      "services": {
+        "required": "Sie müssen mindestens einen Dienst auswählen",
+        "min": "Sie müssen mindestens einen Dienst auswählen"
+      },
+      "message": {
+        "min": "Nachricht muss mindestens 10 Zeichen lang sein",
+        "max": "Nachricht darf höchstens 500 Zeichen lang sein"
+      }
+    }
+  },
+  "contactPage": {
+    "title": "Kontaktieren Sie uns",
+    "subtitle": "Wir helfen Ihnen gerne weiter",
+    "description": "Kontaktieren Sie uns für Ihre Projekte, Fragen oder Kooperationsmöglichkeiten. Wir werden uns so schnell wie möglich bei Ihnen melden.",
+    "cta": "Nachricht senden",
+    "info": {
+      "title": "Kontaktinformationen",
+      "address": {
+        "title": "Adresse",
+        "value": "Atatürk Mah. Ertuğrul Gazi Cad. Nr. 21 Etage: 3 Ataşehir, Istanbul"
+      },
+      "phone": {
+        "title": "Telefon",
+        "value": "+90 (216) 123 45 67"
+      },
+      "email": {
+        "title": "E-Mail",
+        "value": "info@demirciyazilim.com"
+      },
+      "workHours": {
+        "title": "Arbeitszeiten",
+        "value": "Montag - Freitag: 09:00 - 18:00"
+      }
+    },
+    "form": {
+      "title": "Senden Sie uns eine Nachricht",
+      "subtitle": "Teilen Sie Ihre Informationen für maßgeschneiderte Lösungen mit, wir werden uns so schnell wie möglich bei Ihnen melden."
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "questions": [
+        {
+          "question": "Wie hoch sind die Preise für Ihre Dienstleistungen?",
+          "answer": "Unsere Servicepreise variieren je nach Umfang, Anforderungen und Dauer des Projekts. Bitte kontaktieren Sie uns für ein individuelles Angebot."
+        },
+        {
+          "question": "Wie lange dauert es, ein Projekt abzuschließen?",
+          "answer": "Die Projektabschlusszeit variiert je nach Komplexität und Umfang des Projekts. Eine einfache Website kann in 2-4 Wochen fertiggestellt werden, während ein umfassendes E-Commerce-Projekt 2-3 Monate dauern kann."
+        },
+        {
+          "question": "Welche Zahlungsmethoden akzeptieren Sie?",
+          "answer": "Wir akzeptieren Banküberweisungen, Kreditkarten und Ratenzahlungsoptionen. Wir wenden einen Zahlungsplan von 40% zu Beginn des Projekts, 30% während der Entwicklung und 30% bei der Lieferung an."
+        },
+        {
+          "question": "Bieten Sie nach der Projektlieferung Support an?",
+          "answer": "Ja, wir bieten für alle unsere Projekte 1 Jahr lang kostenlosen technischen Support. Nach diesem Zeitraum können Sie von unseren monatlichen Wartungs- und Support-Paketen profitieren."
+        }
+      ]
+    },
+    "map": {
+      "title": "Besuchen Sie uns"
+    }
   }
 } 

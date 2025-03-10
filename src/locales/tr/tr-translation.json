@@ -485,5 +485,107 @@
         "description": "Müşterilerimizle yakın işbirliği içinde çalışarak, onların ihtiyaçlarını en iyi şekilde karşılıyoruz."
       }
     }
+  },
+  "common": {
+    "getQuote": "Teklif Al"
+  },
+  "form": {
+    "title": "Profesyonel Hizmet Talebi",
+    "subtitle": "Size özel çözümler için bilgilerinizi paylaşın, en kısa sürede dönüş yapalım.",
+    "fullName": "Ad Soyad",
+    "email": "E-posta",
+    "phone": "Telefon",
+    "services": "Hizmetler",
+    "message": "Mesajınız",
+    "submit": "Gönder",
+    "cancel": "İptal",
+    "selectService": "Hizmet seçiniz",
+    "countryCode": "Ülke Kodu",
+    "placeholders": {
+      "fullName": "Adınız ve Soyadınız",
+      "email": "ornek@email.com",
+      "phone": "5XX XXX XX XX",
+      "message": "Projenizdeki ihtiyaçlarınızı kısaca açıklayın..."
+    },
+    "validation": {
+      "fullName": {
+        "required": "Ad soyad zorunludur",
+        "min": "Ad soyad en az 2 karakter olmalıdır"
+      },
+      "email": {
+        "required": "E-posta zorunludur",
+        "invalid": "Geçerli bir e-posta adresi giriniz"
+      },
+      "phone": {
+        "required": "Telefon numarası zorunludur",
+        "invalid": "Geçerli bir telefon numarası giriniz",
+        "min": "Telefon numarası en az 10 karakter olmalıdır",
+        "max": "Telefon numarası en fazla 11 karakter olmalıdır"
+      },
+      "countryCode": {
+        "required": "Ülke kodu gereklidir"
+      },
+      "services": {
+        "required": "En az bir hizmet seçmelisiniz",
+        "min": "En az bir hizmet seçmelisiniz"
+      },
+      "message": {
+        "min": "Mesaj en az 10 karakter olmalıdır",
+        "max": "Mesaj en fazla 500 karakter olmalıdır"
+      }
+    }
+  },
+  "contactPage": {
+    "title": "Bize Ulaşın",
+    "subtitle": "Size Yardımcı Olmaktan Memnuniyet Duyarız",
+    "description": "Projeleriniz, sorularınız veya işbirliği fırsatları için bizimle iletişime geçin. En kısa sürede size dönüş yapacağız.",
+    "cta": "Mesaj Gönderin",
+    "info": {
+      "title": "İletişim Bilgileri",
+      "address": {
+        "title": "Adres",
+        "value": "Atatürk Mah. Ertuğrul Gazi Cad. No: 21 Kat: 3 Ataşehir, İstanbul"
+      },
+      "phone": {
+        "title": "Telefon",
+        "value": "+90 (216) 123 45 67"
+      },
+      "email": {
+        "title": "E-posta",
+        "value": "info@demirciyazilim.com"
+      },
+      "workHours": {
+        "title": "Çalışma Saatleri",
+        "value": "Pazartesi - Cuma: 09:00 - 18:00"
+      }
+    },
+    "form": {
+      "title": "Bize Mesaj Gönderin",
+      "subtitle": "Size özel çözümler için bilgilerinizi paylaşın, en kısa sürede dönüş yapalım."
+    },
+    "faq": {
+      "title": "Sıkça Sorulan Sorular",
+      "questions": [
+        {
+          "question": "Hizmetlerinizin fiyatları nedir?",
+          "answer": "Hizmet fiyatlarımız, projenin kapsamına, gereksinimlerine ve süresine göre değişiklik göstermektedir. Size özel fiyat teklifi için lütfen bizimle iletişime geçin."
+        },
+        {
+          "question": "Bir proje ne kadar sürede tamamlanır?",
+          "answer": "Proje tamamlanma süresi, projenin karmaşıklığına ve kapsamına bağlı olarak değişir. Basit bir web sitesi 2-4 hafta içinde tamamlanabilirken, kapsamlı bir e-ticaret projesi 2-3 ay sürebilir."
+        },
+        {
+          "question": "Hangi ödeme yöntemlerini kabul ediyorsunuz?",
+          "answer": "Banka havalesi, kredi kartı ve taksitli ödeme seçeneklerimiz mevcuttur. Proje başlangıcında %40, geliştirme aşamasında %30 ve teslimatta %30 ödeme planı uyguluyoruz."
+        },
+        {
+          "question": "Proje tesliminden sonra destek sağlıyor musunuz?",
+          "answer": "Evet, tüm projelerimiz için 1 yıl boyunca ücretsiz teknik destek sağlıyoruz. Bu süre sonrasında aylık bakım ve destek paketlerimizden faydalanabilirsiniz."
+        }
+      ]
+    },
+    "map": {
+      "title": "Bizi Ziyaret Edin"
+    }
   }
 } 

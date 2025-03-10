@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import demirciLogo from "../assets/DemirciLogo_3.svg";
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
+import { ColoredLogo } from './ui/ColoredLogo';
 
 export function Footer() {
   const { t } = useTranslation();
@@ -13,7 +14,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {/* Logo ve Açıklama */}
           <div className="col-span-1 md:col-span-1 lg:col-span-1">
-            <img src={demirciLogo} alt="Demirci Yazılım Logo" className="h-12 w-auto mb-4" />
+            {/* <img src={demirciLogo} alt="Demirci Yazılım Logo" className="h-12 w-auto mb-4" /> */}
+ 
+            <Link to="/" className="flex items-center">
+              <ColoredLogo className="h-8 md:h-12 w-auto" />
+            </Link>
+
             <p className="text-neutral-400 text-sm mt-4">
               {t('footer.description')}
             </p>

@@ -2,9 +2,17 @@
 @tailwind components;
 @tailwind utilities; */
 
+
 @font-face {
   font-family: 'Square721 BT';
   src: url('./assets/fonts/SQR721B.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Square721 Roman';
+  src: url('./assets/fonts/Square721Roman.TTF') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -66,5 +74,17 @@ button:focus-visible {
 } */
 
 @import "tailwindcss";
+
+/* Select element için özel stil */
+select option {
+  background-color: #1f2937 !important;
+  color: white !important;
+}
+
+/* Dropdown menüler için özel stil */
+.dropdown-menu {
+  background-color: #1f2937 !important;
+  color: white !important;
+}
 
 
