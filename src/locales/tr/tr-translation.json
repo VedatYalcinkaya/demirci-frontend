@@ -533,6 +533,22 @@
         "min": "Mesaj en az 10 karakter olmalıdır",
         "max": "Mesaj en fazla 500 karakter olmalıdır"
       }
+    },
+    "subject": {
+      "title": "Konu",
+      "placeholder": "Konu seçiniz",
+      "customPlaceholder": "Konunuzu yazınız",
+      "options": {
+        "getService": "Hizmet almak istiyorum",
+        "getMeeting": "Görüşme talep ediyorum",
+        "getQuote": "Fiyat teklifi almak istiyorum",
+        "getInfo": "Bilgi almak istiyorum",
+        "other": "Diğer"
+      },
+      "validation": {
+        "required": "Lütfen bir konu seçiniz",
+        "customRequired": "Lütfen konunuzu yazınız"
+      }
     }
   },
   "contactPage": {

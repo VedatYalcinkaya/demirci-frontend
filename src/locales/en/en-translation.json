@@ -533,6 +533,22 @@
         "min": "Message must be at least 10 characters",
         "max": "Message must be at most 500 characters"
       }
+    },
+    "subject": {
+      "title": "Subject",
+      "placeholder": "Select a subject",
+      "customPlaceholder": "Write your subject",
+      "options": {
+        "getService": "I want to get service",
+        "getMeeting": "I want to request a meeting",
+        "getQuote": "I want to get a price quote",
+        "getInfo": "I want to get information",
+        "other": "Other"
+      },
+      "validation": {
+        "required": "Please select a subject",
+        "customRequired": "Please write your subject"
+      }
     }
   },
   "contactPage": {

@@ -533,6 +533,22 @@
         "min": "Nachricht muss mindestens 10 Zeichen lang sein",
         "max": "Nachricht darf höchstens 500 Zeichen lang sein"
       }
+    },
+    "subject": {
+      "title": "Betreff",
+      "placeholder": "Betreff auswählen",
+      "customPlaceholder": "Schreiben Sie Ihren Betreff",
+      "options": {
+        "getService": "Ich möchte eine Dienstleistung erhalten",
+        "getMeeting": "Ich möchte ein Treffen vereinbaren",
+        "getQuote": "Ich möchte ein Preisangebot erhalten",
+        "getInfo": "Ich möchte Informationen erhalten",
+        "other": "Andere"
+      },
+      "validation": {
+        "required": "Bitte wählen Sie einen Betreff aus",
+        "customRequired": "Bitte schreiben Sie Ihren Betreff"
+      }
     }
   },
   "contactPage": {

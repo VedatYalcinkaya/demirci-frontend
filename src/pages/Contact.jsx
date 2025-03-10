@@ -51,11 +51,11 @@ const Contact = () => {
       .min(10, t('form.validation.message.min'))
       .max(500, t('form.validation.message.max')),
     subject: Yup.string()
-      .required('Lütfen bir konu seçiniz'),
+      .required(t('form.subject.validation.required')),
     customSubject: Yup.string()
       .when('subject', {
         is: 'other',
-        then: (schema) => schema.required('Lütfen konunuzu yazınız'),
+        then: (schema) => schema.required(t('form.subject.validation.customRequired')),
         otherwise: (schema) => schema.notRequired(),
       }),
   });
@@ -96,11 +96,11 @@ const Contact = () => {
 
   // Konu seçenekleri
   const subjectOptions = [
-    { value: 'getService', label: 'Hizmet almak istiyorum' },
-    { value: 'getMeeting', label: 'Görüşme talep ediyorum' },
-    { value: 'getQuote', label: 'Fiyat teklifi almak istiyorum' },
-    { value: 'getInfo', label: 'Bilgi almak istiyorum' },
-    { value: 'other', label: 'Diğer' },
+    { value: 'getService', label: t('form.subject.options.getService') },
+    { value: 'getMeeting', label: t('form.subject.options.getMeeting') },
+    { value: 'getQuote', label: t('form.subject.options.getQuote') },
+    { value: 'getInfo', label: t('form.subject.options.getInfo') },
+    { value: 'other', label: t('form.subject.options.other') },
   ];
 
   // Animasyon varyantları
@@ -325,7 +325,7 @@ const Contact = () => {
                 
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Konu
+                    {t('form.subject.title')}
                   </label>
                   <select
                     id="subject"
@@ -335,7 +335,7 @@ const Contact = () => {
                     }`}
                     {...formik.getFieldProps('subject')}
                   >
-                    <option value="" disabled className="bg-gray-800 text-white">Konu seçiniz</option>
+                    <option value="" disabled className="bg-gray-800 text-white">{t('form.subject.placeholder')}</option>
                     {subjectOptions.map((option) => (
                       <option key={option.value} value={option.value} className="bg-gray-800 text-white">
                         {option.label}
@@ -355,7 +355,7 @@ const Contact = () => {
                         className={`block w-full rounded-md bg-white/10 border-gray-600 text-white shadow-sm focus:border-emerald-500 focus:ring-emerald-500 py-3 ${
                           formik.touched.customSubject && formik.errors.customSubject ? 'border-red-500' : ''
                         }`}
-                        placeholder="Konunuzu yazınız"
+                        placeholder={t('form.subject.customPlaceholder')}
                         {...formik.getFieldProps('customSubject')}
                       />
                       {formik.touched.customSubject && formik.errors.customSubject && (
