@@ -85,6 +85,11 @@ function Navbar({ className }) {
             <MenuItem setActive={setActive} active={active} item={t('navbar.references')}>
               <div className="text-sm grid grid-cols-2 gap-4 p-4">
                 <ProductItem
+                  title={t('navbar.dropdown.references.all')}
+                  to="/referanslar"
+                  src="https://picsum.photos/id/5/800/600"
+                  description={t('navbar.dropdown.references.allDesc')} />
+                <ProductItem
                   title={t('navbar.dropdown.references.eCommerce')}
                   to="/referanslar/e-ticaret"
                   src="https://picsum.photos/id/10/800/600"
@@ -99,11 +104,6 @@ function Navbar({ className }) {
                   to="/referanslar/mobil"
                   src="https://picsum.photos/id/30/800/600"
                   description={t('navbar.dropdown.references.mobileDesc')} />
-                <ProductItem
-                  title={t('navbar.dropdown.references.software')}
-                  to="/referanslar/yazilim"
-                  src="https://picsum.photos/id/40/800/600"
-                  description={t('navbar.dropdown.references.softwareDesc')} />
               </div>
             </MenuItem>
             <MenuItem setActive={setActive} active={active} item={t('navbar.about')}>

@@ -14,8 +14,14 @@ import BizKimiz from "./BizKimiz";
 import VizyonMisyon from "./VizyonMisyon";
 import Contact from "./Contact";
 import FAQ from "./FAQ";
+import ReferencePage from "./ReferencePage";
+import ReferenceDetailPage from "./ReferenceDetailPage";
 import { Spotlight } from "../components/ui/spotlight-new";
 import { AnimatedModalDemo } from "../components/AnimatedModalDemo";
+import AdminPage from "./AdminPage";
+import AdminDashboard from "./AdminDashboard";
+import AdminReferencesPage from "./AdminReferencesPage";
+import AdminReferenceForm from "./AdminReferenceForm";
 
 // Route'lara göre renk tanımlamaları
 const routeColors = {
@@ -30,6 +36,7 @@ const routeColors = {
   "/vizyon-misyon": "rgba(79, 70, 229, 0.2)", // Vizyon & Misyon - Indigo
   "/iletisim": "rgba(20, 184, 166, 0.2)", // İletişim - Teal
   "/iletisim/sikca-sorulan-sorular": "rgba(20, 184, 166, 0.2)", // SSS - Teal
+  "/referanslar": "rgba(245, 158, 11, 0.2)", // Referanslar - Amber
 };
 
 // Route'lara göre spotlight gradient renkleri
@@ -88,6 +95,11 @@ const spotlightGradients = {
     first: "radial-gradient(68.54% 68.72% at 55.04% 31.46%, hsla(170, 100%, 85%, .12) 0, hsla(170, 100%, 55%, .04) 50%, hsla(170, 100%, 45%, 0) 80%)",
     second: "radial-gradient(50% 50% at 50% 50%, hsla(170, 100%, 85%, .09) 0, hsla(170, 100%, 55%, .04) 80%, transparent 100%)",
     third: "radial-gradient(50% 50% at 50% 50%, hsla(170, 100%, 85%, .06) 0, hsla(170, 100%, 45%, .04) 80%, transparent 100%)"
+  },
+  "/referanslar": {
+    first: "radial-gradient(68.54% 68.72% at 55.04% 31.46%, hsla(245, 100%, 85%, .12) 0, hsla(245, 100%, 55%, .04) 50%, hsla(245, 100%, 45%, 0) 80%)",
+    second: "radial-gradient(50% 50% at 50% 50%, hsla(245, 100%, 85%, .09) 0, hsla(245, 100%, 55%, .04) 80%, transparent 100%)",
+    third: "radial-gradient(50% 50% at 50% 50%, hsla(245, 100%, 85%, .06) 0, hsla(245, 100%, 45%, .04) 80%, transparent 100%)"
   }
 };
 
@@ -168,7 +180,15 @@ const Dashboard = () => {
           <Route path="/hakkimizda/vizyon-misyon" element={<VizyonMisyon />} />
           <Route path="/iletisim" element={<Contact />} />
           <Route path="/iletisim/sikca-sorulan-sorular" element={<FAQ />} />
+          <Route path="/referanslar" element={<ReferencePage />} />
+          <Route path="/referanslar/:id" element={<ReferenceDetailPage />} />
           <Route path="/animated-modal" element={<AnimatedModalDemo />} />
+          <Route path="/admin" element={<AdminPage />}>
+            <Route index element={<AdminDashboard />} />
+            <Route path="references" element={<AdminReferencesPage />} />
+            <Route path="references/new" element={<AdminReferenceForm />} />
+            <Route path="references/edit/:id" element={<AdminReferenceForm />} />
+          </Route>
         </Routes>
       </div>
 
