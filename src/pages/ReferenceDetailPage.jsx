@@ -187,14 +187,14 @@ const ReferenceDetailPage = () => {
             {/* Teknolojiler */}
             {currentReference.technologies && (
               <div className="mb-6">
-                <h3 className="text-sm font-medium text-gray-400 mb-2">{t('references.technologies')}</h3>
+                <h3 className="text-sm font-medium text-gray-400 mb-2">{t('references.services')}</h3>
                 <div className="flex flex-wrap gap-2">
-                  {currentReference.technologies.split(',').map((tech, index) => (
+                  {currentReference.technologies.split(',').map((service, index) => (
                     <span 
                       key={index} 
                       className="bg-emerald-500/20 text-emerald-300 px-3 py-1 rounded-full text-sm"
                     >
-                      {tech.trim()}
+                      {service.trim()}
                     </span>
                   ))}
                 </div>

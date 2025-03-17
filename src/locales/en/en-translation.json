@@ -626,7 +626,7 @@
     "description": "Description",
     "details": "Project Details",
     "client": "Client",
-    "technologies": "Technologies",
+    "services": "Services",
     "projectUrl": "Project URL",
     "createdAt": "Created At",
     "updatedAt": "Updated At",
@@ -639,7 +639,7 @@
       "clientLogo": "Client Logo URL",
       "projectUrl": "Project URL",
       "completionDate": "Completion Date",
-      "technologies": "Technologies",
+      "services": "Services",
       "active": "Active",
       "save": "Save",
       "cancel": "Cancel"
@@ -648,7 +648,8 @@
       "all": "All",
       "active": "Active Only",
       "byTitle": "By Title",
-      "byTechnology": "By Technology",
+      "byTechnology": "By Service",
+      "byService": "By Service",
       "search": "Search",
       "searchPlaceholder": "Enter search term..."
     }
@@ -710,9 +711,9 @@
     "basicInformation": "Basic Information",
     "summary": "Summary",
     "description": "Description",
-    "technologies": "Technologies",
-    "technologiesPlaceholder": "React, Node.js, MongoDB, ...",
-    "technologiesHelp": "Enter technologies separated by commas",
+    "technologies": "Services",
+    "technologiesPlaceholder": "Web Design, E-Commerce, Mobile App, ...",
+    "technologiesHelp": "Enter services separated by commas",
     "completionDate": "Completion Date",
     "clientInformation": "Client Information",
     "clientName": "Client Name",
@@ -739,6 +740,9 @@
     "imageDetails": "Image Details",
     "imageCaption": "Image Caption",
     "displayOrder": "Display Order",
-    "save": "Save"
+    "save": "Save",
+    "services": "Services",
+    "servicesPlaceholder": "Web Design, E-Commerce, Mobile App, ...",
+    "servicesHelp": "Enter services separated by commas"
   }
 } 
