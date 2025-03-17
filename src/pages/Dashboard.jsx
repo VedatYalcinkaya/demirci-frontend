@@ -108,6 +108,9 @@ const Dashboard = () => {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
+  // Admin sayfasında olup olmadığını kontrol et
+  const isAdminPage = location.pathname.startsWith('/admin');
+
   // Mouse hareketini izle
   React.useEffect(() => {
     const handleMouseMove = (e) => {
@@ -123,6 +126,21 @@ const Dashboard = () => {
   const currentColor = routeColors[location.pathname] || routeColors["/"];
   const currentGradients = spotlightGradients[location.pathname] || spotlightGradients["/"];
 
+  // Admin sayfası için sadece Routes kısmını render et
+  if (isAdminPage) {
+    return (
+      <Routes>
+        <Route path="/admin" element={<AdminPage />}>
+          <Route index element={<AdminDashboard />} />
+          <Route path="references" element={<AdminReferencesPage />} />
+          <Route path="references/new" element={<AdminReferenceForm />} />
+          <Route path="references/edit/:id" element={<AdminReferenceForm />} />
+        </Route>
+      </Routes>
+    );
+  }
+
+  // Normal sayfalar için tam render
   return (
     <div className="relative min-h-screen bg-black group">
       {/* Navbar */}
@@ -183,12 +201,6 @@ const Dashboard = () => {
           <Route path="/referanslar" element={<ReferencePage />} />
           <Route path="/referanslar/:id" element={<ReferenceDetailPage />} />
           <Route path="/animated-modal" element={<AnimatedModalDemo />} />
-          <Route path="/admin" element={<AdminPage />}>
-            <Route index element={<AdminDashboard />} />
-            <Route path="references" element={<AdminReferencesPage />} />
-            <Route path="references/new" element={<AdminReferenceForm />} />
-            <Route path="references/edit/:id" element={<AdminReferenceForm />} />
-          </Route>
         </Routes>
       </div>
 

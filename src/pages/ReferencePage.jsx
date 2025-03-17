@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchReferences, fetchActiveReferences, searchReferencesByTitle, searchReferencesByTechnology, addReference } from '../store/slices/referenceSlice';
+import { fetchReferences, fetchActiveReferences, searchReferencesByTitle, searchReferencesByService, addReference } from '../store/slices/referenceSlice';
 import { useTranslation } from 'react-i18next';
 import ReferenceCard from '../components/ReferenceCard';
 
@@ -92,7 +92,7 @@ const ReferencePage = () => {
     if (filterType === 'title') {
       dispatch(searchReferencesByTitle(searchTerm));
     } else if (filterType === 'technology') {
-      dispatch(searchReferencesByTechnology(searchTerm));
+      dispatch(searchReferencesByService(searchTerm));
     }
   };
 
@@ -219,7 +219,7 @@ const ReferencePage = () => {
             disabled={filterType === 'all' || filterType === 'active' || useSampleData}
           >
             <option value="title">{t('references.filters.byTitle')}</option>
-            <option value="technology">{t('references.filters.byTechnology')}</option>
+            <option value="technology">{t('references.filters.byService')}</option>
           </select>
           <input 
             type="text" 
@@ -376,7 +376,7 @@ const ReferencePage = () => {
               
               <div>
                 <label className="block text-sm font-medium text-gray-300 mb-1">
-                  {t('references.form.technologies')}
+                  {t('references.form.services')}
                 </label>
                 <input
                   type="text"

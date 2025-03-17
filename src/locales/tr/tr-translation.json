@@ -626,7 +626,7 @@
     "description": "Açıklama",
     "details": "Proje Detayları",
     "client": "Müşteri",
-    "technologies": "Teknolojiler",
+    "services": "Hizmetler",
     "projectUrl": "Proje URL",
     "createdAt": "Oluşturulma Tarihi",
     "updatedAt": "Güncellenme Tarihi",
@@ -639,7 +639,7 @@
       "clientLogo": "Müşteri Logo URL",
       "projectUrl": "Proje URL",
       "completionDate": "Tamamlanma Tarihi",
-      "technologies": "Teknolojiler",
+      "services": "Hizmetler",
       "active": "Aktif",
       "save": "Kaydet",
       "cancel": "İptal"
@@ -648,7 +648,8 @@
       "all": "Tümü",
       "active": "Aktif Olanlar",
       "byTitle": "Başlığa Göre",
-      "byTechnology": "Teknolojiye Göre",
+      "byTechnology": "Hizmete Göre",
+      "byService": "Hizmete Göre",
       "search": "Ara",
       "searchPlaceholder": "Arama terimi girin..."
     }
@@ -697,7 +698,6 @@
     "edit": "Düzenle",
     "view": "Görüntüle",
     "confirmDelete": "Silmeyi Onayla",
-    "deleteWarning": "Bu referansı silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
     "confirmBulkDelete": "Seçili referansları silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
     "confirmBulkActivate": "Seçili referansları aktifleştirmek istediğinizden emin misiniz?",
     "confirmBulkDeactivate": "Seçili referansları pasifleştirmek istediğinizden emin misiniz?",
@@ -709,9 +709,9 @@
     "basicInformation": "Temel Bilgiler",
     "summary": "Özet",
     "description": "Açıklama",
-    "technologies": "Teknolojiler",
-    "technologiesPlaceholder": "React, Node.js, MongoDB, ...",
-    "technologiesHelp": "Teknolojileri virgülle ayırarak girin",
+    "technologies": "Hizmetler",
+    "technologiesPlaceholder": "Web Tasarım, E-Ticaret, Mobil Uygulama, ...",
+    "technologiesHelp": "Hizmetleri virgülle ayırarak girin",
     "completionDate": "Tamamlanma Tarihi",
     "clientInformation": "Müşteri Bilgileri",
     "clientName": "Müşteri Adı",
@@ -739,6 +739,9 @@
     "imageCaption": "Resim Açıklaması",
     "displayOrder": "Görüntüleme Sırası",
     "save": "Kaydet",
-    "cancel": "İptal"
+    "cancel": "İptal",
+    "services": "Hizmetler",
+    "servicesPlaceholder": "Web Tasarım, E-Ticaret, Mobil Uygulama, ...",
+    "servicesHelp": "Hizmetleri virgülle ayırarak girin"
   }
 } 

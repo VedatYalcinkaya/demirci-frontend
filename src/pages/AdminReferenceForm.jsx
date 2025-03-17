@@ -435,7 +435,7 @@ const AdminReferenceForm = () => {
               
               <div>
                 <label htmlFor="technologies" className="block text-sm font-medium text-gray-400 mb-1">
-                  {t('admin.technologies')}
+                  {t('admin.services')}
                 </label>
                 <input
                   type="text"
@@ -443,10 +443,10 @@ const AdminReferenceForm = () => {
                   name="technologies"
                   value={formData.technologies}
                   onChange={handleChange}
-                  placeholder={t('admin.technologiesPlaceholder')}
+                  placeholder={t('admin.servicesPlaceholder')}
                   className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
                 />
-                <p className="mt-1 text-xs text-gray-400">{t('admin.technologiesHelp')}</p>
+                <p className="mt-1 text-xs text-gray-400">{t('admin.servicesHelp')}</p>
               </div>
               
               <div>

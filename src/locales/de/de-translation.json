@@ -626,7 +626,7 @@
     "description": "Beschreibung",
     "details": "Projektdetails",
     "client": "Kunde",
-    "technologies": "Technologien",
+    "services": "Dienstleistungen",
     "projectUrl": "Projekt-URL",
     "createdAt": "Erstellt am",
     "updatedAt": "Aktualisiert am",
@@ -639,7 +639,7 @@
       "clientLogo": "Kundenlogo URL",
       "projectUrl": "Projekt URL",
       "completionDate": "Fertigstellungsdatum",
-      "technologies": "Technologien",
+      "services": "Dienstleistungen",
       "active": "Aktiv",
       "save": "Speichern",
       "cancel": "Abbrechen"

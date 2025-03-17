@@ -76,10 +76,10 @@ export const searchReferencesByTitle = createAsyncThunk(
   }
 );
 
-export const searchReferencesByTechnology = createAsyncThunk(
-  'references/searchReferencesByTechnology',
-  async (technology) => {
-    const response = await axios.get(`${API_URL}/search/technology?technology=${technology}`);
+export const searchReferencesByService = createAsyncThunk(
+  'references/searchReferencesByService',
+  async (service) => {
+    const response = await axios.get(`${API_URL}/search/technology?technology=${service}`);
     return Array.isArray(response.data) ? response.data : (response.data.data || []);
   }
 );
@@ -379,8 +379,8 @@ const referenceSlice = createSlice({
       .addCase(searchReferencesByTitle.fulfilled, (state, action) => {
         state.references = action.payload;
       })
-      // Search references by technology
-      .addCase(searchReferencesByTechnology.fulfilled, (state, action) => {
+      // Search references by service
+      .addCase(searchReferencesByService.fulfilled, (state, action) => {
         state.references = action.payload;
       })
       // Fetch reference images
