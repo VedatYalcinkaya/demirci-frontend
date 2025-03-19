@@ -13,6 +13,42 @@ export const fetchReferences = createAsyncThunk(
   }
 );
 
+// Sayfalama ile referansları getir
+export const fetchPaginatedReferences = createAsyncThunk(
+  'references/fetchPaginatedReferences',
+  async ({ page = 0, size = 9 }) => {
+    try {
+      const response = await axios.get(`${API_URL}/paginated`, {
+        params: { page, size }
+      });
+      console.log('Paginated API Response:', response.data);
+      
+      // API yanıtı success, message ve data alanlarını içeriyor
+      if (response.data && response.data.success && Array.isArray(response.data.data)) {
+        // Sayfalama bilgilerini oluştur
+        return {
+          content: response.data.data,
+          totalPages: Math.ceil(response.data.data.length / size),
+          totalElements: response.data.data.length,
+          number: page,
+          size: size
+        };
+      }
+      
+      return {
+        content: [],
+        totalPages: 0,
+        totalElements: 0,
+        number: page,
+        size: size
+      };
+    } catch (error) {
+      console.error('Referanslar yüklenirken hata oluştu:', error);
+      throw error;
+    }
+  }
+);
+
 export const fetchReferenceById = createAsyncThunk(
   'references/fetchReferenceById',
   async (id) => {
@@ -334,7 +370,14 @@ const initialState = {
   currentReference: null,
   referenceImages: [],
   status: 'idle', // 'idle' | 'loading' | 'succeeded' | 'failed'
-  error: null
+  error: null,
+  pagination: {
+    content: [],
+    totalPages: 0,
+    totalElements: 0,
+    currentPage: 0,
+    pageSize: 9
+  }
 };
 
 const referenceSlice = createSlice({
@@ -352,6 +395,26 @@ const referenceSlice = createSlice({
         state.references = action.payload;
       })
       .addCase(fetchReferences.rejected, (state, action) => {
+        state.status = 'failed';
+        state.error = action.error.message;
+      })
+      // Fetch paginated references
+      .addCase(fetchPaginatedReferences.pending, (state) => {
+        state.status = 'loading';
+      })
+      .addCase(fetchPaginatedReferences.fulfilled, (state, action) => {
+        state.status = 'succeeded';
+        state.pagination = {
+          content: action.payload.content || [],
+          totalPages: action.payload.totalPages || 0,
+          totalElements: action.payload.totalElements || 0,
+          currentPage: action.payload.number || 0,
+          pageSize: action.payload.size || 9
+        };
+        // Ayrıca references dizisini de güncelle
+        state.references = action.payload.content || [];
+      })
+      .addCase(fetchPaginatedReferences.rejected, (state, action) => {
         state.status = 'failed';
         state.error = action.error.message;
       })

@@ -6,7 +6,7 @@ import {
   updateReference, 
   activateReference, 
   deactivateReference 
-} from '../store/slices/referenceSlice';
+} from '../../store/slices/referenceSlice';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { format } from 'date-fns';

@@ -1,23 +1,23 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchReferences, fetchActiveReferences, searchReferencesByTitle, searchReferencesByService, fetchPaginatedReferences } from '../store/slices/referenceSlice';
+import { fetchBlogs, fetchActiveBlogs, searchBlogsByTitle, searchBlogsByTag, fetchPaginatedBlogs } from '../store/slices/blogSlice';
 import { useTranslation } from 'react-i18next';
-import ReferenceCard from '../components/ReferenceCard';
+import BlogCard from '../components/BlogCard';
 
-const ReferencePage = () => {
+const BlogPage = () => {
   const dispatch = useDispatch();
-  const { references, status, error, pagination } = useSelector((state) => state.references);
+  const { blogs, status, error, pagination } = useSelector((state) => state.blogs);
   const { t } = useTranslation();
   const [searchTerm, setSearchTerm] = useState('');
-  const [filterType, setFilterType] = useState('all'); // 'all', 'active', 'title', 'technology'
+  const [filterType, setFilterType] = useState('all'); // 'all', 'active', 'title', 'tag'
   
   // Pagination için state'ler
   const [currentPage, setCurrentPage] = useState(0);
   const [pageSize, setPageSize] = useState(9);
 
   useEffect(() => {
-    // Sayfalanmış referansları getir
-    dispatch(fetchPaginatedReferences({ page: currentPage, size: pageSize }));
+    // Sayfalanmış blogları getir
+    dispatch(fetchPaginatedBlogs({ page: currentPage, size: pageSize }));
   }, [dispatch, currentPage, pageSize]);
 
   const handleSearch = (e) => {
@@ -25,9 +25,9 @@ const ReferencePage = () => {
     if (!searchTerm.trim()) return;
 
     if (filterType === 'title') {
-      dispatch(searchReferencesByTitle(searchTerm));
-    } else if (filterType === 'technology') {
-      dispatch(searchReferencesByService(searchTerm));
+      dispatch(searchBlogsByTitle(searchTerm));
+    } else if (filterType === 'tag') {
+      dispatch(searchBlogsByTag(searchTerm));
     }
   };
 
@@ -36,9 +36,9 @@ const ReferencePage = () => {
     setSearchTerm('');
 
     if (type === 'all') {
-      dispatch(fetchReferences());
+      dispatch(fetchBlogs());
     } else if (type === 'active') {
-      dispatch(fetchActiveReferences());
+      dispatch(fetchActiveBlogs());
     }
   };
 
@@ -62,23 +62,23 @@ const ReferencePage = () => {
     return (
       <div className="container mx-auto p-4 text-white">
         <div className="bg-red-500/20 p-4 rounded-lg">
-          <h2 className="text-xl font-bold mb-2">{t('references.error.title')}</h2>
+          <h2 className="text-xl font-bold mb-2">{t('blog.error.title')}</h2>
           <p>{error}</p>
         </div>
       </div>
     );
   }
 
-  // Referansları kontrol et
-  const referencesList = pagination?.content || references || [];
-  const hasReferences = referencesList.length > 0;
+  // Blogları kontrol et
+  const blogsList = pagination?.content || blogs || [];
+  const hasBlogs = blogsList.length > 0;
 
   return (
     <div className="container mx-auto mt-15 p-4">
       <div className="flex justify-between items-center mb-6">
         <div>
-          <h1 className="text-3xl font-bold mb-2 text-white">{t('references.title')}</h1>
-          <p className="text-gray-400">{t('references.subtitle')}</p>
+          <h1 className="text-3xl font-bold mb-2 text-white">{t('blog.title')}</h1>
+          <p className="text-gray-400">{t('blog.subtitle')}</p>
         </div>
       </div>
       
@@ -89,13 +89,13 @@ const ReferencePage = () => {
             onClick={() => handleFilterChange('all')}
             className={`px-4 py-2 rounded-md transition-colors ${filterType === 'all' ? 'bg-emerald-600 text-white' : 'bg-white/10 text-white hover:bg-white/20'}`}
           >
-            {t('references.filters.all')}
+            {t('blog.filters.all')}
           </button>
           <button 
             onClick={() => handleFilterChange('active')}
             className={`px-4 py-2 rounded-md transition-colors ${filterType === 'active' ? 'bg-emerald-600 text-white' : 'bg-white/10 text-white hover:bg-white/20'}`}
           >
-            {t('references.filters.active')}
+            {t('blog.filters.active')}
           </button>
         </div>
         
@@ -106,14 +106,14 @@ const ReferencePage = () => {
             className="bg-white/10 text-white border border-white/20 rounded-md px-3 py-2"
             disabled={filterType === 'all' || filterType === 'active'}
           >
-            <option value="title">{t('references.filters.byTitle')}</option>
-            <option value="technology">{t('references.filters.byService')}</option>
+            <option value="title">{t('blog.filters.byTitle')}</option>
+            <option value="tag">{t('blog.filters.byTag')}</option>
           </select>
           <input 
             type="text" 
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder={t('references.filters.searchPlaceholder')}
+            placeholder={t('blog.filters.searchPlaceholder')}
             className="flex-1 bg-white/10 text-white border border-white/20 rounded-md px-3 py-2 placeholder-gray-400"
             disabled={filterType === 'all' || filterType === 'active'}
           />
@@ -122,17 +122,17 @@ const ReferencePage = () => {
             className="bg-emerald-600 text-white px-4 py-2 rounded-md hover:bg-emerald-700 transition-colors"
             disabled={filterType === 'all' || filterType === 'active' || !searchTerm.trim()}
           >
-            {t('references.filters.search')}
+            {t('blog.filters.search')}
           </button>
         </form>
       </div>
       
-      {!hasReferences ? (
-        <p className="text-white text-center py-8">{t('references.noReferences')}</p>
+      {!hasBlogs ? (
+        <p className="text-white text-center py-8">{t('blog.noBlogs')}</p>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {referencesList.map((reference) => (
-            <ReferenceCard key={reference.id} reference={reference} />
+          {blogsList.map((blog) => (
+            <BlogCard key={blog.id} blog={blog} />
           ))}
         </div>
       )}
@@ -225,11 +225,11 @@ const ReferencePage = () => {
       {/* Sayfa bilgisi */}
       {pagination.totalElements > 0 && (
         <div className="text-center mt-4 text-gray-400 text-sm">
-          {t('references.pagination.showing')} {currentPage * pageSize + 1} - {Math.min((currentPage + 1) * pageSize, pagination.totalElements)} {t('references.pagination.of')} {pagination.totalElements} {t('references.pagination.references')}
+          {t('blog.pagination.showing')} {currentPage * pageSize + 1} - {Math.min((currentPage + 1) * pageSize, pagination.totalElements)} {t('blog.pagination.of')} {pagination.totalElements} {t('blog.pagination.blogs')}
         </div>
       )}
     </div>
   );
 };
 
-export default ReferencePage; 
+export default BlogPage; 

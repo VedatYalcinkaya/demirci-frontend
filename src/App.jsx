@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
+import { HelmetProvider } from 'react-helmet-async';
 
 // Sayfa değişimlerinde scroll pozisyonunu sıfırlayan bileşen
 function ScrollToTop() {
@@ -18,30 +19,32 @@ function ScrollToTop() {
 
 function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <Dashboard />
-      <Toaster 
-        position="top-right"
-        toastOptions={{
-          duration: 3000,
-          style: {
-            background: '#333',
-            color: '#fff',
-          },
-          success: {
+    <HelmetProvider>
+      <Router>
+        <ScrollToTop />
+        <Dashboard />
+        <Toaster 
+          position="top-right"
+          toastOptions={{
+            duration: 3000,
             style: {
-              background: '#10b981',
+              background: '#333',
+              color: '#fff',
             },
-          },
-          error: {
-            style: {
-              background: '#ef4444',
+            success: {
+              style: {
+                background: '#10b981',
+              },
             },
-          },
-        }}
-      />
-    </Router>
+            error: {
+              style: {
+                background: '#ef4444',
+              },
+            },
+          }}
+        />
+      </Router>
+    </HelmetProvider>
   );
 }
 

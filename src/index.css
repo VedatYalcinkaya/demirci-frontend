@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities; */
 
+/* PrimeReact styles */
+@import 'primereact/resources/themes/lara-dark-indigo/theme.css';
+@import 'primereact/resources/primereact.min.css';
+
+/* Quill editor styles */
+@import 'quill/dist/quill.snow.css';
 
 @font-face {
   font-family: 'Square721 BT';

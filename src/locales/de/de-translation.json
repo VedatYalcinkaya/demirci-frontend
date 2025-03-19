@@ -630,6 +630,11 @@
     "projectUrl": "Projekt-URL",
     "createdAt": "Erstellt am",
     "updatedAt": "Aktualisiert am",
+    "pagination": {
+      "showing": "Zeige",
+      "of": "von",
+      "references": "Referenzen"
+    },
     "form": {
       "title": "Titel",
       "summary": "Zusammenfassung",
@@ -648,7 +653,7 @@
       "all": "Alle",
       "active": "Nur Aktive",
       "byTitle": "Nach Titel",
-      "byTechnology": "Nach Technologie",
+      "byService": "Nach Dienstleistung",
       "search": "Suchen",
       "searchPlaceholder": "Suchbegriff eingeben..."
     }

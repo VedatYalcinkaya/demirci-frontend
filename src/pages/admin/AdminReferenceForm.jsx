@@ -10,7 +10,7 @@ import {
   deleteReferenceImage,
   activateReference,
   deactivateReference
-} from '../store/slices/referenceSlice';
+} from '../../store/slices/referenceSlice';
 import { toast } from 'react-hot-toast';
 
 const AdminReferenceForm = () => {

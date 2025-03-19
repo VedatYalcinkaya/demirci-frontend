@@ -86,7 +86,7 @@ const ReferenceDetailPage = () => {
   const images = currentReference.images || referenceImages || [];
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto mt-15 p-4">
       {/* Üst Kısım - Başlık ve Geri Butonu */}
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-3xl font-bold text-white">{currentReference.title}</h1>

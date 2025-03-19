@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import referenceReducer from './slices/referenceSlice';
+import blogReducer from './slices/blogSlice';
 
 export const store = configureStore({
   reducer: {
     references: referenceReducer,
+    blogs: blogReducer,
     // Diğer reducer'lar buraya eklenecek
   },
   middleware: (getDefaultMiddleware) =>

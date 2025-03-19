@@ -630,6 +630,11 @@
     "projectUrl": "Project URL",
     "createdAt": "Created At",
     "updatedAt": "Updated At",
+    "pagination": {
+      "showing": "Showing",
+      "of": "of",
+      "references": "references"
+    },
     "form": {
       "title": "Title",
       "summary": "Summary",
@@ -648,7 +653,6 @@
       "all": "All",
       "active": "Active Only",
       "byTitle": "By Title",
-      "byTechnology": "By Service",
       "byService": "By Service",
       "search": "Search",
       "searchPlaceholder": "Enter search term..."
