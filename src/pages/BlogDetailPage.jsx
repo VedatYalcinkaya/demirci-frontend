@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback, lazy, Suspense } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
@@ -10,22 +10,26 @@ import i18next from 'i18next';
 import { fetchBlogById, fetchBlogBySlug, fetchActiveBlogs } from '../store/slices/blogSlice';
 import BlogCard from '../components/BlogCard';
 import DOMPurify from 'dompurify';
-import hljs from 'highlight.js';
+// Highlight.js ana modülünü içe aktar
+import hljs from 'highlight.js/lib/core';
 import 'highlight.js/styles/atom-one-dark.css'; // Koyu tema
 
-// Prism dil desteği yerine highlight.js dil desteği
-// Gerekli dilleri import et
-import 'highlight.js/lib/languages/javascript';
-import 'highlight.js/lib/languages/typescript';
-import 'highlight.js/lib/languages/css';
-import 'highlight.js/lib/languages/xml';
-import 'highlight.js/lib/languages/python';
-import 'highlight.js/lib/languages/java';
-import 'highlight.js/lib/languages/csharp';
-import 'highlight.js/lib/languages/bash';
-import 'highlight.js/lib/languages/json';
-import 'highlight.js/lib/languages/sql';
-import 'highlight.js/lib/languages/php';
+// Highlight.js dil modüllerini tembel yükleme (sadece gerçekten ihtiyaç duyulduğunda yüklenecek)
+const loadLanguage = async (langName) => {
+  try {
+    const lang = await import(`highlight.js/lib/languages/${langName}`);
+    hljs.registerLanguage(langName, lang.default);
+  } catch (e) {
+    console.warn(`Dil yüklenirken hata: ${langName}`, e);
+  }
+};
+
+// Gerekli dilleri yalnızca ihtiyaç duyulduğunda yükle
+const loadCommonLanguages = async () => {
+  const commonLanguages = ['javascript', 'typescript', 'css', 'xml', 'python', 'java', 'csharp', 'bash', 'json', 'sql', 'php'];
+  await Promise.all(commonLanguages.map(lang => loadLanguage(lang)));
+};
+
 import { IconCalendar, IconUser, IconTag, IconArrowLeft, IconAlertTriangle, IconClipboard, IconCheck } from '@tabler/icons-react';
 
 const getLocale = () => {
@@ -53,12 +57,20 @@ const BlogDetailPage = () => {
   
   const [blogLoaded, setBlogLoaded] = useState(false);
   const [fetchError, setFetchError] = useState(null);
+  const [languagesLoaded, setLanguagesLoaded] = useState(false);
   
   const { currentBlog, status, error } = useSelector(state => state.blogs);
   const loading = status === 'loading';
   const blogs = useSelector(state => state.blogs.blogs);
 
   const [relatedBlogs, setRelatedBlogs] = useState([]);
+  
+  // Sayfa yüklendiğinde dil modüllerini yükle
+  useEffect(() => {
+    loadCommonLanguages().then(() => {
+      setLanguagesLoaded(true);
+    });
+  }, []);
   
   // Blog bilgilerini yükle
   useEffect(() => {
@@ -148,7 +160,7 @@ const BlogDetailPage = () => {
   
   // İçerik yüklendiğinde kod bloklarını vurgula
   useEffect(() => {
-    if (currentBlog?.content) {
+    if (currentBlog?.content && languagesLoaded) {
       // DOMPurify ayarları
       DOMPurify.addHook('afterSanitizeAttributes', function(node) {
         if (node.nodeName === 'PRE' || node.nodeName === 'CODE') {
@@ -247,7 +259,7 @@ const BlogDetailPage = () => {
         }
       }, 100);
     }
-  }, [currentBlog]);
+  }, [currentBlog, languagesLoaded]);
   
   const formatDate = (dateString) => {
     if (!dateString) return '';

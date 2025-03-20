@@ -25,11 +25,7 @@
     "i18next": "^24.2.2",
     "i18next-browser-languagedetector": "^8.0.4",
     "mini-svg-data-uri": "^1.4.4",
-    "motion": "^12.5.0",
     "primereact": "^10.9.3",
-    "prismjs": "^1.30.0",
-    "prismjs-themes": "^2.0.0",
-    "quill": "^2.0.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-helmet-async": "^2.0.5",
@@ -39,11 +35,9 @@
     "react-quill": "^2.0.0",
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.2.0",
-    "react-toastify": "^11.0.5",
     "simplex-noise": "^4.0.3",
     "tailwind-merge": "^3.0.2",
     "three": "^0.173.0",
-    "toastify": "^2.0.1",
     "yup": "^1.6.1"
   },
   "devDependencies": {
@@ -59,6 +53,7 @@
     "globals": "^15.14.0",
     "postcss": "^8.5.2",
     "tailwindcss": "^4.0.6",
+    "terser": "^5.39.0",
     "vite": "^6.1.0"
   }
 }

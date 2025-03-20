@@ -1,11 +1,26 @@
-import React, { useEffect, useState, useRef, forwardRef } from 'react';
+import React, { useEffect, useState, useRef, forwardRef, lazy, Suspense } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
-import { toast } from 'react-toastify';
-import { Editor } from '@tinymce/tinymce-react';
-import hljs from 'highlight.js';
+import { toast } from 'react-hot-toast';
+// TinyMCE bileşenini lazy loading ile içe aktar
+const Editor = lazy(() => import('@tinymce/tinymce-react').then(module => ({
+  default: module.Editor
+})));
+// Highlight.js temel modülünü içe aktar
+import hljs from 'highlight.js/lib/core';
+// Yalnızca en yaygın kullanılan dilleri kaydet
+import javascript from 'highlight.js/lib/languages/javascript';
+import xml from 'highlight.js/lib/languages/xml';
+import css from 'highlight.js/lib/languages/css';
+// Tema stilini import et
 import 'highlight.js/styles/atom-one-dark.css';
+
+// Dilleri kaydedelim
+hljs.registerLanguage('javascript', javascript);
+hljs.registerLanguage('xml', xml);
+hljs.registerLanguage('css', css);
+
 import { 
   fetchBlogById, 
   addBlogWithThumbnail, 
@@ -146,13 +161,15 @@ const TinyEditor = ({ value, onChange }) => {
   };
   
   return (
-    <Editor
-      apiKey="eclre3f3dtlvfd3y07ezetcslfyzxyfticytyahe3ebq5e1m"
-      onInit={(evt, editor) => editorRef.current = editor}
-      value={value}
-      onEditorChange={onChange}
-      init={init}
-    />
+    <Suspense fallback={<div className="h-96 w-full bg-gray-800 rounded-lg animate-pulse flex items-center justify-center">Editor yükleniyor...</div>}>
+      <Editor
+        apiKey="eclre3f3dtlvfd3y07ezetcslfyzxyfticytyahe3ebq5e1m"
+        onInit={(evt, editor) => editorRef.current = editor}
+        value={value}
+        onEditorChange={onChange}
+        init={init}
+      />
+    </Suspense>
   );
 };
 

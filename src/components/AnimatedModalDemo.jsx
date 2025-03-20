@@ -7,7 +7,7 @@ import {
   ModalFooter,
   ModalTrigger,
 } from "./ui/animated-modal";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 export function AnimatedModalDemo() {
   const images = [

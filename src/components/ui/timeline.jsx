@@ -26,8 +26,9 @@ export const Timeline = ({
 
   return (
     <div
-      className="md:w-5/6 mx-auto bg-black/30 backdrop-blur-sm rounded-xl p-6 hover:bg-black/40 transition-colors font-sans md:px-10"
+      className="md:w-5/6 mx-auto bg-black/30 backdrop-blur-sm rounded-xl p-6 hover:bg-black/40 transition-colors font-sans md:px-10 relative"
       ref={containerRef}
+      style={{ position: "relative" }}
     >
       <div className="relative">
         {/* Neon Lamp Effect */}
