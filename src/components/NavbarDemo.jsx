@@ -122,14 +122,21 @@ function Navbar({ className }) {
                 <HoveredLink to="/iletisim/sikca-sorulan-sorular">{t('navbar.dropdown.contact.faq')}</HoveredLink>
               </div>
             </MenuItem>
-            <MenuItem setActive={setActive} active={active} item={t('navbar.blog')}>
+            {/* <MenuItem setActive={setActive} active={active} item={t('navbar.blog')}>
               <div className="flex flex-col space-y-4 text-sm">
                 <HoveredLink to="/blog/teknoloji">{t('navbar.dropdown.blog.technology')}</HoveredLink>
                 <HoveredLink to="/blog/tasarim">{t('navbar.dropdown.blog.design')}</HoveredLink>
                 <HoveredLink to="/blog/pazarlama">{t('navbar.dropdown.blog.marketing')}</HoveredLink>
                 <HoveredLink to="/blog/yapay-zeka">{t('navbar.dropdown.blog.ai')}</HoveredLink>
               </div>
-            </MenuItem>
+            </MenuItem> */}
+
+            {/* Ana Sayfa - Dropdown olmadan direkt link */}
+            <Link to="/blog">
+              <span className="cursor-pointer hover:opacity-[0.9] text-white">
+                {t('navbar.blog')}
+              </span>
+            </Link>
 
             {/* Dil Değiştirici */}
             <div className="ml-4">
@@ -202,12 +209,9 @@ function Navbar({ className }) {
                         <MobileLink to="/iletisim/sikca-sorulan-sorular">{t('navbar.dropdown.contact.faq')}</MobileLink>
                       </MobileMenuSection>
 
-                      <MobileMenuSection title={t('navbar.blog')}>
-                        <MobileLink to="/blog/teknoloji">{t('navbar.dropdown.blog.technology')}</MobileLink>
-                        <MobileLink to="/blog/tasarim">{t('navbar.dropdown.blog.design')}</MobileLink>
-                        <MobileLink to="/blog/pazarlama">{t('navbar.dropdown.blog.marketing')}</MobileLink>
-                        <MobileLink to="/blog/yapay-zeka">{t('navbar.dropdown.blog.ai')}</MobileLink>
-                      </MobileMenuSection>
+                      <MobileLink to="/blog">
+                        {t('navbar.blog')}
+                      </MobileLink>
                     </div>
                   </nav>
 
