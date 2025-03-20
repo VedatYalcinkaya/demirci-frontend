@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { format } from 'date-fns';
 import { tr, de, enUS } from 'date-fns/locale';
 import i18next from 'i18next';
+import { IconCalendar, IconUser, IconArrowRight } from '@tabler/icons-react';
 
 const getLocale = () => {
   const language = i18next.language;
@@ -15,6 +16,7 @@ const getLocale = () => {
 
 const BlogCard = ({ blog }) => {
   const { t } = useTranslation();
+  const [isHovered, setIsHovered] = useState(false);
   
   // Blog prop'unu kontrol et
   if (!blog) return null;
@@ -42,71 +44,76 @@ const BlogCard = ({ blog }) => {
   const displayDate = formatDate(publishDate || createdAt);
   
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 bg-white dark:bg-gray-800 h-full flex flex-col"
+    <div
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className="rounded-2xl overflow-hidden h-full flex flex-col relative border border-gray-700 bg-gray-800/60 backdrop-blur-sm transition-transform duration-300 hover:scale-[1.02] group"
     >
+      {/* Border Corners */}
+      <div className="absolute h-2 w-2 border-t-2 border-l-2 border-emerald-500 top-0 left-0" />
+      <div className="absolute h-2 w-2 border-t-2 border-r-2 border-emerald-500 top-0 right-0" />
+      <div className="absolute h-2 w-2 border-b-2 border-l-2 border-emerald-500 bottom-0 left-0" />
+      <div className="absolute h-2 w-2 border-b-2 border-r-2 border-emerald-500 bottom-0 right-0" />
+      
       <Link to={blogUrl} className="block overflow-hidden h-48 relative">
+        <div className="absolute inset-0 bg-emerald-500/20 opacity-0 hover:opacity-100 transition-opacity z-10"></div>
         <img 
           src={thumbnailUrl || 'https://via.placeholder.com/400x250'} 
           alt={title}
-          className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
+          className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
         />
-        <div className="absolute bottom-0 left-0 w-full p-2 bg-gradient-to-t from-black/70 to-transparent">
+        <div className="absolute bottom-0 left-0 w-full p-3 bg-gradient-to-t from-gray-900 via-gray-900/70 to-transparent z-20">
           <div className="flex gap-2 flex-wrap">
             {tagArray.slice(0, 3).map((tag, index) => (
               <span 
                 key={index} 
-                className="text-xs font-medium text-white bg-primary-500 dark:bg-primary-700 px-2 py-1 rounded-full"
+                className="text-xs font-medium text-emerald-400 bg-emerald-600/20 px-3 py-1 rounded-full border border-emerald-500/30"
               >
-                {tag}
+                #{tag}
               </span>
             ))}
             {tagArray.length > 3 && (
-              <span className="text-xs font-medium text-white bg-gray-500 px-2 py-1 rounded-full">
+              <span className="text-xs font-medium text-gray-300 bg-gray-700/50 px-3 py-1 rounded-full border border-gray-600">
                 +{tagArray.length - 3}
               </span>
             )}
           </div>
         </div>
       </Link>
+      
       <div className="p-5 flex flex-col flex-grow">
-        <div className="flex justify-between items-center mb-2 text-sm text-gray-500 dark:text-gray-400">
-          <span>{author}</span>
-          <span>{displayDate}</span>
+        <div className="flex justify-between items-center mb-3 text-sm text-gray-400">
+          {author && (
+            <span className="flex items-center">
+              <IconUser size={16} className="mr-1 text-emerald-500" />
+              {author}
+            </span>
+          )}
+          <span className="flex items-center">
+            <IconCalendar size={16} className="mr-1 text-emerald-500" />
+            {displayDate}
+          </span>
         </div>
+        
         <Link to={blogUrl} className="block">
-          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 hover:text-primary-500 dark:hover:text-primary-400 transition duration-300">
+          <h3 className="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition duration-300">
             {title}
           </h3>
         </Link>
-        <p className="text-gray-600 dark:text-gray-300 mb-4 flex-grow">
-          {summary && summary.length > 120 ? `${summary.substring(0, 120)}...` : summary}
+        
+        <p className="text-gray-300 mb-4 flex-grow line-clamp-3">
+          {summary}
         </p>
+        
         <Link 
           to={blogUrl}
-          className="inline-flex items-center font-medium text-primary-600 dark:text-primary-400 hover:underline mt-auto"
+          className="inline-flex items-center font-medium text-emerald-400 hover:text-emerald-300 transition-colors mt-auto"
         >
           {t('blog.readMore')} 
-          <svg 
-            className="ml-2 w-4 h-4" 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24" 
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth="2" 
-              d="M14 5l7 7m0 0l-7 7m7-7H3"
-            />
-          </svg>
+          <IconArrowRight className={`ml-1 transition-transform duration-300 ${isHovered ? 'translate-x-1' : ''}`} size={18} />
         </Link>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

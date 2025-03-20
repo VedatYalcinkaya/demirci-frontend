@@ -157,13 +157,13 @@ const AdminBlogPage = () => {
       for (const blogId of selectedBlogs) {
         await dispatch(deleteBlog(blogId)).unwrap();
       }
-      toast.success(t('admin.blogsDeleted'));
+          toast.success(t('admin.blogsDeleted'));
       setSelectedBlogs([]);
       dispatch(fetchBlogs());
       setConfirmDelete(null);
     } catch (err) {
-      toast.error(t('admin.errorDeletingBlogs'));
-      console.error(err);
+          toast.error(t('admin.errorDeletingBlogs'));
+          console.error(err);
       setConfirmDelete(null);
     }
   };
@@ -199,7 +199,7 @@ const AdminBlogPage = () => {
 
   // Filtreleme ve sıralama
   const blogsArray = Array.isArray(blogs) ? blogs : [];
-  
+
   const filteredBlogs = blogsArray.filter(blog => {
     // Arama filtresi
     const searchMatch = blog.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -230,7 +230,7 @@ const AdminBlogPage = () => {
         return 0;
     }
   });
-
+  
   const formatDate = (date) => {
     if (!date) return '';
     return format(new Date(date), 'PPP', { locale: getLocale(i18n.language) });
@@ -249,7 +249,7 @@ const AdminBlogPage = () => {
           <IconPlus className="h-5 w-5 mr-2" />
           {t('admin.createBlog')}
         </button>
-      </div>
+          </div>
 
       {/* Filtreler ve Arama */}
       <div className="bg-gray-800 rounded-lg p-4 mb-6">
@@ -321,8 +321,8 @@ const AdminBlogPage = () => {
               </div>
             )}
           </div>
+          </div>
         </div>
-      </div>
 
       {/* Blog Listesi */}
       <div className="bg-gray-800 rounded-lg overflow-hidden">

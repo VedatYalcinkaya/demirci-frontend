@@ -51,28 +51,54 @@ export const fetchPaginatedBlogs = createAsyncThunk(
 
 export const fetchBlogById = createAsyncThunk(
   'blogs/fetchBlogById',
-  async (id) => {
+  async (id, { rejectWithValue }) => {
     try {
+      console.log("blogSlice: Fetching blog by ID:", id);
       const response = await axios.get(`${API_URL}/${id}`);
-      console.log('API Response (fetchBlogById):', response.data);
-      return response.data.data || response.data;
+      console.log('blogSlice: API Response (fetchBlogById):', response.data);
+      
+      // API yanıtını kontrol et ve uygun şekilde işle
+      if (response.data && (response.data.data || response.data.id)) {
+        // Önce data içinde mi kontrol et, yoksa direkt response.data'yı al
+        const blogData = response.data.data || response.data;
+        console.log('blogSlice: Processed blog data:', blogData);
+        return blogData;
+      } else {
+        console.error('blogSlice: Invalid API response structure:', response.data);
+        return rejectWithValue('Blog bilgileri alınamadı. Geçersiz API yanıtı.');
+      }
     } catch (error) {
-      console.error('Blog detayları yüklenirken hata oluştu:', error);
-      throw error;
+      console.error('blogSlice: Blog detayları yüklenirken hata oluştu:', error);
+      console.error('blogSlice: Error response:', error.response?.data);
+      console.error('blogSlice: Error status:', error.response?.status);
+      return rejectWithValue(error.response?.data?.message || error.message || 'Blog detayları yüklenemedi.');
     }
   }
 );
 
 export const fetchBlogBySlug = createAsyncThunk(
   'blogs/fetchBlogBySlug',
-  async (slug) => {
+  async (slug, { rejectWithValue }) => {
     try {
+      console.log("blogSlice: Fetching blog by slug:", slug);
       const response = await axios.get(`${API_URL}/slug/${slug}`);
-      console.log('API Response (fetchBlogBySlug):', response.data);
-      return response.data.data || response.data;
+      console.log('blogSlice: API Response (fetchBlogBySlug):', response.data);
+      
+      // API yanıtını kontrol et ve uygun şekilde işle
+      if (response.data && (response.data.data || response.data.id)) {
+        // Önce data içinde mi kontrol et, yoksa direkt response.data'yı al
+        const blogData = response.data.data || response.data;
+        console.log('blogSlice: Processed blog data:', blogData);
+        return blogData;
+      } else {
+        console.error('blogSlice: Invalid API response structure:', response.data);
+        return rejectWithValue('Blog bilgileri alınamadı. Geçersiz API yanıtı.');
+      }
     } catch (error) {
-      console.error('Blog detayları yüklenirken hata oluştu:', error);
-      throw error;
+      console.error('blogSlice: Blog detayları yüklenirken hata oluştu:', error);
+      console.error('blogSlice: Error response:', error.response?.data);
+      console.error('blogSlice: Error status:', error.response?.status);
+      return rejectWithValue(error.response?.data?.message || error.message || 'Blog detayları yüklenemedi.');
     }
   }
 );
@@ -125,11 +151,80 @@ export const addBlogWithThumbnail = createAsyncThunk(
   'blogs/addBlogWithThumbnail',
   async (formData, { rejectWithValue }) => {
     try {
-      const response = await axios.post(`${API_URL}/create-with-thumbnail`, formData, {
+      console.log('API isteği başlatılıyor (addBlogWithThumbnail):', `${API_URL}/create-with-thumbnail`);
+      
+      // Alanları sınırlandır
+      const title = formData.get('title');
+      const trimmedTitle = title && title.length > 95
+        ? title.substring(0, 95) + '...'
+        : title;
+        
+      const slug = formData.get('slug');
+      const trimmedSlug = slug && slug.length > 95
+        ? slug.substring(0, 95) + '...'
+        : slug;
+        
+      const metaDescription = formData.get('metaDescription');
+      const trimmedMetaDescription = metaDescription && metaDescription.length > 155 
+        ? metaDescription.substring(0, 155) + '...' 
+        : metaDescription;
+      
+      const summary = formData.get('summary');
+      const trimmedSummary = summary && summary.length > 495
+        ? summary.substring(0, 495) + '...'
+        : summary;
+      
+      const metaKeywords = formData.get('metaKeywords');
+      const trimmedMetaKeywords = metaKeywords && metaKeywords.length > 250
+        ? metaKeywords.substring(0, 250) + '...'
+        : metaKeywords;
+        
+      const canonicalUrl = formData.get('canonicalUrl');
+      const trimmedCanonicalUrl = canonicalUrl && canonicalUrl.length > 250
+        ? canonicalUrl.substring(0, 250) + '...'
+        : canonicalUrl;
+
+      const metaTitle = formData.get('metaTitle');
+      const trimmedMetaTitle = metaTitle && metaTitle.length > 95
+        ? metaTitle.substring(0, 95) + '...'
+        : metaTitle;
+
+      const blogData = {
+        title: trimmedTitle,
+        content: formData.get('content'),
+        summary: trimmedSummary,
+        author: formData.get('author'),
+        tags: formData.get('tags'),
+        slug: trimmedSlug,
+        metaTitle: trimmedMetaTitle,
+        metaDescription: trimmedMetaDescription,
+        metaKeywords: trimmedMetaKeywords,
+        canonicalUrl: trimmedCanonicalUrl,
+        active: formData.get('active') === 'true',
+        publishDate: formData.get('publishDate')
+      };
+
+      // Yeni bir FormData oluştur
+      const newFormData = new FormData();
+      
+      // Blog verilerini JSON string olarak ekle
+      newFormData.append('blogData', JSON.stringify(blogData));
+      
+      // Thumbnail dosyasını ekle
+      const thumbnailFile = formData.get('thumbnail');
+      if (thumbnailFile instanceof File) {
+        newFormData.append('thumbnail', thumbnailFile);
+        console.log('Thumbnail dosyası:', thumbnailFile.name, thumbnailFile.type, thumbnailFile.size, 'bytes');
+      }
+
+      console.log('Gönderilen blog verisi:', blogData);
+      
+      const response = await axios.post(`${API_URL}/create-with-thumbnail`, newFormData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
       });
+      
       console.log('API Yanıtı (addBlogWithThumbnail):', response.data);
       return response.data.data || response.data;
     } catch (error) {
@@ -156,10 +251,85 @@ export const updateBlogWithThumbnail = createAsyncThunk(
   'blogs/updateBlogWithThumbnail',
   async (formData, { rejectWithValue, dispatch }) => {
     try {
-      // FormData'daki blog ID'sini al veya doğrudan blog ID'sini kullan
       const blogId = formData.get('blogId') || formData.id;
+      
+      if (!blogId) {
+        console.error('Blog ID bulunamadı');
+        return rejectWithValue('Blog ID bulunamadı. Güncelleme işlemi yapılamaz.');
+      }
 
-      const response = await axios.post(`${API_URL}/${blogId}/update-with-thumbnail`, formData, {
+      // Alanları sınırlandır
+      const title = formData.get('title');
+      const trimmedTitle = title && title.length > 95
+        ? title.substring(0, 95) + '...'
+        : title;
+        
+      const slug = formData.get('slug');
+      const trimmedSlug = slug && slug.length > 95
+        ? slug.substring(0, 95) + '...'
+        : slug;
+      
+      const metaDescription = formData.get('metaDescription');
+      const trimmedMetaDescription = metaDescription && metaDescription.length > 155 
+        ? metaDescription.substring(0, 155) + '...' 
+        : metaDescription;
+        
+      const summary = formData.get('summary');
+      const trimmedSummary = summary && summary.length > 495
+        ? summary.substring(0, 495) + '...'
+        : summary;
+        
+      const metaKeywords = formData.get('metaKeywords');
+      const trimmedMetaKeywords = metaKeywords && metaKeywords.length > 250
+        ? metaKeywords.substring(0, 250) + '...'
+        : metaKeywords;
+        
+      const canonicalUrl = formData.get('canonicalUrl');
+      const trimmedCanonicalUrl = canonicalUrl && canonicalUrl.length > 250
+        ? canonicalUrl.substring(0, 250) + '...'
+        : canonicalUrl;
+
+      const metaTitle = formData.get('metaTitle');
+      const trimmedMetaTitle = metaTitle && metaTitle.length > 95
+        ? metaTitle.substring(0, 95) + '...'
+        : metaTitle;
+
+      // Blog verilerini formData'dan çıkar
+      const blogData = {
+        id: blogId,
+        title: trimmedTitle,
+        content: formData.get('content'),
+        summary: trimmedSummary,
+        author: formData.get('author'),
+        tags: formData.get('tags'),
+        slug: trimmedSlug,
+        metaTitle: trimmedMetaTitle,
+        metaDescription: trimmedMetaDescription,
+        metaKeywords: trimmedMetaKeywords,
+        canonicalUrl: trimmedCanonicalUrl,
+        active: formData.get('active') === 'true',
+        publishDate: formData.get('publishDate'),
+        thumbnailUrl: formData.get('thumbnailUrl') // Mevcut thumbnail URL'sini ekle
+      };
+
+      // Yeni bir FormData oluştur
+      const newFormData = new FormData();
+      
+      // Blog verilerini JSON string olarak ekle
+      newFormData.append('blogData', JSON.stringify(blogData));
+      
+      // Thumbnail dosyasını ekle
+      const thumbnailFile = formData.get('thumbnail');
+      if (thumbnailFile instanceof File) {
+        newFormData.append('thumbnail', thumbnailFile);
+        console.log('Yeni thumbnail dosyası:', thumbnailFile.name, thumbnailFile.type, thumbnailFile.size, 'bytes');
+      } else if (formData.get('thumbnailUrl')) {
+        console.log('Mevcut thumbnail URL kullanılıyor:', formData.get('thumbnailUrl'));
+      }
+
+      console.log('Gönderilen blog verisi:', blogData);
+      
+      const response = await axios.post(`${API_URL}/${blogId}/update-with-thumbnail`, newFormData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
@@ -167,15 +337,11 @@ export const updateBlogWithThumbnail = createAsyncThunk(
       
       console.log('API Yanıtı (updateBlogWithThumbnail):', response.data);
       
-      // Güncellemeden sonra blog detaylarını yeniden yükle
-      const updatedData = response.data.data || response.data;
-      
-      // Blog detaylarını yeniden yükle
-      if (updatedData.id) {
-        await dispatch(fetchBlogById(updatedData.id));
+      if (response.data.data?.id) {
+        await dispatch(fetchBlogById(response.data.data.id));
       }
       
-      return updatedData;
+      return response.data.data || response.data;
     } catch (error) {
       console.error('Blog güncellenirken hata oluştu:', error);
       console.error('Hata detayları:', error.response?.data);

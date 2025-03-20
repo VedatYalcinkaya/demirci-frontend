@@ -93,4 +93,1377 @@ select option {
   color: white !important;
 }
 
+/* TinyMCE Code Sample biçimlendirmesi */
+.prose pre {
+  background-color: #1e1e1e !important;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.prose code {
+  color: #e6e6e6;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.875em;
+}
+
+.prose pre code {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  color: inherit;
+}
+
+/* Başlık stilleri - TinyMCE uyumu için güncellendi */
+.prose h1 {
+  font-size: 2.5em !important;
+  margin-top: 1.5em !important;
+  margin-bottom: 0.8em !important;
+  font-weight: 700 !important;
+  color: #10b981 !important; /* emerald-500 */
+  line-height: 1.25 !important;
+}
+
+.prose h2 {
+  font-size: 2em !important;
+  margin-top: 1.25em !important;
+  margin-bottom: 0.75em !important;
+  font-weight: 700 !important;
+  color: #10b981 !important; /* emerald-500 */
+  line-height: 1.3 !important;
+}
+
+.prose h3 {
+  font-size: 1.75em !important;
+  margin-top: 1.15em !important;
+  margin-bottom: 0.7em !important;
+  font-weight: 600 !important;
+  color: #10b981 !important; /* emerald-500 */
+  line-height: 1.35 !important;
+}
+
+.prose h4 {
+  font-size: 1.5em !important;
+  margin-top: 1.1em !important;
+  margin-bottom: 0.65em !important;
+  font-weight: 600 !important;
+  color: #10b981 !important; /* emerald-500 */
+  line-height: 1.4 !important;
+}
+
+.prose h5 {
+  font-size: 1.25em !important;
+  margin-top: 1.05em !important;
+  margin-bottom: 0.6em !important;
+  font-weight: 600 !important;
+  color: #10b981 !important; /* emerald-500 */
+  line-height: 1.45 !important;
+}
+
+.prose h6 {
+  font-size: 1.1em !important;
+  margin-top: 1em !important;
+  margin-bottom: 0.55em !important;
+  font-weight: 600 !important;
+  color: #10b981 !important; /* emerald-500 */
+  line-height: 1.5 !important;
+}
+
+/* Prism.js dillerini destekleyen sınıflar */
+.prose .language-javascript,
+.prose .language-js,
+.prose .language-typescript,
+.prose .language-ts,
+.prose .language-css,
+.prose .language-html,
+.prose .language-markup,
+.prose .language-php,
+.prose .language-python,
+.prose .language-ruby,
+.prose .language-java,
+.prose .language-c,
+.prose .language-csharp,
+.prose .language-cpp,
+.prose .language-json,
+.prose .language-bash,
+.prose .language-sql {
+  display: block;
+  color: #f8f8f2;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+}
+
+/* TinyMCE tarafından eklenen codesample_wrap sınıfı için stil */
+.prose .mce-content-body div.mce-resizehandle {
+  background-color: #4f4f4f;
+}
+
+.prose .mce-content-body .mce-item-anchor {
+  background-color: #4f4f4f;
+}
+
+.prose .mce-content-body .mce-item-table {
+  border: 1px dashed #4f4f4f;
+}
+
+/* Kod bloğu ve prism.js için syntax highlighting */
+.prose pre[class*="language-"] {
+  margin: 1.5em 0;
+  overflow: auto;
+  border-radius: 0.5rem;
+}
+
+.prose :not(pre) > code[class*="language-"],
+.prose pre[class*="language-"] {
+  background-color: #1e1e1e;
+}
+
+/* Prism.js ile ilgili ek stiller - Tema ile uyumlu renkleri kullanalım */
+.prism-enabled pre {
+  margin: 1.5em 0 !important;
+  padding: 1.5em !important;
+  background-color: #2d2d2d !important; /* tomorrow.css tema rengi */
+  border-radius: 0.5rem !important;
+  overflow-x: auto !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2) !important;
+}
+
+.prism-enabled pre code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+  font-size: 0.9em !important;
+  padding: 0 !important;
+  background: none !important;
+  white-space: pre !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  line-height: 1.6 !important;
+}
+
+/* PrismJS tomorrow theme uyumlu renkleri manuel ekleyelim */
+.prism-enabled .token.comment,
+.prism-enabled .token.prolog,
+.prism-enabled .token.doctype,
+.prism-enabled .token.cdata {
+  color: #999 !important;
+}
+
+.prism-enabled .token.punctuation {
+  color: #ccc !important;
+}
+
+.prism-enabled .token.tag,
+.prism-enabled .token.attr-name,
+.prism-enabled .token.namespace,
+.prism-enabled .token.deleted {
+  color: #e2777a !important;
+}
+
+.prism-enabled .token.function-name {
+  color: #6196cc !important;
+}
+
+.prism-enabled .token.boolean,
+.prism-enabled .token.number,
+.prism-enabled .token.function {
+  color: #f08d49 !important;
+}
+
+.prism-enabled .token.property,
+.prism-enabled .token.class-name,
+.prism-enabled .token.constant,
+.prism-enabled .token.symbol {
+  color: #f8c555 !important;
+}
+
+.prism-enabled .token.selector,
+.prism-enabled .token.important,
+.prism-enabled .token.atrule,
+.prism-enabled .token.keyword,
+.prism-enabled .token.builtin {
+  color: #cc99cd !important;
+}
+
+.prism-enabled .token.string,
+.prism-enabled .token.char,
+.prism-enabled .token.attr-value,
+.prism-enabled .token.regex,
+.prism-enabled .token.variable {
+  color: #7ec699 !important;
+}
+
+.prism-enabled .token.operator,
+.prism-enabled .token.entity,
+.prism-enabled .token.url {
+  color: #67cdcc !important;
+}
+
+.prism-enabled .token.important,
+.prism-enabled .token.bold {
+  font-weight: bold !important;
+}
+
+.prism-enabled .token.italic {
+  font-style: italic !important;
+}
+
+.prism-enabled .token.entity {
+  cursor: help !important;
+}
+
+.prism-enabled .token.inserted {
+  color: #67cdcc !important;
+}
+
+/* TinyMCE'den gelen codesample özelliği için stillemeler */
+.prism-enabled .mce-content-body {
+  line-height: 1.6 !important;
+}
+
+.prism-enabled .mce-content-body [data-mce-selected=inline-boundary] {
+  background-color: transparent !important;
+}
+
+.prism-enabled .mce-content-body .mce-item-anchor {
+  display: inline-block !important;
+  width: 8px !important;
+  height: 8px !important;
+  background-color: #666 !important;
+}
+
+.prism-enabled .mce-content-body hr {
+  border: 0 !important;
+  border-top: 1px solid #ccc !important;
+}
+
+/* Kod örneği konteyneri */
+.prism-enabled div.mce-codeblock-marker {
+  margin: 1.5em 0 !important;
+  padding: 0 !important;
+  border-radius: 0.5rem !important;
+  overflow: hidden !important;
+}
+
+/* Diğer TinyMCE stilleri */
+.prism-enabled figure.image {
+  display: table !important;
+  margin: 1em auto !important;
+}
+
+.prism-enabled figure.image img {
+  display: block !important;
+  margin: 0 auto !important;
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+.prism-enabled figure.image figcaption {
+  display: table-caption !important;
+  caption-side: bottom !important;
+  word-break: break-word !important;
+  text-align: center !important;
+  color: #999 !important;
+  font-size: 0.8em !important;
+  margin-top: 0.5em !important;
+}
+
+/* TinyMCE içeriği için özel stillemeler */
+.tinymce-content h1, 
+.tinymce-content h2, 
+.tinymce-content h3, 
+.tinymce-content h4, 
+.tinymce-content h5, 
+.tinymce-content h6 {
+  display: block !important;
+  margin-top: 1.5em !important;
+  margin-bottom: 0.75em !important;
+  font-weight: 700 !important;
+  color: #10b981 !important; /* emerald-500 */
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif !important;
+}
+
+.tinymce-content h1 {
+  font-size: 2.25rem !important;
+  line-height: 1.2 !important;
+}
+
+.tinymce-content h2 {
+  font-size: 1.875rem !important;
+  line-height: 1.3 !important;
+}
+
+.tinymce-content h3 {
+  font-size: 1.5rem !important;
+  line-height: 1.4 !important;
+}
+
+.tinymce-content h4 {
+  font-size: 1.25rem !important;
+  line-height: 1.5 !important;
+}
+
+.tinymce-content h5 {
+  font-size: 1.125rem !important;
+  line-height: 1.6 !important;
+}
+
+.tinymce-content h6 {
+  font-size: 1rem !important;
+  line-height: 1.7 !important;
+}
+
+.tinymce-content p {
+  margin-bottom: 1.2em !important;
+}
+
+.tinymce-content ul, 
+.tinymce-content ol {
+  margin-bottom: 1.2em !important;
+  padding-left: 2em !important;
+}
+
+.tinymce-content ul {
+  list-style-type: disc !important;
+}
+
+.tinymce-content ol {
+  list-style-type: decimal !important;
+}
+
+.tinymce-content li {
+  margin-bottom: 0.5em !important;
+}
+
+.tinymce-content blockquote {
+  border-left: 4px solid #10b981 !important;
+  padding-left: 1em !important;
+  margin: 1.5em 0 !important;
+  font-style: italic !important;
+  color: #d1d5db !important;
+}
+
+.tinymce-content img {
+  max-width: 100% !important;
+  height: auto !important;
+  border-radius: 0.5rem !important;
+  margin: 1.5em 0 !important;
+}
+
+.tinymce-content a {
+  color: #10b981 !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+
+.tinymce-content a:hover {
+  color: #34d399 !important;
+  text-decoration: underline !important;
+}
+
+.tinymce-content strong, 
+.tinymce-content b {
+  font-weight: 700 !important;
+  color: #f9fafb !important;
+}
+
+.tinymce-content em, 
+.tinymce-content i {
+  font-style: italic !important;
+}
+
+/* TinyMCE başlık stilleri */
+.tinymce-heading {
+  display: block !important;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif !important;
+  font-weight: 700 !important;
+  color: #10b981 !important; /* emerald-500 */
+  margin-top: 1.25em !important;
+  margin-bottom: 0.75em !important;
+}
+
+h1.tinymce-heading {
+  font-size: 2.25rem !important;
+  line-height: 1.2 !important;
+}
+
+h2.tinymce-heading {
+  font-size: 1.875rem !important;
+  line-height: 1.3 !important;
+}
+
+h3.tinymce-heading {
+  font-size: 1.5rem !important;
+  line-height: 1.4 !important;
+}
+
+h4.tinymce-heading {
+  font-size: 1.25rem !important;
+  line-height: 1.5 !important;
+}
+
+h5.tinymce-heading {
+  font-size: 1.125rem !important;
+  line-height: 1.6 !important;
+}
+
+h6.tinymce-heading {
+  font-size: 1rem !important;
+  line-height: 1.7 !important;
+}
+
+/* Kod bloğu araç çubuğu stilleri */
+.code-toolbar {
+  position: relative !important;
+  margin: 1.5em 0 !important;
+}
+
+.code-toolbar:hover .copy-button {
+  opacity: 1 !important;
+}
+
+.copy-button {
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  background: #2d2d2d !important;
+  border: none !important;
+  color: #ccc !important;
+  padding: 4px 8px !important;
+  cursor: pointer !important;
+  border-radius: 0 0 0 4px !important;
+  border-left: 1px solid #444 !important;
+  border-bottom: 1px solid #444 !important;
+  opacity: 0 !important;
+  transition: opacity 0.3s ease !important;
+  z-index: 10 !important;
+}
+
+.copy-button:hover {
+  background: #3e3e3e !important;
+  color: white !important;
+}
+
+.language-label {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  background: #2d2d2d !important;
+  color: #ccc !important;
+  padding: 2px 8px !important;
+  font-size: 12px !important;
+  border-radius: 0 0 4px 0 !important;
+  border-right: 1px solid #444 !important;
+  border-bottom: 1px solid #444 !important;
+  font-family: ui-monospace, monospace !important;
+  z-index: 10 !important;
+}
+
+/* Kod bloğuna ekstra boşluk ekleme (labellar ve butonlar için) */
+.code-toolbar pre[class*="language-"] {
+  padding-top: 30px !important;
+}
+
+/* Prism.js vurgulama stillerini geliştirme */
+.prose pre[class*="language-"] .token.comment { color: #7d8b99 !important; }
+.prose pre[class*="language-"] .token.punctuation { color: #ccc !important; }
+.prose pre[class*="language-"] .token.function { color: #f08d49 !important; }
+.prose pre[class*="language-"] .token.class-name { color: #f8c555 !important; }
+.prose pre[class*="language-"] .token.keyword { color: #cc99cd !important; }
+.prose pre[class*="language-"] .token.string { color: #7ec699 !important; }
+.prose pre[class*="language-"] .token.operator { color: #67cdcc !important; }
+.prose pre[class*="language-"] .token.number { color: #f08d49 !important; }
+.prose pre[class*="language-"] .token.boolean { color: #f08d49 !important; }
+.prose pre[class*="language-"] .token.property { color: #f8c555 !important; }
+.prose pre[class*="language-"] .token.variable { color: #7ec699 !important; }
+
+/* TinyMCE editör içi kod blokları için stilleri */
+.mce-content-body pre {
+  position: relative !important;
+  margin: 1.5em 0 !important;
+  padding-top: 30px !important;
+  background-color: #1e1e1e !important;
+}
+
+.mce-content-body div.code-toolbar {
+  position: relative !important;
+}
+
+.mce-content-body div.code-toolbar > .toolbar {
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+}
+
+.mce-content-body .language-label {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+/* Fix for TinyMCE codesample bug */
+.mce-content-body {
+  padding-right: 1px;
+}
+
+/* Fix for code block editing */
+.mce-content-body pre {
+  clear: both;
+  position: relative;
+  white-space: pre !important;
+}
+
+.mce-content-body pre:after {
+  content: '';
+  display: block;
+  height: 8px;
+  clear: both;
+}
+
+/* Fix for Prism.js component error */
+pre[class*="language-"] {
+  position: relative !important;
+  margin: 1.5em 0 !important;
+  padding: 1.5em !important;
+  padding-top: 40px !important;
+  overflow-x: auto !important;
+  background-color: #2d2d2d !important;
+  border-radius: 0.5rem !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2) !important;
+  border: 1px solid #444 !important;
+}
+
+pre[class*="language-"] > code {
+  padding: 0 !important;
+  background: none !important;
+  text-shadow: none !important;
+  white-space: pre !important;
+}
+
+/* Fix for line numbers */
+.line-numbers .line-numbers-rows {
+  position: absolute !important;
+  pointer-events: none !important;
+  top: 0 !important;
+  left: -3.8em !important;
+  width: 3em !important;
+  letter-spacing: -1px !important;
+  border-right: 1px solid #999 !important;
+  user-select: none !important;
+  padding-top: 1.5em !important;
+}
+
+/* Fix for code block copy button */
+.copy-button:focus {
+  outline: none !important;
+}
+
+/* TinyMCE ve Prism.js Kod Blokları Stilleri */
+.prism-enabled pre[class*="language-"] {
+  position: relative;
+  padding: 1.5rem !important;
+  margin: 1rem 0;
+  overflow: auto;
+  border-radius: 0.5rem;
+  background-color: #282c34 !important;
+  border: 1px solid #444;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.prism-enabled code[class*="language-"] {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.9rem;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  tab-size: 4;
+  hyphens: none;
+}
+
+.prism-enabled .language-label {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: #2d2d2d;
+  color: #ccc;
+  padding: 2px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.prism-enabled .copy-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: #2d2d2d;
+  border: none;
+  color: #ccc;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 12px;
+  z-index: 2;
+  transition: background-color 0.2s;
+}
+
+.prism-enabled .copy-button:hover {
+  background: #3e3e3e;
+  color: white;
+}
+
+/* TinyMCE içinde kod bloklarının görünümünü düzenle */
+.mce-content-body pre[class*="language-"] {
+  position: relative;
+  padding: 1.5rem !important;
+  padding-top: 2.5rem !important;
+  margin: 1rem 0;
+  overflow: auto;
+  border-radius: 0.5rem;
+  background-color: #282c34 !important;
+  border: 1px solid #444;
+}
+
+.mce-content-body pre[class*="language-"]::before {
+  content: attr(class);
+  content: attr(class);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 3px 10px;
+  font-size: 12px;
+  color: #ccc;
+  background-color: #2d2d2d;
+  text-align: left;
+  font-family: ui-monospace, monospace;
+  border-bottom: 1px solid #444;
+}
+
+.mce-content-body pre[class*="language-"]::before {
+  content: "";
+}
+
+.mce-content-body pre[class*="language-"].language-javascript::before {
+  content: "JavaScript";
+}
+
+.mce-content-body pre[class*="language-"].language-css::before {
+  content: "CSS";
+}
+
+.mce-content-body pre[class*="language-"].language-html::before,
+.mce-content-body pre[class*="language-"].language-markup::before {
+  content: "HTML";
+}
+
+.mce-content-body pre[class*="language-"].language-typescript::before {
+  content: "TypeScript";
+}
+
+.mce-content-body pre[class*="language-"].language-jsx::before {
+  content: "JSX";
+}
+
+.mce-content-body pre[class*="language-"].language-tsx::before {
+  content: "TSX";
+}
+
+.mce-content-body pre[class*="language-"].language-python::before {
+  content: "Python";
+}
+
+.mce-content-body pre[class*="language-"].language-php::before {
+  content: "PHP";
+}
+
+.mce-content-body pre[class*="language-"].language-java::before {
+  content: "Java";
+}
+
+.mce-content-body pre[class*="language-"].language-csharp::before {
+  content: "C#";
+}
+
+.mce-content-body pre[class*="language-"].language-cpp::before {
+  content: "C++";
+}
+
+.mce-content-body pre[class*="language-"].language-c::before {
+  content: "C";
+}
+
+.mce-content-body pre[class*="language-"].language-bash::before,
+.mce-content-body pre[class*="language-"].language-shell::before {
+  content: "Bash";
+}
+
+.mce-content-body pre[class*="language-"].language-sql::before {
+  content: "SQL";
+}
+
+.mce-content-body pre[class*="language-"].language-json::before {
+  content: "JSON";
+}
+
+/* Kod çıktısı için arka plan rengini ayarla */
+.mce-content-body code:not([class*="language-"]) {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #e83e8c;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: ui-monospace, monospace;
+  font-size: 0.9em;
+}
+
+/* Blog sayfası için kod blokları ve içerik stilleri */
+.blog-content pre {
+  background-color: #2d2d2d;
+  border-radius: 4px;
+  color: #ccc;
+  display: block;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 1em;
+  line-height: 1.5;
+  margin: 1.5em 0;
+  overflow: auto;
+  padding: 1em;
+  position: relative;
+  white-space: pre;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+}
+
+.blog-content code {
+  background: none;
+  color: #f8f8f2;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 1em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  padding: 0;
+}
+
+.blog-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.blog-content h1,
+.blog-content h2,
+.blog-content h3,
+.blog-content h4,
+.blog-content h5,
+.blog-content h6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.blog-content h1 {
+  font-size: 2.25rem;
+}
+
+.blog-content h2 {
+  font-size: 1.875rem;
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: 0.5rem;
+}
+
+.blog-content h3 {
+  font-size: 1.5rem;
+}
+
+.blog-content h4 {
+  font-size: 1.25rem;
+}
+
+.blog-content h5 {
+  font-size: 1.125rem;
+}
+
+.blog-content h6 {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.blog-content ul,
+.blog-content ol {
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+}
+
+.blog-content li {
+  margin-bottom: 0.5rem;
+}
+
+.blog-content blockquote {
+  border-left: 4px solid #10b981;
+  padding-left: 1rem;
+  color: #6c757d;
+  margin-left: 0;
+  margin-right: 0;
+  font-style: italic;
+}
+
+.blog-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 2rem auto;
+  border-radius: 0.5rem;
+}
+
+.blog-content a {
+  color: #10b981;
+  text-decoration: none;
+}
+
+.blog-content a:hover {
+  text-decoration: underline;
+}
+
+.blog-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  border: 1px solid #dee2e6;
+}
+
+.blog-content th,
+.blog-content td {
+  padding: 0.75rem;
+  border: 1px solid #dee2e6;
+}
+
+.blog-content th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+/* Token renklendirme - manuel stil */
+.blog-content .token.comment,
+.blog-content .token.prolog,
+.blog-content .token.doctype,
+.blog-content .token.cdata {
+  color: #8292a2;
+}
+
+.blog-content .token.punctuation {
+  color: #f8f8f2;
+}
+
+.blog-content .token.namespace {
+  opacity: .7;
+}
+
+.blog-content .token.property,
+.blog-content .token.tag,
+.blog-content .token.constant,
+.blog-content .token.symbol,
+.blog-content .token.deleted {
+  color: #f92672;
+}
+
+.blog-content .token.boolean,
+.blog-content .token.number {
+  color: #ae81ff;
+}
+
+.blog-content .token.selector,
+.blog-content .token.attr-name,
+.blog-content .token.string,
+.blog-content .token.char,
+.blog-content .token.builtin,
+.blog-content .token.inserted {
+  color: #a6e22e;
+}
+
+.blog-content .token.operator,
+.blog-content .token.entity,
+.blog-content .token.url,
+.blog-content .token.variable {
+  color: #f8f8f2;
+}
+
+.blog-content .token.atrule,
+.blog-content .token.attr-value,
+.blog-content .token.function,
+.blog-content .token.class-name {
+  color: #e6db74;
+}
+
+.blog-content .token.keyword {
+  color: #66d9ef;
+}
+
+.blog-content .token.regex,
+.blog-content .token.important {
+  color: #fd971f;
+}
+
+.blog-content .token.important,
+.blog-content .token.bold {
+  font-weight: bold;
+}
+
+.blog-content .token.italic {
+  font-style: italic;
+}
+
+.blog-content .token.entity {
+  cursor: help;
+}
+
+/* Elle eklenen satır numaraları için stiller */
+.blog-content pre.line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+.blog-content pre.line-numbers > code {
+  position: relative;
+  white-space: inherit;
+}
+
+.blog-content .line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em;
+  letter-spacing: -1px;
+  border-right: 1px solid #999;
+  user-select: none;
+}
+
+/* Dil etiketi ve kopyalama butonu için stiller */
+.blog-content .language-label {
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  color: white;
+  font-size: 0.75em;
+  padding: 0.2em 0.5em;
+  z-index: 10;
+}
+
+.blog-content .copy-button {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  font-size: 0.75em;
+  padding: 0.2em 0.5em;
+  transition: background-color 0.2s;
+  z-index: 10;
+}
+
+.blog-content .copy-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Fallback stil işlemleri - Prism olmasa bile temel görüntüleme */
+.blog-content pre[class*="language-"] {
+  position: relative;
+  margin: 1.5em 0;
+  padding: 1.5em;
+  padding-top: 2.5em;
+  border-radius: 0.375rem;
+  background-color: #282c34;
+  overflow-x: auto;
+  color: #abb2bf;
+}
+
+/* TinyMCE kod bloğu düzeltmeleri */
+.tox .tox-edit-area__iframe {
+  background-color: #1e1e1e !important;
+}
+
+/* TinyMCE editör kod bloğu stilleri - yeni */
+.mce-content-body pre[class*="language-"] {
+  position: relative !important;
+  margin: 1.5em 0 !important;
+  padding: 1.5em !important;
+  padding-top: 2.5em !important;
+  border-radius: 0.375rem !important;
+  background-color: #282c34 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #abb2bf !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+  overflow-x: auto !important;
+}
+
+.mce-content-body pre[class*="language-"] code {
+  background: none !important;
+  padding: 0 !important;
+  color: inherit !important;
+  border-radius: 0 !important;
+  border: none !important;
+  font-size: 0.9em !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+}
+
+.mce-content-body pre[class*="language-"]::before {
+  content: "";
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 1.5em !important;
+  background-color: rgba(40, 44, 52, 0.95) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  line-height: 1.5em !important;
+  padding: 0 1em !important;
+  font-family: ui-monospace, monospace !important;
+  font-size: 0.75rem !important;
+  color: #abb2bf !important;
+  z-index: 2 !important;
+}
+
+/* Her dil için etiket */
+.mce-content-body pre.language-javascript::before { content: "JavaScript" !important; }
+.mce-content-body pre.language-js::before { content: "JavaScript" !important; }
+.mce-content-body pre.language-css::before { content: "CSS" !important; }
+.mce-content-body pre.language-html::before { content: "HTML" !important; }
+.mce-content-body pre.language-markup::before { content: "HTML" !important; }
+.mce-content-body pre.language-xml::before { content: "XML" !important; }
+.mce-content-body pre.language-typescript::before { content: "TypeScript" !important; }
+.mce-content-body pre.language-ts::before { content: "TypeScript" !important; }
+.mce-content-body pre.language-python::before { content: "Python" !important; }
+.mce-content-body pre.language-py::before { content: "Python" !important; }
+.mce-content-body pre.language-php::before { content: "PHP" !important; }
+.mce-content-body pre.language-jsx::before { content: "JSX" !important; }
+.mce-content-body pre.language-tsx::before { content: "TSX" !important; }
+.mce-content-body pre.language-java::before { content: "Java" !important; }
+.mce-content-body pre.language-csharp::before { content: "C#" !important; }
+.mce-content-body pre.language-cs::before { content: "C#" !important; }
+.mce-content-body pre.language-cpp::before { content: "C++" !important; }
+.mce-content-body pre.language-c::before { content: "C" !important; }
+.mce-content-body pre.language-bash::before { content: "Bash" !important; }
+.mce-content-body pre.language-shell::before { content: "Shell" !important; }
+.mce-content-body pre.language-sql::before { content: "SQL" !important; }
+.mce-content-body pre.language-json::before { content: "JSON" !important; }
+.mce-content-body pre.language-ruby::before { content: "Ruby" !important; }
+.mce-content-body pre.language-rb::before { content: "Ruby" !important; }
+.mce-content-body pre.language-go::before { content: "Go" !important; }
+.mce-content-body pre.language-yaml::before { content: "YAML" !important; }
+.mce-content-body pre.language-yml::before { content: "YAML" !important; }
+.mce-content-body pre.language-markdown::before { content: "Markdown" !important; }
+.mce-content-body pre.language-md::before { content: "Markdown" !important; }
+
+/* Kod sözdizimi renklendirme - Temel TinyMCE içinde */
+.mce-content-body pre.language-markup .token.tag { color: #e2777a !important; }
+.mce-content-body pre.language-markup .token.attr-name { color: #6196cc !important; }
+.mce-content-body pre.language-markup .token.attr-value { color: #7ec699 !important; }
+.mce-content-body pre.language-markup .token.string { color: #7ec699 !important; }
+.mce-content-body pre.language-markup .token.comment { color: #999 !important; }
+.mce-content-body pre.language-markup .token.entity { color: #67cdcc !important; }
+
+.mce-content-body pre .token.comment,
+.mce-content-body pre .token.prolog,
+.mce-content-body pre .token.doctype,
+.mce-content-body pre .token.cdata { color: #999 !important; }
+
+.mce-content-body pre .token.punctuation { color: #ccc !important; }
+
+.mce-content-body pre .token.property,
+.mce-content-body pre .token.tag,
+.mce-content-body pre .token.boolean,
+.mce-content-body pre .token.number,
+.mce-content-body pre .token.constant,
+.mce-content-body pre .token.symbol { color: #f8c555 !important; }
+
+.mce-content-body pre .token.selector,
+.mce-content-body pre .token.attr-name,
+.mce-content-body pre .token.string,
+.mce-content-body pre .token.char,
+.mce-content-body pre .token.builtin { color: #7ec699 !important; }
+
+.mce-content-body pre .token.operator,
+.mce-content-body pre .token.entity,
+.mce-content-body pre .token.url { color: #67cdcc !important; }
+
+.mce-content-body pre .token.keyword { color: #cc99cd !important; }
+.mce-content-body pre .token.function { color: #f08d49 !important; }
+
+/* Satır sonu düzeltmesi */
+.mce-content-body pre[class*="language-"]:after {
+  content: "";
+  display: block;
+  height: 0.5em;
+}
+
+/* Editörde seçildiğinde görsel düzeltme */
+.mce-content-body pre[data-mce-selected="inline-boundary"] {
+  outline: 1px solid #4099ff !important;
+  background-color: rgba(64, 153, 255, 0.1) !important;
+}
+
+/* Satır içi kod bloğu stillerini düzelt */
+.mce-content-body code:not([class*="language-"]) {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #e83e8c !important;
+  padding: 2px 4px !important;
+  border-radius: 3px !important;
+  font-family: ui-monospace, monospace !important;
+  font-size: 0.9em !important;
+}
+
+/* TinyMCE metin editör arkaplanı */
+.tox.tox-tinymce-aux .tox-toolbar__overflow {
+  background-color: #2a2a2a !important;
+  border-color: #444 !important;
+}
+
+.tox.tox-tinymce {
+  border-color: #444 !important;
+}
+
+/* TinyMCE editör dark tema düzeltmeleri */
+.tox .tox-toolbar, 
+.tox .tox-toolbar__overflow, 
+.tox .tox-toolbar__primary {
+  background-color: #2a2a2a !important;
+  border-color: #444 !important;
+}
+
+.tox .tox-tbtn {
+  color: #eee !important;
+}
+
+.tox .tox-tbtn:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.tox .tox-tbtn--enabled, 
+.tox .tox-tbtn--enabled:hover {
+  background-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+/* CodeSample plugin düzeltmesi */
+.mce-content-body .codesample-body, 
+.mce-content-body .codesample-body code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+  font-size: 0.9em !important;
+}
+
+/* Blog ve Blog Detay Sayfası İçin Kod Bloğu Stilleri */
+.blog-content pre[class*="language-"] {
+  position: relative !important;
+  margin: 1.5em 0 !important;
+  padding: 1.5em !important;
+  padding-top: 2.5em !important;
+  border-radius: 0.375rem !important;
+  background-color: #282c34 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #abb2bf !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  overflow-x: auto !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+}
+
+.blog-content code[class*="language-"] {
+  background: none !important;
+  padding: 0 !important;
+  color: inherit !important;
+  border-radius: 0 !important;
+  border: none !important;
+  font-size: 0.9em !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+  line-height: 1.5 !important;
+  tab-size: 4 !important;
+  hyphens: none !important;
+  white-space: pre !important;
+  word-spacing: normal !important;
+  word-break: normal !important;
+  word-wrap: normal !important;
+}
+
+/* Token renklendirme düzeltmeleri */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #8292a2 !important;
+}
+
+.token.punctuation {
+  color: #f8f8f2 !important;
+}
+
+.token.namespace {
+  opacity: 0.7 !important;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #f92672 !important;
+}
+
+.token.boolean,
+.token.number {
+  color: #ae81ff !important;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #a6e22e !important;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: #f8f8f2 !important;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+  color: #e6db74 !important;
+}
+
+.token.keyword {
+  color: #66d9ef !important;
+}
+
+.token.regex,
+.token.important {
+  color: #fd971f !important;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold !important;
+}
+
+.token.italic {
+  font-style: italic !important;
+}
+
+.token.entity {
+  cursor: help !important;
+}
+
+/* Satır numaraları ayarları */
+pre[class*="language-"].line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+  position: relative;
+  white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em; /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #999;
+  user-select: none;
+}
+
+/* Tüm kod bloklarının stilleri için ortak sınıf */
+.prism-enabled pre[class*="language-"] {
+  position: relative;
+  padding: 1.5rem !important;
+  margin: 1rem 0;
+  overflow: auto;
+  border-radius: 0.5rem;
+  background-color: #282c34 !important;
+  border: 1px solid #444;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  padding-top: 2.5rem !important;
+}
+
+/* Kodun kendisi için stiller */
+.prism-enabled code[class*="language-"] {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.9rem;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  tab-size: 4;
+  hyphens: none;
+}
+
+/* Dil etiketi stil düzeltmeleri */
+.language-label {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: #2d2d2d;
+  color: #ccc;
+  padding: 2px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  z-index: 2;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* Kopyalama butonu stilleri */
+.copy-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: #2d2d2d;
+  border: none;
+  color: #ccc;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 12px;
+  z-index: 2;
+  transition: all 0.2s ease;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+.copy-button:hover {
+  background: #3d3d3d;
+  color: white;
+}
+
 
