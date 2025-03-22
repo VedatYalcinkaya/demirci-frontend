@@ -8,6 +8,14 @@ import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { ColoredLogo } from "./ui/ColoredLogo";
 
+// Hizmetler logolarını import et
+import webDesignLogo from "../assets/servicesLogos/web-design-logo.png";
+import graphicDesignLogo from "../assets/servicesLogos/graphic-design-logo.png";
+import marketplaceLogo from "../assets/servicesLogos/marketplace-logo.png";
+import eCommerceLogo from "../assets/servicesLogos/e-commerce-logo.png";
+import digitalAdvertisingLogo from "../assets/servicesLogos/digital-advertising-logo.png";
+import aiLogo from "../assets/servicesLogos/ai-logo.png";
+
 export default function NavbarDemo() {
   return (
     <div className="relative w-full flex items-center justify-center">
@@ -73,39 +81,53 @@ function Navbar({ className }) {
             </Link>
 
             <MenuItem setActive={setActive} active={active} item={t('navbar.services')}>
-              <div className="flex flex-col space-y-4 text-sm">
-                <HoveredLink to="/web-tasarim">{t('navbar.dropdown.services.webDesign')}</HoveredLink>
-                <HoveredLink to="/grafik-tasarim">{t('navbar.dropdown.services.graphicDesign')}</HoveredLink>
-                <HoveredLink to="/sanal-pazaryeri">{t('navbar.dropdown.services.marketplace')}</HoveredLink>
-                <HoveredLink to="/e-ticaret">{t('navbar.dropdown.services.eCommerce')}</HoveredLink>
-                <HoveredLink to="/dijital-reklamcilik">{t('navbar.dropdown.services.digitalAdvertising')}</HoveredLink>
-                <HoveredLink to="/yapay-zeka">{t('navbar.dropdown.services.ai')}</HoveredLink>
+              <div className="text-sm grid grid-cols-3 gap-2 p-3">
+                <ProductItem
+                  title={t('navbar.dropdown.services.webDesign')}
+                  to="/web-tasarim"
+                  src={webDesignLogo}
+                  hoverColor="emerald"
+                  description="Modern ve profesyonel web tasarım" />
+                <ProductItem
+                  title={t('navbar.dropdown.services.graphicDesign')}
+                  to="/grafik-tasarim"
+                  src={graphicDesignLogo}
+                  hoverColor="sky"
+                  description="Etkileyici grafik tasarım çözümleri" />
+                <ProductItem
+                  title={t('navbar.dropdown.services.marketplace')}
+                  to="/sanal-pazaryeri"
+                  src={marketplaceLogo}
+                  hoverColor="purple"
+                  description="Pazaryeri entegrasyon çözümleri" />
+                <ProductItem
+                  title={t('navbar.dropdown.services.eCommerce')}
+                  to="/e-ticaret"
+                  src={eCommerceLogo}
+                  hoverColor="orange"
+                  description="Güvenli e-ticaret sistemleri" />
+                <ProductItem
+                  title={t('navbar.dropdown.services.digitalAdvertising')}
+                  to="/dijital-reklamcilik"
+                  src={digitalAdvertisingLogo}
+                  hoverColor="red"
+                  description="Etkili dijital reklam stratejileri" />
+                <ProductItem
+                  title={t('navbar.dropdown.services.ai')}
+                  to="/yapay-zeka"
+                  src={aiLogo}
+                  hoverColor="indigo"
+                  description="Yapay zeka çözümleri" />
               </div>
             </MenuItem>
-            <MenuItem setActive={setActive} active={active} item={t('navbar.references')}>
-              <div className="text-sm grid grid-cols-2 gap-4 p-4">
-                <ProductItem
-                  title={t('navbar.dropdown.references.all')}
-                  to="/referanslar"
-                  src="https://picsum.photos/id/5/800/600"
-                  description={t('navbar.dropdown.references.allDesc')} />
-                <ProductItem
-                  title={t('navbar.dropdown.references.eCommerce')}
-                  to="/referanslar/e-ticaret"
-                  src="https://picsum.photos/id/10/800/600"
-                  description={t('navbar.dropdown.references.eCommerceDesc')} />
-                <ProductItem
-                  title={t('navbar.dropdown.references.corporate')}
-                  to="/referanslar/kurumsal"
-                  src="https://picsum.photos/id/20/800/600"
-                  description={t('navbar.dropdown.references.corporateDesc')} />
-                <ProductItem
-                  title={t('navbar.dropdown.references.mobile')}
-                  to="/referanslar/mobil"
-                  src="https://picsum.photos/id/30/800/600"
-                  description={t('navbar.dropdown.references.mobileDesc')} />
-              </div>
-            </MenuItem>
+            
+            {/* Referanslar - Dropdown olmadan direkt link */}
+            <Link to="/referanslar">
+              <span className="cursor-pointer hover:opacity-[0.9] text-white">
+                {t('navbar.references')}
+              </span>
+            </Link>
+            
             <MenuItem setActive={setActive} active={active} item={t('navbar.about')}>
               <div className="flex flex-col space-y-4 text-sm">
                 <HoveredLink to="/hakkimizda/biz-kimiz">{t('navbar.dropdown.about.whoWeAre')}</HoveredLink>
@@ -122,14 +144,6 @@ function Navbar({ className }) {
                 <HoveredLink to="/iletisim/sikca-sorulan-sorular">{t('navbar.dropdown.contact.faq')}</HoveredLink>
               </div>
             </MenuItem>
-            {/* <MenuItem setActive={setActive} active={active} item={t('navbar.blog')}>
-              <div className="flex flex-col space-y-4 text-sm">
-                <HoveredLink to="/blog/teknoloji">{t('navbar.dropdown.blog.technology')}</HoveredLink>
-                <HoveredLink to="/blog/tasarim">{t('navbar.dropdown.blog.design')}</HoveredLink>
-                <HoveredLink to="/blog/pazarlama">{t('navbar.dropdown.blog.marketing')}</HoveredLink>
-                <HoveredLink to="/blog/yapay-zeka">{t('navbar.dropdown.blog.ai')}</HoveredLink>
-              </div>
-            </MenuItem> */}
 
             {/* Ana Sayfa - Dropdown olmadan direkt link */}
             <Link to="/blog">
@@ -188,12 +202,9 @@ function Navbar({ className }) {
                         <MobileLink to="/yapay-zeka">{t('navbar.dropdown.services.ai')}</MobileLink>
                       </MobileMenuSection>
 
-                      <MobileMenuSection title={t('navbar.references')}>
-                        <MobileLink to="/referanslar/e-ticaret">{t('navbar.dropdown.references.eCommerce')}</MobileLink>
-                        <MobileLink to="/referanslar/kurumsal">{t('navbar.dropdown.references.corporate')}</MobileLink>
-                        <MobileLink to="/referanslar/mobil">{t('navbar.dropdown.references.mobile')}</MobileLink>
-                        <MobileLink to="/referanslar/yazilim">{t('navbar.dropdown.references.software')}</MobileLink>
-                      </MobileMenuSection>
+                      <MobileLink to="/referanslar" className="block py-2 text-lg font-medium text-white hover:text-emerald-400 transition-colors">
+                        {t('navbar.references')}
+                      </MobileLink>
 
                       <MobileMenuSection title={t('navbar.about')}>
                         <MobileLink to="/hakkimizda/biz-kimiz">{t('navbar.dropdown.about.whoWeAre')}</MobileLink>
