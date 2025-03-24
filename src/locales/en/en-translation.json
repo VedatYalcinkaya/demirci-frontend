@@ -47,6 +47,12 @@
         }
       }
     },
+    "notifications": {
+      "success": "Your message has been sent successfully.",
+      "error": "An error occurred. Please try again later.",
+      "info": "Information message.",
+      "warning": "Warning message."
+    },
     "services": {
       "title": "Professional Solutions for Every Need",
       "subtitle": "We are with you in every field of the digital world, from web design to artificial intelligence",
@@ -502,12 +508,14 @@
         "support": "24/7 technical support and maintenance services",
         "quality": "High-quality code and security standards"
       },
-      "clientTrust": "Brands That Trust Us",
+      "clientTrust": "Many Customers Trust Us",
+      "clientTrustDescription": "We have helped our clients stand out in the digital world with our projects. Here are some of our valuable clients.",
       "placeholders": {
         "fullName": "Your Name and Surname",
         "email": "Your email address",
         "phone": "Your phone number",
-        "message": "You can provide a short description about your project..."
+        "message": "You can provide a short description about your project...",
+        "subject": "Subject of your message"
       },
       "validation": {
         "fullName": {
@@ -533,9 +541,19 @@
         },
         "message": {
           "min": "Your message must be at least 10 characters",
-          "max": "Your message must be at most 500 characters"
+          "max": "Your message must be at most 500 characters",
+          "required": "Message is required"
+        },
+        "subject": {
+          "required": "Subject is required",
+          "min": "Subject must be at least 3 characters"
         }
       },
+      "notifications": {
+        "success": "Your message has been sent successfully.",
+        "error": "An error occurred. Please try again later."
+      },
+      "sending": "Sending...",
       "fullName": "Full Name",
       "email": "Email",
       "phone": "Phone",
@@ -543,7 +561,8 @@
       "message": "Your Message",
       "selectService": "Select a service",
       "submit": "Request Quote",
-      "cancel": "Cancel"
+      "cancel": "Cancel",
+      "subject": "Subject"
     },
     "contactPage": {
       "title": "Contact Us",
@@ -625,7 +644,12 @@
       "pagination": {
         "showing": "Showing",
         "of": "of",
-        "references": "references"
+        "references": "references",
+        "firstPage": "First Page",
+        "previousPage": "Previous Page",
+        "goToPage": "Go to Page",
+        "nextPage": "Next Page",
+        "lastPage": "Last Page"
       },
       "form": {
         "title": "Title",
@@ -647,7 +671,9 @@
         "byTitle": "By Title",
         "byService": "By Service",
         "search": "Search",
-        "searchPlaceholder": "Enter search term..."
+        "searchPlaceholder": "Enter search term...",
+        "searchType": "Search Type",
+        "searchInput": "Search Term"
       }
     },
     "admin": {
@@ -745,5 +771,65 @@
       "title": "Customer Success Stories",
       "description": "We have helped our customers stand out in the digital world with our projects. Here are some of our valued customers and their success stories.",
       "varsayilanAciklama": "We've helped our client grow their business with our custom solutions."
+    },
+    "blog": {
+      "title": "Blog",
+      "subtitle": "Information about the latest technology and design trends",
+      "latestPosts": "Latest Posts",
+      "readMore": "Read More",
+      "byAuthor": "Author: {{author}}",
+      "publishedOn": "Publication Date: {{date}}",
+      "relatedPosts": "Related Posts",
+      "readingTime": "{{time}} minute read",
+      "noPostsFound": "No posts found",
+      "searchResults": "Search results: {{term}}",
+      "searchPlaceholder": "Search posts...",
+      "filterByTags": "Filter by tags",
+      "allPosts": "All Posts",
+      "loadMore": "Load More",
+      "errorLoading": "Error loading blogs",
+      "retry": "Retry",
+      "backToList": "Back to List",
+      "taggedWith": "Posts tagged with {{tag}}",
+      "min": "min",
+      "pageTitle": "Blog",
+      "pageDescription": "Latest content about technology, design and digital marketing",
+      "popularTags": "Popular Tags",
+      "tryDifferentSearch": "You can try a different search",
+      "clearFilters": "Clear Filters",
+      "tagResults": "Tag Results",
+      "previous": "Previous",
+      "next": "Next",
+      "publishDate": "Publication Date",
+      "author": "Author",
+      "minutes": "minutes",
+      "readTime": "reading time",
+      "share": "Share",
+      "categories": "Categories",
+      "tags": "Tags",
+      "content": "Content",
+      "aboutAuthor": "About the Author",
+      "blogNotFound": "Blog Not Found",
+      "blogNotFoundDescription": "The blog post you are looking for could not be found or may have been deleted.",
+      "backToBlog": "Back to Blog Page",
+      "filters": {
+        "searchType": "Search Type",
+        "byTitle": "By Title",
+        "byTag": "By Tag",
+        "searchPlaceholder": "Enter search term...",
+        "searchInput": "Search term",
+        "search": "Search"
+      },
+      "noBlogs": "No blog posts found",
+      "pagination": {
+        "firstPage": "First Page",
+        "previousPage": "Previous Page",
+        "goToPage": "Go to Page",
+        "nextPage": "Next Page",
+        "lastPage": "Last Page",
+        "showing": "Showing",
+        "of": "of",
+        "blogs": "blogs"
+      }
     }
   } 

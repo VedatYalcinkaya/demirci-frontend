@@ -159,8 +159,8 @@ const TeklifAl = () => {
         <div>
           <ReferansPinSection 
             referanslar={referanslar}
-            title="Birçok Müşteri Bize Güveniyor"
-            description="Projelerimizle müşterilerimizin dijital dünyada öne çıkmalarını sağladık. İşte bizimle çalışan bazı değerli müşterilerimiz."
+            title={t('form.clientTrust')}
+            description={t('form.clientTrustDescription')}
           />
         </div>
       </div>

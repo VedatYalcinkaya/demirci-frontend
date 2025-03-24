@@ -47,6 +47,12 @@
         }
       }
     },
+    "notifications": {
+      "success": "Mesajınız başarıyla gönderildi.",
+      "error": "Bir hata oluştu. Lütfen daha sonra tekrar deneyiniz.",
+      "info": "Bilgi mesajı.",
+      "warning": "Uyarı mesajı."
+    },
     "services": {
       "title": "Her İhtiyaca Profesyonel Çözümler",
       "subtitle": "Web tasarımdan yapay zekaya, dijital dünyanın her alanında yanınızdayız",
@@ -509,12 +515,14 @@
         "support": "7/24 teknik destek ve bakım hizmetleri",
         "quality": "Yüksek kaliteli kod ve güvenlik standartları"
       },
-      "clientTrust": "Bize Güvenen Markalar",
+      "clientTrust": "Birçok Müşteri Bize Güveniyor",
+      "clientTrustDescription": "Projelerimizle müşterilerimizin dijital dünyada öne çıkmalarını sağladık. İşte bizimle çalışan bazı değerli müşterilerimiz.",
       "placeholders": {
         "fullName": "Adınız Soyadınız",
         "email": "E-posta adresiniz",
         "phone": "Telefon numaranız",
-        "message": "Projeniz hakkında kısa bilgi verebilirsiniz..."
+        "message": "Projeniz hakkında kısa bilgi verebilirsiniz...",
+        "subject": "Mesaj konunuz"
       },
       "validation": {
         "fullName": {
@@ -540,9 +548,19 @@
         },
         "message": {
           "min": "Mesajınız en az 10 karakter olmalıdır",
-          "max": "Mesajınız en fazla 500 karakter olmalıdır"
+          "max": "Mesajınız en fazla 500 karakter olmalıdır",
+          "required": "Mesaj gereklidir"
+        },
+        "subject": {
+          "required": "Konu gereklidir",
+          "min": "Konu en az 3 karakter olmalıdır"
         }
       },
+      "notifications": {
+        "success": "Mesajınız başarıyla gönderildi.",
+        "error": "Bir hata oluştu. Lütfen daha sonra tekrar deneyiniz."
+      },
+      "sending": "Gönderiliyor...",
       "fullName": "İsim Soyisim",
       "email": "E-posta",
       "phone": "Telefon",
@@ -550,7 +568,8 @@
       "message": "Mesajınız",
       "selectService": "Hizmet seçiniz",
       "submit": "Teklif İste",
-      "cancel": "İptal"
+      "cancel": "İptal",
+      "subject": "Konu"
     },
     "contactPage": {
       "title": "Bize Ulaşın",
@@ -632,7 +651,12 @@
       "pagination": {
         "showing": "Gösteriliyor",
         "of": "/",
-        "references": "referans"
+        "references": "referans",
+        "firstPage": "İlk Sayfa",
+        "previousPage": "Önceki Sayfa",
+        "goToPage": "Sayfaya Git",
+        "nextPage": "Sonraki Sayfa",
+        "lastPage": "Son Sayfa"
       },
       "form": {
         "title": "Başlık",
@@ -654,7 +678,9 @@
         "byTitle": "Başlığa Göre",
         "byService": "Hizmete Göre",
         "search": "Ara",
-        "searchPlaceholder": "Arama terimi girin..."
+        "searchPlaceholder": "Arama terimi girin...",
+        "searchType": "Arama Tipi",
+        "searchInput": "Arama terimi"
       }
     },
     "admin": {
@@ -839,6 +865,30 @@
       "aboutAuthor": "Yazar Hakkında",
       "blogNotFound": "Blog Bulunamadı",
       "blogNotFoundDescription": "Aradığınız blog yazısı bulunamadı veya silinmiş olabilir.",
-      "backToBlog": "Blog Sayfasına Dön"
+      "backToBlog": "Blog Sayfasına Dön",
+      "filters": {
+        "searchType": "Arama Tipi",
+        "byTitle": "Başlığa Göre",
+        "byTag": "Etikete Göre",
+        "searchPlaceholder": "Arama terimi girin...",
+        "searchInput": "Arama terimi",
+        "search": "Ara"
+      },
+      "noBlogs": "Hiç blog yazısı bulunamadı",
+      "pagination": {
+        "firstPage": "İlk Sayfa",
+        "previousPage": "Önceki Sayfa",
+        "goToPage": "Sayfaya Git",
+        "nextPage": "Sonraki Sayfa",
+        "lastPage": "Son Sayfa",
+        "showing": "Gösteriliyor",
+        "of": "/",
+        "blogs": "blog"
+      }
+    },
+    "referanslar": {
+      "title": "Müşterilerimizin Başarı Hikayeleri",
+      "description": "Projelerimizle müşterilerimizin dijital dünyada öne çıkmalarına yardımcı olduk. İşte bazı değerli müşterilerimiz ve başarı hikayeleri.",
+      "varsayilanAciklama": "Müşterimizin özel çözümlerimizle işini büyütmesine yardımcı olduk."
     }
   } 

@@ -502,12 +502,14 @@
         "support": "24/7 technischer Support und Wartungsservices",
         "quality": "Hochwertiger Code und Sicherheitsstandards"
       },
-      "clientTrust": "Marken, die uns vertrauen",
+      "clientTrust": "Viele Kunden vertrauen uns",
+      "clientTrustDescription": "Mit unseren Projekten haben wir unseren Kunden geholfen, in der digitalen Welt hervorzustechen. Hier sind einige unserer wertvollen Kunden.",
       "placeholders": {
         "fullName": "Ihr Vor- und Nachname",
         "email": "Ihre E-Mail-Adresse",
         "phone": "Ihre Telefonnummer",
-        "message": "Sie können eine kurze Beschreibung über Ihr Projekt angeben..."
+        "message": "Sie können eine kurze Beschreibung über Ihr Projekt angeben...",
+        "subject": "Betreff Ihrer Nachricht"
       },
       "validation": {
         "fullName": {
@@ -533,9 +535,19 @@
         },
         "message": {
           "min": "Ihre Nachricht muss mindestens 10 Zeichen lang sein",
-          "max": "Ihre Nachricht darf höchstens 500 Zeichen lang sein"
+          "max": "Ihre Nachricht darf höchstens 500 Zeichen lang sein",
+          "required": "Nachricht ist erforderlich"
+        },
+        "subject": {
+          "required": "Betreff ist erforderlich",
+          "min": "Betreff muss mindestens 3 Zeichen lang sein"
         }
       },
+      "notifications": {
+        "success": "Ihre Anfrage wurde erfolgreich gesendet.",
+        "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut."
+      },
+      "sending": "Wird gesendet...",
       "fullName": "Vollständiger Name",
       "email": "E-Mail",
       "phone": "Telefon",
@@ -543,7 +555,8 @@
       "message": "Ihre Nachricht",
       "selectService": "Wählen Sie einen Service",
       "submit": "Angebot anfragen",
-      "cancel": "Abbrechen"
+      "cancel": "Abbrechen",
+      "subject": "Betreff"
     },
     "contactPage": {
       "title": "Kontaktieren Sie uns",
@@ -625,7 +638,12 @@
       "pagination": {
         "showing": "Zeige",
         "of": "von",
-        "references": "Referenzen"
+        "references": "Referenzen",
+        "firstPage": "Erste Seite",
+        "previousPage": "Vorherige Seite",
+        "goToPage": "Gehe zu Seite",
+        "nextPage": "Nächste Seite",
+        "lastPage": "Letzte Seite"
       },
       "form": {
         "title": "Titel",
@@ -647,7 +665,9 @@
         "byTitle": "Nach Titel",
         "byService": "Nach Dienstleistung",
         "search": "Suchen",
-        "searchPlaceholder": "Suchbegriff eingeben..."
+        "searchPlaceholder": "Suchbegriff eingeben...",
+        "searchType": "Suchtyp",
+        "searchInput": "Suchbegriff"
       }
     },
     "admin": {
@@ -740,5 +760,32 @@
       "title": "Erfolgsgeschichten unserer Kunden",
       "description": "Wir haben unseren Kunden geholfen, sich in der digitalen Welt mit unseren Projekten abzuheben. Hier sind einige unserer geschätzten Kunden und ihre Erfolgsgeschichten.",
       "varsayilanAciklama": "Wir haben unserem Kunden geholfen, sein Geschäft mit unseren maßgeschneiderten Lösungen zu erweitern."
+    },
+    "notifications": {
+      "success": "Ihre Anfrage wurde erfolgreich gesendet.",
+      "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.",
+      "info": "Informationsmeldung.",
+      "warning": "Warnmeldung."
+    },
+    "blog": {
+      "filters": {
+        "searchType": "Suchtyp",
+        "byTitle": "Nach Titel",
+        "byTag": "Nach Tag",
+        "searchPlaceholder": "Suchbegriff eingeben...",
+        "searchInput": "Suchbegriff",
+        "search": "Suchen"
+      },
+      "noBlogs": "Keine Blog-Einträge gefunden",
+      "pagination": {
+        "firstPage": "Erste Seite",
+        "previousPage": "Vorherige Seite",
+        "goToPage": "Gehe zu Seite",
+        "nextPage": "Nächste Seite",
+        "lastPage": "Letzte Seite",
+        "showing": "Zeigt",
+        "of": "von",
+        "blogs": "Blog-Einträgen"
+      }
     }
 } 

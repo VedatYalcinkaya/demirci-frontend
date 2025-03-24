@@ -2,35 +2,19 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useTranslation } from 'react-i18next';
-import { ModalBody, ModalContent, useModal } from './animated-modal';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useDispatch, useSelector } from 'react-redux';
-import { sendQuoteForm, selectQuoteFormState, resetQuoteForm } from '../../store/slices/contactSlice';
+import { sendContactForm, selectContactFormState, resetContactForm } from '../../store/slices/contactSlice';
 import { AnimatedToast } from './animated-toast';
 
-export const QuoteForm = ({ isStandalone = false }) => {
+export const ContactForm = () => {
   const { t } = useTranslation();
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const servicesRef = useRef(null);
   const [isCountryCodeOpen, setIsCountryCodeOpen] = useState(false);
   const countryCodeRef = useRef(null);
   const [showNotification, setShowNotification] = useState(false);
   const [notificationData, setNotificationData] = useState({ type: '', message: '' });
   const dispatch = useDispatch();
-  const { loading, success, error } = useSelector(selectQuoteFormState);
-  
-  // ModalProvider içinde değilse bir dummy setOpen fonksiyonu kullan
-  const modalContext = isStandalone ? { setOpen: () => {} } : useModal();
-  const { setOpen } = modalContext;
-
-  const services = [
-    { value: 'web-design', label: t('services.webDesign.title') },
-    { value: 'graphic-design', label: t('services.graphicDesign.title') },
-    { value: 'marketplace', label: t('services.marketplace.title') },
-    { value: 'e-commerce', label: t('services.eCommerce.title') },
-    { value: 'digital-advertising', label: t('services.digitalAdvertising.title') },
-    { value: 'ai', label: t('services.ai.title') }
-  ];
+  const { loading, success, error } = useSelector(selectContactFormState);
 
   const countryCodes = [
     { code: '+90', country: 'Türkiye' },
@@ -59,12 +43,13 @@ export const QuoteForm = ({ isStandalone = false }) => {
       .min(10, t('form.validation.phone.min'))
       .max(11, t('form.validation.phone.max'))
       .required(t('form.validation.phone.required')),
-    selectedServices: Yup.array()
-      .min(1, t('form.validation.services.min'))
-      .required(t('form.validation.services.required')),
+    subject: Yup.string()
+      .min(2, t('form.validation.subject.min'))
+      .required(t('form.validation.subject.required')),
     message: Yup.string()
       .min(10, t('form.validation.message.min'))
       .max(500, t('form.validation.message.max'))
+      .required(t('form.validation.message.required'))
   });
 
   const formik = useFormik({
@@ -73,25 +58,20 @@ export const QuoteForm = ({ isStandalone = false }) => {
       email: '',
       countryCode: '+90',
       phone: '',
-      selectedServices: [],
+      subject: '',
       message: ''
     },
     validationSchema,
     onSubmit: async (values) => {
-      // Seçilen tüm hizmetlerin etiketlerini al
-      const selectedServiceLabels = values.selectedServices.map(serviceValue => 
-        services.find(s => s.value === serviceValue)?.label || ''
-      ).filter(label => label !== '');
-      
       const data = {
         fullName: values.fullName,
         email: values.email,
         phone: `${values.countryCode}${values.phone}`,
-        service: selectedServiceLabels.join(', '), // Virgülle ayırarak birleştir
+        subject: values.subject,
         message: values.message
       };
       
-      await dispatch(sendQuoteForm(data));
+      await dispatch(sendContactForm(data));
     }
   });
 
@@ -105,16 +85,9 @@ export const QuoteForm = ({ isStandalone = false }) => {
       setShowNotification(true);
       formik.resetForm();
       
-      // Standalone değilse ve başarılı ise modalı kapat
-      if (!isStandalone) {
-        setTimeout(() => {
-          setOpen(false);
-        }, 1500);
-      }
-      
       // Redux state'i sıfırla
       setTimeout(() => {
-        dispatch(resetQuoteForm());
+        dispatch(resetContactForm());
       }, 3000);
     }
     
@@ -127,18 +100,14 @@ export const QuoteForm = ({ isStandalone = false }) => {
       
       // Redux state'i sıfırla
       setTimeout(() => {
-        dispatch(resetQuoteForm());
+        dispatch(resetContactForm());
       }, 3000);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [success, error]);
+  }, [success, error, dispatch, t]);
 
   // Dropdown dışına tıklandığında kapanması için
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (servicesRef.current && !servicesRef.current.contains(event.target)) {
-        setIsServicesOpen(false);
-      }
       if (countryCodeRef.current && !countryCodeRef.current.contains(event.target)) {
         setIsCountryCodeOpen(false);
       }
@@ -150,36 +119,23 @@ export const QuoteForm = ({ isStandalone = false }) => {
     };
   }, []);
 
-  // Seçilen hizmetlerin etiketlerini göstermek için
-  const getSelectedServiceLabels = () => {
-    return formik.values.selectedServices.map(value => 
-      services.find(service => service.value === value)?.label
-    ).join(', ');
-  };
-
-  // Hizmet seçme/kaldırma işlevi
-  const toggleService = (value) => {
-    const currentServices = [...formik.values.selectedServices];
-    const index = currentServices.indexOf(value);
-    
-    if (index === -1) {
-      currentServices.push(value);
-    } else {
-      currentServices.splice(index, 1);
-    }
-    
-    formik.setFieldValue('selectedServices', currentServices);
-  };
-
   // Bildirimi kapat
   const handleCloseNotification = () => {
     setShowNotification(false);
   };
 
-  // Standalone modunda form içeriğini render et
-  const renderFormContent = () => (
-    <div className="max-h-[80vh] overflow-y-auto relative">
-      <form onSubmit={formik.handleSubmit} className="space-y-4">
+  return (
+    <>
+      {/* Global bildirim */}
+      <AnimatedToast 
+        type={notificationData.type}
+        message={notificationData.message}
+        isVisible={showNotification}
+        onClose={handleCloseNotification}
+        position="top-right"
+      />
+      
+      <form onSubmit={formik.handleSubmit} className="space-y-4 w-full">
         {/* İsim Soyisim */}
         <div>
           <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">
@@ -282,55 +238,24 @@ export const QuoteForm = ({ isStandalone = false }) => {
           )}
         </div>
 
-        {/* Hizmetler Dropdown */}
-        <div className="relative" ref={servicesRef}>
-          <label className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">
-            {t('form.services')}
+        {/* Konu */}
+        <div>
+          <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">
+            {t('form.subject')}
           </label>
-          <button
-            type="button"
-            className="w-full flex items-center justify-between px-4 py-2.5 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-            onClick={() => setIsServicesOpen(!isServicesOpen)}
+          <input
+            id="subject"
+            name="subject"
+            type="text"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.subject}
+            className="w-full px-4 py-2.5 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder={t('form.placeholders.subject')}
             disabled={loading}
-          >
-            <span className="truncate">
-              {formik.values.selectedServices.length > 0 
-                ? getSelectedServiceLabels() 
-                : t('form.selectService')}
-            </span>
-            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          
-          {isServicesOpen && (
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              className="absolute z-10 w-full mt-1 bg-white dark:bg-gray-800 shadow-lg rounded-md py-1"
-            >
-              {services.map((service) => (
-                <div 
-                  key={service.value} 
-                  className="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer"
-                  onClick={() => toggleService(service.value)}
-                >
-                  <input
-                    type="checkbox"
-                    className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                    checked={formik.values.selectedServices.includes(service.value)}
-                    onChange={() => {}}
-                  />
-                  <label className="ml-2 text-sm text-gray-700 dark:text-gray-200 cursor-pointer">
-                    {service.label}
-                  </label>
-                </div>
-              ))}
-            </motion.div>
-          )}
-          {formik.touched.selectedServices && formik.errors.selectedServices && (
-            <div className="text-red-500 text-sm mt-1">{formik.errors.selectedServices}</div>
+          />
+          {formik.touched.subject && formik.errors.subject && (
+            <div className="text-red-500 text-sm mt-1">{formik.errors.subject}</div>
           )}
         </div>
 
@@ -342,7 +267,7 @@ export const QuoteForm = ({ isStandalone = false }) => {
           <textarea
             id="message"
             name="message"
-            rows={4}
+            rows={5}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.message}
@@ -354,29 +279,19 @@ export const QuoteForm = ({ isStandalone = false }) => {
             <div className="text-red-500 text-sm mt-1">{formik.errors.message}</div>
           )}
         </div>
-        
-        {/* Form Butonları */}
-        <div className="flex flex-col sm:flex-row gap-2 sm:gap-0 justify-end mt-6">
-          {!isStandalone && (
-            <button
-              type="button"
-              onClick={() => setOpen(false)}
-              className="w-full sm:w-auto px-5 py-2.5 text-sm font-medium text-gray-700 bg-gray-100 border border-gray-300 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 transition-colors"
-              disabled={loading}
-            >
-              {t('form.cancel')}
-            </button>
-          )}
+
+        {/* Gönder Butonu */}
+        <div className="flex justify-end mt-6">
           <button
             type="submit"
-            className={`w-full sm:w-auto ml-0 sm:ml-3 px-5 py-2.5 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors ${
+            className={`w-full sm:w-auto px-6 py-3 text-sm md:text-base font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors ${
               loading ? 'opacity-70 cursor-not-allowed' : ''
             }`}
             disabled={loading}
           >
             {loading ? (
               <div className="flex items-center justify-center">
-                <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <svg className="animate-spin -ml-1 mr-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                   <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                   <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                 </svg>
@@ -388,40 +303,8 @@ export const QuoteForm = ({ isStandalone = false }) => {
           </button>
         </div>
       </form>
-    </div>
-  );
-
-  return (
-    <>
-      {/* Global bildirim */}
-      <AnimatedToast 
-        type={notificationData.type}
-        message={notificationData.message}
-        isVisible={showNotification}
-        onClose={handleCloseNotification}
-        position="top-right"
-      />
-      
-      {/* Başlık ve içerik */}
-      <div className="max-h-[80vh] overflow-y-auto">
-        <h2 className="text-2xl font-bold text-center mb-6 dark:text-white">
-          {t('form.title')}
-        </h2>
-        <p className="text-center text-gray-600 dark:text-gray-300 mb-6">
-          {t('form.subtitle')}
-        </p>
-        
-        {/* Standalone modunda ModalBody içine sarma, sadece içeriği render et */}
-        {isStandalone ? (
-          renderFormContent()
-        ) : (
-          <ModalBody>
-            <ModalContent className="max-h-[80vh] overflow-y-auto">
-              {renderFormContent()}
-            </ModalContent>
-          </ModalBody>
-        )}
-      </div>
     </>
   );
 };
+
+export default ContactForm; 
