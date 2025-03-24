@@ -35,19 +35,20 @@ const TeklifAl = () => {
       bgColor: "from-cyan-500 via-blue-500 to-indigo-500"
     },
     {
-      title: "Sağlık Plus",
-      subtitle: "Sağlık Portalı",
-      description: "Kullanıcı dostu arayüz ile online randevu ve hasta takip sistemi.",
+      title: "Eğitim Akademi",
+      subtitle: "Online Eğitim Platformu",
+      description: "Öğrenciler ve eğitmenler için interaktif online eğitim platformu.",
       image: "/vite.svg",
-      href: "https://example.com/saglikplus",
-      bgColor: "from-cyan-500 via-blue-500 to-indigo-500"
+      href: "https://example.com/egitimakademi",
+      bgColor: "from-purple-500 via-pink-500 to-rose-500"
     },  
     {
-      title: "Sağlık Plus",
-      subtitle: "Sağlık Portalı",
-      description: "Kullanıcı dostu arayüz ile online randevu ve hasta takip sistemi.",
+      title: "Finans Bank",
+      subtitle: "Finans Portalı",
+      description: "Kullanıcı dostu finansal hizmetler ve bankacılık çözümleri.",
       image: "/vite.svg",
-      href: "https://example.com/saglikplus",
+      href: "https://example.com/finansbank",
+      bgColor: "from-amber-500 via-orange-500 to-red-500"
     }
   ];
 
@@ -58,29 +59,29 @@ const TeklifAl = () => {
         <meta name="description" content={t('form.subtitle')} />
       </Helmet>
 
-      <div className="min-h-screen w-full py-20">
+      <div className="min-h-screen w-full py-12 md:py-20">
         {/* Hero Başlık */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }} 
           animate={{ opacity: 1, y: 0 }} 
           transition={{ duration: 0.8 }}
-          className="container mx-auto px-4 mb-16 text-center"
+          className="container mx-auto px-4 mb-8 md:mb-16 text-center"
         >
-          <div className="inline-block mb-6">
+          <div className="inline-block mb-4 md:mb-6">
             <div className="relative">
-              <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-emerald-500 to-green-600 opacity-75 blur-xl"></div>
-              <h1 className="relative text-4xl md:text-5xl font-bold text-white py-2 px-4">
+              <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-emerald-500 to-green-600 opacity-25 blur-xl"></div>
+              <h1 className="relative text-3xl md:text-4xl lg:text-5xl font-bold text-white py-2 px-4">
                 {t('form.title')}
               </h1>
             </div>
           </div>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
             {t('form.subtitle')}
           </p>
         </motion.div>
 
         {/* Form Alanı */}
-        <div className="container mx-auto px-4 max-w-4xl mb-16">
+        <div className="container mx-auto px-4 max-w-4xl mb-12 md:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -95,7 +96,7 @@ const TeklifAl = () => {
               {/* Soldan sağa gradient şerit */}
               <div className="absolute h-1 top-0 w-full bg-gradient-to-r from-emerald-500 via-blue-500 to-purple-600"></div>
               
-              <div className="p-8 md:p-10">
+              <div className="p-6 md:p-8 lg:p-10">
                 <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
                   {/* Sol taraf - bilgi metni */}
                   <div className="md:col-span-2 flex flex-col justify-center">
@@ -104,14 +105,14 @@ const TeklifAl = () => {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.8, delay: 0.4 }}
                     >
-                      <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                      <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-4 md:mb-6">
                         {t('form.callToAction')}
                       </h2>
-                      <p className="text-gray-300 mb-6">
+                      <p className="text-gray-300 mb-4 md:mb-6 text-sm md:text-base">
                         {t('form.benefitsDescription')}
                       </p>
                       
-                      <ul className="space-y-3">
+                      <ul className="space-y-2 md:space-y-3">
                         {[
                           'form.benefits.responsive',
                           'form.benefits.customized',
@@ -125,12 +126,12 @@ const TeklifAl = () => {
                             transition={{ duration: 0.5, delay: 0.6 + (index * 0.1) }}
                             className="flex items-center"
                           >
-                            <span className="flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-emerald-500 mr-3">
-                              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                            <span className="flex-shrink-0 w-5 h-5 md:w-6 md:h-6 flex items-center justify-center rounded-full bg-emerald-500 mr-2 md:mr-3">
+                              <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 md:h-4 md:w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
                                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                               </svg>
                             </span>
-                            <span className="text-gray-200">{t(benefit)}</span>
+                            <span className="text-gray-200 text-sm md:text-base">{t(benefit)}</span>
                           </motion.li>
                         ))}
                       </ul>
@@ -138,7 +139,7 @@ const TeklifAl = () => {
                   </div>
                   
                   {/* Sağ taraf - form */}
-                  <div className="md:col-span-3 bg-white/5 rounded-xl p-6 border border-white/10">
+                  <div className="md:col-span-3 bg-white/5 rounded-xl p-4 md:p-6 border border-white/10">
                     <motion.div
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}

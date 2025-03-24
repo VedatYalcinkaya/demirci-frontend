@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { PinContainer } from './3d-pin';
 
@@ -16,34 +16,34 @@ export const ReferansPin = ({
   const defaultImage = '/vite.svg'; // Var olan bir dosyayı kullanalım
   
   return (
-    <div className="w-full sm:w-auto">
+    <div className="w-full md:w-auto px-2 py-2 md:px-3 md:py-4">
       <PinContainer 
         title={title || "Referans"}
         href={href}
-        className="w-full sm:w-80"
+        className="w-full md:w-72 lg:w-80"
       >
-        <div className={`flex flex-col items-center justify-center h-[30rem] w-full bg-gradient-to-br ${bgColor} rounded-lg p-4 text-white`}>
+        <div className={`flex flex-col items-center justify-center h-64 md:h-[20rem] w-full bg-gradient-to-br ${bgColor} rounded-lg p-4 text-white`}>
           <div className="p-5 rounded-xl bg-white/10 backdrop-blur-sm flex flex-col items-center">
             {image ? (
               <img 
                 src={image} 
                 alt={title} 
-                className="w-24 h-24 object-contain mb-4"
+                className="w-16 h-16 md:w-24 md:h-24 object-contain mb-4"
                 onError={(e) => {
                   e.target.src = defaultImage;
                   e.target.onerror = null;
                 }}
               />
             ) : (
-              <div className="w-24 h-24 flex items-center justify-center bg-white/20 rounded-full mb-4">
-                <span className="text-xl font-bold">{title?.charAt(0) || "D"}</span>
+              <div className="w-16 h-16 md:w-24 md:h-24 flex items-center justify-center bg-white/20 rounded-full mb-4">
+                <span className="text-lg md:text-xl font-bold">{title?.charAt(0) || "D"}</span>
               </div>
             )}
             
-            <h3 className="text-xl font-bold mb-1">{title}</h3>
-            {subtitle && <p className="text-sm font-medium mb-3 opacity-90">{subtitle}</p>}
+            <h3 className="text-lg md:text-xl font-bold mb-1 text-center">{title}</h3>
+            {subtitle && <p className="text-xs md:text-sm font-medium mb-3 opacity-90 text-center">{subtitle}</p>}
             
-            <p className="text-sm text-center opacity-90">{description || defaultDescription}</p>
+            <p className="text-xs md:text-sm text-center opacity-90 line-clamp-3">{description || defaultDescription}</p>
           </div>
         </div>
       </PinContainer>
@@ -59,6 +59,23 @@ export const ReferansPinSection = ({
 }) => {
   const { t } = useTranslation();
   const defaultImage = '/vite.svg'; // Var olan bir dosyayı kullanalım
+  const [isMobile, setIsMobile] = useState(false);
+  
+  // Ekran boyutunu izleyen useEffect
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    // İlk yükleme kontrolü
+    checkScreenSize();
+    
+    // Ekran boyutu değişimini izle
+    window.addEventListener('resize', checkScreenSize);
+    
+    // Cleanup
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
   
   // Eğer dışarıdan referanslar verilmediyse varsayılan örnekler kullanılır
   const defaultReferanslar = [
@@ -92,29 +109,45 @@ export const ReferansPinSection = ({
   const displayReferanslar = referanslar.length > 0 ? referanslar : defaultReferanslar;
   
   return (
-    <div className="py-24 container mx-auto px-4">
+    <div className="py-12 md:py-24 container mx-auto px-4">
       <div 
-        className="text-center mb-16 opacity-100 transform translate-y-0 transition-all duration-500"
+        className="text-center mb-8 md:mb-16 opacity-100 transform translate-y-0 transition-all duration-500"
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
           {title || t('referanslar.title')}
         </h2>
-        <p className="text-gray-300 max-w-3xl mx-auto">
+        <p className="text-gray-300 max-w-3xl mx-auto text-sm md:text-base">
           {description || t('referanslar.description')}
         </p>
       </div>
       
-      <div className="flex flex-wrap justify-center gap-8">
-        {displayReferanslar.map((referans, index) => (
-          <div
-            key={index}
-            className="opacity-100 transform translate-y-0 transition-all duration-500"
-            style={{ transitionDelay: `${index * 100}ms` }}
-          >
-            <ReferansPin {...referans} />
-          </div>
-        ))}
-      </div>
+      {isMobile ? (
+        // Mobil görünüm için özel düzen
+        <div className="w-full">
+          {displayReferanslar.map((referans, index) => (
+            <div
+              key={index}
+              className="mb-8 opacity-100 transform translate-y-0 transition-all duration-500"
+              style={{ transitionDelay: `${index * 100}ms` }}
+            >
+              <ReferansPin {...referans} />
+            </div>
+          ))}
+        </div>
+      ) : (
+        // Masaüstü görünümü için 3D efektli düzen
+        <div className="h-auto min-h-[30rem] md:min-h-[40rem] w-full flex flex-wrap items-center justify-center">
+          {displayReferanslar.map((referans, index) => (
+            <div
+              key={index}
+              className="opacity-100 transform translate-y-0 transition-all duration-500 mb-4"
+              style={{ transitionDelay: `${index * 100}ms` }}
+            >
+              <ReferansPin {...referans} />
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }; 
