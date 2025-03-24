@@ -106,17 +106,51 @@ export const fetchLatestReferences = createAsyncThunk(
 
 export const searchReferencesByTitle = createAsyncThunk(
   'references/searchReferencesByTitle',
-  async (title) => {
-    const response = await axios.get(`${API_URL}/search/title?title=${title}`);
-    return Array.isArray(response.data) ? response.data : (response.data.data || []);
+  async ({ title, page = 0, size = 10 }) => {
+    try {
+      console.log('Başlığa göre arama yapılıyor:', title, 'page:', page, 'size:', size);
+      
+      const response = await axios.get(`${API_URL}/search/title`, {
+        params: { 
+          title, 
+          page, 
+          size 
+        }
+      });
+      
+      console.log('Başlık arama sonuçları:', response.data);
+      
+      // API yanıtı yapısına göre doğru veriyi döndür
+      return Array.isArray(response.data) ? response.data : (response.data.data || []);
+    } catch (error) {
+      console.error('Başlık araması sırasında hata:', error);
+      throw error;
+    }
   }
 );
 
 export const searchReferencesByService = createAsyncThunk(
   'references/searchReferencesByService',
-  async (service) => {
-    const response = await axios.get(`${API_URL}/search/technology?technology=${service}`);
-    return Array.isArray(response.data) ? response.data : (response.data.data || []);
+  async ({ technology, page = 0, size = 10 }) => {
+    try {
+      console.log('Teknoloji/servise göre arama yapılıyor:', technology, 'page:', page, 'size:', size);
+      
+      const response = await axios.get(`${API_URL}/search/technology`, {
+        params: { 
+          technology, 
+          page, 
+          size 
+        }
+      });
+      
+      console.log('Teknoloji arama sonuçları:', response.data);
+      
+      // API yanıtı yapısına göre doğru veriyi döndür
+      return Array.isArray(response.data) ? response.data : (response.data.data || []);
+    } catch (error) {
+      console.error('Teknoloji araması sırasında hata:', error);
+      throw error;
+    }
   }
 );
 
@@ -439,12 +473,46 @@ const referenceSlice = createSlice({
         state.references = action.payload;
       })
       // Search references by title
+      .addCase(searchReferencesByTitle.pending, (state) => {
+        state.status = 'loading';
+      })
       .addCase(searchReferencesByTitle.fulfilled, (state, action) => {
+        state.status = 'succeeded';
         state.references = action.payload;
+        
+        // Pagination verilerini de güncelle
+        state.pagination = {
+          content: action.payload,
+          totalPages: Math.ceil(action.payload.length / state.pagination.pageSize),
+          totalElements: action.payload.length,
+          currentPage: state.pagination.currentPage || 0,
+          pageSize: state.pagination.pageSize || 9
+        };
+      })
+      .addCase(searchReferencesByTitle.rejected, (state, action) => {
+        state.status = 'failed';
+        state.error = action.error.message;
       })
       // Search references by service
+      .addCase(searchReferencesByService.pending, (state) => {
+        state.status = 'loading';
+      })
       .addCase(searchReferencesByService.fulfilled, (state, action) => {
+        state.status = 'succeeded';
         state.references = action.payload;
+        
+        // Pagination verilerini de güncelle
+        state.pagination = {
+          content: action.payload,
+          totalPages: Math.ceil(action.payload.length / state.pagination.pageSize),
+          totalElements: action.payload.length,
+          currentPage: state.pagination.currentPage || 0,
+          pageSize: state.pagination.pageSize || 9
+        };
+      })
+      .addCase(searchReferencesByService.rejected, (state, action) => {
+        state.status = 'failed';
+        state.error = action.error.message;
       })
       // Fetch reference images
       .addCase(fetchReferenceImages.fulfilled, (state, action) => {

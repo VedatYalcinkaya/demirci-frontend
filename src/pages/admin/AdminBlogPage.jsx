@@ -11,7 +11,7 @@ import {
   activateBlog,
   deactivateBlog
 } from '../../store/slices/blogSlice';
-import { toast } from 'react-toastify';
+import { toast } from 'react-hot-toast';
 import AdminHeader from '../../components/AdminHeader';
 import { 
   IconPlus, 

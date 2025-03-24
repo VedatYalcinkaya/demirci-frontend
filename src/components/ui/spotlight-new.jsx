@@ -1,6 +1,6 @@
 "use client";;
-import React from "react";
-import { motion } from "motion/react";
+import React, { useRef } from "react";
+import { motion } from "framer-motion";
 
 export const Spotlight = ({
   gradientFirst = "radial-gradient(68.54% 68.72% at 55.02% 31.46%, hsla(210, 100%, 85%, .08) 0, hsla(210, 100%, 55%, .02) 50%, hsla(210, 100%, 45%, 0) 80%)",

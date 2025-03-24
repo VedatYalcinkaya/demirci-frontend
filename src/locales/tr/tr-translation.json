@@ -1,122 +1,96 @@
 {
-  "navbar": {
-    "home": "Ana Sayfa",
-    "services": "Hizmetlerimiz",
-    "about": "Hakkımızda",
-    "contact": "İletişim",
-    "blog": "Blog",
-    "references": "Referanslar",
-    "dropdown": {
-      "services": {
-        "webDesign": "Web Tasarım",
-        "graphicDesign": "Grafik Tasarım",
-        "marketplace": "Sanal Pazaryeri",
-        "eCommerce": "E-Ticaret Danışmanlığı",
-        "digitalAdvertising": "Dijital Reklamcılık",
-        "ai": "Veri Analizi ve Yapay Zeka"
-      },
-      "references": {
-        "all": "Tüm Referanslar",
-        "allDesc": "Tüm başarılı projelerimizi keşfedin.",
-        "eCommerce": "E-Ticaret Projeleri",
-        "corporate": "Kurumsal Web Siteleri",
-        "mobile": "Mobil Uygulamalar",
-        "software": "Özel Yazılım Projeleri",
-        "eCommerceDesc": "Başarıyla tamamladığımız e-ticaret projeleri.",
-        "corporateDesc": "Kurumsal müşterilerimiz için geliştirdiğimiz web siteleri.",
-        "mobileDesc": "iOS ve Android platformları için geliştirdiğimiz uygulamalar.",
-        "softwareDesc": "Müşterilerimize özel geliştirdiğimiz yazılım çözümleri."
-      },
-      "about": {
-        "whoWeAre": "Biz Kimiz",
-        "visionMission": "Vizyon & Misyon",
-        "team": "Ekibimiz",
-        "technologies": "Kullandığımız Teknolojiler"
-      },
-      "contact": {
-        "contactUs": "Bize Ulaşın",
-        "getQuote": "Teklif Alın",
-        "career": "Kariyer",
-        "faq": "S.S.S."
-      },
-      "blog": {
-        "technology": "Teknoloji",
-        "design": "Tasarım",
-        "marketing": "Pazarlama",
-        "ai": "Yapay Zeka"
+    "navbar": {
+      "home": "Ana Sayfa",
+      "services": "Hizmetlerimiz",
+      "about": "Hakkımızda",
+      "contact": "İletişim",
+      "blog": "Blog",
+      "references": "Referanslar",
+      "dropdown": {
+        "services": {
+          "webDesign": "Web Tasarım",
+          "graphicDesign": "Grafik Tasarım",
+          "marketplace": "Sanal Pazaryeri",
+          "eCommerce": "E-Ticaret Danışmanlığı",
+          "digitalAdvertising": "Dijital Reklamcılık",
+          "ai": "Veri Analizi ve Yapay Zeka"
+        },
+        "references": {
+          "all": "Tüm Referanslar",
+          "allDesc": "Tüm başarılı projelerimizi keşfedin.",
+          "eCommerce": "E-Ticaret Projeleri",
+          "corporate": "Kurumsal Web Siteleri",
+          "mobile": "Mobil Uygulamalar",
+          "software": "Özel Yazılım Projeleri",
+          "eCommerceDesc": "Başarıyla tamamladığımız e-ticaret projeleri.",
+          "corporateDesc": "Kurumsal müşterilerimiz için geliştirdiğimiz web siteleri.",
+          "mobileDesc": "iOS ve Android platformları için geliştirdiğimiz uygulamalar.",
+          "softwareDesc": "Müşterilerimize özel geliştirdiğimiz yazılım çözümleri."
+        },
+        "about": {
+          "whoWeAre": "Biz Kimiz",
+          "visionMission": "Vizyon & Misyon",
+          "team": "Ekibimiz",
+          "technologies": "Kullandığımız Teknolojiler"
+        },
+        "contact": {
+          "contactUs": "Bize Ulaşın",
+          "getQuote": "Teklif Alın",
+          "career": "Kariyer",
+          "faq": "S.S.S."
+        },
+        "blog": {
+          "technology": "Teknoloji",
+          "design": "Tasarım",
+          "marketing": "Pazarlama",
+          "ai": "Yapay Zeka"
+        }
       }
-    }
-  },
-  "services": {
-    "title": "Her İhtiyaca Profesyonel Çözümler",
-    "subtitle": "Web tasarımdan yapay zekaya, dijital dünyanın her alanında yanınızdayız",
-    "webDesign": {
-      "title": "WEB TASARIM",
-      "description": "Özel ve profesyonel web tasarım hizmetlerimizle, işletmenizi dijital dünyada en iyi şekilde temsil eden estetik ve kullanıcı dostu web siteleri tasarlıyoruz."
     },
-    "graphicDesign": {
-      "title": "GRAFİK TASARIM",
-      "description": "Markanızı öne çıkaracak logo, kurumsal kimlik ve dijital tasarım çözümleri sunuyoruz."
+    "services": {
+      "title": "Her İhtiyaca Profesyonel Çözümler",
+      "subtitle": "Web tasarımdan yapay zekaya, dijital dünyanın her alanında yanınızdayız",
+      "webDesign": {
+        "title": "WEB TASARIM",
+        "description": "Özel ve profesyonel web tasarım hizmetlerimizle, işletmenizi dijital dünyada en iyi şekilde temsil eden estetik ve kullanıcı dostu web siteleri tasarlıyoruz."
+      },
+      "graphicDesign": {
+        "title": "GRAFİK TASARIM",
+        "description": "Markanızı öne çıkaracak logo, kurumsal kimlik ve dijital tasarım çözümleri sunuyoruz."
+      },
+      "marketplace": {
+        "title": "SANAL PAZARYERİ",
+        "description": "Çok satıcılı e-ticaret platformları ile işletmenizi büyütün ve yeni pazarlara açılın."
+      },
+      "eCommerce": {
+        "title": "E-TİCARET",
+        "description": "Kullanıcı dostu, güvenli ve yüksek performanslı e-ticaret siteleri ile satışlarınızı artırın."
+      },
+      "digitalAdvertising": {
+        "title": "DİJİTAL REKLAMCILIK",
+        "description": "Hedef kitlenize ulaşmanızı sağlayacak etkili dijital reklam stratejileri geliştiriyoruz."
+      },
+      "ai": {
+        "title": "YAPAY ZEKA",
+        "description": "İşletmenizi bir adım öne taşıyacak yapay zeka çözümleri ile verimliliğinizi artırın."
+      },
+      "viewDetails": "Detayları Gör"
     },
-    "marketplace": {
-      "title": "SANAL PAZARYERİ",
-      "description": "Çok satıcılı e-ticaret platformları ile işletmenizi büyütün ve yeni pazarlara açılın."
+    "hero": {
+      "title": "Dijital Dünyada Profesyonel Çözümler",
+      "subtitle": "Web tasarımdan yapay zekaya kadar geniş hizmet yelpazemizle işletmenizi dijital dünyada öne çıkarıyoruz.",
+      "cta": "Hizmetlerimizi Keşfedin",
+      "ideaFromYou": "Fikir Sizden,",
+      "fromUs": "Bizden.",
+      "flipWords": ["Web", "SEO", "Mobil", "Logo", "Marka", "Reklam"]
     },
-    "eCommerce": {
-      "title": "E-TİCARET",
-      "description": "Kullanıcı dostu, güvenli ve yüksek performanslı e-ticaret siteleri ile satışlarınızı artırın."
+    "footer": {
+      "description": "Dijital dünyada markanızı öne çıkaracak yaratıcı çözümler sunuyoruz.",
+      "services": "Hizmetlerimiz",
+      "corporate": "Kurumsal",
+      "contact": "İletişim",
+      "copyright": "© {{year}} Demirci Yazılım. Tüm hakları saklıdır."
     },
-    "digitalAdvertising": {
-      "title": "DİJİTAL REKLAMCILIK",
-      "description": "Hedef kitlenize ulaşmanızı sağlayacak etkili dijital reklam stratejileri geliştiriyoruz."
-    },
-    "ai": {
-      "title": "YAPAY ZEKA",
-      "description": "İşletmenizi bir adım öne taşıyacak yapay zeka çözümleri ile verimliliğinizi artırın."
-    },
-    "viewDetails": "Detayları Gör"
-  },
-  "hero": {
-    "title": "Dijital Dünyada Profesyonel Çözümler",
-    "subtitle": "Web tasarımdan yapay zekaya kadar geniş hizmet yelpazemizle işletmenizi dijital dünyada öne çıkarıyoruz.",
-    "cta": "Hizmetlerimizi Keşfedin",
-    "ideaFromYou": "Fikir Sizden,",
-    "fromUs": "Bizden.",
-    "flipWords": ["Web", "SEO", "Mobil", "Logo", "Marka", "Reklam"]
-  },
-  "footer": {
-    "description": "Dijital dünyada markanızı öne çıkaracak yaratıcı çözümler sunuyoruz.",
-    "services": "Hizmetlerimiz",
-    "corporate": "Kurumsal",
-    "contact": "İletişim",
-    "copyright": "© {{year}} Demirci Yazılım. Tüm hakları saklıdır."
-  },
-  "features": {
-    "responsive": {
-      "title": "Responsive Tasarım",
-      "description": "Tüm cihazlarda mükemmel görünen, mobil uyumlu web siteleri tasarlıyoruz."
-    },
-    "fast": {
-      "title": "Hızlı Yükleme",
-      "description": "Optimize edilmiş kodlama ile hızlı yüklenen web siteleri geliştiriyoruz."
-    },
-    "seo": {
-      "title": "SEO Dostu",
-      "description": "Arama motorlarında üst sıralarda yer almanızı sağlayan SEO uyumlu siteler oluşturuyoruz."
-    },
-    "customizable": {
-      "title": "Özelleştirilebilir Tasarım",
-      "description": "İhtiyaçlarınıza ve marka kimliğinize uygun özelleştirilebilir web tasarımları sunuyoruz."
-    }
-  },
-  "language": {
-    "select": "Dil Seçin"
-  },
-  "webDesignPage": {
-    "title": "Modern Web Tasarım",
-    "subtitle": "Çözümleri",
-    "description": "Markanızı dijital dünyada en iyi şekilde temsil eden, modern ve kullanıcı dostu web siteleri tasarlıyoruz.",
-    "cta": "Teklif Alın",
     "features": {
       "responsive": {
         "title": "Responsive Tasarım",
@@ -133,736 +107,738 @@
       "customizable": {
         "title": "Özelleştirilebilir Tasarım",
         "description": "İhtiyaçlarınıza ve marka kimliğinize uygun özelleştirilebilir web tasarımları sunuyoruz."
-      },
-      "secure": {
-        "title": "Güvenli Altyapı",
-        "description": "SSL sertifikası ve güvenlik önlemleriyle korunan güvenli web siteleri geliştiriyoruz."
-      },
-      "support": {
-        "title": "7/24 Destek",
-        "description": "Web sitenizle ilgili her türlü sorunuzda 7/24 teknik destek hizmeti sunuyoruz."
       }
     },
-    "timeline": {
-      "title": "Çalışma Sürecimiz",
-      "subtitle": "Projelerinizi hayata geçirirken izlediğimiz profesyonel süreç",
-      "step1": {
-        "title": "Analiz ve Planlama",
-        "description": "İhtiyaçlarınızı analiz ediyor, hedeflerinize uygun bir strateji belirliyoruz.",
-        "analysis": {
-          "title": "Hedef Analizi",
-          "description": "Projenizin amaçlarını ve hedef kitlenizi belirliyoruz."
-        },
-        "content": {
-          "title": "İçerik Stratejisi",
-          "description": "Web sitenizin içerik yapısını ve stratejisini oluşturuyoruz."
-        }
-      },
-      "step2": {
-        "title": "Tasarım",
-        "description": "Modern trendlere uygun, markanızı yansıtan özgün tasarımlar oluşturuyoruz.",
-        "uiux": {
-          "title": "UI/UX Tasarım",
-          "description": "Kullanıcı deneyimini ön planda tutan arayüz tasarımları."
-        },
+    "language": {
+      "select": "Dil Seçin"
+    },
+    "webDesignPage": {
+      "title": "Modern Web Tasarım",
+      "subtitle": "Çözümleri",
+      "description": "Markanızı dijital dünyada en iyi şekilde temsil eden, modern ve kullanıcı dostu web siteleri tasarlıyoruz.",
+      "cta": "Teklif Alın",
+      "features": {
         "responsive": {
           "title": "Responsive Tasarım",
-          "description": "Tüm cihazlarda mükemmel görünen tasarımlar."
-        }
-      },
-      "step3": {
-        "title": "Geliştirme",
-        "description": "En son teknolojilerle güvenli ve performanslı web siteleri geliştiriyoruz.",
-        "tech": {
-          "title": "Modern Teknolojiler",
-          "description": "React, Next.js gibi modern framework'ler kullanıyoruz."
+          "description": "Tüm cihazlarda mükemmel görünen, mobil uyumlu web siteleri tasarlıyoruz."
+        },
+        "fast": {
+          "title": "Hızlı Yükleme",
+          "description": "Optimize edilmiş kodlama ile hızlı yüklenen web siteleri geliştiriyoruz."
         },
         "seo": {
-          "title": "SEO Optimizasyonu",
-          "description": "Arama motorları için optimize edilmiş kodlama."
-        }
-      },
-      "step4": {
-        "title": "Test ve Yayın",
-        "description": "Kapsamlı testlerden sonra sitenizi yayına alıyor ve destek sağlıyoruz.",
-        "quality": {
-          "title": "Kalite Kontrol",
-          "description": "Detaylı test süreçleri ve hata ayıklama."
+          "title": "SEO Dostu",
+          "description": "Arama motorlarında üst sıralarda yer almanızı sağlayan SEO uyumlu siteler oluşturuyoruz."
+        },
+        "customizable": {
+          "title": "Özelleştirilebilir Tasarım",
+          "description": "İhtiyaçlarınıza ve marka kimliğinize uygun özelleştirilebilir web tasarımları sunuyoruz."
+        },
+        "secure": {
+          "title": "Güvenli Altyapı",
+          "description": "SSL sertifikası ve güvenlik önlemleriyle korunan güvenli web siteleri geliştiriyoruz."
         },
         "support": {
-          "title": "Sürekli Destek",
-          "description": "Yayın sonrası teknik destek ve bakım hizmetleri."
+          "title": "7/24 Destek",
+          "description": "Web sitenizle ilgili her türlü sorunuzda 7/24 teknik destek hizmeti sunuyoruz."
+        }
+      },
+      "timeline": {
+        "title": "Çalışma Sürecimiz",
+        "subtitle": "Projelerinizi hayata geçirirken izlediğimiz profesyonel süreç",
+        "step1": {
+          "title": "Analiz ve Planlama",
+          "description": "İhtiyaçlarınızı analiz ediyor, hedeflerinize uygun bir strateji belirliyoruz.",
+          "analysis": {
+            "title": "Hedef Analizi",
+            "description": "Projenizin amaçlarını ve hedef kitlenizi belirliyoruz."
+          },
+          "content": {
+            "title": "İçerik Stratejisi",
+            "description": "Web sitenizin içerik yapısını ve stratejisini oluşturuyoruz."
+          }
+        },
+        "step2": {
+          "title": "Tasarım",
+          "description": "Modern trendlere uygun, markanızı yansıtan özgün tasarımlar oluşturuyoruz.",
+          "uiux": {
+            "title": "UI/UX Tasarım",
+            "description": "Kullanıcı deneyimini ön planda tutan arayüz tasarımları."
+          },
+          "responsive": {
+            "title": "Responsive Tasarım",
+            "description": "Tüm cihazlarda mükemmel görünen tasarımlar."
+          }
+        },
+        "step3": {
+          "title": "Geliştirme",
+          "description": "En son teknolojilerle güvenli ve performanslı web siteleri geliştiriyoruz.",
+          "tech": {
+            "title": "Modern Teknolojiler",
+            "description": "React, Next.js gibi modern framework'ler kullanıyoruz."
+          },
+          "seo": {
+            "title": "SEO Optimizasyonu",
+            "description": "Arama motorları için optimize edilmiş kodlama."
+          }
+        },
+        "step4": {
+          "title": "Test ve Yayın",
+          "description": "Kapsamlı testlerden sonra sitenizi yayına alıyor ve destek sağlıyoruz.",
+          "quality": {
+            "title": "Kalite Kontrol",
+            "description": "Detaylı test süreçleri ve hata ayıklama."
+          },
+          "support": {
+            "title": "Sürekli Destek",
+            "description": "Yayın sonrası teknik destek ve bakım hizmetleri."
+          }
         }
       }
-    }
-  },
-  "graphicDesignPage": {
-    "title": "Yaratıcı Grafik Tasarım",
-    "subtitle": "Çözümleri",
-    "description": "Markanızın kimliğini güçlendiren yaratıcı ve etkileyici grafik tasarım çözümleri sunuyoruz.",
-    "cta": "Teklif Alın",
-    "features": {
-      "creative": {
-        "title": "Yaratıcı Tasarım",
-        "description": "Markanızı en iyi şekilde yansıtan özgün ve yaratıcı tasarımlar oluşturuyoruz."
-      },
-      "brandConsistency": {
-        "title": "Marka Tutarlılığı",
-        "description": "Tüm tasarımlarınızda marka kimliğinizi tutarlı bir şekilde yansıtıyoruz."
-      },
-      "corporateIdentity": {
-        "title": "Kurumsal Kimlik",
-        "description": "Kartvizit, broşür, afiş ve tüm matbaa ürünleriyle kurumsal kimliğinizi tasarlıyor ve basıyoruz."
-      },
-      "highQuality": {
-        "title": "Yüksek Kalite",
-        "description": "Her türlü baskı ve dijital ortam için yüksek çözünürlüklü tasarımlar sunuyoruz."
-      },
-      "targetAudience": {
-        "title": "Hedef Kitle Odaklı",
-        "description": "Hedef kitlenize uygun, dikkat çekici ve etkileyici tasarımlar oluşturuyoruz."
-      },
-      "unlimitedRevision": {
-        "title": "Sınırsız Revizyon",
-        "description": "Tam memnuniyet sağlayana kadar sınırsız revizyon imkanı sunuyoruz."
-      }
-    }
-  },
-  "marketplacePage": {
-    "title": "Sanal Pazaryeri",
-    "subtitle": "Danışmanlığı",
-    "description": "Hepsiburada, Trendyol, N11 gibi popüler sanal pazaryerlerinde başarılı olmanız için danışmanlık hizmeti veriyoruz.",
-    "cta": "Teklif Alın",
-    "features": {
-      "wideCustomerBase": {
-        "title": "Geniş Müşteri Kitlesi",
-        "description": "Milyonlarca aktif kullanıcıya sahip pazaryerlerinde ürünlerinizi sergileyerek satışlarınızı artırın."
-      },
-      "competitionAnalysis": {
-        "title": "Rekabet Analizi",
-        "description": "Rakiplerinizin stratejilerini analiz ederek pazarda öne çıkmanızı sağlıyoruz."
-      },
-      "optimalPricing": {
-        "title": "Optimum Fiyatlandırma",
-        "description": "Kâr marjınızı maksimize edecek fiyatlandırma stratejileri geliştiriyoruz."
-      },
-      "targetedAds": {
-        "title": "Hedefli Reklamlar",
-        "description": "Pazaryeri içi reklam kampanyaları ile potansiyel müşterilere ulaşmanızı sağlıyoruz."
-      },
-      "dataAnalysis": {
-        "title": "Veri Analizi",
-        "description": "Satış verilerinizi analiz ederek pazaryeri stratejinizi sürekli iyileştiriyoruz."
-      },
-      "storeOptimization": {
-        "title": "Mağaza Optimizasyonu",
-        "description": "Pazaryeri mağazanızın görünürlüğünü ve satış performansını artıracak optimizasyonlar yapıyoruz."
+    },
+    "graphicDesignPage": {
+      "title": "Yaratıcı Grafik Tasarım",
+      "subtitle": "Çözümleri",
+      "description": "Markanızın kimliğini güçlendiren yaratıcı ve etkileyici grafik tasarım çözümleri sunuyoruz.",
+      "cta": "Teklif Alın",
+      "features": {
+        "creative": {
+          "title": "Yaratıcı Tasarım",
+          "description": "Markanızı en iyi şekilde yansıtan özgün ve yaratıcı tasarımlar oluşturuyoruz."
+        },
+        "brandConsistency": {
+          "title": "Marka Tutarlılığı",
+          "description": "Tüm tasarımlarınızda marka kimliğinizi tutarlı bir şekilde yansıtıyoruz."
+        },
+        "corporateIdentity": {
+          "title": "Kurumsal Kimlik",
+          "description": "Kartvizit, broşür, afiş ve tüm matbaa ürünleriyle kurumsal kimliğinizi tasarlıyor ve basıyoruz."
+        },
+        "highQuality": {
+          "title": "Yüksek Kalite",
+          "description": "Her türlü baskı ve dijital ortam için yüksek çözünürlüklü tasarımlar sunuyoruz."
+        },
+        "targetAudience": {
+          "title": "Hedef Kitle Odaklı",
+          "description": "Hedef kitlenize uygun, dikkat çekici ve etkileyici tasarımlar oluşturuyoruz."
+        },
+        "unlimitedRevision": {
+          "title": "Sınırsız Revizyon",
+          "description": "Tam memnuniyet sağlayana kadar sınırsız revizyon imkanı sunuyoruz."
+        }
       }
     },
-    "marketplaces": {
-      "title": "Çalıştığımız Pazaryerleri",
-      "trendyol": "Trendyol",
-      "hepsiburada": "Hepsiburada",
-      "n11": "N11",
-      "amazon": "Amazon",
-      "gittigidiyor": "GittiGidiyor"
-    }
-  },
-  "digitalAdvertisingPage": {
-    "title": "Dijital Reklamcılık",
-    "subtitle": "Hizmetleri",
-    "description": "Google Ads, Facebook Ads ve diğer dijital reklam platformlarında etkili kampanyalar oluşturuyoruz.",
-    "cta": "Teklif Alın",
-    "features": {
-      "targetedAds": {
-        "title": "Hedefli Reklamlar",
-        "description": "Potansiyel müşterilerinize demografik, ilgi alanı ve davranış bazlı hedefleme ile ulaşıyoruz."
+    "marketplacePage": {
+      "title": "Sanal Pazaryeri",
+      "subtitle": "Danışmanlığı",
+      "description": "Hepsiburada, Trendyol, N11 gibi popüler sanal pazaryerlerinde başarılı olmanız için danışmanlık hizmeti veriyoruz.",
+      "cta": "Teklif Alın",
+      "features": {
+        "wideCustomerBase": {
+          "title": "Geniş Müşteri Kitlesi",
+          "description": "Milyonlarca aktif kullanıcıya sahip pazaryerlerinde ürünlerinizi sergileyerek satışlarınızı artırın."
+        },
+        "competitionAnalysis": {
+          "title": "Rekabet Analizi",
+          "description": "Rakiplerinizin stratejilerini analiz ederek pazarda öne çıkmanızı sağlıyoruz."
+        },
+        "optimalPricing": {
+          "title": "Optimum Fiyatlandırma",
+          "description": "Kâr marjınızı maksimize edecek fiyatlandırma stratejileri geliştiriyoruz."
+        },
+        "targetedAds": {
+          "title": "Hedefli Reklamlar",
+          "description": "Pazaryeri içi reklam kampanyaları ile potansiyel müşterilere ulaşmanızı sağlıyoruz."
+        },
+        "dataAnalysis": {
+          "title": "Veri Analizi",
+          "description": "Satış verilerinizi analiz ederek pazaryeri stratejinizi sürekli iyileştiriyoruz."
+        },
+        "storeOptimization": {
+          "title": "Mağaza Optimizasyonu",
+          "description": "Pazaryeri mağazanızın görünürlüğünü ve satış performansını artıracak optimizasyonlar yapıyoruz."
+        }
       },
-      "performanceTracking": {
-        "title": "Performans Takibi",
-        "description": "Reklam kampanyalarınızın performansını gerçek zamanlı olarak izleyerek optimizasyon sağlıyoruz."
-      },
-      "budgetControl": {
-        "title": "Bütçe Kontrolü",
-        "description": "Reklam bütçenizi en verimli şekilde kullanarak maksimum geri dönüş sağlıyoruz."
-      },
-      "multiPlatform": {
-        "title": "Çoklu Platform",
-        "description": "Google, Facebook, Instagram, LinkedIn ve YouTube gibi çeşitli platformlarda reklam yönetimi yapıyoruz."
-      },
-      "detailedAnalysis": {
-        "title": "Detaylı Analiz",
-        "description": "Kampanya sonuçlarını detaylı raporlar ve analizlerle sunarak stratejilerinizi geliştirmenize yardımcı oluyoruz."
-      },
-      "keywordOptimization": {
-        "title": "Anahtar Kelime Optimizasyonu",
-        "description": "En etkili anahtar kelimeleri belirleyerek reklam kampanyalarınızın verimliliğini artırıyoruz."
+      "marketplaces": {
+        "title": "Çalıştığımız Pazaryerleri",
+        "trendyol": "Trendyol",
+        "hepsiburada": "Hepsiburada",
+        "n11": "N11",
+        "amazon": "Amazon",
+        "gittigidiyor": "GittiGidiyor"
       }
     },
-    "platforms": {
-      "title": "Reklam Platformları",
-      "googleAds": "Google Ads",
-      "facebookAds": "Facebook Ads",
-      "instagramAds": "Instagram Ads",
-      "linkedinAds": "LinkedIn Ads",
-      "youtubeAds": "YouTube Ads"
-    }
-  },
-  "aiPage": {
-    "title": "Veri Analizi ve",
-    "subtitle": "Yapay Zeka",
-    "description": "İşletmenizin verilerini analiz ederek, yapay zeka destekli çözümler sunuyoruz.",
-    "cta": "Teklif Alın",
-    "features": {
-      "smartSolutions": {
-        "title": "Akıllı Çözümler",
-        "description": "İşletmenizin ihtiyaçlarına özel yapay zeka destekli çözümler geliştiriyoruz."
+    "digitalAdvertisingPage": {
+      "title": "Dijital Reklamcılık",
+      "subtitle": "Hizmetleri",
+      "description": "Google Ads, Facebook Ads ve diğer dijital reklam platformlarında etkili kampanyalar oluşturuyoruz.",
+      "cta": "Teklif Alın",
+      "features": {
+        "targetedAds": {
+          "title": "Hedefli Reklamlar",
+          "description": "Potansiyel müşterilerinize demografik, ilgi alanı ve davranış bazlı hedefleme ile ulaşıyoruz."
+        },
+        "performanceTracking": {
+          "title": "Performans Takibi",
+          "description": "Reklam kampanyalarınızın performansını gerçek zamanlı olarak izleyerek optimizasyon sağlıyoruz."
+        },
+        "budgetControl": {
+          "title": "Bütçe Kontrolü",
+          "description": "Reklam bütçenizi en verimli şekilde kullanarak maksimum geri dönüş sağlıyoruz."
+        },
+        "multiPlatform": {
+          "title": "Çoklu Platform",
+          "description": "Google, Facebook, Instagram, LinkedIn ve YouTube gibi çeşitli platformlarda reklam yönetimi yapıyoruz."
+        },
+        "detailedAnalysis": {
+          "title": "Detaylı Analiz",
+          "description": "Kampanya sonuçlarını detaylı raporlar ve analizlerle sunarak stratejilerinizi geliştirmenize yardımcı oluyoruz."
+        },
+        "keywordOptimization": {
+          "title": "Anahtar Kelime Optimizasyonu",
+          "description": "En etkili anahtar kelimeleri belirleyerek reklam kampanyalarınızın verimliliğini artırıyoruz."
+        }
       },
-      "automatedProcesses": {
-        "title": "Otomatik Süreçler",
-        "description": "Tekrarlayan işlerinizi otomatikleştirerek zaman ve maliyet tasarrufu sağlıyoruz."
-      },
-      "dataAnalysis": {
-        "title": "Veri Analizi",
-        "description": "Büyük veri setlerini analiz ederek işletmeniz için değerli içgörüler sunuyoruz."
-      },
-      "chatbotDevelopment": {
-        "title": "Chatbot Geliştirme",
-        "description": "Müşterilerinizle etkileşime geçen ve onlara yardımcı olan akıllı chatbotlar geliştiriyoruz."
-      },
-      "nlp": {
-        "title": "Doğal Dil İşleme",
-        "description": "Metinleri anlayan, analiz eden ve yanıtlayan yapay zeka sistemleri geliştiriyoruz."
-      },
-      "customAiModels": {
-        "title": "Özel AI Modelleri",
-        "description": "İşletmenizin spesifik ihtiyaçlarına yönelik özel yapay zeka modelleri geliştiriyoruz."
+      "platforms": {
+        "title": "Reklam Platformları",
+        "googleAds": "Google Ads",
+        "facebookAds": "Facebook Ads",
+        "instagramAds": "Instagram Ads",
+        "linkedinAds": "LinkedIn Ads",
+        "youtubeAds": "YouTube Ads"
       }
     },
-    "technologies": {
-      "title": "Kullandığımız Teknolojiler",
-      "tensorflow": "TensorFlow",
-      "pytorch": "PyTorch",
-      "python": "Python",
-      "openai": "OpenAI API",
-      "pandas": "Pandas"
-    }
-  },
-  "eCommercePage": {
-    "title": "E-Ticaret",
-    "subtitle": "Danışmanlığı",
-    "description": "E-ticaret sitenizin kurulumundan, yönetimine kadar tüm süreçlerde profesyonel danışmanlık hizmeti sunuyoruz.",
-    "cta": "Teklif Alın",
-    "features": {
-      "securePayment": {
-        "title": "Güvenli Ödeme",
-        "description": "En güncel güvenlik protokolleriyle korunan ödeme sistemleri entegrasyonu sağlıyoruz."
+    "aiPage": {
+      "title": "Veri Analizi ve",
+      "subtitle": "Yapay Zeka",
+      "description": "İşletmenizin verilerini analiz ederek, yapay zeka destekli çözümler sunuyoruz.",
+      "cta": "Teklif Alın",
+      "features": {
+        "smartSolutions": {
+          "title": "Akıllı Çözümler",
+          "description": "İşletmenizin ihtiyaçlarına özel yapay zeka destekli çözümler geliştiriyoruz."
+        },
+        "automatedProcesses": {
+          "title": "Otomatik Süreçler",
+          "description": "Tekrarlayan işlerinizi otomatikleştirerek zaman ve maliyet tasarrufu sağlıyoruz."
+        },
+        "dataAnalysis": {
+          "title": "Veri Analizi",
+          "description": "Büyük veri setlerini analiz ederek işletmeniz için değerli içgörüler sunuyoruz."
+        },
+        "chatbotDevelopment": {
+          "title": "Chatbot Geliştirme",
+          "description": "Müşterilerinizle etkileşime geçen ve onlara yardımcı olan akıllı chatbotlar geliştiriyoruz."
+        },
+        "nlp": {
+          "title": "Doğal Dil İşleme",
+          "description": "Metinleri anlayan, analiz eden ve yanıtlayan yapay zeka sistemleri geliştiriyoruz."
+        },
+        "customAiModels": {
+          "title": "Özel AI Modelleri",
+          "description": "İşletmenizin spesifik ihtiyaçlarına yönelik özel yapay zeka modelleri geliştiriyoruz."
+        }
       },
-      "multiplePaymentOptions": {
-        "title": "Çoklu Ödeme Seçenekleri",
-        "description": "Kredi kartı, havale, kapıda ödeme gibi farklı ödeme yöntemleri sunarak satışlarınızı artırıyoruz."
-      },
-      "detailedReporting": {
-        "title": "Detaylı Raporlama",
-        "description": "Satış, ziyaretçi ve stok verilerinizi analiz ederek işletmenizi büyütmenize yardımcı oluyoruz."
-      },
-      "integratedLogistics": {
-        "title": "Entegre Lojistik",
-        "description": "Kargo firmaları ve lojistik süreçlerle tam entegrasyon sağlayarak teslimat süreçlerinizi optimize ediyoruz."
-      },
-      "seoOptimization": {
-        "title": "SEO Optimizasyonu",
-        "description": "E-ticaret sitenizin arama motorlarında üst sıralarda yer almasını sağlayan SEO çalışmaları yapıyoruz."
-      },
-      "digitalMarketing": {
-        "title": "Dijital Pazarlama",
-        "description": "E-ticaret siteniz için özel dijital pazarlama stratejileri geliştirerek satışlarınızı artırıyoruz."
+      "technologies": {
+        "title": "Kullandığımız Teknolojiler",
+        "tensorflow": "TensorFlow",
+        "pytorch": "PyTorch",
+        "python": "Python",
+        "openai": "OpenAI API",
+        "pandas": "Pandas"
       }
     },
-    "statistics": {
-      "title": "E-Ticaret Başarı Faktörleri",
-      "mobileShopping": {
-        "value": "%68",
-        "description": "Mobil cihazlardan yapılan alışveriş oranı"
+    "eCommercePage": {
+      "title": "E-Ticaret",
+      "subtitle": "Danışmanlığı",
+      "description": "E-ticaret sitenizin kurulumundan, yönetimine kadar tüm süreçlerde profesyonel danışmanlık hizmeti sunuyoruz.",
+      "cta": "Teklif Alın",
+      "features": {
+        "securePayment": {
+          "title": "Güvenli Ödeme",
+          "description": "En güncel güvenlik protokolleriyle korunan ödeme sistemleri entegrasyonu sağlıyoruz."
+        },
+        "multiplePaymentOptions": {
+          "title": "Çoklu Ödeme Seçenekleri",
+          "description": "Kredi kartı, havale, kapıda ödeme gibi farklı ödeme yöntemleri sunarak satışlarınızı artırıyoruz."
+        },
+        "detailedReporting": {
+          "title": "Detaylı Raporlama",
+          "description": "Satış, ziyaretçi ve stok verilerinizi analiz ederek işletmenizi büyütmenize yardımcı oluyoruz."
+        },
+        "integratedLogistics": {
+          "title": "Entegre Lojistik",
+          "description": "Kargo firmaları ve lojistik süreçlerle tam entegrasyon sağlayarak teslimat süreçlerinizi optimize ediyoruz."
+        },
+        "seoOptimization": {
+          "title": "SEO Optimizasyonu",
+          "description": "E-ticaret sitenizin arama motorlarında üst sıralarda yer almasını sağlayan SEO çalışmaları yapıyoruz."
+        },
+        "digitalMarketing": {
+          "title": "Dijital Pazarlama",
+          "description": "E-ticaret siteniz için özel dijital pazarlama stratejileri geliştirerek satışlarınızı artırıyoruz."
+        }
       },
-      "loadingTime": {
-        "value": "3 sn",
-        "description": "Kullanıcıların site yüklenmesi için beklediği maksimum süre"
-      },
-      "cartAbandonment": {
-        "value": "%70",
-        "description": "Sepeti terk etme oranı"
-      },
-      "customerExperience": {
-        "value": "%89",
-        "description": "Müşteri deneyiminin marka sadakatine etkisi"
+      "statistics": {
+        "title": "E-Ticaret Başarı Faktörleri",
+        "mobileShopping": {
+          "value": "%68",
+          "description": "Mobil cihazlardan yapılan alışveriş oranı"
+        },
+        "loadingTime": {
+          "value": "3 sn",
+          "description": "Kullanıcıların site yüklenmesi için beklediği maksimum süre"
+        },
+        "cartAbandonment": {
+          "value": "%70",
+          "description": "Sepeti terk etme oranı"
+        },
+        "customerExperience": {
+          "value": "%89",
+          "description": "Müşteri deneyiminin marka sadakatine etkisi"
+        }
       }
-    }
-  },
-  "aboutPage": {
-    "whoWeAre": {
-      "title": "Biz Kimiz",
-      "subtitle": "Dijital Dünyanın Öncü Ekibi",
-      "description": "2015 yılından bu yana, dijital dünyada işletmelere değer katmak için çalışıyoruz. Deneyimli ekibimiz ve yenilikçi yaklaşımımızla, müşterilerimizin dijital dönüşüm yolculuğunda güvenilir bir çözüm ortağı olarak yer alıyoruz.",
-      "values": {
-        "title": "Değerlerimiz",
+    },
+    "aboutPage": {
+      "whoWeAre": {
+        "title": "Biz Kimiz",
+        "subtitle": "Dijital Dünyanın Öncü Ekibi",
+        "description": "2015 yılından bu yana, dijital dünyada işletmelere değer katmak için çalışıyoruz. Deneyimli ekibimiz ve yenilikçi yaklaşımımızla, müşterilerimizin dijital dönüşüm yolculuğunda güvenilir bir çözüm ortağı olarak yer alıyoruz.",
+        "values": {
+          "title": "Değerlerimiz",
+          "innovation": {
+            "title": "Yenilikçilik",
+            "description": "En son teknolojileri ve trendleri takip ederek, müşterilerimize her zaman en iyi çözümleri sunuyoruz."
+          },
+          "quality": {
+            "title": "Kalite",
+            "description": "Her projemizde en yüksek kalite standartlarını gözetiyor, mükemmeliyetçi yaklaşımımızla çalışıyoruz."
+          },
+          "customerFocus": {
+            "title": "Müşteri Odaklılık",
+            "description": "Müşterilerimizin ihtiyaçlarını en iyi şekilde anlıyor ve onlara özel çözümler geliştiriyoruz."
+          },
+          "transparency": {
+            "title": "Şeffaflık",
+            "description": "Tüm iş süreçlerimizde açık ve dürüst iletişimi benimsiyoruz."
+          }
+        }
+      },
+      "visionMission": {
+        "title": "Vizyon & Misyon",
+        "vision": {
+          "title": "Vizyonumuz",
+          "description": "Dijital dönüşümde global bir teknoloji şirketi olarak, işletmelerin dijital başarı hikayelerinde tercih edilen çözüm ortağı olmak."
+        },
+        "mission": {
+          "title": "Misyonumuz",
+          "description": "Yenilikçi teknolojiler ve yaratıcı çözümlerle işletmelerin dijital dünyada sürdürülebilir başarı elde etmelerini sağlamak."
+        },
+        "goals": {
+          "title": "Hedeflerimiz",
+          "items": [
+            "Müşterilerimizin dijital varlıklarını güçlendirmek",
+            "Yenilikçi teknolojilerle değer yaratmak",
+            "Sürdürülebilir büyüme sağlamak",
+            "Global pazarda söz sahibi olmak"
+          ]
+        }
+      },
+      "timeline": {
+        "title": "Yolculuğumuz",
+        "foundation": {
+          "year": "2015",
+          "title": "Kuruluş",
+          "description": "Demirci Yazılım, dijital dünyada işletmelere değer katmak amacıyla kuruldu."
+        },
+        "growth": {
+          "year": "2017",
+          "title": "Büyüme",
+          "description": "Ekibimiz genişledi ve hizmet yelpazemizi çeşitlendirdik."
+        },
+        "international": {
+          "year": "2019",
+          "title": "Uluslararası Projeler",
+          "description": "İlk uluslararası projelerimizi hayata geçirerek global pazara adım attık."
+        },
+        "innovation": {
+          "year": "2022",
+          "title": "Teknoloji Yenilikleri",
+          "description": "Yapay zeka ve veri analizi çözümlerimizi geliştirerek hizmet yelpazemizi genişlettik."
+        },
+        "today": {
+          "year": "2024",
+          "title": "Bugün",
+          "description": "Deneyimli ekibimiz ve yenilikçi yaklaşımımızla müşterilerimize değer katmaya devam ediyoruz."
+        }
+      },
+      "principles": {
+        "title": "Temel İlkelerimiz",
+        "reliability": {
+          "title": "Güvenilirlik",
+          "description": "Müşterilerimize karşı her zaman dürüst ve şeffaf bir yaklaşım benimsiyor, verdiğimiz sözleri tutuyoruz."
+        },
         "innovation": {
           "title": "Yenilikçilik",
-          "description": "En son teknolojileri ve trendleri takip ederek, müşterilerimize her zaman en iyi çözümleri sunuyoruz."
+          "description": "Teknolojik gelişmeleri yakından takip ediyor, müşterilerimize en yenilikçi çözümleri sunuyoruz."
         },
-        "quality": {
-          "title": "Kalite",
-          "description": "Her projemizde en yüksek kalite standartlarını gözetiyor, mükemmeliyetçi yaklaşımımızla çalışıyoruz."
-        },
-        "customerFocus": {
-          "title": "Müşteri Odaklılık",
-          "description": "Müşterilerimizin ihtiyaçlarını en iyi şekilde anlıyor ve onlara özel çözümler geliştiriyoruz."
-        },
-        "transparency": {
-          "title": "Şeffaflık",
-          "description": "Tüm iş süreçlerimizde açık ve dürüst iletişimi benimsiyoruz."
+        "collaboration": {
+          "title": "İşbirliği",
+          "description": "Müşterilerimizle yakın işbirliği içinde çalışarak, onların ihtiyaçlarını en iyi şekilde karşılıyoruz."
         }
       }
     },
-    "visionMission": {
-      "title": "Vizyon & Misyon",
-      "vision": {
-        "title": "Vizyonumuz",
-        "description": "Dijital dönüşümde global bir teknoloji şirketi olarak, işletmelerin dijital başarı hikayelerinde tercih edilen çözüm ortağı olmak."
-      },
-      "mission": {
-        "title": "Misyonumuz",
-        "description": "Yenilikçi teknolojiler ve yaratıcı çözümlerle işletmelerin dijital dünyada sürdürülebilir başarı elde etmelerini sağlamak."
-      },
-      "goals": {
-        "title": "Hedeflerimiz",
-        "items": [
-          "Müşterilerimizin dijital varlıklarını güçlendirmek",
-          "Yenilikçi teknolojilerle değer yaratmak",
-          "Sürdürülebilir büyüme sağlamak",
-          "Global pazarda söz sahibi olmak"
-        ]
-      }
+    "common": {
+      "getQuote": "Teklif Al",
+      "dragAndDrop": "Dosyaları buraya sürükleyin veya tıklayın",
+      "or": "veya",
+      "browse": "dosya seçin",
+      "upload": "Yükle",
+      "selectFile": "Dosya Seç",
+      "uploadImage": "Resim Yükle",
+      "preview": "Önizleme"
     },
-    "timeline": {
-      "title": "Yolculuğumuz",
-      "foundation": {
-        "year": "2015",
-        "title": "Kuruluş",
-        "description": "Demirci Yazılım, dijital dünyada işletmelere değer katmak amacıyla kuruldu."
+    "form": {
+      "title": "Profesyonel Hizmet Talebi",
+      "subtitle": "Size özel web tasarım, e-ticaret ve dijital pazarlama çözümleri için hemen teklif alın.",
+      "callToAction": "Dijital Çözüm Ortağınız",
+      "benefitsDescription": "Demirci Yazılım olarak ihtiyacınıza yönelik özel çözümler sunuyoruz:",
+      "benefits": {
+        "responsive": "Mobil uyumlu, hızlı ve modern tasarımlar",
+        "customized": "İhtiyaçlarınıza özel yazılım çözümleri",
+        "support": "7/24 teknik destek ve bakım hizmetleri",
+        "quality": "Yüksek kaliteli kod ve güvenlik standartları"
       },
-      "growth": {
-        "year": "2017",
-        "title": "Büyüme",
-        "description": "Ekibimiz genişledi ve hizmet yelpazemizi çeşitlendirdik."
-      },
-      "international": {
-        "year": "2019",
-        "title": "Uluslararası Projeler",
-        "description": "İlk uluslararası projelerimizi hayata geçirerek global pazara adım attık."
-      },
-      "innovation": {
-        "year": "2022",
-        "title": "Teknoloji Yenilikleri",
-        "description": "Yapay zeka ve veri analizi çözümlerimizi geliştirerek hizmet yelpazemizi genişlettik."
-      },
-      "today": {
-        "year": "2024",
-        "title": "Bugün",
-        "description": "Deneyimli ekibimiz ve yenilikçi yaklaşımımızla müşterilerimize değer katmaya devam ediyoruz."
-      }
-    },
-    "principles": {
-      "title": "Temel İlkelerimiz",
-      "reliability": {
-        "title": "Güvenilirlik",
-        "description": "Müşterilerimize karşı her zaman dürüst ve şeffaf bir yaklaşım benimsiyor, verdiğimiz sözleri tutuyoruz."
-      },
-      "innovation": {
-        "title": "Yenilikçilik",
-        "description": "Teknolojik gelişmeleri yakından takip ediyor, müşterilerimize en yenilikçi çözümleri sunuyoruz."
-      },
-      "collaboration": {
-        "title": "İşbirliği",
-        "description": "Müşterilerimizle yakın işbirliği içinde çalışarak, onların ihtiyaçlarını en iyi şekilde karşılıyoruz."
-      }
-    }
-  },
-  "common": {
-    "getQuote": "Teklif Al",
-    "dragAndDrop": "Dosyaları buraya sürükleyin veya tıklayın",
-    "or": "veya",
-    "browse": "dosya seçin",
-    "upload": "Yükle",
-    "selectFile": "Dosya Seç",
-    "uploadImage": "Resim Yükle",
-    "preview": "Önizleme"
-  },
-  "form": {
-    "title": "Profesyonel Hizmet Talebi",
-    "subtitle": "Size özel çözümler için bilgilerinizi paylaşın, en kısa sürede dönüş yapalım.",
-    "fullName": "Ad Soyad",
-    "email": "E-posta",
-    "phone": "Telefon",
-    "services": "Hizmetler",
-    "message": "Mesajınız",
-    "submit": "Gönder",
-    "cancel": "İptal",
-    "selectService": "Hizmet seçiniz",
-    "countryCode": "Ülke Kodu",
-    "placeholders": {
-      "fullName": "Adınız ve Soyadınız",
-      "email": "ornek@email.com",
-      "phone": "5XX XXX XX XX",
-      "message": "Projenizdeki ihtiyaçlarınızı kısaca açıklayın..."
-    },
-    "validation": {
-      "fullName": {
-        "required": "Ad soyad zorunludur",
-        "min": "Ad soyad en az 2 karakter olmalıdır"
-      },
-      "email": {
-        "required": "E-posta zorunludur",
-        "invalid": "Geçerli bir e-posta adresi giriniz"
-      },
-      "phone": {
-        "required": "Telefon numarası zorunludur",
-        "invalid": "Geçerli bir telefon numarası giriniz",
-        "min": "Telefon numarası en az 10 karakter olmalıdır",
-        "max": "Telefon numarası en fazla 11 karakter olmalıdır"
-      },
-      "countryCode": {
-        "required": "Ülke kodu gereklidir"
-      },
-      "services": {
-        "required": "En az bir hizmet seçmelisiniz",
-        "min": "En az bir hizmet seçmelisiniz"
-      },
-      "message": {
-        "min": "Mesaj en az 10 karakter olmalıdır",
-        "max": "Mesaj en fazla 500 karakter olmalıdır"
-      }
-    },
-    "subject": {
-      "title": "Konu",
-      "placeholder": "Konu seçiniz",
-      "customPlaceholder": "Konunuzu yazınız",
-      "options": {
-        "getService": "Hizmet almak istiyorum",
-        "getMeeting": "Görüşme talep ediyorum",
-        "getQuote": "Fiyat teklifi almak istiyorum",
-        "getInfo": "Bilgi almak istiyorum",
-        "other": "Diğer"
+      "clientTrust": "Bize Güvenen Markalar",
+      "placeholders": {
+        "fullName": "Adınız Soyadınız",
+        "email": "E-posta adresiniz",
+        "phone": "Telefon numaranız",
+        "message": "Projeniz hakkında kısa bilgi verebilirsiniz..."
       },
       "validation": {
-        "required": "Lütfen bir konu seçiniz",
-        "customRequired": "Lütfen konunuzu yazınız"
-      }
-    }
-  },
-  "contactPage": {
-    "title": "Bize Ulaşın",
-    "subtitle": "Size Yardımcı Olmaktan Memnuniyet Duyarız",
-    "description": "Projeleriniz, sorularınız veya işbirliği fırsatları için bizimle iletişime geçin. En kısa sürede size dönüş yapacağız.",
-    "cta": "Mesaj Gönderin",
-    "info": {
-      "title": "İletişim Bilgileri",
-      "address": {
-        "title": "Adres",
-        "value": "Atatürk Mah. Ertuğrul Gazi Cad. No: 21 Kat: 3 Ataşehir, İstanbul"
-      },
-      "phone": {
-        "title": "Telefon",
-        "value": "+90 (216) 123 45 67"
-      },
-      "email": {
-        "title": "E-posta",
-        "value": "info@demirciyazilim.com"
-      },
-      "workHours": {
-        "title": "Çalışma Saatleri",
-        "value": "Pazartesi - Cuma: 09:00 - 18:00"
-      }
-    },
-    "form": {
-      "title": "Bize Mesaj Gönderin",
-      "subtitle": "Size özel çözümler için bilgilerinizi paylaşın, en kısa sürede dönüş yapalım."
-    },
-    "faq": {
-      "title": "Sıkça Sorulan Sorular",
-      "questions": [
-        {
-          "question": "Hizmetlerinizin fiyatları nedir?",
-          "answer": "Hizmet fiyatlarımız, projenin kapsamına, gereksinimlerine ve süresine göre değişiklik göstermektedir. Size özel fiyat teklifi için lütfen bizimle iletişime geçin."
+        "fullName": {
+          "required": "İsim ve soyisim gereklidir",
+          "min": "İsim en az 2 karakter olmalıdır"
         },
-        {
-          "question": "Bir proje ne kadar sürede tamamlanır?",
-          "answer": "Proje tamamlanma süresi, projenin karmaşıklığına ve kapsamına bağlı olarak değişir. Basit bir web sitesi 2-4 hafta içinde tamamlanabilirken, kapsamlı bir e-ticaret projesi 2-3 ay sürebilir."
+        "email": {
+          "required": "E-posta adresi gereklidir",
+          "invalid": "Geçerli bir e-posta adresi giriniz"
         },
-        {
-          "question": "Hangi ödeme yöntemlerini kabul ediyorsunuz?",
-          "answer": "Banka havalesi, kredi kartı ve taksitli ödeme seçeneklerimiz mevcuttur. Proje başlangıcında %40, geliştirme aşamasında %30 ve teslimatta %30 ödeme planı uyguluyoruz."
+        "countryCode": {
+          "required": "Ülke kodu gereklidir"
         },
-        {
-          "question": "Proje tesliminden sonra destek sağlıyor musunuz?",
-          "answer": "Evet, tüm projelerimiz için 1 yıl boyunca ücretsiz teknik destek sağlıyoruz. Bu süre sonrasında aylık bakım ve destek paketlerimizden faydalanabilirsiniz."
+        "phone": {
+          "required": "Telefon numarası gereklidir",
+          "invalid": "Geçerli bir telefon numarası giriniz",
+          "min": "Telefon numarası en az 10 karakter olmalıdır",
+          "max": "Telefon numarası en fazla 11 karakter olmalıdır"
+        },
+        "services": {
+          "required": "En az bir hizmet seçmelisiniz",
+          "min": "En az bir hizmet seçmelisiniz"
+        },
+        "message": {
+          "min": "Mesajınız en az 10 karakter olmalıdır",
+          "max": "Mesajınız en fazla 500 karakter olmalıdır"
         }
-      ]
-    },
-    "map": {
-      "title": "Bizi Ziyaret Edin"
-    }
-  },
-  "references": {
-    "title": "Referanslarımız",
-    "subtitle": "Başarıyla tamamladığımız projeler",
-    "noReferences": "Henüz referans bulunmamaktadır.",
-    "loading": "Yükleniyor...",
-    "error": {
-      "title": "Bir hata oluştu",
-      "message": "Referans bilgileri yüklenirken bir hata oluştu."
-    },
-    "notFound": {
-      "title": "Referans bulunamadı",
-      "message": "Aradığınız referans bulunamadı veya silinmiş olabilir."
-    },
-    "visitWebsite": "Web Sitesini Ziyaret Et",
-    "completionDate": "Tamamlanma Tarihi",
-    "addNew": "Yeni Referans Ekle",
-    "backToList": "Listeye Dön",
-    "description": "Açıklama",
-    "details": "Proje Detayları",
-    "client": "Müşteri",
-    "services": "Hizmetler",
-    "projectUrl": "Proje URL",
-    "createdAt": "Oluşturulma Tarihi",
-    "updatedAt": "Güncellenme Tarihi",
-    "pagination": {
-      "showing": "Gösteriliyor",
-      "of": "/",
-      "references": "referans"
-    },
-    "form": {
-      "title": "Başlık",
-      "summary": "Özet",
-      "description": "Açıklama",
-      "thumbnailUrl": "Kapak Resmi URL",
-      "clientName": "Müşteri Adı",
-      "clientLogo": "Müşteri Logo URL",
-      "projectUrl": "Proje URL",
-      "completionDate": "Tamamlanma Tarihi",
-      "services": "Hizmetler",
-      "active": "Aktif",
-      "save": "Kaydet",
+      },
+      "fullName": "İsim Soyisim",
+      "email": "E-posta",
+      "phone": "Telefon",
+      "services": "İlgilendiğiniz Hizmetler",
+      "message": "Mesajınız",
+      "selectService": "Hizmet seçiniz",
+      "submit": "Teklif İste",
       "cancel": "İptal"
     },
-    "filters": {
-      "all": "Tümü",
-      "active": "Aktif Olanlar",
-      "byTitle": "Başlığa Göre",
-      "byService": "Hizmete Göre",
+    "contactPage": {
+      "title": "Bize Ulaşın",
+      "subtitle": "Size Yardımcı Olmaktan Memnuniyet Duyarız",
+      "description": "Projeleriniz, sorularınız veya işbirliği fırsatları için bizimle iletişime geçin. En kısa sürede size dönüş yapacağız.",
+      "cta": "Mesaj Gönderin",
+      "info": {
+        "title": "İletişim Bilgileri",
+        "address": {
+          "title": "Adres",
+          "value": "Atatürk Mah. Ertuğrul Gazi Cad. No: 21 Kat: 3 Ataşehir, İstanbul"
+        },
+        "phone": {
+          "title": "Telefon",
+          "value": "+90 (216) 123 45 67"
+        },
+        "email": {
+          "title": "E-posta",
+          "value": "info@demirciyazilim.com"
+        },
+        "workHours": {
+          "title": "Çalışma Saatleri",
+          "value": "Pazartesi - Cuma: 09:00 - 18:00"
+        }
+      },
+      "form": {
+        "title": "Bize Mesaj Gönderin",
+        "subtitle": "Size özel çözümler için bilgilerinizi paylaşın, en kısa sürede dönüş yapalım."
+      },
+      "faq": {
+        "title": "Sıkça Sorulan Sorular",
+        "questions": [
+          {
+            "question": "Hizmetlerinizin fiyatları nedir?",
+            "answer": "Hizmet fiyatlarımız, projenin kapsamına, gereksinimlerine ve süresine göre değişiklik göstermektedir. Size özel fiyat teklifi için lütfen bizimle iletişime geçin."
+          },
+          {
+            "question": "Bir proje ne kadar sürede tamamlanır?",
+            "answer": "Proje tamamlanma süresi, projenin karmaşıklığına ve kapsamına bağlı olarak değişir. Basit bir web sitesi 2-4 hafta içinde tamamlanabilirken, kapsamlı bir e-ticaret projesi 2-3 ay sürebilir."
+          },
+          {
+            "question": "Hangi ödeme yöntemlerini kabul ediyorsunuz?",
+            "answer": "Banka havalesi, kredi kartı ve taksitli ödeme seçeneklerimiz mevcuttur. Proje başlangıcında %40, geliştirme aşamasında %30 ve teslimatta %30 ödeme planı uyguluyoruz."
+          },
+          {
+            "question": "Proje tesliminden sonra destek sağlıyor musunuz?",
+            "answer": "Evet, tüm projelerimiz için 1 yıl boyunca ücretsiz teknik destek sağlıyoruz. Bu süre sonrasında aylık bakım ve destek paketlerimizden faydalanabilirsiniz."
+          }
+        ]
+      },
+      "map": {
+        "title": "Bizi Ziyaret Edin"
+      }
+    },
+    "references": {
+      "title": "Referanslarımız",
+      "subtitle": "Başarıyla tamamladığımız projeler",
+      "noReferences": "Henüz referans bulunmamaktadır.",
+      "loading": "Yükleniyor...",
+      "error": {
+        "title": "Bir hata oluştu",
+        "message": "Referans bilgileri yüklenirken bir hata oluştu."
+      },
+      "notFound": {
+        "title": "Referans bulunamadı",
+        "message": "Aradığınız referans bulunamadı veya silinmiş olabilir."
+      },
+      "visitWebsite": "Web Sitesini Ziyaret Et",
+      "completionDate": "Tamamlanma Tarihi",
+      "addNew": "Yeni Referans Ekle",
+      "backToList": "Listeye Dön",
+      "description": "Açıklama",
+      "details": "Proje Detayları",
+      "client": "Müşteri",
+      "services": "Hizmetler",
+      "projectUrl": "Proje URL",
+      "createdAt": "Oluşturulma Tarihi",
+      "updatedAt": "Güncellenme Tarihi",
+      "pagination": {
+        "showing": "Gösteriliyor",
+        "of": "/",
+        "references": "referans"
+      },
+      "form": {
+        "title": "Başlık",
+        "summary": "Özet",
+        "description": "Açıklama",
+        "thumbnailUrl": "Kapak Resmi URL",
+        "clientName": "Müşteri Adı",
+        "clientLogo": "Müşteri Logo URL",
+        "projectUrl": "Proje URL",
+        "completionDate": "Tamamlanma Tarihi",
+        "services": "Hizmetler",
+        "active": "Aktif",
+        "save": "Kaydet",
+        "cancel": "İptal"
+      },
+      "filters": {
+        "all": "Tümü",
+        "active": "Aktif Olanlar",
+        "byTitle": "Başlığa Göre",
+        "byService": "Hizmete Göre",
+        "search": "Ara",
+        "searchPlaceholder": "Arama terimi girin..."
+      }
+    },
+    "admin": {
+      "adminPanel": "Yönetim Paneli",
+      "dashboard": "Kontrol Paneli",
+      "references": "Referanslar",
+      "settings": "Ayarlar",
+      "logout": "Çıkış Yap",
+      "online": "Çevrimiçi",
+      "offline": "Çevrimdışı",
+      "totalReferences": "Toplam Referanslar",
+      "activeReferences": "Aktif Referanslar",
+      "inactiveReferences": "Pasif Referanslar",
+      "quickActions": "Hızlı Erişim",
+      "addNewReference": "Yeni Referans Ekle",
+      "manageReferences": "Referansları Yönet",
+      "systemStatus": "Sistem Durumu",
+      "apiStatus": "API Durumu",
+      "lastUpdate": "Son Güncelleme",
+      "recentReferences": "Son Eklenen Referanslar",
+      "viewAll": "Tümünü Görüntüle",
+      "title": "Başlık",
+      "client": "Müşteri",
+      "status": "Durum",
+      "date": "Tarih",
+      "actions": "İşlemler",
+      "active": "Aktif",
+      "inactive": "Pasif",
+      "noReferencesFound": "Referans bulunamadı",
       "search": "Ara",
-      "searchPlaceholder": "Arama terimi girin..."
+      "searchPlaceholder": "Başlık veya müşteri adı ile ara...",
+      "filterByStatus": "Duruma Göre Filtrele",
+      "allStatuses": "Tüm Durumlar",
+      "activeOnly": "Sadece Aktif",
+      "inactiveOnly": "Sadece Pasif",
+      "sortBy": "Sırala",
+      "newest": "En Yeni",
+      "oldest": "En Eski",
+      "titleAZ": "Başlık (A-Z)",
+      "clientAZ": "Müşteri (A-Z)",
+      "activate": "Aktifleştir",
+      "deactivate": "Pasifleştir",
+      "delete": "Sil",
+      "edit": "Düzenle",
+      "view": "Görüntüle",
+      "confirmDelete": "Silmeyi Onayla",
+      "confirmBulkDelete": "Seçili referansları silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
+      "confirmBulkActivate": "Seçili referansları aktifleştirmek istediğinizden emin misiniz?",
+      "confirmBulkDeactivate": "Seçili referansları pasifleştirmek istediğinizden emin misiniz?",
+      "errorLoadingReferences": "Referanslar yüklenirken bir hata oluştu",
+      "tryAgain": "Tekrar Dene",
+      "createdAt": "Oluşturulma Tarihi",
+      "back": "Geri",
+      "editReference": "Referans Düzenle",
+      "basicInformation": "Temel Bilgiler",
+      "summary": "Özet",
+      "description": "Açıklama",
+      "technologies": "Hizmetler",
+      "technologiesPlaceholder": "Web Tasarım, E-Ticaret, Mobil Uygulama, ...",
+      "technologiesHelp": "Hizmetleri virgülle ayırarak girin",
+      "completionDate": "Tamamlanma Tarihi",
+      "clientInformation": "Müşteri Bilgileri",
+      "clientName": "Müşteri Adı",
+      "projectUrl": "Proje URL",
+      "clientLogo": "Müşteri Logosu",
+      "images": "Görseller",
+      "thumbnail": "Kapak Görseli",
+      "additionalImages": "Ek Görseller",
+      "uploadLogo": "Logo Yükle",
+      "changeLogo": "Logo Değiştir",
+      "uploadThumbnail": "Kapak Görseli Yükle",
+      "changeThumbnail": "Kapak Görseli Değiştir",
+      "addImages": "Görsel Ekle",
+      "new": "Yeni",
+      "saveReference": "Referansı Kaydet",
+      "updateReference": "Referansı Güncelle",
+      "titleRequired": "Başlık alanı zorunludur",
+      "summaryRequired": "Özet alanı zorunludur",
+      "descriptionRequired": "Açıklama alanı zorunludur",
+      "thumbnailRequired": "Kapak görseli zorunludur",
+      "errorSavingReference": "Referans kaydedilirken bir hata oluştu",
+      "referenceAdded": "Referans başarıyla eklendi",
+      "referenceUpdated": "Referans başarıyla güncellendi",
+      "imageDetails": "Resim Detayları",
+      "imageCaption": "Resim Açıklaması",
+      "displayOrder": "Görüntüleme Sırası",
+      "save": "Kaydet",
+      "cancel": "İptal",
+      "services": "Hizmetler",
+      "servicesPlaceholder": "Web Tasarım, E-Ticaret, Mobil Uygulama, ...",
+      "servicesHelp": "Hizmetleri virgülle ayırarak girin",
+      "blogs": "Bloglar",
+      "addNewBlog": "Yeni Blog Ekle",
+      "manageBlogs": "Blog Yönetimi",
+      "editBlog": "Blog Düzenle",
+      "createBlog": "Yeni Blog Oluştur",
+      "author": "Yazar",
+      "content": "İçerik",
+      "publishDate": "Yayın Tarihi",
+      "tags": "Etiketler",
+      "draft": "Taslak",
+      "published": "Yayında",
+      "publish": "Yayınla",
+      "unpublish": "Taslağa Al",
+      "seoSettings": "SEO Ayarları",
+      "seoTitle": "SEO Başlığı",
+      "seoDescription": "SEO Açıklaması",
+      "seoKeywords": "SEO Anahtar Kelimeleri",
+      "preview": "Önizleme",
+      "confirmDeleteBlog": "Bu blog yazısını silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
+      "confirmBulkDeleteBlogs": "Seçilen {{count}} blog yazısını silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
+      "contentRequired": "İçerik gerekli",
+      "authorRequired": "Yazar gerekli",
+      "formError": "Form hatası",
+      "pleaseFixErrors": "Lütfen formdaki hataları düzeltin",
+      "blogUpdated": "Blog başarıyla güncellendi",
+      "blogCreated": "Blog başarıyla oluşturuldu",
+      "errorSavingBlog": "Blog kaydedilirken bir hata oluştu",
+      "blogPublished": "Blog başarıyla yayınlandı",
+      "blogUnpublished": "Blog başarıyla taslağa alındı",
+      "statusUpdateFailed": "Durum güncelleme işlemi başarısız oldu",
+      "searchBlogs": "Blog ara...",
+      "noBlogsFound": "Hiç blog yazısı bulunamadı",
+      "deleteBulk": "Toplu Sil",
+      "viewWebsite": "Web Sitesini Görüntüle",
+      "quickLinks": "Hızlı Erişim",
+      "authorAZ": "Yazara Göre (A-Z)",
+      "errorUpdatingBlog": "Blog güncellenirken bir hata oluştu",
+      "error": "Hata",
+      "goBack": "Geri Dön",
+      "errorDeletingBlog": "Blog silinirken bir hata oluştu",
+      "blogDeleted": "Blog başarıyla silindi",
+      "errorDeletingBlogs": "Bloglar silinirken bir hata oluştu",
+      "blogsDeleted": "Seçili bloglar başarıyla silindi",
+      "selectBlogsFirst": "Lütfen önce blog seçin",
+      "errorActivatingBlog": "Blog aktifleştirilirken bir hata oluştu",
+      "errorDeactivatingBlog": "Blog pasifleştirilirken bir hata oluştu",
+      "blogActivated": "Blog başarıyla aktifleştirildi",
+      "blogDeactivated": "Blog başarıyla pasifleştirildi",
+      "blogsActivated": "Seçili bloglar başarıyla aktifleştirildi",
+      "blogsDeactivated": "Seçili bloglar başarıyla pasifleştirildi",
+      "errorChangingStatus": "Durum değiştirilirken bir hata oluştu",
+      "metaDescription": "Meta Açıklama",
+      "metaDescriptionHelp": "En fazla 160 karakter. Boş bırakılırsa blog özeti kullanılır."
+    },
+    "blog": {
+      "title": "Blog",
+      "subtitle": "Son teknoloji ve tasarım trendleri hakkında bilgiler",
+      "latestPosts": "Son Yazılar",
+      "readMore": "Devamını Oku",
+      "byAuthor": "Yazar: {{author}}",
+      "publishedOn": "Yayın Tarihi: {{date}}",
+      "relatedPosts": "İlgili Yazılar",
+      "readingTime": "{{time}} dakika okuma",
+      "noPostsFound": "Hiç yazı bulunamadı",
+      "searchResults": "Arama sonuçları: {{term}}",
+      "searchPlaceholder": "Yazı ara...",
+      "filterByTags": "Etiketlere göre filtrele",
+      "allPosts": "Tüm Yazılar",
+      "loadMore": "Daha Fazla Yükle",
+      "errorLoading": "Bloglar yüklenirken bir hata oluştu",
+      "retry": "Tekrar Dene",
+      "backToList": "Listeye Dön",
+      "taggedWith": "{{tag}} ile etiketlenen yazılar",
+      "min": "dk",
+      "pageTitle": "Blog",
+      "pageDescription": "Teknoloji, tasarım ve dijital pazarlama hakkında en güncel içerikler",
+      "popularTags": "Popüler Etiketler",
+      "tryDifferentSearch": "Farklı bir arama yapmayı deneyebilirsiniz",
+      "clearFilters": "Filtreleri Temizle",
+      "tagResults": "Etiket Sonuçları",
+      "previous": "Önceki",
+      "next": "Sonraki",
+      "publishDate": "Yayın Tarihi",
+      "author": "Yazar",
+      "minutes": "dakika",
+      "readTime": "okuma süresi",
+      "share": "Paylaş",
+      "categories": "Kategoriler",
+      "tags": "Etiketler",
+      "content": "İçerik",
+      "aboutAuthor": "Yazar Hakkında",
+      "blogNotFound": "Blog Bulunamadı",
+      "blogNotFoundDescription": "Aradığınız blog yazısı bulunamadı veya silinmiş olabilir.",
+      "backToBlog": "Blog Sayfasına Dön"
     }
-  },
-  "admin": {
-    "adminPanel": "Yönetim Paneli",
-    "dashboard": "Kontrol Paneli",
-    "references": "Referanslar",
-    "settings": "Ayarlar",
-    "logout": "Çıkış Yap",
-    "online": "Çevrimiçi",
-    "offline": "Çevrimdışı",
-    "totalReferences": "Toplam Referanslar",
-    "activeReferences": "Aktif Referanslar",
-    "inactiveReferences": "Pasif Referanslar",
-    "quickActions": "Hızlı Erişim",
-    "addNewReference": "Yeni Referans Ekle",
-    "manageReferences": "Referansları Yönet",
-    "systemStatus": "Sistem Durumu",
-    "apiStatus": "API Durumu",
-    "lastUpdate": "Son Güncelleme",
-    "recentReferences": "Son Eklenen Referanslar",
-    "viewAll": "Tümünü Görüntüle",
-    "title": "Başlık",
-    "client": "Müşteri",
-    "status": "Durum",
-    "date": "Tarih",
-    "actions": "İşlemler",
-    "active": "Aktif",
-    "inactive": "Pasif",
-    "noReferencesFound": "Referans bulunamadı",
-    "search": "Ara",
-    "searchPlaceholder": "Başlık veya müşteri adı ile ara...",
-    "filterByStatus": "Duruma Göre Filtrele",
-    "allStatuses": "Tüm Durumlar",
-    "activeOnly": "Sadece Aktif",
-    "inactiveOnly": "Sadece Pasif",
-    "sortBy": "Sırala",
-    "newest": "En Yeni",
-    "oldest": "En Eski",
-    "titleAZ": "Başlık (A-Z)",
-    "clientAZ": "Müşteri (A-Z)",
-    "activate": "Aktifleştir",
-    "deactivate": "Pasifleştir",
-    "delete": "Sil",
-    "edit": "Düzenle",
-    "view": "Görüntüle",
-    "confirmDelete": "Silmeyi Onayla",
-    "confirmBulkDelete": "Seçili referansları silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
-    "confirmBulkActivate": "Seçili referansları aktifleştirmek istediğinizden emin misiniz?",
-    "confirmBulkDeactivate": "Seçili referansları pasifleştirmek istediğinizden emin misiniz?",
-    "errorLoadingReferences": "Referanslar yüklenirken bir hata oluştu",
-    "tryAgain": "Tekrar Dene",
-    "createdAt": "Oluşturulma Tarihi",
-    "back": "Geri",
-    "editReference": "Referans Düzenle",
-    "basicInformation": "Temel Bilgiler",
-    "summary": "Özet",
-    "description": "Açıklama",
-    "technologies": "Hizmetler",
-    "technologiesPlaceholder": "Web Tasarım, E-Ticaret, Mobil Uygulama, ...",
-    "technologiesHelp": "Hizmetleri virgülle ayırarak girin",
-    "completionDate": "Tamamlanma Tarihi",
-    "clientInformation": "Müşteri Bilgileri",
-    "clientName": "Müşteri Adı",
-    "projectUrl": "Proje URL",
-    "clientLogo": "Müşteri Logosu",
-    "images": "Görseller",
-    "thumbnail": "Kapak Görseli",
-    "additionalImages": "Ek Görseller",
-    "uploadLogo": "Logo Yükle",
-    "changeLogo": "Logo Değiştir",
-    "uploadThumbnail": "Kapak Görseli Yükle",
-    "changeThumbnail": "Kapak Görseli Değiştir",
-    "addImages": "Görsel Ekle",
-    "new": "Yeni",
-    "saveReference": "Referansı Kaydet",
-    "updateReference": "Referansı Güncelle",
-    "titleRequired": "Başlık alanı zorunludur",
-    "summaryRequired": "Özet alanı zorunludur",
-    "descriptionRequired": "Açıklama alanı zorunludur",
-    "thumbnailRequired": "Kapak görseli zorunludur",
-    "errorSavingReference": "Referans kaydedilirken bir hata oluştu",
-    "referenceAdded": "Referans başarıyla eklendi",
-    "referenceUpdated": "Referans başarıyla güncellendi",
-    "imageDetails": "Resim Detayları",
-    "imageCaption": "Resim Açıklaması",
-    "displayOrder": "Görüntüleme Sırası",
-    "save": "Kaydet",
-    "cancel": "İptal",
-    "services": "Hizmetler",
-    "servicesPlaceholder": "Web Tasarım, E-Ticaret, Mobil Uygulama, ...",
-    "servicesHelp": "Hizmetleri virgülle ayırarak girin",
-    "blogs": "Bloglar",
-    "addNewBlog": "Yeni Blog Ekle",
-    "manageBlogs": "Blog Yönetimi",
-    "editBlog": "Blog Düzenle",
-    "createBlog": "Yeni Blog Oluştur",
-    "title": "Başlık",
-    "summary": "Özet",
-    "author": "Yazar",
-    "content": "İçerik",
-    "publishDate": "Yayın Tarihi",
-    "tags": "Etiketler",
-    "status": "Durum",
-    "draft": "Taslak",
-    "published": "Yayında",
-    "publish": "Yayınla",
-    "unpublish": "Taslağa Al",
-    "seoSettings": "SEO Ayarları",
-    "seoTitle": "SEO Başlığı",
-    "seoDescription": "SEO Açıklaması",
-    "seoKeywords": "SEO Anahtar Kelimeleri",
-    "thumbnail": "Kapak Görseli",
-    "preview": "Önizleme",
-    "confirmDeleteBlog": "Bu blog yazısını silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
-    "confirmBulkDeleteBlogs": "Seçilen {{count}} blog yazısını silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
-    "blogDeleted": "Blog başarıyla silindi",
-    "blogsDeleted": "Seçilen bloglar başarıyla silindi",
-    "errorDeletingBlog": "Blog silinirken bir hata oluştu",
-    "errorDeletingBlogs": "Bloglar silinirken bir hata oluştu",
-    "titleRequired": "Başlık gerekli",
-    "summaryRequired": "Özet gerekli",
-    "contentRequired": "İçerik gerekli",
-    "authorRequired": "Yazar gerekli",
-    "formError": "Form hatası",
-    "pleaseFixErrors": "Lütfen formdaki hataları düzeltin",
-    "blogUpdated": "Blog başarıyla güncellendi",
-    "blogCreated": "Blog başarıyla oluşturuldu",
-    "errorSavingBlog": "Blog kaydedilirken bir hata oluştu",
-    "blogPublished": "Blog başarıyla yayınlandı",
-    "blogUnpublished": "Blog başarıyla taslağa alındı",
-    "statusUpdateFailed": "Durum güncelleme işlemi başarısız oldu",
-    "searchBlogs": "Blog ara...",
-    "noBlogsFound": "Hiç blog yazısı bulunamadı",
-    "selectBlogsFirst": "Lütfen önce blog seçin",
-    "deleteBulk": "Toplu Sil",
-    "viewWebsite": "Web Sitesini Görüntüle",
-    "quickLinks": "Hızlı Erişim",
-    "authorAZ": "Yazara Göre (A-Z)",
-    "errorUpdatingBlog": "Blog güncellenirken bir hata oluştu",
-    "error": "Hata",
-    "goBack": "Geri Dön",
-    "errorDeletingBlog": "Blog silinirken bir hata oluştu",
-    "blogDeleted": "Blog başarıyla silindi",
-    "errorDeletingBlogs": "Bloglar silinirken bir hata oluştu",
-    "blogsDeleted": "Seçili bloglar başarıyla silindi",
-    "selectBlogsFirst": "Lütfen önce blog seçin",
-    "errorActivatingBlog": "Blog aktifleştirilirken bir hata oluştu",
-    "errorDeactivatingBlog": "Blog pasifleştirilirken bir hata oluştu",
-    "blogActivated": "Blog başarıyla aktifleştirildi",
-    "blogDeactivated": "Blog başarıyla pasifleştirildi",
-    "blogsActivated": "Seçili bloglar başarıyla aktifleştirildi",
-    "blogsDeactivated": "Seçili bloglar başarıyla pasifleştirildi",
-    "errorChangingStatus": "Durum değiştirilirken bir hata oluştu",
-    "metaDescription": "Meta Açıklama",
-    "metaDescriptionHelp": "En fazla 160 karakter. Boş bırakılırsa blog özeti kullanılır."
-  },
-  "blog": {
-    "title": "Blog",
-    "subtitle": "Son teknoloji ve tasarım trendleri hakkında bilgiler",
-    "latestPosts": "Son Yazılar",
-    "readMore": "Devamını Oku",
-    "byAuthor": "Yazar: {{author}}",
-    "publishedOn": "Yayın Tarihi: {{date}}",
-    "relatedPosts": "İlgili Yazılar",
-    "readingTime": "{{time}} dakika okuma",
-    "noPostsFound": "Hiç yazı bulunamadı",
-    "searchResults": "Arama sonuçları: {{term}}",
-    "searchPlaceholder": "Yazı ara...",
-    "filterByTags": "Etiketlere göre filtrele",
-    "allPosts": "Tüm Yazılar",
-    "loadMore": "Daha Fazla Yükle",
-    "errorLoading": "Bloglar yüklenirken bir hata oluştu",
-    "retry": "Tekrar Dene",
-    "backToList": "Listeye Dön",
-    "taggedWith": "{{tag}} ile etiketlenen yazılar",
-    "min": "dk",
-    "pageTitle": "Blog",
-    "pageDescription": "Teknoloji, tasarım ve dijital pazarlama hakkında en güncel içerikler",
-    "popularTags": "Popüler Etiketler",
-    "tryDifferentSearch": "Farklı bir arama yapmayı deneyebilirsiniz",
-    "searchPlaceholder": "Blog yazılarında ara...",
-    "clearFilters": "Filtreleri Temizle",
-    "searchResults": "Arama Sonuçları",
-    "tagResults": "Etiket Sonuçları",
-    "noPostsFound": "Hiç yazı bulunamadı",
-    "previous": "Önceki",
-    "next": "Sonraki",
-    "readMore": "Devamını Oku",
-    "publishDate": "Yayın Tarihi",
-    "author": "Yazar",
-    "minutes": "dakika",
-    "readTime": "okuma süresi",
-    "share": "Paylaş",
-    "relatedPosts": "İlgili Yazılar",
-    "categories": "Kategoriler",
-    "tags": "Etiketler",
-    "content": "İçerik",
-    "aboutAuthor": "Yazar Hakkında",
-    "blogNotFound": "Blog Bulunamadı",
-    "blogNotFoundDescription": "Aradığınız blog yazısı bulunamadı veya silinmiş olabilir.",
-    "backToBlog": "Blog Sayfasına Dön"
-  }
-} 
+  } 

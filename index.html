@@ -7,9 +7,30 @@
     <title>Demirci Yazılım - Dijital Dönüşüm Çözümleri</title>
     <meta name="description" content="Demirci Yazılım ile dijital dönüşüm yolculuğunuza başlayın. Web tasarım, grafik tasarım, e-ticaret ve daha fazlası." />
     <meta name="theme-color" content="#000000" />
+    
+    <!-- Performans optimizasyonu için CDN'lere önbağlantı -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.tiny.cloud">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdn.tiny.cloud">
+    
+    <!-- MessageChannel hatasını önlemek için -->
+    <script>
+      // Service Worker ve MessageChannel hatalarını önlemek için
+      window.addEventListener('error', function(event) {
+        if (event.message && event.message.includes('message channel closed')) {
+          event.preventDefault();
+          console.warn('MessageChannel hatası engellendi');
+        }
+      });
+    </script>
+    
+    <!-- Ana CSS dosyası -->
+    <link rel="stylesheet" href="/src/index.css" />
   </head>
   <body class="bg-black text-white">
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <!-- Ana script yüklemeden önce bekle -->
+    <script type="module" src="/src/main.jsx" defer></script>
   </body>
 </html>

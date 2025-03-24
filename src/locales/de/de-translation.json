@@ -1,122 +1,96 @@
 {
-  "navbar": {
-    "home": "Startseite",
-    "services": "Dienstleistungen",
-    "about": "Über Uns",
-    "contact": "Kontakt",
-    "blog": "Blog",
-    "references": "Referenzen",
-    "dropdown": {
-      "services": {
-        "webDesign": "Webdesign",
-        "graphicDesign": "Grafikdesign",
-        "marketplace": "Virtueller Marktplatz",
-        "eCommerce": "E-Commerce-Beratung",
-        "digitalAdvertising": "Digitale Werbung",
-        "ai": "Datenanalyse & KI"
-      },
-      "references": {
-        "all": "Alle Referenzen",
-        "allDesc": "Entdecken Sie alle unsere erfolgreichen Projekte.",
-        "eCommerce": "E-Commerce-Projekte",
-        "corporate": "Unternehmenswebsites",
-        "mobile": "Mobile Anwendungen",
-        "software": "Individuelle Softwareprojekte",
-        "eCommerceDesc": "E-Commerce-Projekte, die wir erfolgreich abgeschlossen haben.",
-        "corporateDesc": "Websites, die wir für unsere Unternehmenskunden entwickelt haben.",
-        "mobileDesc": "Anwendungen, die wir für iOS- und Android-Plattformen entwickelt haben.",
-        "softwareDesc": "Individuelle Softwarelösungen, die wir für unsere Kunden entwickelt haben."
-      },
-      "about": {
-        "whoWeAre": "Wer Wir Sind",
-        "visionMission": "Vision & Mission",
-        "team": "Unser Team",
-        "technologies": "Verwendete Technologien"
-      },
-      "contact": {
-        "contactUs": "Kontaktieren Sie Uns",
-        "getQuote": "Angebot Anfordern",
-        "career": "Karriere",
-        "faq": "FAQ"
-      },
-      "blog": {
-        "technology": "Technologie",
-        "design": "Design",
-        "marketing": "Marketing",
-        "ai": "Künstliche Intelligenz"
+    "navbar": {
+      "home": "Startseite",
+      "services": "Dienstleistungen",
+      "about": "Über Uns",
+      "contact": "Kontakt",
+      "blog": "Blog",
+      "references": "Referenzen",
+      "dropdown": {
+        "services": {
+          "webDesign": "Webdesign",
+          "graphicDesign": "Grafikdesign",
+          "marketplace": "Virtueller Marktplatz",
+          "eCommerce": "E-Commerce-Beratung",
+          "digitalAdvertising": "Digitale Werbung",
+          "ai": "Datenanalyse & KI"
+        },
+        "references": {
+          "all": "Alle Referenzen",
+          "allDesc": "Entdecken Sie alle unsere erfolgreichen Projekte.",
+          "eCommerce": "E-Commerce-Projekte",
+          "corporate": "Unternehmenswebsites",
+          "mobile": "Mobile Anwendungen",
+          "software": "Individuelle Softwareprojekte",
+          "eCommerceDesc": "E-Commerce-Projekte, die wir erfolgreich abgeschlossen haben.",
+          "corporateDesc": "Websites, die wir für unsere Unternehmenskunden entwickelt haben.",
+          "mobileDesc": "Anwendungen, die wir für iOS- und Android-Plattformen entwickelt haben.",
+          "softwareDesc": "Individuelle Softwarelösungen, die wir für unsere Kunden entwickelt haben."
+        },
+        "about": {
+          "whoWeAre": "Wer Wir Sind",
+          "visionMission": "Vision & Mission",
+          "team": "Unser Team",
+          "technologies": "Verwendete Technologien"
+        },
+        "contact": {
+          "contactUs": "Kontaktieren Sie Uns",
+          "getQuote": "Angebot Anfordern",
+          "career": "Karriere",
+          "faq": "FAQ"
+        },
+        "blog": {
+          "technology": "Technologie",
+          "design": "Design",
+          "marketing": "Marketing",
+          "ai": "Künstliche Intelligenz"
+        }
       }
-    }
-  },
-  "services": {
-    "title": "Professionelle Lösungen für jeden Bedarf",
-    "subtitle": "Wir sind in jedem Bereich der digitalen Welt für Sie da, vom Webdesign bis zur künstlichen Intelligenz",
-    "webDesign": {
-      "title": "WEBDESIGN",
-      "description": "Mit unseren maßgeschneiderten und professionellen Webdesign-Dienstleistungen gestalten wir ästhetische und benutzerfreundliche Websites, die Ihr Unternehmen in der digitalen Welt am besten repräsentieren."
     },
-    "graphicDesign": {
-      "title": "GRAFIKDESIGN",
-      "description": "Wir bieten Logo-, Corporate Identity- und digitale Designlösungen an, die Ihre Marke hervorheben."
+    "services": {
+      "title": "Professionelle Lösungen für jeden Bedarf",
+      "subtitle": "Wir sind in jedem Bereich der digitalen Welt für Sie da, vom Webdesign bis zur künstlichen Intelligenz",
+      "webDesign": {
+        "title": "WEBDESIGN",
+        "description": "Mit unseren maßgeschneiderten und professionellen Webdesign-Dienstleistungen gestalten wir ästhetische und benutzerfreundliche Websites, die Ihr Unternehmen in der digitalen Welt am besten repräsentieren."
+      },
+      "graphicDesign": {
+        "title": "GRAFIKDESIGN",
+        "description": "Wir bieten Logo-, Corporate Identity- und digitale Designlösungen an, die Ihre Marke hervorheben."
+      },
+      "marketplace": {
+        "title": "VIRTUELLER MARKTPLATZ",
+        "description": "Erweitern Sie Ihr Geschäft und erschließen Sie neue Märkte mit Multi-Vendor-E-Commerce-Plattformen."
+      },
+      "eCommerce": {
+        "title": "E-COMMERCE",
+        "description": "Steigern Sie Ihren Umsatz mit benutzerfreundlichen, sicheren und leistungsstarken E-Commerce-Websites."
+      },
+      "digitalAdvertising": {
+        "title": "DIGITALE WERBUNG",
+        "description": "Wir entwickeln effektive digitale Werbestrategien, die Ihnen helfen, Ihre Zielgruppe zu erreichen."
+      },
+      "ai": {
+        "title": "KÜNSTLICHE INTELLIGENZ",
+        "description": "Steigern Sie Ihre Effizienz mit KI-Lösungen, die Ihr Unternehmen einen Schritt weiter bringen."
+      },
+      "viewDetails": "Details Anzeigen"
     },
-    "marketplace": {
-      "title": "VIRTUELLER MARKTPLATZ",
-      "description": "Erweitern Sie Ihr Geschäft und erschließen Sie neue Märkte mit Multi-Vendor-E-Commerce-Plattformen."
+    "hero": {
+      "title": "Professionelle Lösungen in der digitalen Welt",
+      "subtitle": "Mit unserem breiten Spektrum an Dienstleistungen vom Webdesign bis zur künstlichen Intelligenz lassen wir Ihr Unternehmen in der digitalen Welt herausstechen.",
+      "cta": "Entdecken Sie unsere Dienstleistungen",
+      "ideaFromYou": "Ihre Idee,",
+      "fromUs": "Unsere Umsetzung.",
+      "flipWords": ["Web", "SEO", "Mobil", "Logo", "Marke", "Werbung"]
     },
-    "eCommerce": {
-      "title": "E-COMMERCE",
-      "description": "Steigern Sie Ihren Umsatz mit benutzerfreundlichen, sicheren und leistungsstarken E-Commerce-Websites."
+    "footer": {
+      "description": "Wir bieten kreative Lösungen an, die Ihre Marke in der digitalen Welt hervorheben.",
+      "services": "Unsere Dienstleistungen",
+      "corporate": "Unternehmen",
+      "contact": "Kontakt",
+      "copyright": "© {{year}} Demirci Software. Alle Rechte vorbehalten."
     },
-    "digitalAdvertising": {
-      "title": "DIGITALE WERBUNG",
-      "description": "Wir entwickeln effektive digitale Werbestrategien, die Ihnen helfen, Ihre Zielgruppe zu erreichen."
-    },
-    "ai": {
-      "title": "KÜNSTLICHE INTELLIGENZ",
-      "description": "Steigern Sie Ihre Effizienz mit KI-Lösungen, die Ihr Unternehmen einen Schritt weiter bringen."
-    },
-    "viewDetails": "Details Anzeigen"
-  },
-  "hero": {
-    "title": "Professionelle Lösungen in der digitalen Welt",
-    "subtitle": "Mit unserem breiten Spektrum an Dienstleistungen vom Webdesign bis zur künstlichen Intelligenz lassen wir Ihr Unternehmen in der digitalen Welt herausstechen.",
-    "cta": "Entdecken Sie unsere Dienstleistungen",
-    "ideaFromYou": "Ihre Idee,",
-    "fromUs": "Unsere Umsetzung.",
-    "flipWords": ["Web", "SEO", "Mobil", "Logo", "Marke", "Werbung"]
-  },
-  "footer": {
-    "description": "Wir bieten kreative Lösungen an, die Ihre Marke in der digitalen Welt hervorheben.",
-    "services": "Unsere Dienstleistungen",
-    "corporate": "Unternehmen",
-    "contact": "Kontakt",
-    "copyright": "© {{year}} Demirci Software. Alle Rechte vorbehalten."
-  },
-  "features": {
-    "responsive": {
-      "title": "Responsives Design",
-      "description": "Wir gestalten mobilfreundliche Websites, die auf allen Geräten perfekt aussehen."
-    },
-    "fast": {
-      "title": "Schnelles Laden",
-      "description": "Wir entwickeln schnell ladende Websites mit optimierter Codierung."
-    },
-    "seo": {
-      "title": "SEO-Freundlich",
-      "description": "Wir erstellen SEO-kompatible Websites, die Ihnen helfen, in Suchmaschinen hoch zu ranken."
-    },
-    "customizable": {
-      "title": "Anpassbares Design",
-      "description": "Wir bieten anpassbare Webdesigns an, die auf Ihre Bedürfnisse und Markenidentität zugeschnitten sind."
-    }
-  },
-  "language": {
-    "select": "Sprache Auswählen"
-  },
-  "webDesignPage": {
-    "title": "Modernes Webdesign",
-    "subtitle": "Lösungen",
-    "description": "Wir gestalten moderne und benutzerfreundliche Websites, die Ihre Marke in der digitalen Welt am besten repräsentieren.",
-    "cta": "Angebot Anfordern",
     "features": {
       "responsive": {
         "title": "Responsives Design",
@@ -133,615 +107,638 @@
       "customizable": {
         "title": "Anpassbares Design",
         "description": "Wir bieten anpassbare Webdesigns an, die auf Ihre Bedürfnisse und Markenidentität zugeschnitten sind."
-      },
-      "secure": {
-        "title": "Sichere Infrastruktur",
-        "description": "Wir entwickeln sichere Websites, die mit SSL-Zertifikaten und Sicherheitsmaßnahmen geschützt sind."
-      },
-      "support": {
-        "title": "24/7 Support",
-        "description": "Wir bieten 24/7 technischen Support für alle Fragen zu Ihrer Website."
       }
     },
-    "timeline": {
-      "title": "Unser Arbeitsprozess",
-      "subtitle": "Der professionelle Prozess, dem wir bei der Umsetzung Ihrer Projekte folgen",
-      "step1": {
-        "title": "Analyse und Planung",
-        "description": "Wir analysieren Ihre Bedürfnisse und bestimmen eine für Ihre Ziele geeignete Strategie.",
-        "analysis": {
-          "title": "Zielanalyse",
-          "description": "Wir bestimmen die Ziele Ihres Projekts und Ihre Zielgruppe."
-        },
-        "content": {
-          "title": "Content-Strategie",
-          "description": "Wir erstellen die Inhaltsstruktur und -strategie Ihrer Website."
-        }
-      },
-      "step2": {
-        "title": "Design",
-        "description": "Wir erstellen einzigartige Designs, die Ihre Marke im Einklang mit modernen Trends widerspiegeln.",
-        "uiux": {
-          "title": "UI/UX Design",
-          "description": "Schnittstellendesigns, die die Benutzererfahrung priorisieren."
-        },
+    "language": {
+      "select": "Sprache Auswählen"
+    },
+    "webDesignPage": {
+      "title": "Modernes Webdesign",
+      "subtitle": "Lösungen",
+      "description": "Wir gestalten moderne und benutzerfreundliche Websites, die Ihre Marke in der digitalen Welt am besten repräsentieren.",
+      "cta": "Angebot Anfordern",
+      "features": {
         "responsive": {
           "title": "Responsives Design",
-          "description": "Designs, die auf allen Geräten perfekt aussehen."
-        }
-      },
-      "step3": {
-        "title": "Entwicklung",
-        "description": "Wir entwickeln sichere und leistungsstarke Websites mit den neuesten Technologien.",
-        "tech": {
-          "title": "Moderne Technologien",
-          "description": "Wir verwenden moderne Frameworks wie React, Next.js."
+          "description": "Wir gestalten mobilfreundliche Websites, die auf allen Geräten perfekt aussehen."
+        },
+        "fast": {
+          "title": "Schnelles Laden",
+          "description": "Wir entwickeln schnell ladende Websites mit optimierter Codierung."
         },
         "seo": {
-          "title": "SEO-Optimierung",
-          "description": "Für Suchmaschinen optimierte Codierung."
-        }
-      },
-      "step4": {
-        "title": "Testen und Launch",
-        "description": "Wir starten Ihre Website nach umfassenden Tests und bieten Support.",
-        "quality": {
-          "title": "Qualitätskontrolle",
-          "description": "Detaillierte Testprozesse und Fehlerbehebung."
+          "title": "SEO-Freundlich",
+          "description": "Wir erstellen SEO-kompatible Websites, die Ihnen helfen, in Suchmaschinen hoch zu ranken."
+        },
+        "customizable": {
+          "title": "Anpassbares Design",
+          "description": "Wir bieten anpassbare Webdesigns an, die auf Ihre Bedürfnisse und Markenidentität zugeschnitten sind."
+        },
+        "secure": {
+          "title": "Sichere Infrastruktur",
+          "description": "Wir entwickeln sichere Websites, die mit SSL-Zertifikaten und Sicherheitsmaßnahmen geschützt sind."
         },
         "support": {
-          "title": "Kontinuierlicher Support",
-          "description": "Technischer Support und Wartungsdienste nach dem Launch."
+          "title": "24/7 Support",
+          "description": "Wir bieten 24/7 technischen Support für alle Fragen zu Ihrer Website."
+        }
+      },
+      "timeline": {
+        "title": "Unser Arbeitsprozess",
+        "subtitle": "Der professionelle Prozess, dem wir bei der Umsetzung Ihrer Projekte folgen",
+        "step1": {
+          "title": "Analyse und Planung",
+          "description": "Wir analysieren Ihre Bedürfnisse und bestimmen eine für Ihre Ziele geeignete Strategie.",
+          "analysis": {
+            "title": "Zielanalyse",
+            "description": "Wir bestimmen die Ziele Ihres Projekts und Ihre Zielgruppe."
+          },
+          "content": {
+            "title": "Content-Strategie",
+            "description": "Wir erstellen die Inhaltsstruktur und -strategie Ihrer Website."
+          }
+        },
+        "step2": {
+          "title": "Design",
+          "description": "Wir erstellen einzigartige Designs, die Ihre Marke im Einklang mit modernen Trends widerspiegeln.",
+          "uiux": {
+            "title": "UI/UX Design",
+            "description": "Schnittstellendesigns, die die Benutzererfahrung priorisieren."
+          },
+          "responsive": {
+            "title": "Responsives Design",
+            "description": "Designs, die auf allen Geräten perfekt aussehen."
+          }
+        },
+        "step3": {
+          "title": "Entwicklung",
+          "description": "Wir entwickeln sichere und leistungsstarke Websites mit den neuesten Technologien.",
+          "tech": {
+            "title": "Moderne Technologien",
+            "description": "Wir verwenden moderne Frameworks wie React, Next.js."
+          },
+          "seo": {
+            "title": "SEO-Optimierung",
+            "description": "Für Suchmaschinen optimierte Codierung."
+          }
+        },
+        "step4": {
+          "title": "Testen und Launch",
+          "description": "Wir starten Ihre Website nach umfassenden Tests und bieten Support.",
+          "quality": {
+            "title": "Qualitätskontrolle",
+            "description": "Detaillierte Testprozesse und Fehlerbehebung."
+          },
+          "support": {
+            "title": "Kontinuierlicher Support",
+            "description": "Technischer Support und Wartungsdienste nach dem Launch."
+          }
         }
       }
-    }
-  },
-  "graphicDesignPage": {
-    "title": "Kreatives Grafikdesign",
-    "subtitle": "Lösungen",
-    "description": "Wir bieten kreative und beeindruckende Grafikdesign-Lösungen an, die Ihre Markenidentität stärken.",
-    "cta": "Angebot Anfordern",
-    "features": {
-      "creative": {
-        "title": "Kreatives Design",
-        "description": "Wir erstellen einzigartige und kreative Designs, die Ihre Marke am besten widerspiegeln."
-      },
-      "brandConsistency": {
-        "title": "Markenkonsistenz",
-        "description": "Wir spiegeln Ihre Markenidentität konsequent in all Ihren Designs wider."
-      },
-      "corporateIdentity": {
-        "title": "Unternehmensidentität",
-        "description": "Wir gestalten und drucken Ihre Corporate Identity mit Visitenkarten, Broschüren, Plakaten und sämtlichen Druckmaterialien."
-      },
-      "highQuality": {
-        "title": "Hohe Qualität",
-        "description": "Wir bieten hochauflösende Designs für alle Arten von Print- und digitalen Medien an."
-      },
-      "targetAudience": {
-        "title": "Zielgruppenorientiert",
-        "description": "Wir erstellen auffällige und beeindruckende Designs, die für Ihre Zielgruppe geeignet sind."
-      },
-      "unlimitedRevision": {
-        "title": "Unbegrenzte Revision",
-        "description": "Wir bieten unbegrenzte Revisionsmöglichkeiten an, bis Sie vollständig zufrieden sind."
-      }
-    }
-  },
-  "marketplacePage": {
-    "title": "Virtueller Marktplatz",
-    "subtitle": "Beratung",
-    "description": "Wir bieten Beratungsdienste an, um Ihnen zum Erfolg auf beliebten virtuellen Marktplätzen wie Amazon, eBay und Etsy zu verhelfen.",
-    "cta": "Angebot Anfordern",
-    "features": {
-      "wideCustomerBase": {
-        "title": "Breite Kundenbasis",
-        "description": "Steigern Sie Ihren Umsatz, indem Sie Ihre Produkte auf Marktplätzen mit Millionen aktiver Nutzer präsentieren."
-      },
-      "competitionAnalysis": {
-        "title": "Wettbewerbsanalyse",
-        "description": "Wir helfen Ihnen, sich auf dem Markt abzuheben, indem wir die Strategien Ihrer Wettbewerber analysieren."
-      },
-      "optimalPricing": {
-        "title": "Optimale Preisgestaltung",
-        "description": "Wir entwickeln Preisstrategien, die Ihre Gewinnmarge maximieren."
-      },
-      "targetedAds": {
-        "title": "Gezielte Werbung",
-        "description": "Wir helfen Ihnen, potenzielle Kunden mit Werbekampagnen innerhalb des Marktplatzes zu erreichen."
-      },
-      "dataAnalysis": {
-        "title": "Datenanalyse",
-        "description": "Wir verbessern Ihre Marktplatzstrategie kontinuierlich, indem wir Ihre Verkaufsdaten analysieren."
-      },
-      "storeOptimization": {
-        "title": "Shop-Optimierung",
-        "description": "Wir nehmen Optimierungen vor, die die Sichtbarkeit und Verkaufsleistung Ihres Marktplatz-Shops erhöhen."
+    },
+    "graphicDesignPage": {
+      "title": "Kreatives Grafikdesign",
+      "subtitle": "Lösungen",
+      "description": "Wir bieten kreative und beeindruckende Grafikdesign-Lösungen an, die Ihre Markenidentität stärken.",
+      "cta": "Angebot Anfordern",
+      "features": {
+        "creative": {
+          "title": "Kreatives Design",
+          "description": "Wir erstellen einzigartige und kreative Designs, die Ihre Marke am besten widerspiegeln."
+        },
+        "brandConsistency": {
+          "title": "Markenkonsistenz",
+          "description": "Wir spiegeln Ihre Markenidentität konsequent in all Ihren Designs wider."
+        },
+        "corporateIdentity": {
+          "title": "Unternehmensidentität",
+          "description": "Wir gestalten und drucken Ihre Corporate Identity mit Visitenkarten, Broschüren, Plakaten und sämtlichen Druckmaterialien."
+        },
+        "highQuality": {
+          "title": "Hohe Qualität",
+          "description": "Wir bieten hochauflösende Designs für alle Arten von Print- und digitalen Medien an."
+        },
+        "targetAudience": {
+          "title": "Zielgruppenorientiert",
+          "description": "Wir erstellen auffällige und beeindruckende Designs, die für Ihre Zielgruppe geeignet sind."
+        },
+        "unlimitedRevision": {
+          "title": "Unbegrenzte Revision",
+          "description": "Wir bieten unbegrenzte Revisionsmöglichkeiten an, bis Sie vollständig zufrieden sind."
+        }
       }
     },
-    "marketplaces": {
-      "title": "Marktplätze, mit denen wir arbeiten",
-      "trendyol": "Trendyol",
-      "hepsiburada": "Hepsiburada",
-      "n11": "N11",
-      "amazon": "Amazon",
-      "gittigidiyor": "GittiGidiyor"
-    }
-  },
-  "digitalAdvertisingPage": {
-    "title": "Digitale Werbung",
-    "subtitle": "Dienstleistungen",
-    "description": "Wir erstellen effektive Kampagnen auf Google Ads, Facebook Ads und anderen digitalen Werbeplattformen.",
-    "cta": "Angebot Anfordern",
-    "features": {
-      "targetedAds": {
-        "title": "Gezielte Werbung",
-        "description": "Wir erreichen Ihre potenziellen Kunden mit demografischem, interessenbasiertem und verhaltensbasiertem Targeting."
+    "marketplacePage": {
+      "title": "Virtueller Marktplatz",
+      "subtitle": "Beratung",
+      "description": "Wir bieten Beratungsdienste an, um Ihnen zum Erfolg auf beliebten virtuellen Marktplätzen wie Amazon, eBay und Etsy zu verhelfen.",
+      "cta": "Angebot Anfordern",
+      "features": {
+        "wideCustomerBase": {
+          "title": "Breite Kundenbasis",
+          "description": "Steigern Sie Ihren Umsatz, indem Sie Ihre Produkte auf Marktplätzen mit Millionen aktiver Nutzer präsentieren."
+        },
+        "competitionAnalysis": {
+          "title": "Wettbewerbsanalyse",
+          "description": "Wir helfen Ihnen, sich auf dem Markt abzuheben, indem wir die Strategien Ihrer Wettbewerber analysieren."
+        },
+        "optimalPricing": {
+          "title": "Optimale Preisgestaltung",
+          "description": "Wir entwickeln Preisstrategien, die Ihre Gewinnmarge maximieren."
+        },
+        "targetedAds": {
+          "title": "Gezielte Werbung",
+          "description": "Wir helfen Ihnen, potenzielle Kunden mit Werbekampagnen innerhalb des Marktplatzes zu erreichen."
+        },
+        "dataAnalysis": {
+          "title": "Datenanalyse",
+          "description": "Wir verbessern Ihre Marktplatzstrategie kontinuierlich, indem wir Ihre Verkaufsdaten analysieren."
+        },
+        "storeOptimization": {
+          "title": "Shop-Optimierung",
+          "description": "Wir nehmen Optimierungen vor, die die Sichtbarkeit und Verkaufsleistung Ihres Marktplatz-Shops erhöhen."
+        }
       },
-      "performanceTracking": {
-        "title": "Leistungsverfolgung",
-        "description": "Wir bieten Optimierung, indem wir die Leistung Ihrer Werbekampagnen in Echtzeit überwachen."
-      },
-      "budgetControl": {
-        "title": "Budgetkontrolle",
-        "description": "Wir sorgen für maximale Rendite, indem wir Ihr Werbebudget auf die effizienteste Weise einsetzen."
-      },
-      "multiPlatform": {
-        "title": "Multi-Plattform",
-        "description": "Wir verwalten Werbung auf verschiedenen Plattformen wie Google, Facebook, Instagram, LinkedIn und YouTube."
-      },
-      "detailedAnalysis": {
-        "title": "Detaillierte Analyse",
-        "description": "Wir helfen Ihnen, Ihre Strategien zu verbessern, indem wir Kampagnenergebnisse mit detaillierten Berichten und Analysen präsentieren."
-      },
-      "keywordOptimization": {
-        "title": "Keyword-Optimierung",
-        "description": "Wir steigern die Effizienz Ihrer Werbekampagnen, indem wir die effektivsten Keywords identifizieren."
+      "marketplaces": {
+        "title": "Marktplätze, mit denen wir arbeiten",
+        "trendyol": "Trendyol",
+        "hepsiburada": "Hepsiburada",
+        "n11": "N11",
+        "amazon": "Amazon",
+        "gittigidiyor": "GittiGidiyor"
       }
     },
-    "platforms": {
-      "title": "Werbeplattformen",
-      "googleAds": "Google Ads",
-      "facebookAds": "Facebook Ads",
-      "instagramAds": "Instagram Ads",
-      "linkedinAds": "LinkedIn Ads",
-      "youtubeAds": "YouTube Ads"
-    }
-  },
-  "aiPage": {
-    "title": "Datenanalyse und",
-    "subtitle": "Künstliche Intelligenz",
-    "description": "Wir bieten KI-gestützte Lösungen an, indem wir die Daten Ihres Unternehmens analysieren.",
-    "cta": "Angebot Anfordern",
-    "features": {
-      "smartSolutions": {
-        "title": "Intelligente Lösungen",
-        "description": "Wir entwickeln KI-gestützte Lösungen, die speziell auf die Bedürfnisse Ihres Unternehmens zugeschnitten sind."
+    "digitalAdvertisingPage": {
+      "title": "Digitale Werbung",
+      "subtitle": "Dienstleistungen",
+      "description": "Wir erstellen effektive Kampagnen auf Google Ads, Facebook Ads und anderen digitalen Werbeplattformen.",
+      "cta": "Angebot Anfordern",
+      "features": {
+        "targetedAds": {
+          "title": "Gezielte Werbung",
+          "description": "Wir erreichen Ihre potenziellen Kunden mit demografischem, interessenbasiertem und verhaltensbasiertem Targeting."
+        },
+        "performanceTracking": {
+          "title": "Leistungsverfolgung",
+          "description": "Wir bieten Optimierung, indem wir die Leistung Ihrer Werbekampagnen in Echtzeit überwachen."
+        },
+        "budgetControl": {
+          "title": "Budgetkontrolle",
+          "description": "Wir sorgen für maximale Rendite, indem wir Ihr Werbebudget auf die effizienteste Weise einsetzen."
+        },
+        "multiPlatform": {
+          "title": "Multi-Plattform",
+          "description": "Wir verwalten Werbung auf verschiedenen Plattformen wie Google, Facebook, Instagram, LinkedIn und YouTube."
+        },
+        "detailedAnalysis": {
+          "title": "Detaillierte Analyse",
+          "description": "Wir helfen Ihnen, Ihre Strategien zu verbessern, indem wir Kampagnenergebnisse mit detaillierten Berichten und Analysen präsentieren."
+        },
+        "keywordOptimization": {
+          "title": "Keyword-Optimierung",
+          "description": "Wir steigern die Effizienz Ihrer Werbekampagnen, indem wir die effektivsten Keywords identifizieren."
+        }
       },
-      "automatedProcesses": {
-        "title": "Automatisierte Prozesse",
-        "description": "Wir sparen Zeit und Kosten, indem wir Ihre sich wiederholenden Aufgaben automatisieren."
-      },
-      "dataAnalysis": {
-        "title": "Datenanalyse",
-        "description": "Wir liefern wertvolle Erkenntnisse für Ihr Unternehmen, indem wir große Datensätze analysieren."
-      },
-      "chatbotDevelopment": {
-        "title": "Chatbot-Entwicklung",
-        "description": "Wir entwickeln intelligente Chatbots, die mit Ihren Kunden interagieren und ihnen helfen."
-      },
-      "nlp": {
-        "title": "Natürliche Sprachverarbeitung",
-        "description": "Wir entwickeln KI-Systeme, die Texte verstehen, analysieren und darauf reagieren."
-      },
-      "customAiModels": {
-        "title": "Benutzerdefinierte KI-Modelle",
-        "description": "Wir entwickeln benutzerdefinierte KI-Modelle für die spezifischen Bedürfnisse Ihres Unternehmens."
+      "platforms": {
+        "title": "Werbeplattformen",
+        "googleAds": "Google Ads",
+        "facebookAds": "Facebook Ads",
+        "instagramAds": "Instagram Ads",
+        "linkedinAds": "LinkedIn Ads",
+        "youtubeAds": "YouTube Ads"
       }
     },
-    "technologies": {
-      "title": "Technologien, die wir verwenden",
-      "tensorflow": "TensorFlow",
-      "pytorch": "PyTorch",
-      "python": "Python",
-      "openai": "OpenAI API",
-      "pandas": "Pandas"
-    }
-  },
-  "eCommercePage": {
-    "title": "E-Commerce",
-    "subtitle": "Beratung",
-    "description": "Wir bieten professionelle Beratungsdienste in allen Prozessen vom Aufbau bis zur Verwaltung Ihrer E-Commerce-Website an.",
-    "cta": "Angebot Anfordern",
-    "features": {
-      "securePayment": {
-        "title": "Sichere Zahlung",
-        "description": "Wir bieten Zahlungssystemintegration, die durch die aktuellsten Sicherheitsprotokolle geschützt ist."
+    "aiPage": {
+      "title": "Datenanalyse und",
+      "subtitle": "Künstliche Intelligenz",
+      "description": "Wir bieten KI-gestützte Lösungen an, indem wir die Daten Ihres Unternehmens analysieren.",
+      "cta": "Angebot Anfordern",
+      "features": {
+        "smartSolutions": {
+          "title": "Intelligente Lösungen",
+          "description": "Wir entwickeln KI-gestützte Lösungen, die speziell auf die Bedürfnisse Ihres Unternehmens zugeschnitten sind."
+        },
+        "automatedProcesses": {
+          "title": "Automatisierte Prozesse",
+          "description": "Wir sparen Zeit und Kosten, indem wir Ihre sich wiederholenden Aufgaben automatisieren."
+        },
+        "dataAnalysis": {
+          "title": "Datenanalyse",
+          "description": "Wir liefern wertvolle Erkenntnisse für Ihr Unternehmen, indem wir große Datensätze analysieren."
+        },
+        "chatbotDevelopment": {
+          "title": "Chatbot-Entwicklung",
+          "description": "Wir entwickeln intelligente Chatbots, die mit Ihren Kunden interagieren und ihnen helfen."
+        },
+        "nlp": {
+          "title": "Natürliche Sprachverarbeitung",
+          "description": "Wir entwickeln KI-Systeme, die Texte verstehen, analysieren und darauf reagieren."
+        },
+        "customAiModels": {
+          "title": "Benutzerdefinierte KI-Modelle",
+          "description": "Wir entwickeln benutzerdefinierte KI-Modelle für die spezifischen Bedürfnisse Ihres Unternehmens."
+        }
       },
-      "multiplePaymentOptions": {
-        "title": "Mehrere Zahlungsoptionen",
-        "description": "Wir steigern Ihren Umsatz, indem wir verschiedene Zahlungsmethoden wie Kreditkarte, Banküberweisung und Nachnahme anbieten."
-      },
-      "detailedReporting": {
-        "title": "Detaillierte Berichterstattung",
-        "description": "Wir helfen Ihnen, Ihr Unternehmen zu vergrößern, indem wir Ihre Verkaufs-, Besucher- und Bestandsdaten analysieren."
-      },
-      "integratedLogistics": {
-        "title": "Integrierte Logistik",
-        "description": "Wir optimieren Ihre Lieferprozesse, indem wir eine vollständige Integration mit Versandunternehmen und Logistikprozessen bieten."
-      },
-      "seoOptimization": {
-        "title": "SEO-Optimierung",
-        "description": "Wir führen SEO-Arbeiten durch, die sicherstellen, dass Ihre E-Commerce-Website in Suchmaschinen hoch rankt."
-      },
-      "digitalMarketing": {
-        "title": "Digitales Marketing",
-        "description": "Wir steigern Ihren Umsatz, indem wir spezielle digitale Marketingstrategien für Ihre E-Commerce-Website entwickeln."
+      "technologies": {
+        "title": "Technologien, die wir verwenden",
+        "tensorflow": "TensorFlow",
+        "pytorch": "PyTorch",
+        "python": "Python",
+        "openai": "OpenAI API",
+        "pandas": "Pandas"
       }
     },
-    "statistics": {
-      "title": "E-Commerce-Erfolgsfaktoren",
-      "mobileShopping": {
-        "value": "68%",
-        "description": "Rate des Einkaufs von mobilen Geräten"
+    "eCommercePage": {
+      "title": "E-Commerce",
+      "subtitle": "Beratung",
+      "description": "Wir bieten professionelle Beratungsdienste in allen Prozessen vom Aufbau bis zur Verwaltung Ihrer E-Commerce-Website an.",
+      "cta": "Angebot Anfordern",
+      "features": {
+        "securePayment": {
+          "title": "Sichere Zahlung",
+          "description": "Wir bieten Zahlungssystemintegration, die durch die aktuellsten Sicherheitsprotokolle geschützt ist."
+        },
+        "multiplePaymentOptions": {
+          "title": "Mehrere Zahlungsoptionen",
+          "description": "Wir steigern Ihren Umsatz, indem wir verschiedene Zahlungsmethoden wie Kreditkarte, Banküberweisung und Nachnahme anbieten."
+        },
+        "detailedReporting": {
+          "title": "Detaillierte Berichterstattung",
+          "description": "Wir helfen Ihnen, Ihr Unternehmen zu vergrößern, indem wir Ihre Verkaufs-, Besucher- und Bestandsdaten analysieren."
+        },
+        "integratedLogistics": {
+          "title": "Integrierte Logistik",
+          "description": "Wir optimieren Ihre Lieferprozesse, indem wir eine vollständige Integration mit Versandunternehmen und Logistikprozessen bieten."
+        },
+        "seoOptimization": {
+          "title": "SEO-Optimierung",
+          "description": "Wir führen SEO-Arbeiten durch, die sicherstellen, dass Ihre E-Commerce-Website in Suchmaschinen hoch rankt."
+        },
+        "digitalMarketing": {
+          "title": "Digitales Marketing",
+          "description": "Wir steigern Ihren Umsatz, indem wir spezielle digitale Marketingstrategien für Ihre E-Commerce-Website entwickeln."
+        }
       },
-      "loadingTime": {
-        "value": "3 Sek",
-        "description": "Maximale Zeit, die Benutzer auf das Laden der Website warten"
-      },
-      "cartAbandonment": {
-        "value": "70%",
-        "description": "Warenkorbabbruchrate"
-      },
-      "customerExperience": {
-        "value": "89%",
-        "description": "Einfluss der Kundenerfahrung auf die Markentreue"
+      "statistics": {
+        "title": "E-Commerce-Erfolgsfaktoren",
+        "mobileShopping": {
+          "value": "68%",
+          "description": "Rate des Einkaufs von mobilen Geräten"
+        },
+        "loadingTime": {
+          "value": "3 Sek",
+          "description": "Maximale Zeit, die Benutzer auf das Laden der Website warten"
+        },
+        "cartAbandonment": {
+          "value": "70%",
+          "description": "Warenkorbabbruchrate"
+        },
+        "customerExperience": {
+          "value": "89%",
+          "description": "Einfluss der Kundenerfahrung auf die Markentreue"
+        }
       }
-    }
-  },
-  "aboutPage": {
-    "whoWeAre": {
-      "title": "Wer Wir Sind",
-      "subtitle": "Führendes Team in der digitalen Welt",
-      "description": "Seit 2015 arbeiten wir daran, Unternehmen in der digitalen Welt Mehrwert zu bieten. Mit unserem erfahrenen Team und innovativen Ansatz sind wir ein vertrauenswürdiger Lösungspartner auf der digitalen Transformationsreise unserer Kunden.",
-      "values": {
-        "title": "Unsere Werte",
+    },
+    "aboutPage": {
+      "whoWeAre": {
+        "title": "Wer Wir Sind",
+        "subtitle": "Führendes Team in der digitalen Welt",
+        "description": "Seit 2015 arbeiten wir daran, Unternehmen in der digitalen Welt Mehrwert zu bieten. Mit unserem erfahrenen Team und innovativen Ansatz sind wir ein vertrauenswürdiger Lösungspartner auf der digitalen Transformationsreise unserer Kunden.",
+        "values": {
+          "title": "Unsere Werte",
+          "innovation": {
+            "title": "Innovation",
+            "description": "Wir verfolgen die neuesten Technologien und Trends, um unseren Kunden stets die besten Lösungen zu bieten."
+          },
+          "quality": {
+            "title": "Qualität",
+            "description": "Wir halten in allen unseren Projekten die höchsten Qualitätsstandards ein und arbeiten mit einem perfektionistischen Ansatz."
+          },
+          "customerFocus": {
+            "title": "Kundenorientierung",
+            "description": "Wir verstehen die Bedürfnisse unserer Kunden bestmöglich und entwickeln maßgeschneiderte Lösungen für sie."
+          },
+          "transparency": {
+            "title": "Transparenz",
+            "description": "Wir pflegen eine offene und ehrliche Kommunikation in allen unseren Geschäftsprozessen."
+          }
+        }
+      },
+      "visionMission": {
+        "title": "Vision & Mission",
+        "vision": {
+          "title": "Unsere Vision",
+          "description": "Als globales Technologieunternehmen in der digitalen Transformation der bevorzugte Lösungspartner in den digitalen Erfolgsgeschichten von Unternehmen zu werden."
+        },
+        "mission": {
+          "title": "Unsere Mission",
+          "description": "Unternehmen durch innovative Technologien und kreative Lösungen zu nachhaltigem Erfolg in der digitalen Welt zu verhelfen."
+        },
+        "goals": {
+          "title": "Unsere Ziele",
+          "items": [
+            "Die digitale Präsenz unserer Kunden stärken",
+            "Mehrwert durch innovative Technologien schaffen",
+            "Nachhaltiges Wachstum sicherstellen",
+            "Ein wichtiger Akteur im globalen Markt werden"
+          ]
+        }
+      },
+      "timeline": {
+        "title": "Unsere Reise",
+        "foundation": {
+          "year": "2015",
+          "title": "Gründung",
+          "description": "Demirci Software wurde mit dem Ziel gegründet, Unternehmen in der digitalen Welt Mehrwert zu bieten."
+        },
+        "growth": {
+          "year": "2017",
+          "title": "Wachstum",
+          "description": "Unser Team hat sich erweitert und wir haben unser Dienstleistungsportfolio diversifiziert."
+        },
+        "international": {
+          "year": "2019",
+          "title": "Internationale Projekte",
+          "description": "Wir sind in den globalen Markt eingetreten, indem wir unsere ersten internationalen Projekte umgesetzt haben."
+        },
+        "innovation": {
+          "year": "2022",
+          "title": "Technologische Innovationen",
+          "description": "Wir haben unser Dienstleistungsspektrum durch die Entwicklung von KI- und Datenanalyselösungen erweitert."
+        },
+        "today": {
+          "year": "2024",
+          "title": "Heute",
+          "description": "Wir schaffen weiterhin Mehrwert für unsere Kunden mit unserem erfahrenen Team und innovativen Ansatz."
+        }
+      },
+      "principles": {
+        "title": "Unsere Grundprinzipien",
+        "reliability": {
+          "title": "Zuverlässigkeit",
+          "description": "Wir verfolgen einen ehrlichen und transparenten Ansatz gegenüber unseren Kunden und halten unsere Versprechen."
+        },
         "innovation": {
           "title": "Innovation",
-          "description": "Wir verfolgen die neuesten Technologien und Trends, um unseren Kunden stets die besten Lösungen zu bieten."
+          "description": "Wir verfolgen technologische Entwicklungen genau und bieten unseren Kunden die innovativsten Lösungen."
         },
-        "quality": {
-          "title": "Qualität",
-          "description": "Wir halten in allen unseren Projekten die höchsten Qualitätsstandards ein und arbeiten mit einem perfektionistischen Ansatz."
-        },
-        "customerFocus": {
-          "title": "Kundenorientierung",
-          "description": "Wir verstehen die Bedürfnisse unserer Kunden bestmöglich und entwickeln maßgeschneiderte Lösungen für sie."
-        },
-        "transparency": {
-          "title": "Transparenz",
-          "description": "Wir pflegen eine offene und ehrliche Kommunikation in allen unseren Geschäftsprozessen."
+        "collaboration": {
+          "title": "Zusammenarbeit",
+          "description": "Wir arbeiten eng mit unseren Kunden zusammen, um ihre Bedürfnisse bestmöglich zu erfüllen."
         }
       }
     },
-    "visionMission": {
-      "title": "Vision & Mission",
-      "vision": {
-        "title": "Unsere Vision",
-        "description": "Als globales Technologieunternehmen in der digitalen Transformation der bevorzugte Lösungspartner in den digitalen Erfolgsgeschichten von Unternehmen zu werden."
-      },
-      "mission": {
-        "title": "Unsere Mission",
-        "description": "Unternehmen durch innovative Technologien und kreative Lösungen zu nachhaltigem Erfolg in der digitalen Welt zu verhelfen."
-      },
-      "goals": {
-        "title": "Unsere Ziele",
-        "items": [
-          "Die digitale Präsenz unserer Kunden stärken",
-          "Mehrwert durch innovative Technologien schaffen",
-          "Nachhaltiges Wachstum sicherstellen",
-          "Ein wichtiger Akteur im globalen Markt werden"
-        ]
-      }
+    "common": {
+      "getQuote": "Angebot anfordern"
     },
-    "timeline": {
-      "title": "Unsere Reise",
-      "foundation": {
-        "year": "2015",
-        "title": "Gründung",
-        "description": "Demirci Software wurde mit dem Ziel gegründet, Unternehmen in der digitalen Welt Mehrwert zu bieten."
+    "form": {
+      "title": "Angebot erhalten",
+      "subtitle": "Holen Sie sich ein Angebot für Ihre individuelle Webdesign-, E-Commerce- und digitalen Marketinglösungen.",
+      "callToAction": "Ihr Partner für digitale Lösungen",
+      "benefitsDescription": "Bei Demirci Software bieten wir maßgeschneiderte Lösungen für Ihre Bedürfnisse:",
+      "benefits": {
+        "responsive": "Mobilfreundliche, schnelle und moderne Designs",
+        "customized": "Maßgeschneiderte Softwarelösungen für Ihre Bedürfnisse",
+        "support": "24/7 technischer Support und Wartungsservices",
+        "quality": "Hochwertiger Code und Sicherheitsstandards"
       },
-      "growth": {
-        "year": "2017",
-        "title": "Wachstum",
-        "description": "Unser Team hat sich erweitert und wir haben unser Dienstleistungsportfolio diversifiziert."
-      },
-      "international": {
-        "year": "2019",
-        "title": "Internationale Projekte",
-        "description": "Wir sind in den globalen Markt eingetreten, indem wir unsere ersten internationalen Projekte umgesetzt haben."
-      },
-      "innovation": {
-        "year": "2022",
-        "title": "Technologische Innovationen",
-        "description": "Wir haben unser Dienstleistungsspektrum durch die Entwicklung von KI- und Datenanalyselösungen erweitert."
-      },
-      "today": {
-        "year": "2024",
-        "title": "Heute",
-        "description": "Wir schaffen weiterhin Mehrwert für unsere Kunden mit unserem erfahrenen Team und innovativen Ansatz."
-      }
-    },
-    "principles": {
-      "title": "Unsere Grundprinzipien",
-      "reliability": {
-        "title": "Zuverlässigkeit",
-        "description": "Wir verfolgen einen ehrlichen und transparenten Ansatz gegenüber unseren Kunden und halten unsere Versprechen."
-      },
-      "innovation": {
-        "title": "Innovation",
-        "description": "Wir verfolgen technologische Entwicklungen genau und bieten unseren Kunden die innovativsten Lösungen."
-      },
-      "collaboration": {
-        "title": "Zusammenarbeit",
-        "description": "Wir arbeiten eng mit unseren Kunden zusammen, um ihre Bedürfnisse bestmöglich zu erfüllen."
-      }
-    }
-  },
-  "common": {
-    "getQuote": "Angebot anfordern"
-  },
-  "form": {
-    "title": "Professionelle Serviceanfrage",
-    "subtitle": "Teilen Sie Ihre Informationen für maßgeschneiderte Lösungen, wir melden uns so schnell wie möglich bei Ihnen.",
-    "fullName": "Vollständiger Name",
-    "email": "E-Mail",
-    "phone": "Telefon",
-    "services": "Dienstleistungen",
-    "message": "Ihre Nachricht",
-    "submit": "Absenden",
-    "cancel": "Abbrechen",
-    "selectService": "Dienstleistung auswählen",
-    "countryCode": "Ländercode",
-    "placeholders": {
-      "fullName": "Ihr Vor- und Nachname",
-      "email": "beispiel@email.com",
-      "phone": "5XX XXX XX XX",
-      "message": "Beschreiben Sie kurz Ihre Projektanforderungen..."
-    },
-    "validation": {
-      "fullName": {
-        "required": "Vollständiger Name ist erforderlich",
-        "min": "Vollständiger Name muss mindestens 2 Zeichen lang sein"
-      },
-      "email": {
-        "required": "E-Mail ist erforderlich",
-        "invalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein"
-      },
-      "phone": {
-        "required": "Telefonnummer ist erforderlich",
-        "invalid": "Bitte geben Sie eine gültige Telefonnummer ein",
-        "min": "Telefonnummer muss mindestens 10 Zeichen lang sein",
-        "max": "Telefonnummer darf höchstens 11 Zeichen lang sein"
-      },
-      "countryCode": {
-        "required": "Ländercode ist erforderlich"
-      },
-      "services": {
-        "required": "Sie müssen mindestens einen Dienst auswählen",
-        "min": "Sie müssen mindestens einen Dienst auswählen"
-      },
-      "message": {
-        "min": "Nachricht muss mindestens 10 Zeichen lang sein",
-        "max": "Nachricht darf höchstens 500 Zeichen lang sein"
-      }
-    },
-    "subject": {
-      "title": "Betreff",
-      "placeholder": "Betreff auswählen",
-      "customPlaceholder": "Schreiben Sie Ihren Betreff",
-      "options": {
-        "getService": "Ich möchte eine Dienstleistung erhalten",
-        "getMeeting": "Ich möchte ein Treffen vereinbaren",
-        "getQuote": "Ich möchte ein Preisangebot erhalten",
-        "getInfo": "Ich möchte Informationen erhalten",
-        "other": "Andere"
+      "clientTrust": "Marken, die uns vertrauen",
+      "placeholders": {
+        "fullName": "Ihr Vor- und Nachname",
+        "email": "Ihre E-Mail-Adresse",
+        "phone": "Ihre Telefonnummer",
+        "message": "Sie können eine kurze Beschreibung über Ihr Projekt angeben..."
       },
       "validation": {
-        "required": "Bitte wählen Sie einen Betreff aus",
-        "customRequired": "Bitte schreiben Sie Ihren Betreff"
-      }
-    }
-  },
-  "contactPage": {
-    "title": "Kontaktieren Sie uns",
-    "subtitle": "Wir helfen Ihnen gerne weiter",
-    "description": "Kontaktieren Sie uns für Ihre Projekte, Fragen oder Kooperationsmöglichkeiten. Wir werden uns so schnell wie möglich bei Ihnen melden.",
-    "cta": "Nachricht senden",
-    "info": {
-      "title": "Kontaktinformationen",
-      "address": {
-        "title": "Adresse",
-        "value": "Atatürk Mah. Ertuğrul Gazi Cad. Nr. 21 Etage: 3 Ataşehir, Istanbul"
-      },
-      "phone": {
-        "title": "Telefon",
-        "value": "+90 (216) 123 45 67"
-      },
-      "email": {
-        "title": "E-Mail",
-        "value": "info@demirciyazilim.com"
-      },
-      "workHours": {
-        "title": "Arbeitszeiten",
-        "value": "Montag - Freitag: 09:00 - 18:00"
-      }
-    },
-    "form": {
-      "title": "Senden Sie uns eine Nachricht",
-      "subtitle": "Teilen Sie Ihre Informationen für maßgeschneiderte Lösungen mit, wir werden uns so schnell wie möglich bei Ihnen melden."
-    },
-    "faq": {
-      "title": "Häufig gestellte Fragen",
-      "questions": [
-        {
-          "question": "Wie hoch sind die Preise für Ihre Dienstleistungen?",
-          "answer": "Unsere Servicepreise variieren je nach Umfang, Anforderungen und Dauer des Projekts. Bitte kontaktieren Sie uns für ein individuelles Angebot."
+        "fullName": {
+          "required": "Vollständiger Name ist erforderlich",
+          "min": "Name muss mindestens 2 Zeichen lang sein"
         },
-        {
-          "question": "Wie lange dauert es, ein Projekt abzuschließen?",
-          "answer": "Die Projektabschlusszeit variiert je nach Komplexität und Umfang des Projekts. Eine einfache Website kann in 2-4 Wochen fertiggestellt werden, während ein umfassendes E-Commerce-Projekt 2-3 Monate dauern kann."
+        "email": {
+          "required": "E-Mail-Adresse ist erforderlich",
+          "invalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein"
         },
-        {
-          "question": "Welche Zahlungsmethoden akzeptieren Sie?",
-          "answer": "Wir akzeptieren Banküberweisungen, Kreditkarten und Ratenzahlungsoptionen. Wir wenden einen Zahlungsplan von 40% zu Beginn des Projekts, 30% während der Entwicklung und 30% bei der Lieferung an."
+        "countryCode": {
+          "required": "Ländercode ist erforderlich"
         },
-        {
-          "question": "Bieten Sie nach der Projektlieferung Support an?",
-          "answer": "Ja, wir bieten für alle unsere Projekte 1 Jahr lang kostenlosen technischen Support. Nach diesem Zeitraum können Sie von unseren monatlichen Wartungs- und Support-Paketen profitieren."
+        "phone": {
+          "required": "Telefonnummer ist erforderlich",
+          "invalid": "Bitte geben Sie eine gültige Telefonnummer ein",
+          "min": "Telefonnummer muss mindestens 10 Zeichen lang sein",
+          "max": "Telefonnummer darf höchstens 11 Zeichen lang sein"
+        },
+        "services": {
+          "required": "Bitte wählen Sie mindestens einen Service aus",
+          "min": "Bitte wählen Sie mindestens einen Service aus"
+        },
+        "message": {
+          "min": "Ihre Nachricht muss mindestens 10 Zeichen lang sein",
+          "max": "Ihre Nachricht darf höchstens 500 Zeichen lang sein"
         }
-      ]
-    },
-    "map": {
-      "title": "Besuchen Sie uns"
-    }
-  },
-  "references": {
-    "title": "Unsere Referenzen",
-    "subtitle": "Projekte, die wir erfolgreich abgeschlossen haben",
-    "noReferences": "Noch keine Referenzen verfügbar.",
-    "loading": "Wird geladen...",
-    "error": {
-      "title": "Ein Fehler ist aufgetreten",
-      "message": "Beim Laden der Referenzinformationen ist ein Fehler aufgetreten."
-    },
-    "notFound": {
-      "title": "Referenz nicht gefunden",
-      "message": "Die gesuchte Referenz konnte nicht gefunden werden oder wurde möglicherweise gelöscht."
-    },
-    "visitWebsite": "Website besuchen",
-    "completionDate": "Fertigstellungsdatum",
-    "addNew": "Neue Referenz hinzufügen",
-    "backToList": "Zurück zur Liste",
-    "description": "Beschreibung",
-    "details": "Projektdetails",
-    "client": "Kunde",
-    "services": "Dienstleistungen",
-    "projectUrl": "Projekt-URL",
-    "createdAt": "Erstellt am",
-    "updatedAt": "Aktualisiert am",
-    "pagination": {
-      "showing": "Zeige",
-      "of": "von",
-      "references": "Referenzen"
-    },
-    "form": {
-      "title": "Titel",
-      "summary": "Zusammenfassung",
-      "description": "Beschreibung",
-      "thumbnailUrl": "Vorschaubild URL",
-      "clientName": "Kundenname",
-      "clientLogo": "Kundenlogo URL",
-      "projectUrl": "Projekt URL",
-      "completionDate": "Fertigstellungsdatum",
-      "services": "Dienstleistungen",
-      "active": "Aktiv",
-      "save": "Speichern",
+      },
+      "fullName": "Vollständiger Name",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "services": "Services, an denen Sie interessiert sind",
+      "message": "Ihre Nachricht",
+      "selectService": "Wählen Sie einen Service",
+      "submit": "Angebot anfragen",
       "cancel": "Abbrechen"
     },
-    "filters": {
-      "all": "Alle",
-      "active": "Nur Aktive",
-      "byTitle": "Nach Titel",
-      "byService": "Nach Dienstleistung",
+    "contactPage": {
+      "title": "Kontaktieren Sie uns",
+      "subtitle": "Wir helfen Ihnen gerne weiter",
+      "description": "Kontaktieren Sie uns für Ihre Projekte, Fragen oder Kooperationsmöglichkeiten. Wir werden uns so schnell wie möglich bei Ihnen melden.",
+      "cta": "Nachricht senden",
+      "info": {
+        "title": "Kontaktinformationen",
+        "address": {
+          "title": "Adresse",
+          "value": "Atatürk Mah. Ertuğrul Gazi Cad. Nr. 21 Etage: 3 Ataşehir, Istanbul"
+        },
+        "phone": {
+          "title": "Telefon",
+          "value": "+90 (216) 123 45 67"
+        },
+        "email": {
+          "title": "E-Mail",
+          "value": "info@demirciyazilim.com"
+        },
+        "workHours": {
+          "title": "Arbeitszeiten",
+          "value": "Montag - Freitag: 09:00 - 18:00"
+        }
+      },
+      "form": {
+        "title": "Senden Sie uns eine Nachricht",
+        "subtitle": "Teilen Sie Ihre Informationen für maßgeschneiderte Lösungen mit, wir werden uns so schnell wie möglich bei Ihnen melden."
+      },
+      "faq": {
+        "title": "Häufig gestellte Fragen",
+        "questions": [
+          {
+            "question": "Wie hoch sind die Preise für Ihre Dienstleistungen?",
+            "answer": "Unsere Servicepreise variieren je nach Umfang, Anforderungen und Dauer des Projekts. Bitte kontaktieren Sie uns für ein individuelles Angebot."
+          },
+          {
+            "question": "Wie lange dauert es, ein Projekt abzuschließen?",
+            "answer": "Die Projektabschlusszeit variiert je nach Komplexität und Umfang des Projekts. Eine einfache Website kann in 2-4 Wochen fertiggestellt werden, während ein umfassendes E-Commerce-Projekt 2-3 Monate dauern kann."
+          },
+          {
+            "question": "Welche Zahlungsmethoden akzeptieren Sie?",
+            "answer": "Wir akzeptieren Banküberweisungen, Kreditkarten und Ratenzahlungsoptionen. Wir wenden einen Zahlungsplan von 40% zu Beginn des Projekts, 30% während der Entwicklung und 30% bei der Lieferung an."
+          },
+          {
+            "question": "Bieten Sie nach der Projektlieferung Support an?",
+            "answer": "Ja, wir bieten für alle unsere Projekte 1 Jahr lang kostenlosen technischen Support. Nach diesem Zeitraum können Sie von unseren monatlichen Wartungs- und Support-Paketen profitieren."
+          }
+        ]
+      },
+      "map": {
+        "title": "Besuchen Sie uns"
+      }
+    },
+    "references": {
+      "title": "Unsere Referenzen",
+      "subtitle": "Projekte, die wir erfolgreich abgeschlossen haben",
+      "noReferences": "Noch keine Referenzen verfügbar.",
+      "loading": "Wird geladen...",
+      "error": {
+        "title": "Ein Fehler ist aufgetreten",
+        "message": "Beim Laden der Referenzinformationen ist ein Fehler aufgetreten."
+      },
+      "notFound": {
+        "title": "Referenz nicht gefunden",
+        "message": "Die gesuchte Referenz konnte nicht gefunden werden oder wurde möglicherweise gelöscht."
+      },
+      "visitWebsite": "Website besuchen",
+      "completionDate": "Fertigstellungsdatum",
+      "addNew": "Neue Referenz hinzufügen",
+      "backToList": "Zurück zur Liste",
+      "description": "Beschreibung",
+      "details": "Projektdetails",
+      "client": "Kunde",
+      "services": "Dienstleistungen",
+      "projectUrl": "Projekt-URL",
+      "createdAt": "Erstellt am",
+      "updatedAt": "Aktualisiert am",
+      "pagination": {
+        "showing": "Zeige",
+        "of": "von",
+        "references": "Referenzen"
+      },
+      "form": {
+        "title": "Titel",
+        "summary": "Zusammenfassung",
+        "description": "Beschreibung",
+        "thumbnailUrl": "Vorschaubild URL",
+        "clientName": "Kundenname",
+        "clientLogo": "Kundenlogo URL",
+        "projectUrl": "Projekt URL",
+        "completionDate": "Fertigstellungsdatum",
+        "services": "Dienstleistungen",
+        "active": "Aktiv",
+        "save": "Speichern",
+        "cancel": "Abbrechen"
+      },
+      "filters": {
+        "all": "Alle",
+        "active": "Nur Aktive",
+        "byTitle": "Nach Titel",
+        "byService": "Nach Dienstleistung",
+        "search": "Suchen",
+        "searchPlaceholder": "Suchbegriff eingeben..."
+      }
+    },
+    "admin": {
+      "adminPanel": "Admin-Panel",
+      "dashboard": "Dashboard",
+      "references": "Referenzen",
+      "settings": "Einstellungen",
+      "logout": "Abmelden",
+      "online": "Online",
+      "offline": "Offline",
+      "totalReferences": "Gesamte Referenzen",
+      "activeReferences": "Aktive Referenzen",
+      "inactiveReferences": "Inaktive Referenzen",
+      "quickActions": "Schnellzugriff",
+      "addNewReference": "Neue Referenz hinzufügen",
+      "manageReferences": "Referenzen verwalten",
+      "systemStatus": "Systemstatus",
+      "apiStatus": "API-Status",
+      "lastUpdate": "Letzte Aktualisierung",
+      "recentReferences": "Neueste Referenzen",
+      "viewAll": "Alle anzeigen",
+      "title": "Titel",
+      "status": "Status",
+      "date": "Datum",
+      "actions": "Aktionen",
+      "active": "Aktiv",
+      "inactive": "Inaktiv",
+      "noReferencesFound": "Keine Referenzen gefunden",
       "search": "Suchen",
-      "searchPlaceholder": "Suchbegriff eingeben..."
+      "searchPlaceholder": "Nach Titel oder Kundenname suchen...",
+      "filterByStatus": "Nach Status filtern",
+      "allStatuses": "Alle Status",
+      "activeOnly": "Nur aktive",
+      "inactiveOnly": "Nur inaktive",
+      "sortBy": "Sortieren nach",
+      "newest": "Neueste",
+      "oldest": "Älteste",
+      "titleAZ": "Titel (A-Z)",
+      "clientAZ": "Kunde (A-Z)",
+      "activate": "Aktivieren",
+      "deactivate": "Deaktivieren",
+      "delete": "Löschen",
+      "edit": "Bearbeiten",
+      "view": "Ansehen",
+      "confirmDelete": "Löschen bestätigen",
+      "deleteWarning": "Sind Sie sicher, dass Sie diese Referenz löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.",
+      "cancel": "Abbrechen",
+      "confirmBulkDelete": "Sind Sie sicher, dass Sie die ausgewählten Referenzen löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.",
+      "confirmBulkActivate": "Sind Sie sicher, dass Sie die ausgewählten Referenzen aktivieren möchten?",
+      "confirmBulkDeactivate": "Sind Sie sicher, dass Sie die ausgewählten Referenzen deaktivieren möchten?",
+      "errorLoadingReferences": "Fehler beim Laden der Referenzen",
+      "tryAgain": "Erneut versuchen",
+      "back": "Zurück",
+      "editReference": "Referenz bearbeiten",
+      "basicInformation": "Grundinformationen",
+      "summary": "Zusammenfassung",
+      "description": "Beschreibung",
+      "technologies": "Technologien",
+      "technologiesPlaceholder": "React, Node.js, MongoDB, ...",
+      "technologiesHelp": "Geben Sie Technologien durch Kommas getrennt ein",
+      "completionDate": "Fertigstellungsdatum",
+      "clientInformation": "Kundeninformationen",
+      "clientName": "Kundenname",
+      "projectUrl": "Projekt-URL",
+      "clientLogo": "Kundenlogo",
+      "images": "Bilder",
+      "thumbnail": "Vorschaubild",
+      "additionalImages": "Zusätzliche Bilder",
+      "uploadLogo": "Logo hochladen",
+      "changeLogo": "Logo ändern",
+      "uploadThumbnail": "Vorschaubild hochladen",
+      "changeThumbnail": "Vorschaubild ändern",
+      "addImages": "Bilder hinzufügen",
+      "new": "Neu",
+      "saveReference": "Referenz speichern",
+      "updateReference": "Referenz aktualisieren",
+      "titleRequired": "Titel ist erforderlich",
+      "summaryRequired": "Zusammenfassung ist erforderlich",
+      "descriptionRequired": "Beschreibung ist erforderlich",
+      "thumbnailRequired": "Vorschaubild ist erforderlich",
+      "errorSavingReference": "Fehler beim Speichern der Referenz",
+      "referenceAdded": "Referenz erfolgreich hinzugefügt",
+      "referenceUpdated": "Referenz erfolgreich aktualisiert",
+      "imageDetails": "Bilddetails",
+      "imageCaption": "Bildunterschrift",
+      "displayOrder": "Anzeigereihenfolge",
+      "save": "Speichern"
+    },
+    "referanslar": {
+      "title": "Erfolgsgeschichten unserer Kunden",
+      "description": "Wir haben unseren Kunden geholfen, sich in der digitalen Welt mit unseren Projekten abzuheben. Hier sind einige unserer geschätzten Kunden und ihre Erfolgsgeschichten.",
+      "varsayilanAciklama": "Wir haben unserem Kunden geholfen, sein Geschäft mit unseren maßgeschneiderten Lösungen zu erweitern."
     }
-  },
-  "admin": {
-    "adminPanel": "Admin-Panel",
-    "dashboard": "Dashboard",
-    "references": "Referenzen",
-    "settings": "Einstellungen",
-    "logout": "Abmelden",
-    "online": "Online",
-    "offline": "Offline",
-    "totalReferences": "Gesamte Referenzen",
-    "activeReferences": "Aktive Referenzen",
-    "inactiveReferences": "Inaktive Referenzen",
-    "quickActions": "Schnellzugriff",
-    "addNewReference": "Neue Referenz hinzufügen",
-    "manageReferences": "Referenzen verwalten",
-    "systemStatus": "Systemstatus",
-    "apiStatus": "API-Status",
-    "lastUpdate": "Letzte Aktualisierung",
-    "recentReferences": "Neueste Referenzen",
-    "viewAll": "Alle anzeigen",
-    "title": "Titel",
-    "status": "Status",
-    "date": "Datum",
-    "actions": "Aktionen",
-    "active": "Aktiv",
-    "inactive": "Inaktiv",
-    "noReferencesFound": "Keine Referenzen gefunden",
-    "search": "Suchen",
-    "searchPlaceholder": "Nach Titel oder Kundenname suchen...",
-    "filterByStatus": "Nach Status filtern",
-    "allStatuses": "Alle Status",
-    "activeOnly": "Nur aktive",
-    "inactiveOnly": "Nur inaktive",
-    "sortBy": "Sortieren nach",
-    "newest": "Neueste",
-    "oldest": "Älteste",
-    "titleAZ": "Titel (A-Z)",
-    "clientAZ": "Kunde (A-Z)",
-    "activate": "Aktivieren",
-    "deactivate": "Deaktivieren",
-    "delete": "Löschen",
-    "edit": "Bearbeiten",
-    "view": "Ansehen",
-    "confirmDelete": "Löschen bestätigen",
-    "deleteWarning": "Sind Sie sicher, dass Sie diese Referenz löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.",
-    "cancel": "Abbrechen",
-    "confirmBulkDelete": "Sind Sie sicher, dass Sie die ausgewählten Referenzen löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.",
-    "confirmBulkActivate": "Sind Sie sicher, dass Sie die ausgewählten Referenzen aktivieren möchten?",
-    "confirmBulkDeactivate": "Sind Sie sicher, dass Sie die ausgewählten Referenzen deaktivieren möchten?",
-    "errorLoadingReferences": "Fehler beim Laden der Referenzen",
-    "tryAgain": "Erneut versuchen",
-    "back": "Zurück",
-    "editReference": "Referenz bearbeiten",
-    "basicInformation": "Grundinformationen",
-    "summary": "Zusammenfassung",
-    "description": "Beschreibung",
-    "technologies": "Technologien",
-    "technologiesPlaceholder": "React, Node.js, MongoDB, ...",
-    "technologiesHelp": "Geben Sie Technologien durch Kommas getrennt ein",
-    "completionDate": "Fertigstellungsdatum",
-    "clientInformation": "Kundeninformationen",
-    "clientName": "Kundenname",
-    "projectUrl": "Projekt-URL",
-    "clientLogo": "Kundenlogo",
-    "images": "Bilder",
-    "thumbnail": "Vorschaubild",
-    "additionalImages": "Zusätzliche Bilder",
-    "uploadLogo": "Logo hochladen",
-    "changeLogo": "Logo ändern",
-    "uploadThumbnail": "Vorschaubild hochladen",
-    "changeThumbnail": "Vorschaubild ändern",
-    "addImages": "Bilder hinzufügen",
-    "new": "Neu",
-    "saveReference": "Referenz speichern",
-    "updateReference": "Referenz aktualisieren",
-    "titleRequired": "Titel ist erforderlich",
-    "summaryRequired": "Zusammenfassung ist erforderlich",
-    "descriptionRequired": "Beschreibung ist erforderlich",
-    "thumbnailRequired": "Vorschaubild ist erforderlich",
-    "errorSavingReference": "Fehler beim Speichern der Referenz",
-    "referenceAdded": "Referenz erfolgreich hinzugefügt",
-    "referenceUpdated": "Referenz erfolgreich aktualisiert",
-    "imageDetails": "Bilddetails",
-    "imageCaption": "Bildunterschrift",
-    "displayOrder": "Anzeigereihenfolge",
-    "save": "Speichern"
-  }
 } 

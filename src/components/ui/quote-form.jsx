@@ -2,15 +2,19 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useTranslation } from 'react-i18next';
-import { ModalBody, ModalContent, ModalFooter } from './animated-modal';
+import { ModalBody, ModalContent, useModal } from './animated-modal';
 import { motion } from 'framer-motion';
 
-export const QuoteForm = () => {
+export const QuoteForm = ({ isStandalone = false }) => {
   const { t } = useTranslation();
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const servicesRef = useRef(null);
   const [isCountryCodeOpen, setIsCountryCodeOpen] = useState(false);
   const countryCodeRef = useRef(null);
+  
+  // ModalProvider içinde değilse bir dummy setOpen fonksiyonu kullan
+  const modalContext = isStandalone ? { setOpen: () => {} } : useModal();
+  const { setOpen } = modalContext;
 
   const services = [
     { value: 'web-design', label: t('services.webDesign.title') },
@@ -69,6 +73,7 @@ export const QuoteForm = () => {
     onSubmit: (values) => {
       console.log(values);
       // Burada form verilerini API'ye gönderebilirsiniz
+      setOpen(false); // Form gönderildikten sonra modalı kapat
     }
   });
 
@@ -110,6 +115,202 @@ export const QuoteForm = () => {
     formik.setFieldValue('selectedServices', currentServices);
   };
 
+  // Standalone modunda ModalBody içine sarma, sadece içeriği render et
+  if (isStandalone) {
+    return (
+      <div className="max-h-[80vh] overflow-y-auto">
+        <h2 className="text-2xl font-bold text-center mb-6 dark:text-white">
+          {t('form.title')}
+        </h2>
+        <p className="text-center text-gray-600 dark:text-gray-300 mb-6">
+          {t('form.subtitle')}
+        </p>
+        <form onSubmit={formik.handleSubmit} className="space-y-4">
+          {/* İsim Soyisim */}
+          <div>
+            <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">
+              {t('form.fullName')}
+            </label>
+            <input
+              id="fullName"
+              name="fullName"
+              type="text"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.fullName}
+              className="w-full px-4 py-2.5 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder={t('form.placeholders.fullName')}
+            />
+            {formik.touched.fullName && formik.errors.fullName && (
+              <div className="text-red-500 text-sm mt-1">{formik.errors.fullName}</div>
+            )}
+          </div>
+
+          {/* E-posta */}
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">
+              {t('form.email')}
+            </label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.email}
+              className="w-full px-4 py-2.5 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder={t('form.placeholders.email')}
+            />
+            {formik.touched.email && formik.errors.email && (
+              <div className="text-red-500 text-sm mt-1">{formik.errors.email}</div>
+            )}
+          </div>
+
+          {/* Telefon */}
+          <div>
+            <label htmlFor="phone" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">
+              {t('form.phone')}
+            </label>
+            <div className="flex">
+              {/* Ülke Kodu Dropdown */}
+              <div className="relative" ref={countryCodeRef}>
+                <button
+                  type="button"
+                  className="flex items-center justify-between w-20 md:w-24 px-2 md:px-3 py-2.5 border border-gray-300 dark:border-gray-600 rounded-l-md shadow-sm dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  onClick={() => setIsCountryCodeOpen(!isCountryCodeOpen)}
+                >
+                  <span>{formik.values.countryCode}</span>
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {isCountryCodeOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    className="absolute z-10 w-48 mt-1 bg-white dark:bg-gray-800 shadow-lg rounded-md py-1 max-h-60 overflow-auto"
+                  >
+                    {countryCodes.map((country) => (
+                      <button
+                        key={country.code}
+                        type="button"
+                        className="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                        onClick={() => {
+                          formik.setFieldValue('countryCode', country.code);
+                          setIsCountryCodeOpen(false);
+                        }}
+                      >
+                        <span className="font-medium">{country.code}</span> {country.country}
+                      </button>
+                    ))}
+                  </motion.div>
+                )}
+              </div>
+              {/* Telefon Numarası Input */}
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.phone}
+                className="flex-1 px-4 py-2.5 border border-gray-300 dark:border-gray-600 rounded-r-md shadow-sm dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder={t('form.placeholders.phone')}
+              />
+            </div>
+            {formik.touched.phone && formik.errors.phone && (
+              <div className="text-red-500 text-sm mt-1">{formik.errors.phone}</div>
+            )}
+          </div>
+
+          {/* Hizmetler Dropdown */}
+          <div className="relative" ref={servicesRef}>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">
+              {t('form.services')}
+            </label>
+            <button
+              type="button"
+              className="w-full flex items-center justify-between px-4 py-2.5 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              onClick={() => setIsServicesOpen(!isServicesOpen)}
+            >
+              <span className="truncate">
+                {formik.values.selectedServices.length > 0 
+                  ? getSelectedServiceLabels() 
+                  : t('form.selectService')}
+              </span>
+              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            
+            {isServicesOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                className="absolute z-10 w-full mt-1 bg-white dark:bg-gray-800 shadow-lg rounded-md py-1"
+              >
+                {services.map((service) => (
+                  <div 
+                    key={service.value} 
+                    className="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer"
+                    onClick={() => toggleService(service.value)}
+                  >
+                    <input
+                      type="checkbox"
+                      className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                      checked={formik.values.selectedServices.includes(service.value)}
+                      onChange={() => {}}
+                    />
+                    <label className="ml-2 text-sm text-gray-700 dark:text-gray-200 cursor-pointer">
+                      {service.label}
+                    </label>
+                  </div>
+                ))}
+              </motion.div>
+            )}
+            {formik.touched.selectedServices && formik.errors.selectedServices && (
+              <div className="text-red-500 text-sm mt-1">{formik.errors.selectedServices}</div>
+            )}
+          </div>
+
+          {/* Mesaj */}
+          <div>
+            <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">
+              {t('form.message')}
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              rows={4}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.message}
+              className="w-full px-4 py-2.5 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder={t('form.placeholders.message')}
+            />
+            {formik.touched.message && formik.errors.message && (
+              <div className="text-red-500 text-sm mt-1">{formik.errors.message}</div>
+            )}
+          </div>
+          
+          {/* Form Butonları */}
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-0 justify-end mt-6">
+            <button
+              type="submit"
+              onClick={formik.handleSubmit}
+              className="w-full sm:w-auto ml-0 sm:ml-3 px-5 py-2.5 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+            >
+              {t('form.submit')}
+            </button>
+          </div>
+        </form>
+      </div>
+    );
+  }
+
+  // Modal içinde ise normal modda render et
   return (
     <ModalBody>
       <ModalContent className="max-h-[80vh] overflow-y-auto">
@@ -288,24 +489,26 @@ export const QuoteForm = () => {
               <div className="text-red-500 text-sm mt-1">{formik.errors.message}</div>
             )}
           </div>
+          
+          {/* Modal için butonlar */}
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-0 justify-end mt-6">
+            <button
+              type="button"
+              onClick={() => setOpen(false)}
+              className="w-full sm:w-auto px-5 py-2.5 text-sm font-medium text-gray-700 bg-gray-100 border border-gray-300 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 transition-colors"
+            >
+              {t('form.cancel')}
+            </button>
+            <button
+              type="submit"
+              onClick={formik.handleSubmit}
+              className="w-full sm:w-auto ml-0 sm:ml-3 px-5 py-2.5 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+            >
+              {t('form.submit')}
+            </button>
+          </div>
         </form>
       </ModalContent>
-      <ModalFooter className="flex flex-col sm:flex-row gap-2 sm:gap-0">
-        <button
-          type="button"
-          onClick={() => formik.resetForm()}
-          className="w-full sm:w-auto px-5 py-2.5 text-sm font-medium text-gray-700 bg-gray-100 border border-gray-300 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 transition-colors"
-        >
-          {t('form.cancel')}
-        </button>
-        <button
-          type="submit"
-          onClick={formik.handleSubmit}
-          className="w-full sm:w-auto ml-0 sm:ml-3 px-5 py-2.5 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
-        >
-          {t('form.submit')}
-        </button>
-      </ModalFooter>
     </ModalBody>
   );
-}; 
+};

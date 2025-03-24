@@ -72,25 +72,45 @@ export const ProductItem = ({
   title,
   description,
   to,
-  src
+  src,
+  hoverColor = "emerald"
 }) => {
+  const [isHovered, setIsHovered] = React.useState(false);
+  
+  // Tema rengi için çevirme tablosu
+  const colorMap = {
+    emerald: "bg-emerald-500/10 border-emerald-500/20",
+    sky: "bg-sky-500/10 border-sky-500/20",
+    purple: "bg-purple-500/10 border-purple-500/20",
+    orange: "bg-orange-500/10 border-orange-500/20",
+    red: "bg-red-500/10 border-red-500/20",
+    indigo: "bg-indigo-500/10 border-indigo-500/20"
+  };
+  
+  const hoverClass = colorMap[hoverColor] || colorMap.emerald;
+  
   return (
-    (<Link to={to} className="flex space-x-2">
+    <Link 
+      to={to} 
+      className={`flex space-x-2 p-1 rounded-lg transition-all duration-300 ${isHovered ? hoverClass : ''}`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <img
         src={src}
-        width={140}
-        height={70}
+        width={60}
+        height={60}
         alt={title}
-        className="flex-shrink-0 rounded-md shadow-2xl" />
+        className="flex-shrink-0 rounded-md shadow-md object-contain" />
       <div>
-        <h4 className="text-xl font-bold mb-1 text-white">
+        <h4 className="text-sm font-bold mb-0.5 text-white">
           {title}
         </h4>
-        <p className="text-sm max-w-[10rem] text-neutral-300">
+        <p className="text-xs max-w-[8rem] text-neutral-400 line-clamp-2">
           {description}
         </p>
       </div>
-    </Link>)
+    </Link>
   );
 };
 
