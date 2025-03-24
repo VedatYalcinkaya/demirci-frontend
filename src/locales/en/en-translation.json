@@ -489,11 +489,21 @@
     }
   },
   "common": {
-    "getQuote": "Get a Quote"
+    "getQuote": "Get a Quote",
+    "searching": "Searching..."
   },
   "form": {
     "title": "Professional Service Request",
     "subtitle": "Share your information for customized solutions, we'll get back to you as soon as possible.",
+    "callToAction": "Get a Quote for Your Project",
+    "benefitsDescription": "By bringing your project to life with Demirci Software, you'll benefit from:",
+    "benefits": {
+      "responsive": "Responsive designs that look perfect on all devices",
+      "customized": "Solutions customized to your specific needs",
+      "support": "24/7 technical support and consulting",
+      "quality": "High-quality code and performance guarantee"
+    },
+    "clientTrust": "Many clients trust us",
     "fullName": "Full Name",
     "email": "Email",
     "phone": "Phone",
@@ -610,6 +620,9 @@
     "title": "Our References",
     "subtitle": "Projects we have successfully completed",
     "noReferences": "No references available yet.",
+    "noSearchResults": "No search results found.",
+    "searchResultsFor": "Search results for: \"{{term}}\" by {{type}} ({{count}} results)",
+    "clearSearch": "Clear Search",
     "loading": "Loading...",
     "error": {
       "title": "An error occurred",
@@ -633,7 +646,12 @@
     "pagination": {
       "showing": "Showing",
       "of": "of",
-      "references": "references"
+      "references": "references",
+      "firstPage": "First Page",
+      "previousPage": "Previous Page",
+      "nextPage": "Next Page",
+      "lastPage": "Last Page",
+      "goToPage": "Go to page {{page}}"
     },
     "form": {
       "title": "Title",
@@ -650,11 +668,11 @@
       "cancel": "Cancel"
     },
     "filters": {
-      "all": "All",
-      "active": "Active Only",
+      "searchType": "Search Type",
       "byTitle": "By Title",
       "byService": "By Service",
       "search": "Search",
+      "searchInput": "Search Input",
       "searchPlaceholder": "Enter search term..."
     }
   },
@@ -748,5 +766,39 @@
     "services": "Services",
     "servicesPlaceholder": "Web Design, E-Commerce, Mobile App, ...",
     "servicesHelp": "Enter services separated by commas"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Information about the latest technology and design trends",
+    "latestPosts": "Latest Posts",
+    "readMore": "Read More",
+    "byAuthor": "Author: {{author}}",
+    "publishedOn": "Publication Date: {{date}}",
+    "relatedPosts": "Related Posts",
+    "readingTime": "{{time}} minute read",
+    "noPostsFound": "No posts found",
+    "noBlogs": "No blog posts available yet.",
+    "noSearchResults": "No search results found.",
+    "searchResults": "Search results for: {{term}} ({{count}} results found)",
+    "searchResultsFor": "Search results for: \"{{term}}\" by {{type}} ({{count}} results)",
+    "clearSearch": "Clear Search",
+    "filters": {
+      "searchType": "Search Type",
+      "byTitle": "By Title",
+      "byTag": "By Tag",
+      "search": "Search",
+      "searchInput": "Search Input",
+      "searchPlaceholder": "Enter search term..."
+    },
+    "pagination": {
+      "showing": "Showing",
+      "of": "of",
+      "blogs": "blog posts",
+      "firstPage": "First Page",
+      "previousPage": "Previous Page",
+      "nextPage": "Next Page",
+      "lastPage": "Last Page",
+      "goToPage": "Go to page {{page}}"
+    }
   }
 } 

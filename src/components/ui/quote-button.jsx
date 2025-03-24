@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { Modal, ModalTrigger, useModal } from './animated-modal';
+import { Modal, ModalTrigger } from './animated-modal';
 import { QuoteForm } from './quote-form';
 
 export const QuoteButton = ({ colorTheme = 'emerald' }) => {

@@ -3,10 +3,13 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { toast } from 'react-hot-toast';
-// TinyMCE bileşenini lazy loading ile içe aktar
-const Editor = lazy(() => import('@tinymce/tinymce-react').then(module => ({
-  default: module.Editor
-})));
+// TinyMCE bileşenini dinamik import ile yükle - ESM formatında
+const Editor = lazy(() => import('@tinymce/tinymce-react')
+  .then(module => {
+    // ESM modülü doğrudan döndür
+    return { default: module.Editor };
+  })
+);
 // Highlight.js temel modülünü içe aktar
 import hljs from 'highlight.js/lib/core';
 // Yalnızca en yaygın kullanılan dilleri kaydet

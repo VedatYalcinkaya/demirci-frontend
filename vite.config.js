@@ -79,10 +79,26 @@ export default defineConfig({
         },
       },
     },
+    commonjsOptions: {
+      // CommonJS modülleri için özel ayarlar
+      transformMixedEsModules: true, // Karışık ES modüllerini dönüştür
+    }
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom', 'framer-motion'],
-    exclude: ['@tinymce/tinymce-react'], // Sorun çıkaran ağır paketleri önceden işleme
+    include: [
+      'react', 
+      'react-dom', 
+      'react-router-dom', 
+      'framer-motion',
+      '@tinymce/tinymce-react', // TinyMCE'yi önceden optimize et
+      'tinymce'
+    ],
+    esbuildOptions: {
+      // ESBuild için özel ayarlar
+      resolveExtensions: ['.js', '.jsx', '.ts', '.tsx'],
+      mainFields: ['module', 'main'],
+      format: 'esm'
+    }
   },
   // Bellek sınırını artır
   esbuild: {

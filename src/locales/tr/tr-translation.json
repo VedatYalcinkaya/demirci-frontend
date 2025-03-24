@@ -496,11 +496,21 @@
     "upload": "Yükle",
     "selectFile": "Dosya Seç",
     "uploadImage": "Resim Yükle",
-    "preview": "Önizleme"
+    "preview": "Önizleme",
+    "searching": "Aranıyor..."
   },
   "form": {
     "title": "Profesyonel Hizmet Talebi",
     "subtitle": "Size özel çözümler için bilgilerinizi paylaşın, en kısa sürede dönüş yapalım.",
+    "callToAction": "Projeniz için Teklif Alın",
+    "benefitsDescription": "Demirci Yazılım ile projenizi hayata geçirirken şunlardan yararlanacaksınız:",
+    "benefits": {
+      "responsive": "Tüm cihazlarda mükemmel görünen duyarlı tasarımlar",
+      "customized": "İhtiyaçlarınıza özel geliştirilmiş çözümler",
+      "support": "7/24 teknik destek ve danışmanlık",
+      "quality": "Yüksek kaliteli kod ve performans garantisi"
+    },
+    "clientTrust": "Birçok müşteri bize güveniyor",
     "fullName": "Ad Soyad",
     "email": "E-posta",
     "phone": "Telefon",
@@ -617,6 +627,9 @@
     "title": "Referanslarımız",
     "subtitle": "Başarıyla tamamladığımız projeler",
     "noReferences": "Henüz referans bulunmamaktadır.",
+    "noSearchResults": "Arama sonucu bulunamadı.",
+    "searchResultsFor": "\"{{term}}\" için {{type}} araması ({{count}} sonuç)",
+    "clearSearch": "Aramayı Temizle",
     "loading": "Yükleniyor...",
     "error": {
       "title": "Bir hata oluştu",
@@ -640,7 +653,12 @@
     "pagination": {
       "showing": "Gösteriliyor",
       "of": "/",
-      "references": "referans"
+      "references": "referans",
+      "firstPage": "İlk Sayfa",
+      "previousPage": "Önceki Sayfa",
+      "nextPage": "Sonraki Sayfa",
+      "lastPage": "Son Sayfa",
+      "goToPage": "Sayfa {{page}}'e git"
     },
     "form": {
       "title": "Başlık",
@@ -657,11 +675,11 @@
       "cancel": "İptal"
     },
     "filters": {
-      "all": "Tümü",
-      "active": "Aktif Olanlar",
+      "searchType": "Arama Türü",
       "byTitle": "Başlığa Göre",
       "byService": "Hizmete Göre",
       "search": "Ara",
+      "searchInput": "Arama Metni",
       "searchPlaceholder": "Arama terimi girin..."
     }
   },
@@ -829,40 +847,28 @@
     "relatedPosts": "İlgili Yazılar",
     "readingTime": "{{time}} dakika okuma",
     "noPostsFound": "Hiç yazı bulunamadı",
-    "searchResults": "Arama sonuçları: {{term}}",
-    "searchPlaceholder": "Yazı ara...",
-    "filterByTags": "Etiketlere göre filtrele",
-    "allPosts": "Tüm Yazılar",
-    "loadMore": "Daha Fazla Yükle",
-    "errorLoading": "Bloglar yüklenirken bir hata oluştu",
-    "retry": "Tekrar Dene",
-    "backToList": "Listeye Dön",
-    "taggedWith": "{{tag}} ile etiketlenen yazılar",
-    "min": "dk",
-    "pageTitle": "Blog",
-    "pageDescription": "Teknoloji, tasarım ve dijital pazarlama hakkında en güncel içerikler",
-    "popularTags": "Popüler Etiketler",
-    "tryDifferentSearch": "Farklı bir arama yapmayı deneyebilirsiniz",
-    "searchPlaceholder": "Blog yazılarında ara...",
-    "clearFilters": "Filtreleri Temizle",
-    "searchResults": "Arama Sonuçları",
-    "tagResults": "Etiket Sonuçları",
-    "noPostsFound": "Hiç yazı bulunamadı",
-    "previous": "Önceki",
-    "next": "Sonraki",
-    "readMore": "Devamını Oku",
-    "publishDate": "Yayın Tarihi",
-    "author": "Yazar",
-    "minutes": "dakika",
-    "readTime": "okuma süresi",
-    "share": "Paylaş",
-    "relatedPosts": "İlgili Yazılar",
-    "categories": "Kategoriler",
-    "tags": "Etiketler",
-    "content": "İçerik",
-    "aboutAuthor": "Yazar Hakkında",
-    "blogNotFound": "Blog Bulunamadı",
-    "blogNotFoundDescription": "Aradığınız blog yazısı bulunamadı veya silinmiş olabilir.",
-    "backToBlog": "Blog Sayfasına Dön"
+    "noBlogs": "Henüz blog yazısı bulunmamaktadır.",
+    "noSearchResults": "Arama sonucu bulunamadı.",
+    "searchResults": "Arama sonuçları: {{term}} ({{count}} sonuç bulundu)",
+    "searchResultsFor": "\"{{term}}\" için {{type}} araması ({{count}} sonuç)",
+    "clearSearch": "Aramayı Temizle",
+    "filters": {
+      "searchType": "Arama Türü",
+      "byTitle": "Başlığa Göre",
+      "byTag": "Etikete Göre",
+      "search": "Ara",
+      "searchInput": "Arama Metni",
+      "searchPlaceholder": "Arama terimi girin..."
+    },
+    "pagination": {
+      "showing": "Gösteriliyor",
+      "of": "/",
+      "blogs": "blog yazısı",
+      "firstPage": "İlk Sayfa",
+      "previousPage": "Önceki Sayfa",
+      "nextPage": "Sonraki Sayfa",
+      "lastPage": "Son Sayfa",
+      "goToPage": "Sayfa {{page}}'e git"
+    }
   }
 } 

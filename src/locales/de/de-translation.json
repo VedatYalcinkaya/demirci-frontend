@@ -489,11 +489,28 @@
     }
   },
   "common": {
-    "getQuote": "Angebot anfordern"
+    "getQuote": "Angebot anfordern",
+    "dragAndDrop": "Dateien hierher ziehen oder klicken",
+    "or": "oder",
+    "browse": "Datei auswählen",
+    "upload": "Hochladen",
+    "selectFile": "Datei auswählen",
+    "uploadImage": "Bild hochladen",
+    "preview": "Vorschau",
+    "searching": "Suche läuft..."
   },
   "form": {
     "title": "Professionelle Serviceanfrage",
     "subtitle": "Teilen Sie Ihre Informationen für maßgeschneiderte Lösungen, wir melden uns so schnell wie möglich bei Ihnen.",
+    "callToAction": "Holen Sie ein Angebot für Ihr Projekt",
+    "benefitsDescription": "Wenn Sie Ihr Projekt mit Demirci Software verwirklichen, profitieren Sie von:",
+    "benefits": {
+      "responsive": "Responsive Designs, die auf allen Geräten perfekt aussehen",
+      "customized": "Lösungen, die auf Ihre spezifischen Bedürfnisse zugeschnitten sind",
+      "support": "24/7 technischer Support und Beratung",
+      "quality": "Hochwertiger Code und Leistungsgarantie"
+    },
+    "clientTrust": "Viele Kunden vertrauen uns",
     "fullName": "Vollständiger Name",
     "email": "E-Mail",
     "phone": "Telefon",
@@ -610,6 +627,9 @@
     "title": "Unsere Referenzen",
     "subtitle": "Projekte, die wir erfolgreich abgeschlossen haben",
     "noReferences": "Noch keine Referenzen verfügbar.",
+    "noSearchResults": "Keine Suchergebnisse gefunden.",
+    "searchResultsFor": "Suchergebnisse für: \"{{term}}\" nach {{type}} ({{count}} Ergebnisse)",
+    "clearSearch": "Suche löschen",
     "loading": "Wird geladen...",
     "error": {
       "title": "Ein Fehler ist aufgetreten",
@@ -617,7 +637,7 @@
     },
     "notFound": {
       "title": "Referenz nicht gefunden",
-      "message": "Die gesuchte Referenz konnte nicht gefunden werden oder wurde möglicherweise gelöscht."
+      "message": "Die gesuchte Referenz wurde nicht gefunden oder wurde möglicherweise gelöscht."
     },
     "visitWebsite": "Website besuchen",
     "completionDate": "Fertigstellungsdatum",
@@ -631,18 +651,23 @@
     "createdAt": "Erstellt am",
     "updatedAt": "Aktualisiert am",
     "pagination": {
-      "showing": "Zeige",
+      "showing": "Anzeige",
       "of": "von",
-      "references": "Referenzen"
+      "references": "Referenzen",
+      "firstPage": "Erste Seite",
+      "previousPage": "Vorherige Seite",
+      "nextPage": "Nächste Seite",
+      "lastPage": "Letzte Seite",
+      "goToPage": "Zu Seite {{page}} gehen"
     },
     "form": {
       "title": "Titel",
       "summary": "Zusammenfassung",
       "description": "Beschreibung",
-      "thumbnailUrl": "Vorschaubild URL",
+      "thumbnailUrl": "Thumbnail-URL",
       "clientName": "Kundenname",
-      "clientLogo": "Kundenlogo URL",
-      "projectUrl": "Projekt URL",
+      "clientLogo": "Kunden-Logo-URL",
+      "projectUrl": "Projekt-URL",
       "completionDate": "Fertigstellungsdatum",
       "services": "Dienstleistungen",
       "active": "Aktiv",
@@ -650,11 +675,11 @@
       "cancel": "Abbrechen"
     },
     "filters": {
-      "all": "Alle",
-      "active": "Nur Aktive",
+      "searchType": "Suchtyp",
       "byTitle": "Nach Titel",
       "byService": "Nach Dienstleistung",
       "search": "Suchen",
+      "searchInput": "Sucheingabe",
       "searchPlaceholder": "Suchbegriff eingeben..."
     }
   },
@@ -743,5 +768,39 @@
     "imageCaption": "Bildunterschrift",
     "displayOrder": "Anzeigereihenfolge",
     "save": "Speichern"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Informationen zu den neuesten Technologie- und Design-Trends",
+    "latestPosts": "Neueste Beiträge",
+    "readMore": "Weiterlesen",
+    "byAuthor": "Autor: {{author}}",
+    "publishedOn": "Veröffentlichungsdatum: {{date}}",
+    "relatedPosts": "Verwandte Beiträge",
+    "readingTime": "{{time}} Minuten Lesezeit",
+    "noPostsFound": "Keine Beiträge gefunden",
+    "noBlogs": "Noch keine Blogbeiträge verfügbar.",
+    "noSearchResults": "Keine Suchergebnisse gefunden.",
+    "searchResults": "Suchergebnisse für: {{term}} ({{count}} Ergebnisse gefunden)",
+    "searchResultsFor": "Suchergebnisse für: \"{{term}}\" nach {{type}} ({{count}} Ergebnisse)",
+    "clearSearch": "Suche löschen",
+    "filters": {
+      "searchType": "Suchtyp",
+      "byTitle": "Nach Titel",
+      "byTag": "Nach Tag",
+      "search": "Suchen",
+      "searchInput": "Sucheingabe",
+      "searchPlaceholder": "Suchbegriff eingeben..."
+    },
+    "pagination": {
+      "showing": "Anzeige",
+      "of": "von",
+      "blogs": "Blogbeiträgen",
+      "firstPage": "Erste Seite",
+      "previousPage": "Vorherige Seite",
+      "nextPage": "Nächste Seite",
+      "lastPage": "Letzte Seite",
+      "goToPage": "Zu Seite {{page}} gehen"
+    }
   }
 } 

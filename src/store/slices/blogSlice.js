@@ -121,17 +121,61 @@ export const fetchLatestBlogs = createAsyncThunk(
 
 export const searchBlogsByTitle = createAsyncThunk(
   'blogs/searchBlogsByTitle',
-  async (title) => {
-    const response = await axios.get(`${API_URL}/search/title`, { params: { title } });
-    return Array.isArray(response.data) ? response.data : (response.data.data || []);
+  async ({ title, page = 0, size = 10, language }) => {
+    try {
+      console.log('Başlığa göre blog araması yapılıyor:', title, 'page:', page, 'size:', size, 'language:', language);
+      
+      const params = { 
+        title, 
+        page, 
+        size 
+      };
+      
+      // Dil parametresi varsa ekle
+      if (language) {
+        params.language = language;
+      }
+      
+      const response = await axios.get(`${API_URL}/search/title`, { params });
+      
+      console.log('Blog başlık arama sonuçları:', response.data);
+      
+      // API yanıtı yapısına göre doğru veriyi döndür
+      return Array.isArray(response.data) ? response.data : (response.data.data || []);
+    } catch (error) {
+      console.error('Blog başlık araması sırasında hata:', error);
+      throw error;
+    }
   }
 );
 
 export const searchBlogsByTag = createAsyncThunk(
   'blogs/searchBlogsByTag',
-  async (tag) => {
-    const response = await axios.get(`${API_URL}/search/tag`, { params: { tag } });
-    return Array.isArray(response.data) ? response.data : (response.data.data || []);
+  async ({ tag, page = 0, size = 10, language }) => {
+    try {
+      console.log('Etikete göre blog araması yapılıyor:', tag, 'page:', page, 'size:', size, 'language:', language);
+      
+      const params = { 
+        tag, 
+        page, 
+        size 
+      };
+      
+      // Dil parametresi varsa ekle
+      if (language) {
+        params.language = language;
+      }
+      
+      const response = await axios.get(`${API_URL}/search/tag`, { params });
+      
+      console.log('Blog etiket arama sonuçları:', response.data);
+      
+      // API yanıtı yapısına göre doğru veriyi döndür
+      return Array.isArray(response.data) ? response.data : (response.data.data || []);
+    } catch (error) {
+      console.error('Blog etiket araması sırasında hata:', error);
+      throw error;
+    }
   }
 );
 
@@ -487,12 +531,46 @@ const blogSlice = createSlice({
         state.blogs = action.payload;
       })
       // Search blogs by title
+      .addCase(searchBlogsByTitle.pending, (state) => {
+        state.status = 'loading';
+      })
       .addCase(searchBlogsByTitle.fulfilled, (state, action) => {
+        state.status = 'succeeded';
         state.blogs = action.payload;
+        
+        // Pagination verilerini de güncelle
+        state.pagination = {
+          content: action.payload,
+          totalPages: Math.ceil(action.payload.length / state.pagination.pageSize),
+          totalElements: action.payload.length,
+          currentPage: state.pagination.currentPage || 0,
+          pageSize: state.pagination.pageSize || 9
+        };
+      })
+      .addCase(searchBlogsByTitle.rejected, (state, action) => {
+        state.status = 'failed';
+        state.error = action.error.message;
       })
       // Search blogs by tag
+      .addCase(searchBlogsByTag.pending, (state) => {
+        state.status = 'loading';
+      })
       .addCase(searchBlogsByTag.fulfilled, (state, action) => {
+        state.status = 'succeeded';
         state.blogs = action.payload;
+        
+        // Pagination verilerini de güncelle
+        state.pagination = {
+          content: action.payload,
+          totalPages: Math.ceil(action.payload.length / state.pagination.pageSize),
+          totalElements: action.payload.length,
+          currentPage: state.pagination.currentPage || 0,
+          pageSize: state.pagination.pageSize || 9
+        };
+      })
+      .addCase(searchBlogsByTag.rejected, (state, action) => {
+        state.status = 'failed';
+        state.error = action.error.message;
       })
       // Add blog
       .addCase(addBlog.fulfilled, (state, action) => {

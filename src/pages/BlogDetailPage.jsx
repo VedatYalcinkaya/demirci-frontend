@@ -292,12 +292,12 @@ const BlogDetailPage = () => {
           </div>
           <h2 className="text-2xl font-bold text-white mb-4">{t('blog.blogNotFound')}</h2>
           <p className="text-gray-300 mb-6">{fetchError || error || t('blog.blogNotFoundDescription')}</p>
-          <Link 
-            to="/blog" 
+            <Link 
+              to="/blog"
             className="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-medium px-6 py-3 rounded-lg transition-colors"
-          >
+            >
             {t('blog.backToBlog')}
-          </Link>
+            </Link>
         </div>
       </div>
     );
@@ -313,7 +313,7 @@ const BlogDetailPage = () => {
           <h2 className="text-2xl font-bold text-white mb-4">{t('blog.blogNotFound')}</h2>
           <p className="text-gray-300 mb-6">{t('blog.blogNotFoundDescription')}</p>
           <Link 
-            to="/blog" 
+            to="/blog"
             className="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-medium px-6 py-3 rounded-lg transition-colors"
           >
             {t('blog.backToBlog')}
@@ -335,7 +335,7 @@ const BlogDetailPage = () => {
       )}
     
       <div className="container mx-auto px-4 py-12 mt-12">
-        {/* Hero Section */}
+      {/* Hero Section */}
         <div className="w-full mb-10">
           <div className="relative">
             {currentBlog.thumbnailUrl ? (
@@ -349,29 +349,29 @@ const BlogDetailPage = () => {
                   <div className="p-6 md:p-10 w-full">
                     <motion.h1 
                       className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5 }}
-                    >
-                      {currentBlog.title}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+              {currentBlog.title}
                     </motion.h1>
-                  </div>
-                </div>
-              </div>
+            </div>
+        </div>
+      </div>
             ) : (
               <div className="bg-gray-800/60 backdrop-blur-sm rounded-2xl p-10 border border-gray-700">
                 <motion.h1 
                   className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
                 >
                   {currentBlog.title}
                 </motion.h1>
               </div>
             )}
-          </div>
-          
+              </div>
+              
           {/* Blog Meta */}
           <motion.div 
             className="flex flex-wrap gap-4 mt-4 text-gray-300"
@@ -439,14 +439,14 @@ const BlogDetailPage = () => {
             {/* Tags */}
             {tagArray.length > 0 && (
               <div className="flex flex-wrap gap-2 mt-4">
-                {tagArray.map((tag, index) => (
+                  {tagArray.map((tag, index) => (
                   <span 
-                    key={index} 
+                      key={index}
                     className="bg-gray-800/60 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium border border-gray-700"
-                  >
+                    >
                     #{tag}
                   </span>
-                ))}
+                  ))}
               </div>
             )}
           </motion.div>
@@ -465,13 +465,13 @@ const BlogDetailPage = () => {
                 <div className="flex items-center">
                   <div className="bg-emerald-600/20 text-emerald-500 rounded-full w-12 h-12 flex items-center justify-center">
                     <span className="font-bold">{currentBlog.author.charAt(0)}</span>
-                  </div>
+              </div>
                   <div className="ml-4">
                     <h4 className="font-bold text-white">{currentBlog.author}</h4>
                     <p className="text-sm text-gray-400">{t('blog.author')}</p>
-                  </div>
-                </div>
-              </motion.div>
+            </div>
+          </div>
+        </motion.div>
             )}
             
             {/* Related posts */}
@@ -494,21 +494,21 @@ const BlogDetailPage = () => {
                         {blog.thumbnailUrl && (
                           <img 
                             src={blog.thumbnailUrl} 
-                            alt={blog.title} 
+                        alt={blog.title} 
                             className="w-16 h-16 object-cover rounded-lg"
                           />
                         )}
                         <div className={blog.thumbnailUrl ? "ml-3" : ""}>
                           <h4 className="font-medium text-white group-hover:text-emerald-400 transition">
-                            {blog.title}
-                          </h4>
+                        {blog.title}
+                      </h4>
                           <p className="text-sm text-gray-400">
                             {formatDate(blog.publishDate || blog.createdAt)}
-                          </p>
+                      </p>
                         </div>
-                      </div>
-                    </Link>
-                  ))}
+                    </div>
+                  </Link>
+                ))}
                 </div>
               </motion.div>
             )}

@@ -26,6 +26,7 @@ import BlogPage from "./BlogPage";
 import BlogDetailPage from "./BlogDetailPage";
 import AdminBlogPage from "./admin/AdminBlogPage";
 import AdminBlogForm from "./admin/AdminBlogForm";
+import TeklifAl from "./TeklifAl";
 
 
 // Route'lara göre renk tanımlamaları
@@ -217,6 +218,7 @@ const Dashboard = () => {
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:id" element={<BlogDetailPage />} />
           <Route path="/blog/slug/:slug" element={<BlogDetailPage />} />
+          <Route path="/teklif-al" element={<TeklifAl />} />
           <Route path="/animated-modal" element={<AnimatedModalDemo />} />
         </Routes>
       </div>

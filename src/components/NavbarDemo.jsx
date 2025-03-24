@@ -7,6 +7,8 @@ import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { ColoredLogo } from "./ui/ColoredLogo";
+import { Modal, ModalTrigger } from "./ui/animated-modal";
+import { QuoteForm } from "./ui/quote-form";
 
 // Hizmetler logolarını import et
 import webDesignLogo from "../assets/servicesLogos/web-design-logo.png";
@@ -139,7 +141,12 @@ function Navbar({ className }) {
             <MenuItem setActive={setActive} active={active} item={t('navbar.contact')}>
               <div className="flex flex-col space-y-4 text-sm">
                 <HoveredLink to="/iletisim">{t('navbar.dropdown.contact.contactUs')}</HoveredLink>
-                <HoveredLink to="/iletisim/teklif-al">{t('navbar.dropdown.contact.getQuote')}</HoveredLink>
+                <HoveredLink 
+                  to="/teklif-al"
+                  onClick={() => setActive(null)}
+                >
+                  {t('navbar.dropdown.contact.getQuote')}
+                </HoveredLink>
                 <HoveredLink to="/iletisim/kariyer">{t('navbar.dropdown.contact.career')}</HoveredLink>
                 <HoveredLink to="/iletisim/sikca-sorulan-sorular">{t('navbar.dropdown.contact.faq')}</HoveredLink>
               </div>
@@ -215,7 +222,12 @@ function Navbar({ className }) {
 
                       <MobileMenuSection title={t('navbar.contact')}>
                         <MobileLink to="/iletisim">{t('navbar.dropdown.contact.contactUs')}</MobileLink>
-                        <MobileLink to="/iletisim/teklif-al">{t('navbar.dropdown.contact.getQuote')}</MobileLink>
+                        <MobileLink 
+                          to="/teklif-al"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          {t('navbar.dropdown.contact.getQuote')}
+                        </MobileLink>
                         <MobileLink to="/iletisim/kariyer">{t('navbar.dropdown.contact.career')}</MobileLink>
                         <MobileLink to="/iletisim/sikca-sorulan-sorular">{t('navbar.dropdown.contact.faq')}</MobileLink>
                       </MobileMenuSection>
