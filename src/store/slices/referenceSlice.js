@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import apiClient from '../../services/api';
 
-const API_URL = 'http://localhost:8080/api/v1/references';
+// Sadece path tanımla, API URL api.js içinde tanımlı
 const API_PATH = '/references';
 
 // Async thunks
