@@ -83,43 +83,43 @@ function Navbar({ className }) {
             </Link>
 
             <MenuItem setActive={setActive} active={active} item={t('navbar.services')}>
-              <div className="text-sm grid grid-cols-3 gap-2 p-3">
+              <div className="text-sm grid grid-cols-2 gap-4 p-4">
                 <ProductItem
                   title={t('navbar.dropdown.services.webDesign')}
                   to="/web-tasarim"
                   src={webDesignLogo}
                   hoverColor="emerald"
-                  description="Modern ve profesyonel web tasarım" />
+                  description={t('services.webDesign.description')} />
                 <ProductItem
                   title={t('navbar.dropdown.services.graphicDesign')}
                   to="/grafik-tasarim"
                   src={graphicDesignLogo}
                   hoverColor="sky"
-                  description="Etkileyici grafik tasarım çözümleri" />
+                  description={t('services.graphicDesign.description')} />
                 <ProductItem
                   title={t('navbar.dropdown.services.marketplace')}
                   to="/sanal-pazaryeri"
                   src={marketplaceLogo}
                   hoverColor="purple"
-                  description="Pazaryeri entegrasyon çözümleri" />
+                  description={t('services.marketplace.description')} />
                 <ProductItem
                   title={t('navbar.dropdown.services.eCommerce')}
                   to="/e-ticaret"
                   src={eCommerceLogo}
                   hoverColor="orange"
-                  description="Güvenli e-ticaret sistemleri" />
+                  description={t('services.eCommerce.description')} />
                 <ProductItem
                   title={t('navbar.dropdown.services.digitalAdvertising')}
                   to="/dijital-reklamcilik"
                   src={digitalAdvertisingLogo}
                   hoverColor="red"
-                  description="Etkili dijital reklam stratejileri" />
+                  description={t('services.digitalAdvertising.description')} />
                 <ProductItem
                   title={t('navbar.dropdown.services.ai')}
                   to="/yapay-zeka"
                   src={aiLogo}
                   hoverColor="indigo"
-                  description="Yapay zeka çözümleri" />
+                  description={t('services.ai.description')} />
               </div>
             </MenuItem>
             
@@ -145,7 +145,6 @@ function Navbar({ className }) {
                 >
                   {t('navbar.dropdown.contact.getQuote')}
                 </HoveredLink>
-                <HoveredLink to="/iletisim/kariyer">{t('navbar.dropdown.contact.career')}</HoveredLink>
                 <HoveredLink to="/iletisim/sikca-sorulan-sorular">{t('navbar.dropdown.contact.faq')}</HoveredLink>
               </div>
             </MenuItem>
@@ -224,7 +223,6 @@ function Navbar({ className }) {
                         >
                           {t('navbar.dropdown.contact.getQuote')}
                         </MobileLink>
-                        <MobileLink to="/iletisim/kariyer">{t('navbar.dropdown.contact.career')}</MobileLink>
                         <MobileLink to="/iletisim/sikca-sorulan-sorular">{t('navbar.dropdown.contact.faq')}</MobileLink>
                       </MobileMenuSection>
 

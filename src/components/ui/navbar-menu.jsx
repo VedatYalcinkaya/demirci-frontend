@@ -92,21 +92,21 @@ export const ProductItem = ({
   return (
     <Link 
       to={to} 
-      className={`flex space-x-2 p-1 rounded-lg transition-all duration-300 ${isHovered ? hoverClass : ''}`}
+      className={`flex items-center p-3 rounded-lg transition-all duration-300 ${isHovered ? hoverClass : ''}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <img
         src={src}
-        width={60}
-        height={60}
+        width={40}
+        height={40}
         alt={title}
-        className="flex-shrink-0 rounded-md shadow-md object-contain" />
+        className="flex-shrink-0 rounded-md object-contain mr-3" />
       <div>
-        <h4 className="text-sm font-bold mb-0.5 text-white">
+        <h4 className="text-sm font-bold mb-1 text-white flex items-center">
           {title}
         </h4>
-        <p className="text-xs max-w-[8rem] text-neutral-400 line-clamp-2">
+        <p className="text-xs text-neutral-400 line-clamp-2 max-w-[15rem]">
           {description}
         </p>
       </div>

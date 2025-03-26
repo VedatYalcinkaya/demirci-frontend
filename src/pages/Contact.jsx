@@ -81,7 +81,9 @@ const Contact = () => {
                   </div>
                   <div className="ml-4">
                     <p className="text-sm font-medium text-emerald-100">{t('contactPage.info.phone.title')}</p>
-                    <p className="mt-1">{t('contactPage.info.phone.value')}</p>
+                    <a href="tel:+905303785281" className="mt-1 hover:text-emerald-300 transition-colors">
+                      {t('contactPage.info.phone.value')}
+                    </a>
                   </div>
                 </div>
                 
