@@ -754,7 +754,9 @@
       "imageDetails": "Bilddetails",
       "imageCaption": "Bildunterschrift",
       "displayOrder": "Anzeigereihenfolge",
-      "save": "Speichern"
+      "save": "Speichern",
+      "logoutSuccess": "Erfolgreich abgemeldet",
+      "logoutError": "Beim Abmelden ist ein Fehler aufgetreten"
     },
     "referanslar": {
       "title": "Erfolgsgeschichten unserer Kunden",
@@ -786,6 +788,25 @@
         "showing": "Zeigt",
         "of": "von",
         "blogs": "Blog-Einträgen"
+      }
+    },
+    "login": {
+      "title": "Anmelden",
+      "subtitle": "Melden Sie sich an, um auf das Admin-Panel zuzugreifen",
+      "meta": "Demirci Yazılım Anmelden - Admin-Panel",
+      "username": "Benutzername",
+      "password": "Passwort",
+      "loginButton": "Anmelden",
+      "loggingIn": "Anmeldung läuft...",
+      "fieldsRequired": "Benutzername und Passwort sind erforderlich",
+      "success": "Anmeldung erfolgreich!",
+      "backToHome": "Zurück zur Startseite",
+      "errors": {
+        "default": "Bei der Anmeldung ist ein Fehler aufgetreten",
+        "invalidCredentials": "Ungültiger Benutzername oder Passwort",
+        "userNotFound": "Benutzer nicht gefunden",
+        "accountDisabled": "Ihr Konto wurde deaktiviert",
+        "unauthorized": "Unbefugter Zugriff"
       }
     }
 } 

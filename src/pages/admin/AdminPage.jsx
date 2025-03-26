@@ -4,6 +4,9 @@ import { useTranslation } from 'react-i18next';
 import { Sidebar, SidebarBody, SidebarLink } from '../../components/ui/sidebar';
 import { motion } from 'framer-motion';
 import { cn } from '../../lib/utils';
+import { toast } from 'react-hot-toast';
+import { useDispatch } from 'react-redux';
+import { logoutUser } from '../../store/slices/authSlice';
 import {
   IconDashboard,
   IconBookmarks,
@@ -17,7 +20,19 @@ import {
 const AdminPage = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [open, setOpen] = useState(true);
+
+  const handleLogout = async () => {
+    try {
+      await dispatch(logoutUser()).unwrap();
+      toast.success(t('admin.logoutSuccess'));
+      navigate('/login');
+    } catch (error) {
+      toast.error(t('admin.logoutError'));
+      console.error('Logout error:', error);
+    }
+  };
 
   const mainLinks = [
     {
@@ -63,7 +78,7 @@ const AdminPage = () => {
     },
     {
       label: t('admin.logout'),
-      href: "#",
+      onClick: handleLogout,
       icon: <IconLogout className="h-5 w-5 shrink-0 text-gray-300" />
     }
   ];
@@ -129,6 +144,20 @@ const AdminPage = () => {
 };
 
 const CustomSidebarLink = ({ link }) => {
+  if (link.onClick) {
+    return (
+      <button
+        onClick={link.onClick}
+        className="flex items-center rounded-lg px-3 py-2 transition-colors duration-200 text-gray-300 hover:bg-gray-700/50 hover:text-white w-full text-left"
+      >
+        <div className="text-gray-400">
+          {link.icon}
+        </div>
+        <span className="ml-3">{link.label}</span>
+      </button>
+    );
+  }
+
   return (
     <NavLink
       to={link.href}

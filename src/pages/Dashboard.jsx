@@ -27,7 +27,9 @@ import BlogDetailPage from "./BlogDetailPage";
 import AdminBlogPage from "./admin/AdminBlogPage";
 import AdminBlogForm from "./admin/AdminBlogForm";
 import TeklifAl from "./TeklifAl";
-
+import LoginPage from "./login/LoginPage";
+import AuthGuard from "../guards/AuthGuard";
+import RoleGuard from "../guards/RoleGuard";
 
 // Route'lara göre renk tanımlamaları
 const routeColors = {
@@ -44,6 +46,7 @@ const routeColors = {
   "/iletisim/sikca-sorulan-sorular": "rgba(20, 184, 166, 0.2)", // SSS - Teal
   "/referanslar": "rgba(245, 158, 11, 0.2)", // Referanslar - Amber
   "/blog": "rgba(79, 70, 229, 0.2)", // Blog - Indigo
+  "/login": "rgba(79, 70, 229, 0.2)", // Login - Indigo
 };
 
 // Route'lara göre spotlight gradient renkleri
@@ -112,6 +115,11 @@ const spotlightGradients = {
     first: "radial-gradient(68.54% 68.72% at 55.04% 31.46%, hsla(240, 100%, 85%, .12) 0, hsla(240, 100%, 55%, .04) 50%, hsla(240, 100%, 45%, 0) 80%)",
     second: "radial-gradient(50% 50% at 50% 50%, hsla(240, 100%, 85%, .09) 0, hsla(240, 100%, 55%, .04) 80%, transparent 100%)",
     third: "radial-gradient(50% 50% at 50% 50%, hsla(240, 100%, 85%, .06) 0, hsla(240, 100%, 45%, .04) 80%, transparent 100%)"
+  },
+  "/login": {
+    first: "radial-gradient(68.54% 68.72% at 55.04% 31.46%, hsla(240, 100%, 85%, .12) 0, hsla(240, 100%, 55%, .04) 50%, hsla(240, 100%, 45%, 0) 80%)",
+    second: "radial-gradient(50% 50% at 50% 50%, hsla(240, 100%, 85%, .09) 0, hsla(240, 100%, 55%, .04) 80%, transparent 100%)",
+    third: "radial-gradient(50% 50% at 50% 50%, hsla(240, 100%, 85%, .06) 0, hsla(240, 100%, 45%, .04) 80%, transparent 100%)"
   }
 };
 
@@ -122,6 +130,8 @@ const Dashboard = () => {
 
   // Admin sayfasında olup olmadığını kontrol et
   const isAdminPage = location.pathname.startsWith('/admin');
+  // Login sayfasında olup olmadığını kontrol et
+  const isLoginPage = location.pathname === '/login';
 
   // Mouse hareketini izle
   React.useEffect(() => {
@@ -140,9 +150,14 @@ const Dashboard = () => {
 
   // Admin sayfası için sadece Routes kısmını render et
   if (isAdminPage) {
+    console.log('Admin page rendering, checking roles');
     return (
       <Routes>
-        <Route path="/admin" element={<AdminPage />}>
+        <Route path="/admin" element={
+          <RoleGuard allowedRoles={['ADMIN', 'EDITOR']}>
+            <AdminPage />
+          </RoleGuard>
+        }>
           <Route index element={<AdminDashboard />} />
           <Route path="references" element={<AdminReferencesPage />} />
           <Route path="references/new" element={<AdminReferenceForm />} />
@@ -151,6 +166,15 @@ const Dashboard = () => {
           <Route path="blogs/new" element={<AdminBlogForm />} />
           <Route path="blogs/edit/:id" element={<AdminBlogForm />} />
         </Route>
+      </Routes>
+    );
+  }
+
+  // Login sayfası için sadece login bileşenini render et
+  if (isLoginPage) {
+    return (
+      <Routes>
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
     );
   }
@@ -220,6 +244,7 @@ const Dashboard = () => {
           <Route path="/blog/slug/:slug" element={<BlogDetailPage />} />
           <Route path="/teklif-al" element={<TeklifAl />} />
           <Route path="/animated-modal" element={<AnimatedModalDemo />} />
+          <Route path="/login" element={<LoginPage />} />
         </Routes>
       </div>
 

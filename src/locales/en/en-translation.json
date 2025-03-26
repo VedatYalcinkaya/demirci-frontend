@@ -765,7 +765,9 @@
       "save": "Save",
       "services": "Services",
       "servicesPlaceholder": "Web Design, E-Commerce, Mobile App, ...",
-      "servicesHelp": "Enter services separated by commas"
+      "servicesHelp": "Enter services separated by commas",
+      "logoutSuccess": "Successfully logged out",
+      "logoutError": "An error occurred while logging out"
     },
     "referanslar": {
       "title": "Customer Success Stories",
@@ -830,6 +832,25 @@
         "showing": "Showing",
         "of": "of",
         "blogs": "blogs"
+      }
+    },
+    "login": {
+      "title": "Login",
+      "subtitle": "Sign in to access the admin panel",
+      "meta": "Demirci Yazılım Login - Admin Panel",
+      "username": "Username",
+      "password": "Password",
+      "loginButton": "Sign In",
+      "loggingIn": "Signing In...",
+      "fieldsRequired": "Username and password are required",
+      "success": "Login successful!",
+      "backToHome": "Back to Home",
+      "errors": {
+        "default": "An error occurred while logging in",
+        "invalidCredentials": "Invalid username or password",
+        "userNotFound": "User not found",
+        "accountDisabled": "Your account has been disabled",
+        "unauthorized": "Unauthorized access"
       }
     }
   } 

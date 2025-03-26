@@ -1,13 +1,14 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+import apiClient from '../../services/api';
 
 const API_URL = 'http://localhost:8080/api/v1/references';
+const API_PATH = '/references';
 
 // Async thunks
 export const fetchReferences = createAsyncThunk(
   'references/fetchReferences',
   async () => {
-    const response = await axios.get(API_URL);
+    const response = await apiClient.get(API_PATH);
     console.log('API Response:', response.data);
     return Array.isArray(response.data) ? response.data : (response.data.data || []);
   }
@@ -18,7 +19,7 @@ export const fetchPaginatedReferences = createAsyncThunk(
   'references/fetchPaginatedReferences',
   async ({ page = 0, size = 9 }) => {
     try {
-      const response = await axios.get(`${API_URL}/paginated`, {
+      const response = await apiClient.get(`${API_PATH}/paginated`, {
         params: { page, size }
       });
       console.log('Paginated API Response:', response.data);
@@ -54,14 +55,14 @@ export const fetchReferenceById = createAsyncThunk(
   async (id) => {
     try {
       // Önce referans verilerini al
-      const response = await axios.get(`${API_URL}/${id}`);
+      const response = await apiClient.get(`${API_PATH}/${id}`);
       console.log('API Response (fetchReferenceById):', response.data);
       
       // Referans verilerini al
       const referenceData = response.data.data || response.data;
       
       // Sonra referans resimlerini yükle
-      const imagesResponse = await axios.get(`${API_URL}/${id}/images`);
+      const imagesResponse = await apiClient.get(`${API_PATH}/${id}/images`);
       console.log('API Response (fetchReferenceImages):', imagesResponse.data);
       
       // Resimleri referans verisine ekle
@@ -91,7 +92,7 @@ export const fetchReferenceById = createAsyncThunk(
 export const fetchActiveReferences = createAsyncThunk(
   'references/fetchActiveReferences',
   async () => {
-    const response = await axios.get(`${API_URL}/active`);
+    const response = await apiClient.get(`${API_PATH}/active`);
     return Array.isArray(response.data) ? response.data : (response.data.data || []);
   }
 );
@@ -99,7 +100,7 @@ export const fetchActiveReferences = createAsyncThunk(
 export const fetchLatestReferences = createAsyncThunk(
   'references/fetchLatestReferences',
   async (count) => {
-    const response = await axios.get(`${API_URL}/latest/${count}`);
+    const response = await apiClient.get(`${API_PATH}/latest/${count}`);
     return Array.isArray(response.data) ? response.data : (response.data.data || []);
   }
 );
@@ -110,7 +111,7 @@ export const searchReferencesByTitle = createAsyncThunk(
     try {
       console.log('Başlığa göre arama yapılıyor:', title, 'page:', page, 'size:', size);
       
-      const response = await axios.get(`${API_URL}/search/title`, {
+      const response = await apiClient.get(`${API_PATH}/search/title`, {
         params: { 
           title, 
           page, 
@@ -135,7 +136,7 @@ export const searchReferencesByService = createAsyncThunk(
     try {
       console.log('Teknoloji/servise göre arama yapılıyor:', technology, 'page:', page, 'size:', size);
       
-      const response = await axios.get(`${API_URL}/search/technology`, {
+      const response = await apiClient.get(`${API_PATH}/search/technology`, {
         params: { 
           technology, 
           page, 
@@ -157,7 +158,7 @@ export const searchReferencesByService = createAsyncThunk(
 export const fetchReferenceImages = createAsyncThunk(
   'references/fetchReferenceImages',
   async (referenceId) => {
-    const response = await axios.get(`${API_URL}/${referenceId}/images`);
+    const response = await apiClient.get(`${API_PATH}/${referenceId}/images`);
     console.log('API Response (fetchReferenceImages):', response.data);
     // API yanıtı success, message ve data alanlarını içeriyorsa, data alanını döndür
     return Array.isArray(response.data) ? response.data : (response.data.data || []);
@@ -203,7 +204,7 @@ export const addReference = createAsyncThunk(
       console.log('Client logo dosyası:', reference.clientLogoFile);
       
       // API çağrısı
-      const response = await axios.post(`${API_URL}/create-with-files`, formData, {
+      const response = await apiClient.post(`${API_PATH}/create-with-files`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
@@ -224,7 +225,7 @@ export const addReference = createAsyncThunk(
 export const addReferenceImage = createAsyncThunk(
   'references/addReferenceImage',
   async ({referenceId, image}) => {
-    const response = await axios.post(`${API_URL}/${referenceId}/images`, image);
+    const response = await apiClient.post(`${API_PATH}/${referenceId}/images`, image);
     return response.data;
   }
 );
@@ -274,7 +275,7 @@ export const updateReference = createAsyncThunk(
       console.log('Güncellenen referans verisi:', referenceData);
       
       // API çağrısı
-      const response = await axios.post(`${API_URL}/update-with-files`, formData, {
+      const response = await apiClient.post(`${API_PATH}/update-with-files`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
@@ -301,9 +302,11 @@ export const deleteReference = createAsyncThunk(
   'references/deleteReference',
   async (id, { rejectWithValue }) => {
     try {
-      await axios.delete(`${API_URL}/${id}`);
+      await apiClient.delete(`${API_PATH}/${id}`);
       return id;
     } catch (error) {
+      console.error('Referans silme hatası:', error);
+      console.error('Hata detayları:', error.response?.data);
       return rejectWithValue(error.response?.data?.message || 'Referans silinirken bir hata oluştu');
     }
   }
@@ -318,7 +321,7 @@ export const deleteReferenceImage = createAsyncThunk(
       const referenceId = currentReference?.id;
       
       // Resmi sil
-      await axios.delete(`${API_URL}/images/${imageId}`);
+      await apiClient.delete(`${API_PATH}/images/${imageId}`);
       
       // Eğer referans ID'si varsa, referans detaylarını yeniden yükle
       if (referenceId) {
@@ -337,7 +340,7 @@ export const activateReference = createAsyncThunk(
   'references/activateReference',
   async (id, { rejectWithValue, dispatch }) => {
     try {
-      const response = await axios.patch(`${API_URL}/activate/${id}`);
+      const response = await apiClient.patch(`${API_PATH}/activate/${id}`);
       
       // Referans detaylarını yeniden yükle
       await dispatch(fetchReferenceById(id));
@@ -354,7 +357,7 @@ export const deactivateReference = createAsyncThunk(
   'references/deactivateReference',
   async (id, { rejectWithValue, dispatch }) => {
     try {
-      const response = await axios.patch(`${API_URL}/deactivate/${id}`);
+      const response = await apiClient.patch(`${API_PATH}/deactivate/${id}`);
       
       // Referans detaylarını yeniden yükle
       await dispatch(fetchReferenceById(id));
@@ -378,7 +381,7 @@ export const uploadReferenceImage = createAsyncThunk(
       const referenceId = formData.get('referenceId');
       
       // API çağrısı - Swagger dokümanına göre endpoint ve parametreler
-      const response = await axios.post(`${API_URL}/${referenceId}/upload-image`, formData, {
+      const response = await apiClient.post(`${API_PATH}/${referenceId}/upload-image`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }

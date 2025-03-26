@@ -4,6 +4,8 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import { HelmetProvider } from 'react-helmet-async';
+import { useDispatch } from 'react-redux';
+import { getCurrentUser } from './store/slices/authSlice';
 
 // Dashboard bileşenini lazy loading ile yükle - gecikme olmadan
 const Dashboard = lazy(() => import('./pages/Dashboard'));
@@ -27,8 +29,32 @@ const LoadingFallback = () => (
 );
 
 function App() {
+  const dispatch = useDispatch();
+  
   // Uygulama yüklenme durumunu izle
   const [isReady, setIsReady] = useState(false);
+  
+  // Access Token varsa kullanıcı bilgisini getir
+  useEffect(() => {
+    const accessToken = localStorage.getItem('accessToken');
+    if (accessToken) {
+      console.log('App: Found access token, fetching user info');
+      dispatch(getCurrentUser())
+        .unwrap()
+        .then(userData => {
+          console.log('App: User info fetched successfully', userData);
+        })
+        .catch(error => {
+          console.error('App: Error fetching user info', error);
+          // Token sorunluysa temizle
+          localStorage.removeItem('accessToken');
+          localStorage.removeItem('refreshToken');
+          localStorage.removeItem('user');
+        });
+    } else {
+      console.log('App: No access token found');
+    }
+  }, [dispatch]);
   
   // Tüm kaynaklar yüklendikten sonra ready durumuna geç - basitleştirilmiş
   useEffect(() => {

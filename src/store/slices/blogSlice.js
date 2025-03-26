@@ -1,13 +1,14 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+import apiClient from '../../services/api';
 
 const API_URL = 'http://localhost:8080/api/v1/blogs';
+const API_PATH = '/blogs';
 
 // Async thunks
 export const fetchBlogs = createAsyncThunk(
   'blogs/fetchBlogs',
   async () => {
-    const response = await axios.get(API_URL);
+    const response = await apiClient.get(API_PATH);
     console.log('API Response:', response.data);
     return Array.isArray(response.data) ? response.data : (response.data.data || []);
   }
@@ -18,7 +19,7 @@ export const fetchPaginatedBlogs = createAsyncThunk(
   'blogs/fetchPaginatedBlogs',
   async ({ page = 0, size = 9 }) => {
     try {
-      const response = await axios.get(`${API_URL}/paginated`, {
+      const response = await apiClient.get(`${API_PATH}/paginated`, {
         params: { page, size }
       });
       console.log('Paginated API Response:', response.data);
@@ -54,7 +55,7 @@ export const fetchBlogById = createAsyncThunk(
   async (id, { rejectWithValue }) => {
     try {
       console.log("blogSlice: Fetching blog by ID:", id);
-      const response = await axios.get(`${API_URL}/${id}`);
+      const response = await apiClient.get(`${API_PATH}/${id}`);
       console.log('blogSlice: API Response (fetchBlogById):', response.data);
       
       // API yanıtını kontrol et ve uygun şekilde işle
@@ -81,7 +82,7 @@ export const fetchBlogBySlug = createAsyncThunk(
   async (slug, { rejectWithValue }) => {
     try {
       console.log("blogSlice: Fetching blog by slug:", slug);
-      const response = await axios.get(`${API_URL}/slug/${slug}`);
+      const response = await apiClient.get(`${API_PATH}/slug/${slug}`);
       console.log('blogSlice: API Response (fetchBlogBySlug):', response.data);
       
       // API yanıtını kontrol et ve uygun şekilde işle
@@ -106,7 +107,7 @@ export const fetchBlogBySlug = createAsyncThunk(
 export const fetchActiveBlogs = createAsyncThunk(
   'blogs/fetchActiveBlogs',
   async () => {
-    const response = await axios.get(`${API_URL}/active`);
+    const response = await apiClient.get(`${API_PATH}/active`);
     return Array.isArray(response.data) ? response.data : (response.data.data || []);
   }
 );
@@ -114,7 +115,7 @@ export const fetchActiveBlogs = createAsyncThunk(
 export const fetchLatestBlogs = createAsyncThunk(
   'blogs/fetchLatestBlogs',
   async (count) => {
-    const response = await axios.get(`${API_URL}/latest/${count}`);
+    const response = await apiClient.get(`${API_PATH}/latest/${count}`);
     return Array.isArray(response.data) ? response.data : (response.data.data || []);
   }
 );
@@ -136,7 +137,7 @@ export const searchBlogsByTitle = createAsyncThunk(
         params.language = language;
       }
       
-      const response = await axios.get(`${API_URL}/search/title`, { params });
+      const response = await apiClient.get(`${API_PATH}/search/title`, { params });
       
       console.log('Blog başlık arama sonuçları:', response.data);
       
@@ -166,7 +167,7 @@ export const searchBlogsByTag = createAsyncThunk(
         params.language = language;
       }
       
-      const response = await axios.get(`${API_URL}/search/tag`, { params });
+      const response = await apiClient.get(`${API_PATH}/search/tag`, { params });
       
       console.log('Blog etiket arama sonuçları:', response.data);
       
@@ -183,7 +184,7 @@ export const addBlog = createAsyncThunk(
   'blogs/addBlog',
   async (blog, { rejectWithValue }) => {
     try {
-      const response = await axios.post(API_URL, blog);
+      const response = await apiClient.post(API_PATH, blog);
       return response.data.data || response.data;
     } catch (error) {
       return rejectWithValue(error.response?.data?.message || 'Blog eklenirken bir hata oluştu');
@@ -195,7 +196,7 @@ export const addBlogWithThumbnail = createAsyncThunk(
   'blogs/addBlogWithThumbnail',
   async (formData, { rejectWithValue }) => {
     try {
-      console.log('API isteği başlatılıyor (addBlogWithThumbnail):', `${API_URL}/create-with-thumbnail`);
+      console.log('API isteği başlatılıyor (addBlogWithThumbnail):', `${API_PATH}/create-with-thumbnail`);
       
       // Alanları sınırlandır
       const title = formData.get('title');
@@ -263,7 +264,7 @@ export const addBlogWithThumbnail = createAsyncThunk(
 
       console.log('Gönderilen blog verisi:', blogData);
       
-      const response = await axios.post(`${API_URL}/create-with-thumbnail`, newFormData, {
+      const response = await apiClient.post(`${API_PATH}/create-with-thumbnail`, newFormData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
@@ -283,7 +284,7 @@ export const updateBlog = createAsyncThunk(
   'blogs/updateBlog',
   async (blog, { rejectWithValue }) => {
     try {
-      const response = await axios.put(`${API_URL}/${blog.id}`, blog);
+      const response = await apiClient.put(`${API_PATH}/${blog.id}`, blog);
       return response.data.data || response.data;
     } catch (error) {
       return rejectWithValue(error.response?.data?.message || 'Blog güncellenirken bir hata oluştu');
@@ -373,7 +374,7 @@ export const updateBlogWithThumbnail = createAsyncThunk(
 
       console.log('Gönderilen blog verisi:', blogData);
       
-      const response = await axios.post(`${API_URL}/${blogId}/update-with-thumbnail`, newFormData, {
+      const response = await apiClient.post(`${API_PATH}/${blogId}/update-with-thumbnail`, newFormData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
@@ -398,9 +399,11 @@ export const deleteBlog = createAsyncThunk(
   'blogs/deleteBlog',
   async (id, { rejectWithValue }) => {
     try {
-      await axios.delete(`${API_URL}/${id}`);
+      await apiClient.delete(`${API_PATH}/${id}`);
       return id;
     } catch (error) {
+      console.error('Blog silme hatası:', error);
+      console.error('Hata detayları:', error.response?.data);
       return rejectWithValue(error.response?.data?.message || 'Blog silinirken bir hata oluştu');
     }
   }
@@ -410,7 +413,7 @@ export const activateBlog = createAsyncThunk(
   'blogs/activateBlog',
   async (id, { rejectWithValue, dispatch }) => {
     try {
-      const response = await axios.patch(`${API_URL}/activate/${id}`);
+      const response = await apiClient.patch(`${API_PATH}/activate/${id}`);
       
       // Blog detaylarını yeniden yükle
       await dispatch(fetchBlogById(id));
@@ -427,7 +430,7 @@ export const deactivateBlog = createAsyncThunk(
   'blogs/deactivateBlog',
   async (id, { rejectWithValue, dispatch }) => {
     try {
-      const response = await axios.patch(`${API_URL}/deactivate/${id}`);
+      const response = await apiClient.patch(`${API_PATH}/deactivate/${id}`);
       
       // Blog detaylarını yeniden yükle
       await dispatch(fetchBlogById(id));

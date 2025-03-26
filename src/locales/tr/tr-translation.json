@@ -824,7 +824,9 @@
       "blogsDeactivated": "Seçili bloglar başarıyla pasifleştirildi",
       "errorChangingStatus": "Durum değiştirilirken bir hata oluştu",
       "metaDescription": "Meta Açıklama",
-      "metaDescriptionHelp": "En fazla 160 karakter. Boş bırakılırsa blog özeti kullanılır."
+      "metaDescriptionHelp": "En fazla 160 karakter. Boş bırakılırsa blog özeti kullanılır.",
+      "logoutSuccess": "Başarıyla çıkış yaptınız",
+      "logoutError": "Çıkış yaparken bir hata oluştu"
     },
     "blog": {
       "title": "Blog",
@@ -890,5 +892,24 @@
       "title": "Müşterilerimizin Başarı Hikayeleri",
       "description": "Projelerimizle müşterilerimizin dijital dünyada öne çıkmalarına yardımcı olduk. İşte bazı değerli müşterilerimiz ve başarı hikayeleri.",
       "varsayilanAciklama": "Müşterimizin özel çözümlerimizle işini büyütmesine yardımcı olduk."
+    },
+    "login": {
+      "title": "Giriş Yap",
+      "subtitle": "Admin paneline erişmek için giriş yapın",
+      "meta": "Demirci Yazılım Giriş - Admin Paneli",
+      "username": "Kullanıcı Adı",
+      "password": "Şifre",
+      "loginButton": "Giriş Yap",
+      "loggingIn": "Giriş Yapılıyor...",
+      "fieldsRequired": "Kullanıcı adı ve şifre gereklidir",
+      "success": "Giriş başarılı!",
+      "backToHome": "Ana Sayfaya Dön",
+      "errors": {
+        "default": "Giriş yapılırken bir hata oluştu",
+        "invalidCredentials": "Kullanıcı adı veya şifre hatalı",
+        "userNotFound": "Kullanıcı bulunamadı",
+        "accountDisabled": "Hesabınız devre dışı bırakılmış",
+        "unauthorized": "Yetkisiz erişim"
+      }
     }
   } 

@@ -134,8 +134,6 @@ function Navbar({ className }) {
               <div className="flex flex-col space-y-4 text-sm">
                 <HoveredLink to="/hakkimizda/biz-kimiz">{t('navbar.dropdown.about.whoWeAre')}</HoveredLink>
                 <HoveredLink to="/hakkimizda/vizyon-misyon">{t('navbar.dropdown.about.visionMission')}</HoveredLink>
-                <HoveredLink to="/hakkimizda/ekibimiz">{t('navbar.dropdown.about.team')}</HoveredLink>
-                <HoveredLink to="/hakkimizda/teknolojiler">{t('navbar.dropdown.about.technologies')}</HoveredLink>
               </div>
             </MenuItem>
             <MenuItem setActive={setActive} active={active} item={t('navbar.contact')}>
@@ -216,8 +214,6 @@ function Navbar({ className }) {
                       <MobileMenuSection title={t('navbar.about')}>
                         <MobileLink to="/hakkimizda/biz-kimiz">{t('navbar.dropdown.about.whoWeAre')}</MobileLink>
                         <MobileLink to="/hakkimizda/vizyon-misyon">{t('navbar.dropdown.about.visionMission')}</MobileLink>
-                        <MobileLink to="/hakkimizda/ekibimiz">{t('navbar.dropdown.about.team')}</MobileLink>
-                        <MobileLink to="/hakkimizda/teknolojiler">{t('navbar.dropdown.about.technologies')}</MobileLink>
                       </MobileMenuSection>
 
                       <MobileMenuSection title={t('navbar.contact')}>
