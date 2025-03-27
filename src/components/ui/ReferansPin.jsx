@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { PinContainer } from './3d-pin';
 
@@ -10,22 +10,18 @@ export const ReferansPin = ({
   image, 
   href = "#", 
   bgColor = "from-cyan-500 via-blue-500 to-indigo-500",
-  customStyle, // Yeni prop: özel CSS stilleri için
-  referenceKey // Çeviri için kullanılacak anahtar
+  customStyle,
+  referenceKey
 }) => {
   const { t } = useTranslation();
   const defaultDescription = t('referanslar.varsayilanAciklama');
-  const defaultImage = '/vite.svg'; // Var olan bir dosyayı kullanalım
+  const defaultImage = '/vite.svg';
   
-  // Eğer referenceKey varsa, bu anahtara göre çevirileri kullan
   const displayTitle = referenceKey ? t(`referanslar.customReferences.${referenceKey}.title`) : title;
   const displaySubtitle = referenceKey ? t(`referanslar.customReferences.${referenceKey}.subtitle`) : subtitle;
   const displayDescription = referenceKey ? t(`referanslar.customReferences.${referenceKey}.description`) : (description || defaultDescription);
-  
-  // URL'yi href'ten çıkart, www kısmını da kaldır
   const displayUrl = href.replace(/(^\w+:|^)\/\//, '').replace(/^www\./, '').replace(/\/$/, '');
   
-  // Özel gradient için kontrol - bg- ile başlıyorsa direkt kullan, değilse varsayılan gradient formatını uygula
   const gradientClass = bgColor.startsWith('bg-') 
     ? bgColor 
     : `bg-gradient-to-br ${bgColor}`;
@@ -56,12 +52,12 @@ export const ReferansPin = ({
                 />
               </div>
             ) : (
-              <div className="w-16 h-16 md:w-24 md:h-24 flex items-center justify-center bg-white/20 rounded-full mb-4">
+              <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center bg-white/20 rounded-full mb-4">
                 <span className="text-lg md:text-xl font-bold">{displayTitle?.charAt(0) || "D"}</span>
               </div>
             )}
             
-            <h3 className="text-lg md:text-xl font-bold mb-1 text-center">{displayTitle}</h3>
+            <h3 className="text-lg md:text-xl font-bold mb-2 text-center">{displayTitle}</h3>
             {displaySubtitle && <p className="text-xs md:text-sm font-medium mb-3 opacity-90 text-center">{displaySubtitle}</p>}
             
             <p className="text-xs md:text-sm text-center opacity-90 line-clamp-3">{displayDescription}</p>
@@ -79,35 +75,33 @@ export const ReferansPinSection = ({
   referanslar = [] 
 }) => {
   const { t } = useTranslation();
-  const defaultImage = '/vite.svg'; // Var olan bir dosyayı kullanalım
+  const [isHovered, setIsHovered] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
-  
-  // Ekran boyutunu izleyen useEffect
+  const containerRef = useRef(null);
+
+  // Ekran boyutunu kontrol et
   useEffect(() => {
-    const checkScreenSize = () => {
+    const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    
-    // İlk yükleme kontrolü
-    checkScreenSize();
-    
-    // Ekran boyutu değişimini izle
-    window.addEventListener('resize', checkScreenSize);
-    
-    // Cleanup
-    return () => window.removeEventListener('resize', checkScreenSize);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
   }, []);
   
-  // Eğer dışarıdan referanslar verilmediyse varsayılan örnekler kullanılır
+  // Varsayılan referanslar
   const defaultReferanslar = [
     {
       referenceKey: "duruAnkastre",
       image: "https://res.cloudinary.com/ddzh9sngl/image/upload/v1743048370/DuruLogo_6-5000x1002_1_vn4trn.png",
       href: "https://www.duruankastre.com/",
       bgColor: "from-stone-300 via-stone-600 to-stone-900",
-      // customStyle: { 
-      //   background: "radial-gradient(ellipse at top, #44403c, #78716c, #d6d3d1)" 
-      // }
+      customStyle: { 
+        background: "radial-gradient(ellipse at top, #44403c, #78716c, #d6d3d1)" 
+      }
     },
     {
       referenceKey: "kartvizitBahcesi",
@@ -129,47 +123,119 @@ export const ReferansPinSection = ({
     }
   ];
   
-  // Dışarıdan referanslar gelmişse onları, yoksa varsayılanları kullan
-  const displayReferanslar = referanslar.length > 0 ? referanslar : defaultReferanslar;
+  // Otomatik kaydırma için useEffect (sadece mobilde çalışır)
+  useEffect(() => {
+    if (!isMobile) return; // Masaüstünde çalıştırma
+    
+    let animationFrameId;
+    const speed = 0.3; // Mobil için kaydırma hızı
+
+    const scroll = () => {
+      if (containerRef.current && !isHovered && !isDragging) {
+        containerRef.current.scrollLeft += speed;
+        
+        // Sona geldiğinde başa dön
+        if (containerRef.current.scrollLeft >= containerRef.current.scrollWidth / 2) {
+          containerRef.current.scrollLeft = 0;
+        }
+      }
+      animationFrameId = requestAnimationFrame(scroll);
+    };
+
+    animationFrameId = requestAnimationFrame(scroll);
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [isHovered, isDragging, isMobile]);
+
+  // Mouse/Touch sürükleme işleyicileri (sadece mobilde kullanılır)
+  const handleMouseDown = (e) => {
+    if (!isMobile) return; // Masaüstünde çalıştırma
+    setIsDragging(true);
+    setStartX(e.type === 'mousedown' ? e.pageX : e.touches[0].pageX);
+    setScrollLeft(containerRef.current.scrollLeft);
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging || !isMobile) return; // Masaüstünde çalıştırma
+    e.preventDefault();
+    const x = e.type === 'mousemove' ? e.pageX : e.touches[0].pageX;
+    const walk = (x - startX) * 2;
+    if (containerRef.current) {
+      containerRef.current.scrollLeft = scrollLeft - walk;
+    }
+  };
+
+  const handleDragEnd = () => {
+    setIsDragging(false);
+  };
+
+  // Eğer dışarıdan referanslar verilmişse onları, yoksa varsayılanları kullan
+  const useReferanslar = referanslar.length > 0 ? referanslar : defaultReferanslar;
+  
+  // Mobil için referansları 3 kez tekrarla, masaüstü için normal kullan
+  const displayReferanslar = isMobile 
+    ? [...useReferanslar, ...useReferanslar, ...useReferanslar]
+    : useReferanslar;
   
   return (
-    <div className="py-12 md:py-24 container mx-auto px-4">
-      <div 
-        className="text-center mb-8 md:mb-16 opacity-100 transform translate-y-0 transition-all duration-500"
-      >
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
+    <div className="py-8 md:py-16">
+      <div className="text-center mb-6 md:mb-10">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3">
           {title || t('referanslar.title')}
         </h2>
-        <p className="text-gray-300 max-w-3xl mx-auto text-sm md:text-base">
+        <p className="text-gray-300 max-w-3xl mx-auto text-sm md:text-base px-4">
           {description || t('referanslar.description')}
         </p>
       </div>
       
       {isMobile ? (
-        // Mobil görünüm için özel düzen
-        <div className="w-full">
-          {displayReferanslar.map((referans, index) => (
-            <div
-              key={index}
-              className="mb-8 opacity-100 transform translate-y-0 transition-all duration-500"
-              style={{ transitionDelay: `${index * 100}ms` }}
-            >
-              <ReferansPin {...referans} />
+        // MOBİL GÖRÜNÜM - Kayan versiyon
+        <div className="max-w-[100vw] w-full mx-auto">
+          <div 
+            ref={containerRef}
+            className="overflow-x-hidden overflow-y-hidden relative w-full touch-pan-x"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => {
+              setIsHovered(false);
+              setIsDragging(false);
+            }}
+            onMouseDown={handleMouseDown}
+            onMouseMove={handleMouseMove}
+            onMouseUp={handleDragEnd}
+            onTouchStart={handleMouseDown}
+            onTouchMove={handleMouseMove}
+            onTouchEnd={handleDragEnd}
+          >
+            <div className="flex gap-1 px-0">
+              {displayReferanslar.map((referans, index) => (
+                <div
+                  key={index}
+                  className="transform transition-all duration-500"
+                  style={{ 
+                    flex: '0 0 auto',
+                    width: '92vw',
+                    maxWidth: '92vw'
+                  }}
+                >
+                  <ReferansPin {...referans} />
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       ) : (
-        // Masaüstü görünümü için 3D efektli düzen
-        <div className="h-auto min-h-[30rem] md:min-h-[40rem] w-full flex flex-wrap items-center justify-center">
-          {displayReferanslar.map((referans, index) => (
-            <div
-              key={index}
-              className="opacity-100 transform translate-y-0 transition-all duration-500 mb-4"
-              style={{ transitionDelay: `${index * 100}ms` }}
-            >
-              <ReferansPin {...referans} />
-            </div>
-          ))}
+        // MASAÜSTÜ GÖRÜNÜM - Orijinal grid yapısı
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            {displayReferanslar.map((referans, index) => (
+              <div 
+                key={index} 
+                className="opacity-100 transform translate-y-0 transition-all duration-500"
+                style={{ transitionDelay: `${index * 100}ms` }}
+              >
+                <ReferansPin {...referans} />
+              </div>
+            ))}
+          </div>
         </div>
       )}
     </div>

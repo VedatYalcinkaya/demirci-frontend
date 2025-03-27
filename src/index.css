@@ -9,6 +9,71 @@
 /* Quill editor styles */
 @import 'quill/dist/quill.snow.css';
 
+/* Mobil menü için özel stiller */
+.fixed.top-0.right-0.h-screen {
+  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(15, 23, 42, 0.95) 100%);
+}
+
+.fixed.top-0.right-0.h-screen .p-6.border-b {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.fixed.top-0.right-0.h-screen a,
+.fixed.top-0.right-0.h-screen a:hover {
+  color: white !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+}
+
+.fixed.top-0.right-0.h-screen .py-2.px-4 {
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.fixed.top-0.right-0.h-screen .py-2.px-4:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  transform: translateX(4px);
+}
+
+.fixed.top-0.right-0.h-screen .rounded-lg.bg-white\/5 {
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 8px;
+}
+
+.fixed.top-0.right-0.h-screen .rounded-lg.bg-white\/5:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.fixed.top-0.right-0.h-screen .space-y-2 a {
+  padding: 10px 16px;
+  border-radius: 6px;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.fixed.top-0.right-0.h-screen .space-y-2 a:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+  transform: translateX(4px);
+}
+
+.fixed.top-0.right-0.h-screen .space-y-2 a img {
+  transition: all 0.3s ease;
+}
+
+.fixed.top-0.right-0.h-screen .space-y-2 a:hover img {
+  transform: scale(1.1);
+}
+
 @font-face {
   font-family: 'Square721 BT';
   src: url('./assets/fonts/SQR721B.TTF') format('truetype');
