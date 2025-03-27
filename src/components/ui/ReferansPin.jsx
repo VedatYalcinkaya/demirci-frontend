@@ -41,17 +41,20 @@ export const ReferansPin = ({
           className={`flex flex-col items-center justify-center h-64 md:h-[20rem] w-full ${gradientClass} rounded-lg p-4 text-white`}
           style={customStyle} // Özel stil prop'unu uygula
         >
-          <div className="p-5 rounded-xl bg-neutral-800/30 backdrop-blur-xl border border-neutral-800/20 flex flex-col items-center">
+          <div className="p-5 rounded-xl bg-stone-900/20 backdrop-blur-xl border border-neutral-800/20 flex flex-col items-center">
             {image ? (
-              <img 
-                src={image} 
-                alt={displayTitle} 
-                className="w-16 h-16 md:w-24 md:h-24 object-contain mb-4"
-                onError={(e) => {
-                  e.target.src = defaultImage;
-                  e.target.onerror = null;
-                }}
-              />
+              <div className="w-16 h-16 md:w-24 md:h-24 flex items-center justify-center mb-4 overflow-hidden">
+                <img 
+                  src={image} 
+                  alt={displayTitle} 
+                  className="w-full h-full object-contain max-w-full max-h-full"
+                  style={{ objectPosition: 'center' }}
+                  onError={(e) => {
+                    e.target.src = defaultImage;
+                    e.target.onerror = null;
+                  }}
+                />
+              </div>
             ) : (
               <div className="w-16 h-16 md:w-24 md:h-24 flex items-center justify-center bg-white/20 rounded-full mb-4">
                 <span className="text-lg md:text-xl font-bold">{displayTitle?.charAt(0) || "D"}</span>
@@ -99,27 +102,30 @@ export const ReferansPinSection = ({
   const defaultReferanslar = [
     {
       referenceKey: "duruAnkastre",
-      image: defaultImage,
-      href: "https://example.com/duruankastre",
-      bgColor: "from-cyan-500 via-blue-500 to-indigo-500"
+      image: "https://res.cloudinary.com/ddzh9sngl/image/upload/v1743048370/DuruLogo_6-5000x1002_1_vn4trn.png",
+      href: "https://www.duruankastre.com/",
+      bgColor: "from-stone-300 via-stone-600 to-stone-900",
+      // customStyle: { 
+      //   background: "radial-gradient(ellipse at top, #44403c, #78716c, #d6d3d1)" 
+      // }
     },
     {
       referenceKey: "kartvizitBahcesi",
-      image: defaultImage,
-      href: "https://example.com/kartvizitbahcesi",
-      bgColor: "from-blue-500 via-indigo-500 to-purple-500"
-    },
-    {
-      referenceKey: "alternatifBant",
-      image: defaultImage,
-      href: "https://example.com/alternatifbant",
-      bgColor: "from-purple-500 via-pink-500 to-rose-500"
+      image: "https://res.cloudinary.com/ddzh9sngl/image/upload/c_thumb,w_200,g_face/v1743057768/Kartvizit_Logo2_cy2w9v.png",
+      href: "https://www.kartvizitbahcesi.com/",
+      bgColor: "from-amber-200 via-amber-900 to-amber-950"
     },
     {
       referenceKey: "ankastreConcept",
-      image: defaultImage,
-      href: "https://example.com/ankastreconcept",
-      bgColor: "from-amber-500 via-orange-500 to-red-500"
+      image: "https://res.cloudinary.com/ddzh9sngl/image/upload/v1743057188/Ankastre_gedsei.png",
+      href: "https://www.ankastreconcept.com/",
+      bgColor: "from-red-200 via-red-800 to-red-950"
+    },
+    {
+      referenceKey: "alternatifBant",
+      image: "https://res.cloudinary.com/ddzh9sngl/image/upload/c_thumb,w_200,g_face/v1743057534/AlternatifBant_qsboyp.png",
+      href: "https://www.alternatifbant.com/",
+      bgColor: "from-yellow-200 via-yellow-900 to-yellow-950"
     }
   ];
   

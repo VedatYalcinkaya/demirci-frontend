@@ -8,33 +8,6 @@ import { ReferansPinSection } from '../components/ui/ReferansPin';
 const TeklifAl = () => {
   const { t } = useTranslation();
 
-  // Çeviri anahtarlarını kullanan referans verileri
-  const referanslar = [
-    {
-      referenceKey: "duruAnkastre",
-      image: "/vite.svg",
-      href: "https://www.duruankastre.com/",
-      bgColor: "from-emerald-500 via-teal-500 to-blue-500"
-    },
-    {
-      referenceKey: "kartvizitBahcesi",
-      image: "/vite.svg",
-      href: "https://www.kartvizitbahcesi.com/",
-      bgColor: "from-blue-500 via-indigo-500 to-purple-500"
-    },
-    {
-      referenceKey: "alternatifBant",
-      image: "/vite.svg",
-      href: "https://www.alternatifbant.com/",
-      bgColor: "from-cyan-500 via-blue-500 to-indigo-500"
-    },
-    {
-      referenceKey: "ankastreConcept",
-      image: "/vite.svg",
-      href: "https://www.ankastreconcept.com/",
-      bgColor: "from-purple-500 via-pink-500 to-rose-500"
-    }
-  ];
 
   return (
     <>
@@ -142,7 +115,6 @@ const TeklifAl = () => {
         {/* Referanslar Bölümü */}
         <div>
           <ReferansPinSection 
-            referanslar={referanslar}
             title={t('form.clientTrust')}
             description={t('form.clientTrustDescription')}
           />

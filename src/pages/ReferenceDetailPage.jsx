@@ -101,18 +101,20 @@ const ReferenceDetailPage = () => {
         <div className="lg:col-span-2">
           <div className="bg-white/5 rounded-lg overflow-hidden">
             {/* Ana Resim */}
-            <div className="relative aspect-video overflow-hidden">
+            <div className="relative aspect-video overflow-hidden flex items-center justify-center bg-neutral-900/50 p-4">
               {images.length > 0 ? (
                 <img 
                   src={images[activeImageIndex]?.imageUrl || currentReference.thumbnailUrl} 
                   alt={images[activeImageIndex]?.caption || currentReference.title}
-                  className="w-full h-full object-cover"
+                  className="max-w-full max-h-full object-contain"
+                  style={{ maxHeight: '100%', maxWidth: '100%', margin: 'auto' }}
                 />
               ) : (
                 <img 
                   src={currentReference.thumbnailUrl} 
                   alt={currentReference.title}
-                  className="w-full h-full object-cover"
+                  className="max-w-full max-h-full object-contain"
+                  style={{ maxHeight: '100%', maxWidth: '100%', margin: 'auto' }}
                 />
               )}
             </div>
@@ -124,12 +126,13 @@ const ReferenceDetailPage = () => {
                   <button 
                     key={image.id} 
                     onClick={() => setActiveImageIndex(index)}
-                    className={`flex-shrink-0 w-20 h-20 rounded-md overflow-hidden border-2 ${index === activeImageIndex ? 'border-emerald-500' : 'border-transparent'}`}
+                    className={`flex-shrink-0 w-20 h-20 rounded-md overflow-hidden border-2 ${index === activeImageIndex ? 'border-emerald-500' : 'border-transparent'} flex items-center justify-center bg-neutral-900/50`}
                   >
                     <img 
                       src={image.imageUrl} 
                       alt={image.caption || `${currentReference.title} - ${index + 1}`}
-                      className="w-full h-full object-cover"
+                      className="max-w-full max-h-full object-contain"
+                      style={{ maxHeight: '100%', maxWidth: '100%' }}
                     />
                   </button>
                 ))}
@@ -165,11 +168,13 @@ const ReferenceDetailPage = () => {
                 <h3 className="text-sm font-medium text-gray-400 mb-2">{t('references.client')}</h3>
                 <div className="flex items-center">
                   {currentReference.clientLogo && (
-                    <img 
-                      src={currentReference.clientLogo} 
-                      alt={currentReference.clientName} 
-                      className="w-10 h-10 mr-3 rounded-full object-cover bg-white/10 p-1"
-                    />
+                    <div className="w-10 h-10 mr-3 rounded-full bg-white/10 p-1 flex items-center justify-center overflow-hidden">
+                      <img 
+                        src={currentReference.clientLogo} 
+                        alt={currentReference.clientName}
+                        className="max-w-full max-h-full object-contain"
+                      />
+                    </div>
                   )}
                   <span className="text-white font-medium">{currentReference.clientName}</span>
                 </div>
