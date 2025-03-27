@@ -22,22 +22,23 @@ const HomePage = () => {
     },
     {
       referenceKey: "kartvizitBahcesi",
-      image: "/vite.svg",
+      image: "https://res.cloudinary.com/ddzh9sngl/image/upload/c_thumb,w_200,g_face/v1743057768/Kartvizit_Logo2_cy2w9v.png",
       href: "https://www.kartvizitbahcesi.com/",
       bgColor: "from-amber-200 via-amber-900 to-amber-950"
     },
     {
-      referenceKey: "alternatifBant",
-      image: "/vite.svg",
-      href: "https://www.alternatifbant.com/",
-      bgColor: "from-yellow-200 via-yellow-900 to-yellow-950"
-    },
-    {
       referenceKey: "ankastreConcept",
-      image: "/vite.svg",
+      image: "https://res.cloudinary.com/ddzh9sngl/image/upload/v1743057188/Ankastre_gedsei.png",
       href: "https://www.ankastreconcept.com/",
       bgColor: "from-red-200 via-red-800 to-red-950"
+    },
+    {
+      referenceKey: "alternatifBant",
+      image: "https://res.cloudinary.com/ddzh9sngl/image/upload/c_thumb,w_200,g_face/v1743057534/AlternatifBant_qsboyp.png",
+      href: "https://www.alternatifbant.com/",
+      bgColor: "from-yellow-200 via-yellow-900 to-yellow-950"
     }
+ 
   ];
 
   return (
