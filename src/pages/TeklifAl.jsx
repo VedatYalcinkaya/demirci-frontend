@@ -8,47 +8,31 @@ import { ReferansPinSection } from '../components/ui/ReferansPin';
 const TeklifAl = () => {
   const { t } = useTranslation();
 
-  // Özel referans verileri
+  // Çeviri anahtarlarını kullanan referans verileri
   const referanslar = [
     {
-      title: "TeknoMarket",
-      subtitle: "E-Ticaret Çözümü",
-      description: "Türkiye'nin önde gelen e-ticaret platformu için SEO odaklı tasarım ve performans iyileştirmeleri yaptık.",
+      referenceKey: "duruAnkastre",
       image: "/vite.svg",
-      href: "https://example.com/teknomarket",
+      href: "https://www.duruankastre.com/",
       bgColor: "from-emerald-500 via-teal-500 to-blue-500"
     },
     {
-      title: "Mavi Holding",
-      subtitle: "Kurumsal Web Sitesi",
-      description: "Modern teknolojilerle kurumsal kimliği yansıtan özel tasarım.",
+      referenceKey: "kartvizitBahcesi",
       image: "/vite.svg",
-      href: "https://example.com/maviholding",
+      href: "https://www.kartvizitbahcesi.com/",
       bgColor: "from-blue-500 via-indigo-500 to-purple-500"
     },
     {
-      title: "Sağlık Plus",
-      subtitle: "Sağlık Portalı",
-      description: "Kullanıcı dostu arayüz ile online randevu ve hasta takip sistemi.",
+      referenceKey: "alternatifBant",
       image: "/vite.svg",
-      href: "https://example.com/saglikplus",
+      href: "https://www.alternatifbant.com/",
       bgColor: "from-cyan-500 via-blue-500 to-indigo-500"
     },
     {
-      title: "Eğitim Akademi",
-      subtitle: "Online Eğitim Platformu",
-      description: "Öğrenciler ve eğitmenler için interaktif online eğitim platformu.",
+      referenceKey: "ankastreConcept",
       image: "/vite.svg",
-      href: "https://example.com/egitimakademi",
+      href: "https://www.ankastreconcept.com/",
       bgColor: "from-purple-500 via-pink-500 to-rose-500"
-    },  
-    {
-      title: "Finans Bank",
-      subtitle: "Finans Portalı",
-      description: "Kullanıcı dostu finansal hizmetler ve bankacılık çözümleri.",
-      image: "/vite.svg",
-      href: "https://example.com/finansbank",
-      bgColor: "from-amber-500 via-orange-500 to-red-500"
     }
   ];
 

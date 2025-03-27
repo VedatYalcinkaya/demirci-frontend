@@ -127,7 +127,9 @@ export function ServicesSection() {
   ];
 
   return (
-    <div className="relative z-10 py-20 mt-[-10vh] flex flex-col items-center justify-center w-full">
+    <div id="services" className="relative z-10 py-20 pt-14 mt-0 flex flex-col items-center justify-center w-full">
+      {/* Scroll anchor for navigation */}
+      <div id="services-scroll-anchor" className="absolute" style={{ top: "-100px" }}></div>
       {/* Başlık Kısmı */}
       <div className="text-center mb-16">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-3 md:gap-4">

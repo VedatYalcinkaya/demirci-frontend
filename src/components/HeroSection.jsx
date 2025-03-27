@@ -3,15 +3,19 @@ import React from "react";
 import { FlipWords } from "./ui/flip-words";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { QuoteButton } from "./ui/quote-button";
 
 export function HeroSection({ onCtaClick }) {
   const { t } = useTranslation();
   
   // Çeviri dosyasından kelimeleri al
   const words = t('hero.flipWords', { returnObjects: true });
+  
+  // Her iki buton için aynı genişlik tanımı
+  const buttonWidth = "250px";
 
   return (
-    <div className="relative min-h-[80vh] md:min-h-[80vh] flex flex-col justify-center items-center px-4 py-20 overflow-hidden">
+    <div className="relative min-h-[70vh] md:min-h-[70vh] flex flex-col justify-center items-center px-4 py-10 overflow-hidden">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -39,15 +43,36 @@ export function HeroSection({ onCtaClick }) {
           {t('hero.subtitle')}
         </p>
         
-        <motion.button
-          onClick={onCtaClick}
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mt-8 px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-medium rounded-lg transition-colors"
+          className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          {t('hero.cta')}
-        </motion.button>
+          <div className="cursor-pointer" onClick={onCtaClick}>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="p-[3px] relative"
+              style={{ width: buttonWidth }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-green-500 rounded-lg" />
+              <div className="px-8 py-3 bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent flex items-center justify-center w-full">
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  className="h-5 w-5 mr-2 flex-shrink-0" 
+                  viewBox="0 0 20 20" 
+                  fill="currentColor"
+                >
+                  <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd" />
+                </svg>
+                <span className="whitespace-nowrap">{t('hero.cta')}</span>
+              </div>
+            </motion.div>
+          </div>
+          
+          <QuoteButton colorTheme="emerald" width={buttonWidth} />
+        </motion.div>
       </motion.div>
     </div>
   );

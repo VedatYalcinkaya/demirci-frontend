@@ -889,9 +889,31 @@
       }
     },
     "referanslar": {
-      "title": "Müşterilerimizin Başarı Hikayeleri",
-      "description": "Projelerimizle müşterilerimizin dijital dünyada öne çıkmalarına yardımcı olduk. İşte bazı değerli müşterilerimiz ve başarı hikayeleri.",
-      "varsayilanAciklama": "Müşterimizin özel çözümlerimizle işini büyütmesine yardımcı olduk."
+      "title": "Seçkin Müşterilerimiz",
+      "description": "Dijital dönüşüm yolculuğunda çözüm ortağı olduğumuz değerli markalar",
+      "varsayilanAciklama": "Müşterilerimizle işbirliği içinde çalışarak özel dijital çözümler geliştirdik.",
+      "customReferences": {
+        "duruAnkastre": {
+          "title": "Duru Ankastre",
+          "subtitle": "Tam Kapsamlı Dijital Operasyon",
+          "description": "Sıfırdan kurulan dijital altyapı sayesinde ilk yılında 50M+ online ciroya ulaşıldı. E-ticaret, yazılım, muhasebe ve sanal pazar operasyonları tek merkezden yönetildi."
+        },
+        "kartvizitBahcesi": {
+          "title": "Kartvizit Bahçesi",
+          "subtitle": "E-Ticaret & Sosyal Medya Başarısı",
+          "description": "Modern tasarım, Meta reklamları ve içerik stratejisiyle 676.000 kişiye erişildi. Görünürlük ve satışlar katlanarak arttı."
+        },
+        "alternatifBant": {
+          "title": "Alternatif Bant",
+          "subtitle": "Endüstriyel Ürünler İçin E-Ticaret Dönüşümü",
+          "description": "Pazar yerleri entegrasyonu, kullanıcı dostu site ve yönetim altyapısıyla geleneksel satıştan dijitale güçlü bir geçiş sağlandı."
+        },
+        "ankastreConcept": {
+          "title": "Ankastre Concept",
+          "subtitle": "E-Ticaret'te Yeni Nesil Mutfak Deneyimi",
+          "description": "Premium tasarım, hızlı altyapı ve optimize reklam stratejisiyle markayı dijitalde üst seviyeye taşıdık. Tüm operasyon Demirci Yazılım tarafından inşa edildi."
+        }
+      }
     },
     "login": {
       "title": "Giriş Yap",

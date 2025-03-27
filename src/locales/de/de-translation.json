@@ -761,7 +761,29 @@
     "referanslar": {
       "title": "Erfolgsgeschichten unserer Kunden",
       "description": "Wir haben unseren Kunden geholfen, sich in der digitalen Welt mit unseren Projekten abzuheben. Hier sind einige unserer geschätzten Kunden und ihre Erfolgsgeschichten.",
-      "varsayilanAciklama": "Wir haben unserem Kunden geholfen, sein Geschäft mit unseren maßgeschneiderten Lösungen zu erweitern."
+      "varsayilanAciklama": "Wir haben unserem Kunden geholfen, sein Geschäft mit unseren maßgeschneiderten Lösungen zu erweitern.",
+      "customReferences": {
+        "duruAnkastre": {
+          "title": "Duru Ankastre",
+          "subtitle": "Umfassende Digitale Operation",
+          "description": "Im ersten Jahr wurde dank einer von Grund auf neu entwickelten digitalen Infrastruktur ein Online-Umsatz von über 50 Millionen erzielt. E-Commerce, Software, Buchhaltung und virtuelle Marktoperationen wurden von einer einzigen Zentrale aus verwaltet."
+        },
+        "kartvizitBahcesi": {
+          "title": "Kartvizit Bahçesi",
+          "subtitle": "E-Commerce & Social Media Erfolg",
+          "description": "Mit modernem Design, Meta-Anzeigen und Contentstrategie wurden 676.000 Menschen erreicht. Sichtbarkeit und Verkäufe stiegen exponentiell an."
+        },
+        "alternatifBant": {
+          "title": "Alternatif Bant",
+          "subtitle": "E-Commerce-Transformation für Industrieprodukte",
+          "description": "Mit Marktplatzintegrationen, benutzerfreundlicher Website und Managementinfrastruktur wurde ein starker Übergang vom traditionellen Verkauf zum digitalen Verkauf erreicht."
+        },
+        "ankastreConcept": {
+          "title": "Ankastre Concept",
+          "subtitle": "Next-Gen Küchenerlebnis im E-Commerce",
+          "description": "Wir haben die Marke mit Premium-Design, schneller Infrastruktur und optimierter Werbestrategie auf ein Spitzenniveau im digitalen Bereich gehoben. Der gesamte Betrieb wurde von Demirci Software aufgebaut."
+        }
+      }
     },
     "notifications": {
       "success": "Ihre Anfrage wurde erfolgreich gesendet.",

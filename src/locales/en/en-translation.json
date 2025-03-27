@@ -770,9 +770,31 @@
       "logoutError": "An error occurred while logging out"
     },
     "referanslar": {
-      "title": "Customer Success Stories",
-      "description": "We have helped our customers stand out in the digital world with our projects. Here are some of our valued customers and their success stories.",
-      "varsayilanAciklama": "We've helped our client grow their business with our custom solutions."
+      "title": "Our References",
+      "description": "We are proud to be by our clients' side in their digital success journeys",
+      "varsayilanAciklama": "We have developed custom digital solutions working in collaboration with our clients.",
+      "customReferences": {
+        "duruAnkastre": {
+          "title": "Duru Ankastre",
+          "subtitle": "Full-Scale Digital Operation",
+          "description": "Achieved 50M+ online revenue in the first year thanks to a digital infrastructure built from scratch. E-commerce, software, accounting, and virtual market operations were managed from a single center."
+        },
+        "kartvizitBahcesi": {
+          "title": "Kartvizit Bahçesi",
+          "subtitle": "E-Commerce & Social Media Success",
+          "description": "Reached 676,000 people with modern design, Meta ads, and content strategy. Visibility and sales increased exponentially."
+        },
+        "alternatifBant": {
+          "title": "Alternatif Bant",
+          "subtitle": "E-Commerce Transformation for Industrial Products",
+          "description": "Achieved a strong transition from traditional sales to digital with marketplace integrations, user-friendly site, and management infrastructure."
+        },
+        "ankastreConcept": {
+          "title": "Ankastre Concept",
+          "subtitle": "Next-Gen Kitchen Experience in E-Commerce",
+          "description": "We elevated the brand to a top-tier level in digital with premium design, fast infrastructure, and optimized advertising strategy. The entire operation was built by Demirci Software."
+        }
+      }
     },
     "blog": {
       "title": "Blog",
