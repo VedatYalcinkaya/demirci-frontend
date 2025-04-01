@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { PinContainer } from './3d-pin';
+import { Link } from 'react-router-dom';
 
 // Tek bir referans için bileşen
 export const ReferansPin = ({ 
@@ -11,7 +12,9 @@ export const ReferansPin = ({
   href = "#", 
   bgColor = "from-cyan-500 via-blue-500 to-indigo-500",
   customStyle,
-  referenceKey
+  referenceKey,
+  referenceId,
+  sectionId
 }) => {
   const { t } = useTranslation();
   const defaultDescription = t('referanslar.varsayilanAciklama');
@@ -25,45 +28,55 @@ export const ReferansPin = ({
   const gradientClass = bgColor.startsWith('bg-') 
     ? bgColor 
     : `bg-gradient-to-br ${bgColor}`;
+
+  // Referans detay sayfasına link oluştur
+  const getDetailLink = () => {
+    if (referenceId && sectionId) {
+      return `/referanslar/${referenceId}#${sectionId}`;
+    }
+    return href;
+  };
   
   return (
     <div className="w-full md:w-auto px-2 py-2 md:px-3 md:py-4">
-      <PinContainer 
-        title={displayUrl || "Referans"}
-        href={href}
-        className="w-full md:w-72 lg:w-80"
-      >
-        <div 
-          className={`flex flex-col items-center justify-center h-64 md:h-[20rem] w-full ${gradientClass} rounded-lg p-4 text-white`}
-          style={customStyle} // Özel stil prop'unu uygula
+      <Link to={getDetailLink()} className="block">
+        <PinContainer 
+          title={displayUrl || "Referans"}
+          href={getDetailLink()}
+          className="w-full md:w-72 lg:w-80"
         >
-          <div className="p-5 rounded-xl bg-stone-900/20 backdrop-blur-xl border border-neutral-800/20 flex flex-col items-center">
-            {image ? (
-              <div className="w-16 h-16 md:w-24 md:h-24 flex items-center justify-center mb-4 overflow-hidden">
-                <img 
-                  src={image} 
-                  alt={displayTitle} 
-                  className="w-full h-full object-contain max-w-full max-h-full"
-                  style={{ objectPosition: 'center' }}
-                  onError={(e) => {
-                    e.target.src = defaultImage;
-                    e.target.onerror = null;
-                  }}
-                />
-              </div>
-            ) : (
-              <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center bg-white/20 rounded-full mb-4">
-                <span className="text-lg md:text-xl font-bold">{displayTitle?.charAt(0) || "D"}</span>
-              </div>
-            )}
-            
-            <h3 className="text-lg md:text-xl font-bold mb-2 text-center">{displayTitle}</h3>
-            {displaySubtitle && <p className="text-xs md:text-sm font-medium mb-3 opacity-90 text-center">{displaySubtitle}</p>}
-            
-            <p className="text-xs md:text-sm text-center opacity-90 line-clamp-3">{displayDescription}</p>
+          <div 
+            className={`flex flex-col items-center justify-center h-64 md:h-[20rem] w-full ${gradientClass} rounded-lg p-4 text-white`}
+            style={customStyle}
+          >
+            <div className="p-5 rounded-xl bg-stone-900/20 backdrop-blur-xl border border-neutral-800/20 flex flex-col items-center">
+              {image ? (
+                <div className="w-16 h-16 md:w-24 md:h-24 flex items-center justify-center mb-4 overflow-hidden">
+                  <img 
+                    src={image} 
+                    alt={displayTitle} 
+                    className="w-full h-full object-contain max-w-full max-h-full"
+                    style={{ objectPosition: 'center' }}
+                    onError={(e) => {
+                      e.target.src = defaultImage;
+                      e.target.onerror = null;
+                    }}
+                  />
+                </div>
+              ) : (
+                <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center bg-white/20 rounded-full mb-4">
+                  <span className="text-lg md:text-xl font-bold">{displayTitle?.charAt(0) || "D"}</span>
+                </div>
+              )}
+              
+              <h3 className="text-lg md:text-xl font-bold mb-2 text-center">{displayTitle}</h3>
+              {displaySubtitle && <p className="text-xs md:text-sm font-medium mb-3 opacity-90 text-center">{displaySubtitle}</p>}
+              
+              <p className="text-xs md:text-sm text-center opacity-90 line-clamp-3">{displayDescription}</p>
+            </div>
           </div>
-        </div>
-      </PinContainer>
+        </PinContainer>
+      </Link>
     </div>
   );
 };
@@ -95,6 +108,8 @@ export const ReferansPinSection = ({
   // Varsayılan referanslar
   const defaultReferanslar = [
     {
+      referenceId: "4",
+      sectionId: "duru-ankastre",
       referenceKey: "duruAnkastre",
       image: "https://res.cloudinary.com/ddzh9sngl/image/upload/v1743048370/DuruLogo_6-5000x1002_1_vn4trn.png",
       href: "https://www.duruankastre.com/",
@@ -104,18 +119,24 @@ export const ReferansPinSection = ({
       }
     },
     {
+      referenceId: "2",
+      sectionId: "kartvizit-bahcesi",
       referenceKey: "kartvizitBahcesi",
       image: "https://res.cloudinary.com/ddzh9sngl/image/upload/c_thumb,w_200,g_face/v1743057768/Kartvizit_Logo2_cy2w9v.png",
       href: "https://www.kartvizitbahcesi.com/",
       bgColor: "from-amber-200 via-amber-900 to-amber-950"
     },
     {
+      referenceId: "1",
+      sectionId: "ankastre-concept",
       referenceKey: "ankastreConcept",
       image: "https://res.cloudinary.com/ddzh9sngl/image/upload/v1743057188/Ankastre_gedsei.png",
       href: "https://www.ankastreconcept.com/",
       bgColor: "from-red-200 via-red-800 to-red-950"
     },
-    {
+    { 
+      referenceId: "3",
+      sectionId: "alternatif-bant",
       referenceKey: "alternatifBant",
       image: "https://res.cloudinary.com/ddzh9sngl/image/upload/c_thumb,w_200,g_face/v1743057534/AlternatifBant_qsboyp.png",
       href: "https://www.alternatifbant.com/",
