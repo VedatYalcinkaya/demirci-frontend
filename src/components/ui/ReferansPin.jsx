@@ -113,7 +113,7 @@ export const ReferansPinSection = ({
       referenceKey: "duruAnkastre",
       image: "https://res.cloudinary.com/ddzh9sngl/image/upload/v1743048370/DuruLogo_6-5000x1002_1_vn4trn.png",
       href: "https://www.duruankastre.com/",
-      bgColor: "from-stone-300 via-stone-600 to-stone-900",
+      bgColor: "from-stone-300 via-stone-600 to-stone-950",
       customStyle: { 
         background: "radial-gradient(ellipse at top, #44403c, #78716c, #d6d3d1)" 
       }
